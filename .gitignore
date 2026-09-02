@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+.env
+.env.*
+.vscode/
+.claude/
+.mcp.json
+*.code-workspace
+
+# Local project-ledger metadata is not part of the public repository.
+/PROJECT.md
