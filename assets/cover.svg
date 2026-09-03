@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code Work Setup</title>
+  <desc id="desc">A professional dark blue workstation interface showing a guided path from policy checks to tailored workflows and verified results.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08101f"/>
+      <stop offset="0.58" stop-color="#0b1730"/>
+      <stop offset="1" stop-color="#07111b"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5aa7ff"/>
+      <stop offset="1" stop-color="#7ad9ff"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#142545"/>
+      <stop offset="1" stop-color="#0d1b34"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1340" cy="90" r="340" fill="#183b69" opacity="0.18"/>
+  <circle cx="170" cy="830" r="290" fill="#0d68a0" opacity="0.11"/>
+  <path d="M0 720 C310 650 460 805 790 740 S1280 630 1600 720" fill="none" stroke="#56b9ff" stroke-opacity="0.08" stroke-width="2"/>
+
+  <text x="112" y="120" fill="#7ad9ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="5">GUIDED • REVIEWABLE • PROFESSIONAL</text>
+  <text x="108" y="196" fill="#f3f7ff" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="760" letter-spacing="-1">CLAUDE CODE</text>
+  <text x="108" y="262" fill="url(#blue)" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="760" letter-spacing="-1">WORK SETUP</text>
+  <text x="112" y="312" fill="#a9bad4" font-family="Segoe UI, Arial, sans-serif" font-size="24">From first launch to controlled, reviewable work.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="108" y="370" width="1384" height="408" rx="22" fill="#0a1326" stroke="#29486f" stroke-width="2"/>
+    <rect x="108" y="370" width="1384" height="54" rx="22" fill="#16243b"/>
+    <rect x="108" y="405" width="1384" height="19" fill="#16243b"/>
+    <circle cx="143" cy="397" r="7" fill="#ff6b6b"/><circle cx="169" cy="397" r="7" fill="#f2c14e"/><circle cx="195" cy="397" r="7" fill="#62d394"/>
+    <text x="235" y="404" fill="#91a7c5" font-family="Segoe UI, Arial, sans-serif" font-size="15" letter-spacing="1.5">GUIDED ONBOARDING</text>
+  </g>
+
+  <!-- navigation rail -->
+  <rect x="108" y="424" width="82" height="354" fill="#0d192e"/>
+  <g stroke="#6685aa" fill="none" stroke-width="2">
+    <rect x="135" y="460" width="28" height="25" rx="3"/>
+    <path d="M139 465h20M139 472h14M139 479h17"/>
+    <circle cx="149" cy="532" r="15"/><path d="M144 532l4 4 8-9" stroke="#6fd6ff"/>
+    <rect x="135" y="574" width="28" height="28" rx="6"/>
+    <path d="M142 588h14M149 581v14"/>
+  </g>
+  <rect x="184" y="451" width="4" height="54" rx="2" fill="#62c5ff"/>
+
+  <!-- step cards -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="225" y="464" width="315" height="260" rx="16" fill="url(#panel)" stroke="#31557f"/>
+    <circle cx="278" cy="518" r="24" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+    <path d="M267 518l7 7 15-17" fill="none" stroke="#79ddff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="320" y="510" fill="#78d7ff" font-size="14" font-weight="700" letter-spacing="3">01</text>
+    <text x="320" y="540" fill="#f1f6ff" font-size="27" font-weight="700">CHECK</text>
+    <text x="253" y="588" fill="#a9bad4" font-size="17">Verify policy, permissions,</text>
+    <text x="253" y="614" fill="#a9bad4" font-size="17">tools, and data boundaries.</text>
+    <rect x="253" y="653" width="229" height="10" rx="5" fill="#203755"/><rect x="253" y="653" width="185" height="10" rx="5" fill="#63c9ff"/>
+    <text x="253" y="691" fill="#6f87a8" font-size="13" letter-spacing="1">READ-ONLY FIRST</text>
+
+    <rect x="584" y="464" width="315" height="260" rx="16" fill="url(#panel)" stroke="#3c638d"/>
+    <circle cx="637" cy="518" r="24" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+    <path d="M629 510h16v17h-16zM633 506h8" fill="none" stroke="#79ddff" stroke-width="3" stroke-linecap="round"/>
+    <text x="679" y="510" fill="#78d7ff" font-size="14" font-weight="700" letter-spacing="3">02</text>
+    <text x="679" y="540" fill="#f1f6ff" font-size="27" font-weight="700">TAILOR</text>
+    <text x="612" y="588" fill="#a9bad4" font-size="17">Turn real goals into clear,</text>
+    <text x="612" y="614" fill="#a9bad4" font-size="17">controlled work requests.</text>
+    <rect x="612" y="653" width="229" height="10" rx="5" fill="#203755"/><rect x="612" y="653" width="210" height="10" rx="5" fill="#63c9ff"/>
+    <text x="612" y="691" fill="#6f87a8" font-size="13" letter-spacing="1">ONE QUESTION AT A TIME</text>
+
+    <rect x="943" y="464" width="315" height="260" rx="16" fill="url(#panel)" stroke="#4481a8"/>
+    <circle cx="996" cy="518" r="24" fill="#173c65" stroke="#69c9ff" stroke-width="2" filter="url(#glow)"/>
+    <path d="M985 518l7 7 15-17" fill="none" stroke="#d8f7ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1038" y="510" fill="#78d7ff" font-size="14" font-weight="700" letter-spacing="3">03</text>
+    <text x="1038" y="540" fill="#f1f6ff" font-size="27" font-weight="700">VERIFY</text>
+    <text x="971" y="588" fill="#a9bad4" font-size="17">Tie out totals, surface every</text>
+    <text x="971" y="614" fill="#a9bad4" font-size="17">exception, preserve evidence.</text>
+    <g transform="translate(971 650)">
+      <rect width="62" height="25" rx="12.5" fill="#143b35" stroke="#3fae8a"/><text x="31" y="18" text-anchor="middle" fill="#78e2bd" font-size="12" font-weight="700">PASS</text>
+      <rect x="70" width="100" height="25" rx="12.5" fill="#493d20" stroke="#c99c3a"/><text x="120" y="18" text-anchor="middle" fill="#f2c964" font-size="11" font-weight="700">UNVERIFIED</text>
+      <rect x="178" width="50" height="25" rx="12.5" fill="#3b2937" stroke="#a96086"/><text x="203" y="18" text-anchor="middle" fill="#ef9ec8" font-size="12" font-weight="700">FAIL</text>
+    </g>
+  </g>
+
+  <!-- connection line -->
+  <path d="M540 594h44M899 594h44" stroke="#62c9ff" stroke-width="3" stroke-dasharray="7 8"/>
+  <circle cx="562" cy="594" r="5" fill="#62c9ff"/><circle cx="921" cy="594" r="5" fill="#62c9ff"/>
+
+  <!-- safety panel -->
+  <rect x="1290" y="464" width="166" height="260" rx="16" fill="#0e2038" stroke="#315b81"/>
+  <path d="M1373 502l42 17v34c0 30-19 52-42 64-23-12-42-34-42-64v-34z" fill="#153b5e" stroke="#70d4ff" stroke-width="2"/>
+  <path d="M1357 554l11 11 23-27" fill="none" stroke="#d8f7ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1373" y="651" text-anchor="middle" fill="#eef6ff" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">HUMAN</text>
+  <text x="1373" y="674" text-anchor="middle" fill="#eef6ff" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">REVIEW</text>
+  <text x="1373" y="704" text-anchor="middle" fill="#7891b2" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">REQUIRED</text>
+
+  <text x="112" y="842" fill="#6d87aa" font-family="Segoe UI, Arial, sans-serif" font-size="15" letter-spacing="2">WINDOWS • VS CODE • CLAUDE CODE • WORKPLACE STARTER</text>
+</svg>

@@ -6,6 +6,22 @@ Thumbs.db
 .claude/
 .mcp.json
 *.code-workspace
+.pi-work/
+*.backup
+*.candidate
+
+# Common work artifacts. These patterns reduce accidental staging; they are not DLP.
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.docx
+.local-work/
+work-data/
+outputs/
+evidence/
+receipts/
+backups/
 
 # Local project-ledger metadata is not part of the public repository.
 /PROJECT.md

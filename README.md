@@ -1,174 +1,154 @@
-# VS Code + Claude Code starter
+# Claude Code Work Setup
 
-A small Windows-friendly setup for someone learning Claude Code in VS Code while
-working with confidential, regulated accounting and reconciliation workflows.
-Nothing runs automatically. Everything here is generic and contains no company,
-person, taxpayer, property, system, or project details.
+> **Windows only.** Use this starter only after the employer has approved the software,
+> enterprise account or tenant, AI provider, allowed data classes, and applicable retention and
+> data-residency terms. If any approval is **no** or **unknown**, stop. Do not install, sign in, or
+> open work data.
 
-## Files
+![Claude Code Work Setup](assets/cover.svg)
 
-| File | Purpose |
-| --- | --- |
-| `settings.json` | Safe, beginner-friendly VS Code and Claude Code settings |
-| `extensions.json` | Five recommended VS Code extensions |
-| `GLOBAL-CLAUDE.md` | Generic global instructions for careful regulated work |
-| `CLAUDE.md` | Universal per-project instructions template |
-| `SETUP-INTERVIEW.md` | Local interview prompt for safely personalizing the setup |
-| `TOOLS-AND-SKILLS.md` | Gradual guide to Claude tools, plugins, and Superpowers |
+A guided starting point for a first-time Claude Code user doing confidential corporate tax,
+property-tax accounting, reconciliation, and evidence-heavy work in a large enterprise.
 
-## Install on a new Windows PC
+The setup asks before each change. Interview responses are processed by the employer-approved
+Claude service. The resulting instruction and configuration files remain local on the approved
+work computer unless the user separately moves them.
 
-### 1. Install VS Code
+## Prepare a safe onboarding folder
 
-Download and install [Visual Studio Code](https://code.visualstudio.com/).
-During installation, allow VS Code to add itself to PATH if the installer offers
-that option.
+1. Obtain this repository from a reviewed, tagged release or another employer-approved snapshot.
+2. Put it in an empty starter folder that contains no work files, exports, evidence, or records.
+3. Review this README, [`START-HERE.md`](START-HERE.md), the templates, the two skills, and the
+   settings candidate before trusting the folder.
+4. Keep future work artifacts in a separate employer-approved work directory, never in this
+   checkout.
 
-### 2. Create a separate profile
+Repository ignore rules reduce accidental Git staging; they are not data-loss prevention (DLP).
 
-1. Press `Ctrl+Shift+P`.
-2. Run **Profiles: Create Profile**.
-3. Choose **Create an Empty Profile**.
-4. Name it **Claude Code Beginner**.
+## Confirm approval before setup
 
-This keeps the starter settings separate from any existing VS Code setup.
+Before installing software or signing in, confirm all of the following through employer policy or
+an authorized administrator:
 
-### 3. Install the extensions
+- Visual Studio Code and Claude Code are approved for the work computer;
+- the exact Claude provider, enterprise account or tenant, and sign-in method are approved;
+- the intended work-data classes may be processed by that approved Claude service;
+- retention, training-use, logging, and data-residency terms are acceptable; and
+- local instruction files, user skills, and configuration changes are permitted.
 
-While the new profile is active, press `Ctrl+Shift+X` and install:
+A personal Claude account is not a substitute for an approved workplace account. A personal
+private repository is still external storage and is not automatically approved for work data.
 
-1. **Claude Code for VS Code** by Anthropic
-2. **inlineMark** by 2001Y
-3. **markdownlint** by David Anson
-4. **Code Spell Checker** by Street Side Software
-5. **GitHub Theme** by GitHub
+## Install one approved Claude surface
 
-The exact Marketplace identifiers are in [`extensions.json`](extensions.json).
-Review each publisher before installing.
+The onboarding prompt needs either the approved VS Code extension or the approved Claude Code CLI
+to run. It cannot install the surface currently running it.
 
-### 4. Copy the settings
+### Extension first
 
-While the **Claude Code Beginner** profile is active:
+1. Install [Visual Studio Code](https://code.visualstudio.com/download) only through the approved
+   company method.
+2. Install **Claude Code for VS Code** by **Anthropic** only from the approved company catalog or
+   its [verified Marketplace listing][claude-vscode].
+3. Sign in only to the approved enterprise account or tenant.
+4. Open the clean starter folder in VS Code and open Claude Code.
 
-1. Press `Ctrl+Shift+P`.
-2. Run **Preferences: Open User Settings (JSON)**.
-3. If the file is empty, paste the contents of [`settings.json`](settings.json).
-   If it already contains settings, merge the entries instead of replacing them.
-4. Save with `Ctrl+S`.
-5. Run **Developer: Reload Window**.
+### CLI first
 
-The profile uses **GitHub Dark Dimmed**, PowerShell, Manual Claude permissions,
-and conservative Workspace Trust prompts. Automatic saving and dangerous
-permission bypass are disabled.
+1. Follow Anthropic's current [Claude Code setup](https://code.claude.com/docs/en/setup) only when
+   the employer approves that installation path.
+2. Sign in only to the approved enterprise account or tenant.
+3. Open a terminal in the clean starter folder and run `claude`.
 
-The editor font is **Cascadia Code** with **Consolas** as a fallback. Windows
-normally provides Consolas. Cascadia Code is optional and available from
-[Microsoft's official repository](https://github.com/microsoft/cascadia-code).
+Managed computers may block installation or configuration. Stop instead of seeking a bypass.
 
-### 5. Open Claude Code
+## Give Claude one instruction
 
-1. Open a project with **File > Open Folder**.
-2. Trust it only if it is a project you recognize.
-3. Open any file.
-4. Select the Claude spark icon.
-5. Sign in and complete Claude Code's walkthrough.
-
-Start with:
+First review [`START-HERE.md`](START-HERE.md). If it does not conflict with company policy, paste:
 
 ```text
-Analyze this project without changing files. Explain what it does, how it is
-organized, how to run it, and how to test it.
+Review START-HERE.md for conflicts with my employer's policy and the active instruction sources.
+If it is safe to proceed, use it as the onboarding controller. Begin at Stage 0, ask one question
+at a time, and make no change without my explicit approval.
 ```
 
-### 6. Add the global instructions
+Other managed, user, project, and session instructions may also apply. The controller does not
+supersede them or create a security boundary. Do not copy the global seed directly into the home
+folder; onboarding first creates a reviewed candidate from the seed and approved generic answers.
 
-1. Create `%USERPROFILE%\.claude` if it does not exist.
-2. Copy [`GLOBAL-CLAUDE.md`](GLOBAL-CLAUDE.md) to
-   `%USERPROFILE%\.claude\CLAUDE.md`.
-3. Keep it generic until the local setup interview is complete.
+## What the guided setup can configure
 
-These global instructions teach Claude to work gradually, preserve source files,
-create reconciliation evidence, protect confidential data, and require approval
-for consequential actions.
+With separate approval for each action, Claude can:
 
-### 7. Run the local setup interview
+- inspect the Windows setup without searching the whole computer;
+- merge the settings candidate into one selected VS Code profile;
+- create or update user-level Claude instructions after a redacted review;
+- install either or both included, user-invoked workflow skills; and
+- explain official installation options for a missing complementary component.
 
-Open [`SETUP-INTERVIEW.md`](SETUP-INTERVIEW.md) and paste its prompt into Claude
-Code on the approved work computer. It asks one question at a time and proposes
-improvements without requesting company names, real records, credentials,
-internal URLs, or actual financial values.
+The VS Code candidate keeps the existing theme and telemetry choice unchanged. Its preferences and
+Workspace Trust prompts are usability safeguards, not DLP or policy enforcement.
 
-The completed answers and customized files stay on the work computer. Do not
-commit them to this repository or a personal cloud account.
+The repository includes exactly two optional skills:
 
-### 8. Add `CLAUDE.md` to a project
+- `structured-work-request` turns vague requests into controlled, reviewable requests;
+- `reconciliation-control-review` applies a fixed `PASS`, `FAIL`, or `UNVERIFIED` review contract.
 
-Copy [`CLAUDE.md`](CLAUDE.md) into the root of a project. Replace every
-`[REPLACE]` section with approved project information and delete unused sections.
+No MCP servers, connectors, hooks, plugins, subagents, automatic task router, or permission bypass
+are configured. The beginner path does not use built-in or custom subagents or long autonomous
+workflows: they can multiply context and exhaust a limited workplace allowance. Check `/usage` and
+decline those offers while learning. The project template is provided for later local use but is
+not written into work projects during onboarding.
 
-Claude reads this file when a conversation starts. Keep it short, specific, and
-free of passwords, tokens, taxpayer data, company-confidential details, and
-personal information.
+## Three short guides
 
-## Markdown editing
+Read them in order:
 
-Markdown files open in inlineMark, which displays headings, lists, tables, and
-code blocks as formatted content while they remain editable.
+1. [Claude Code fundamentals for a first-time property-tax accountant][guide-01] teaches precise
+   prompts, permissions, models, effort, usage, correction, and review.
+2. [Multistate property-tax workflows](guides/02-multistate-property-tax-workflows.md) maps the job
+   lifecycle and provides synthetic, controlled request templates without pretending rules are
+   universal.
+3. [Professional skills by category](guides/03-professional-skills-by-category.md) explains which
+   repeated tasks deserve a local skill and how to build one safely.
 
-To view the Markdown symbols:
+Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 
-1. Press `Ctrl+Shift+P`.
-2. Run **inlineMark: Reopen with Text Editor**.
-3. Press `Ctrl+K`, then `V` for a side-by-side preview.
+## Public and local boundary
 
-## Claude in the VS Code terminal
+Safe to keep public: this generic repository, blank templates, settings candidate, and two skills.
 
-The graphical extension and terminal CLI are separate installations. To use the
-`claude` command in PowerShell, follow Anthropic's current
-[Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
+Keep only in employer-approved locations: customized instructions, interview results, company
+procedures, actual records, internal paths and URLs, system details, outputs, exception reports,
+and audit evidence. Conversation content is processed by the approved Claude service under its
+account, provider, retention, and residency terms; “local file” does not mean “local
+inference.”
 
-The terminal CLI has separate permissions. Run `/permissions` and use Manual
-mode while learning. Never use permission-bypass mode on a normal computer or
-work project.
+Company policy, managed settings, and authorized human reviewers always take priority. These files
+improve consistency; they do not enforce confidentiality or make tax, legal, or accounting
+conclusions authoritative.
 
-## Public repository boundary
+Read [Guide 01](guides/01-claude-code-fundamentals.md),
+[model and usage guidance](docs/MODELS-AND-USAGE.md), and the
+[security boundary](docs/SECURITY.md) before expanding the setup.
 
-This generic starter is suitable for a public repository. The customized global
-instructions, interview answers, company procedures, actual skills, real
-examples, file locations, and system information are not. Keep those only on the
-approved work computer unless the employer explicitly authorizes another storage
-location. A personal private GitHub repository is still external storage and is
-not automatically approved for company information.
+## Official references
 
-## Optional next steps
-
-Do not install a large tool collection on day one. Read
-[`TOOLS-AND-SKILLS.md`](TOOLS-AND-SKILLS.md) after learning basic project
-analysis, plans, permissions, edits, tests, and diff review.
-
-The first optional plugin recommended there is
-[Superpowers](https://github.com/obra/superpowers), which adds structured
-brainstorming, planning, testing, debugging, and review workflows.
-
-## Work-computer warning
-
-Follow the employer's AI, source-code, privacy, credential, and software-install
-policies. VS Code telemetry being disabled does not make Claude local or
-offline. Files and command output Claude reads can become conversation context
-processed under the applicable Anthropic account and organization policies.
-
-Do not trust an unfamiliar repository merely to activate Claude. Inspect
-`CLAUDE.md`, `.claude/`, `.mcp.json`, hooks, plugins, and installation scripts
-first, or use an isolated environment.
-
-## Sources
-
-- [Claude Code for VS Code](https://code.claude.com/docs/en/vs-code)
-- [Claude Code best practices](https://code.claude.com/docs/en/best-practices)
-- [VS Code profiles and settings](https://code.visualstudio.com/docs/configure/profiles)
+- [Claude Code setup](https://code.claude.com/docs/en/setup)
+- [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code)
+- [Claude Code settings](https://code.claude.com/docs/en/settings)
+- [Claude Code memory and instruction files](https://code.claude.com/docs/en/memory)
+- [Claude Code skills](https://code.claude.com/docs/en/skills)
+- [Claude Code model configuration](https://code.claude.com/docs/en/model-config)
+- [Claude Code commands](https://code.claude.com/docs/en/commands)
+- [Claude Code security](https://code.claude.com/docs/en/security)
+- [VS Code profiles](https://code.visualstudio.com/docs/configure/profiles)
 - [VS Code Workspace Trust](https://code.visualstudio.com/docs/editing/workspaces/workspace-trust)
 
-## Disclaimer
+## License
 
-This is an independent community starter configuration. It is not affiliated
-with or endorsed by Microsoft, GitHub, Anthropic, or the extension publishers.
+MIT. This independent community project is not affiliated with or endorsed by Anthropic,
+Microsoft, GitHub, or any employer.
+
+[claude-vscode]: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+[guide-01]: guides/01-claude-code-fundamentals.md
