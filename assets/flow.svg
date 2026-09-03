@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="300" viewBox="0 0 1600 300" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">The eight-stage onboarding controller</title>
+  <desc id="flow-desc">A horizontal pipeline of nine stages, zero through eight, from approval and preflight through a redacted completion receipt, each gated on explicit approval.</desc>
+  <defs>
+    <linearGradient id="flow-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08101f"/>
+      <stop offset="0.58" stop-color="#0b1730"/>
+      <stop offset="1" stop-color="#07111b"/>
+    </linearGradient>
+    <linearGradient id="flow-blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5aa7ff"/>
+      <stop offset="1" stop-color="#7ad9ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="300" fill="url(#flow-bg)"/>
+  <circle cx="80" cy="30" r="160" fill="#183b69" opacity="0.14"/>
+  <circle cx="1540" cy="270" r="160" fill="#0d68a0" opacity="0.10"/>
+
+  <text x="60" y="46" fill="#7ad9ff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="4">START-HERE.md</text>
+  <text x="60" y="76" fill="#f3f7ff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="760" letter-spacing="-0.5">The eight-stage onboarding controller</text>
+
+  <line x1="80" y1="190" x2="1520" y2="190" stroke="#2c4a70" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <circle cx="80" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="80" y="197" fill="#eef6ff" font-size="20" font-weight="700">0</text>
+      <text x="80" y="240" fill="#dce8fa" font-size="14" font-weight="700">APPROVAL</text>
+      <text x="80" y="258" fill="#7891b2" font-size="12">preflight</text>
+    </g>
+    <g>
+      <circle cx="260" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="260" y="197" fill="#eef6ff" font-size="20" font-weight="700">1</text>
+      <text x="260" y="240" fill="#dce8fa" font-size="14" font-weight="700">POLICY</text>
+      <text x="260" y="258" fill="#7891b2" font-size="12">boundary</text>
+    </g>
+    <g>
+      <circle cx="440" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="440" y="197" fill="#eef6ff" font-size="20" font-weight="700">2</text>
+      <text x="440" y="240" fill="#dce8fa" font-size="14" font-weight="700">INTERVIEW</text>
+      <text x="440" y="258" fill="#7891b2" font-size="12">work goals</text>
+    </g>
+    <g>
+      <circle cx="620" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="620" y="197" fill="#eef6ff" font-size="20" font-weight="700">3</text>
+      <text x="620" y="240" fill="#dce8fa" font-size="14" font-weight="700">INSTRUCTIONS</text>
+      <text x="620" y="258" fill="#7891b2" font-size="12">draft + backup</text>
+    </g>
+    <g>
+      <circle cx="800" cy="190" r="34" fill="#173c65" stroke="#7ad9ff" stroke-width="3"/>
+      <text x="800" y="198" fill="#f3f7ff" font-size="22" font-weight="700">4</text>
+      <text x="800" y="242" fill="#f1f6ff" font-size="15" font-weight="700">VS CODE</text>
+      <text x="800" y="260" fill="#8ea3c2" font-size="12">merge + rollback</text>
+    </g>
+    <g>
+      <circle cx="980" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="980" y="197" fill="#eef6ff" font-size="20" font-weight="700">5</text>
+      <text x="980" y="240" fill="#dce8fa" font-size="14" font-weight="700">SKILLS</text>
+      <text x="980" y="258" fill="#7891b2" font-size="12">three, optional</text>
+    </g>
+    <g>
+      <circle cx="1160" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="1160" y="197" fill="#eef6ff" font-size="20" font-weight="700">6</text>
+      <text x="1160" y="240" fill="#dce8fa" font-size="14" font-weight="700">MODEL</text>
+      <text x="1160" y="258" fill="#7891b2" font-size="12">and usage</text>
+    </g>
+    <g>
+      <circle cx="1340" cy="190" r="30" fill="#173c65" stroke="#69c9ff" stroke-width="2"/>
+      <text x="1340" y="197" fill="#eef6ff" font-size="20" font-weight="700">7</text>
+      <text x="1340" y="240" fill="#dce8fa" font-size="14" font-weight="700">PRACTICE</text>
+      <text x="1340" y="258" fill="#7891b2" font-size="12">synthetic only</text>
+    </g>
+    <g>
+      <circle cx="1520" cy="190" r="30" fill="#143b35" stroke="#3fae8a" stroke-width="2"/>
+      <path d="M1508 190l7 7 15-16" fill="none" stroke="#78e2bd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1520" y="240" fill="#dce8fa" font-size="14" font-weight="700">RECEIPT</text>
+      <text x="1520" y="258" fill="#7891b2" font-size="12">redacted, stage 8</text>
+    </g>
+  </g>
+
+  <text x="800" y="292" text-anchor="middle" fill="#5f7a9d" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="1.5">ONE QUESTION AT A TIME • NO OR UNKNOWN IS A HARD STOP • NOTHING WRITES WITHOUT APPROVAL</text>
+</svg>

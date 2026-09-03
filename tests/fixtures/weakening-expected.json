@@ -1,0 +1,6 @@
+{
+  "security.workspace.trust.enabled": true,
+  "security.workspace.trust.startupPrompt": "always",
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on"
+}

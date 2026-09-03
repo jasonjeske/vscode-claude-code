@@ -54,6 +54,9 @@ At Stage 0, explain in plain language:
 
 Then begin Stage 0 with the first approval question below.
 
+To see what this flow looks like end to end before running it, read
+`docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md`. It is synthetic and illustrative, not a real session.
+
 ## Stage 0: approval and preflight
 
 Marker: `[SETUP 0/8 — APPROVAL AND PREFLIGHT]`
@@ -170,6 +173,9 @@ reconciliation, approval, memory, and token rules; uses only generic approved in
 separates facts from assumptions; and includes approval boundaries. Explain that it guides behavior
 but does not enforce policy. Present the safe candidate plus a redacted change summary. If existing
 content must remain private, direct the user to review it locally rather than printing it.
+
+If the user wants help reviewing the candidate before deciding, point them to
+`guides/04-reviewing-claude-plans-and-diffs.md`.
 
 Ask: **“Approve a backup and one reviewed write of this candidate to User instructions?”**
 

@@ -25,6 +25,10 @@ work computer unless the user separately moves them.
 
 Repository ignore rules reduce accidental Git staging; they are not data-loss prevention (DLP).
 
+Every Windows-specific claim in this repository is tracked per claim in
+[`docs/WINDOWS-VERIFICATION.md`](docs/WINDOWS-VERIFICATION.md). Rows marked `UNVERIFIED` were
+written from vendor documentation and have not been exercised on a Windows machine.
+
 ## Confirm approval before setup
 
 Before installing software or signing in, confirm all of the following through employer policy or
@@ -85,6 +89,12 @@ upgrade.
 
 ## Run the full onboarding
 
+![The eight-stage onboarding controller](assets/flow.svg)
+
+To see what this flow looks like before starting it, read the
+[example onboarding transcript](docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md). It is synthetic and
+illustrative rather than a recording of a real session.
+
 First review [`START-HERE.md`](START-HERE.md). If it does not conflict with company policy, paste:
 
 ```text
@@ -144,7 +154,7 @@ content is processed by the approved Claude service; local storage does not mean
 Use generic redacted summaries only and confirm employer policy first. See the complete
 [work-memory design and limits](docs/WORK-MEMORY.md).
 
-## Three short guides
+## Six short guides
 
 Read them in order:
 
@@ -155,6 +165,13 @@ Read them in order:
    universal.
 3. [Professional skills by category](guides/03-professional-skills-by-category.md) explains which
    repeated tasks deserve a local skill and how to build one safely.
+4. [Reviewing Claude's plans and diffs](guides/04-reviewing-claude-plans-and-diffs.md) teaches how
+   to read a plan before approving it, how to read a diff, and what a good refusal sounds like.
+5. [After onboarding, the growth path](guides/05-after-onboarding-growth-path.md) covers graduation,
+   building more bounded skills, and why graduating unlocks no new machinery.
+6. [A budget-aware status line](guides/06-budget-aware-statusline.md) sets up an optional status line
+   that shows context usage, this session's cost, and, only when your organization's tooling actually
+   reports it, your spend-cap utilization, so a metered seat does not run out mid-project unnoticed.
 
 Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 
@@ -190,6 +207,12 @@ Read [Guide 01](guides/01-claude-code-fundamentals.md), the
 - [Claude Code security](https://code.claude.com/docs/en/security)
 - [VS Code profiles](https://code.visualstudio.com/docs/configure/profiles)
 - [VS Code Workspace Trust](https://code.visualstudio.com/docs/editing/workspaces/workspace-trust)
+
+## Project documents
+
+- [Changelog](CHANGELOG.md) records what changed in each release.
+- [Contributing](CONTRIBUTING.md) covers what fits here, the design principles a change may not
+  weaken, the test commands, and the release checklist.
 
 ## License
 

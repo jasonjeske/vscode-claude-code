@@ -1,0 +1,5 @@
+{
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.rulers": [100],
+  "files.exclude": { "**/.git": true }
+}

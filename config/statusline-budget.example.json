@@ -1,0 +1,4 @@
+{
+  "monthly_budget_usd": null,
+  "note": "Copy this file to statusline-budget.json next to statusline.ps1 and replace null with the monthly USD figure your Claude Code administrator gave you for the gateway spend limit that applies to you. Leave it null to show the percentage alone with no invented dollar amount. This number is never sent anywhere; the status line script reads it from local disk only."
+}
