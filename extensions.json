@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "anthropic.claude-code",
-    "2001y.inlinemark",
-    "davidanson.vscode-markdownlint",
-    "streetsidesoftware.code-spell-checker",
-    "github.github-vscode-theme"
-  ]
-}
