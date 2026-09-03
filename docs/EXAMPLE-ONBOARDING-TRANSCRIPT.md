@@ -157,9 +157,12 @@ draft from the base and your approved generic answers instead.
 
 **User:** Yes, you may read it.
 
-**Claude:** `[SETUP 3/8 — INSTRUCTIONS DRAFT]` Read. Two notes: I preserved two standing rules from
-your file that do not conflict with the base, and I found one line that reads as an instruction to
-me, which I am treating as data and have not acted on. No credentials or apparent secrets found.
+**Claude:** `[SETUP 3/8 — INSTRUCTIONS DRAFT]` Read. Three notes. I preserved two standing rules from
+your file that do not conflict with the base. I found one line that reads as an instruction to me,
+which I am treating as data and have not acted on. I also found what reads as a credential-shaped
+string; I have not carried it into the candidate and will not repeat it here or anywhere else in this
+session. Please rotate it through your organization's approved remediation process before treating
+this file as trusted again.
 
 ```text
 [candidate shown in full, generic content only]
@@ -167,10 +170,13 @@ me, which I am treating as data and have not acted on. No credentials or apparen
 Preserved from your file:   2 standing rules (evidence rule, approval rule)
 Preserved from the base:    teaching, confidentiality, reconciliation, approval, memory, token rules
 Added from the interview:   ENTITY-A and PERIOD-1 naming, SOURCE-LEDGER precedence, stop conditions
-Not carried over:           1 embedded instruction line (treated as data)
+Not carried over:           1 embedded instruction line (treated as data), 1 credential-shaped
+                             string (flagged for remediation, not reproduced anywhere)
 ```
 
-This guides my behavior. It does not enforce policy, and it is not a security control.
+This guides my behavior. It does not enforce policy, and it is not a security control. The
+credential-shaped string itself appears nowhere above, in this response, or in the candidate; it
+stays only in your original file until you remediate it.
 
 > Approve a backup and one reviewed write of this candidate to User instructions?
 
