@@ -1,0 +1,56 @@
+# Windows verification ledger
+
+Every Windows-specific behavior this repository asserts was written from vendor documentation on a
+macOS machine. None of it has been exercised on a real Windows install.
+
+That is a normal state for a young project and a bad thing to leave unsaid, so it is tracked here
+per claim instead of being implied away. A row's status changes only when a human runs the procedure
+on real Windows and records what happened, with the date. Until then every row reads `UNVERIFIED`,
+and `UNVERIFIED` means exactly what it says: the claim may well be correct, but nobody has checked.
+
+This ledger deliberately has no CI job behind it. A `windows-latest` runner cannot open a GUI, click
+a Workspace Trust dialog, or hold a managed group policy, so a green Windows job would assert far
+more than it tested. See decision D2 in `AGENTS.md`.
+
+## How to verify a row
+
+1. Use a real Windows machine, ideally one managed the way the target user's machine is managed.
+2. Run the procedure in the row exactly as written.
+3. Record the outcome, the date, and the Windows and VS Code versions in the notes column.
+4. If the claim is wrong, fix the claim in its source file first, then update this row.
+5. Never mark a row from documentation, from a virtual machine that is not representative, or from
+   reasoning about what should happen.
+
+A row that fails is more valuable than a row that passes. It means the repository was about to tell
+a first-time user something untrue on a machine holding confidential records.
+
+## Ledger
+
+| ID | Claim | Where stated | Procedure | Status | Verified on | Notes |
+|---|---|---|---|---|---|---|
+| W01 | `%USERPROFILE%\.claude\CLAUDE.md` is the correct user-level instruction file path | `START-HERE.md` Stage 0, `README.md` quick start | Open a Windows shell, resolve the path, confirm Claude Code reads instructions from it | UNVERIFIED | | Central to Stage 3; every write target depends on it |
+| W02 | Claude can detect that the OS is Windows and appears managed | `START-HERE.md` Stage 0 preflight | Run Stage 0 on a domain-joined machine and on an unmanaged one, compare the reported result | UNVERIFIED | | Managed detection is the weakest half of this claim |
+| W03 | `code` and `claude` are discoverable on PATH without signing in | `START-HERE.md` Stage 0 preflight | Fresh install, no sign-in, run the preflight, confirm both report FOUND or MISSING correctly | UNVERIFIED | | PATH entry for `code` depends on an installer checkbox |
+| W04 | Installed VS Code version and selected profile are discoverable | `START-HERE.md` Stage 0 preflight | With two profiles configured, confirm the preflight names the active one | UNVERIFIED | | Profile discovery is the part most likely to fail |
+| W05 | Extension `anthropic.claude-code` and its source are discoverable | `START-HERE.md` Stage 0 preflight | Install from the Marketplace, then from a managed catalog, compare reported source | UNVERIFIED | | Source reporting may differ under a managed catalog |
+| W06 | Existence of the user instruction file can be checked without reading it | `START-HERE.md` Stage 0 preflight | Create the file with distinctive content, run preflight, confirm content is never echoed | UNVERIFIED | | A privacy claim, so verify by observing what is printed |
+| W07 | VS Code user and profile settings targets are discoverable | `START-HERE.md` Stage 0, Stage 4 | Confirm the discovered target resolves under `%APPDATA%\Code\User` for the default profile | UNVERIFIED | | Path differs for portable and per-profile installs |
+| W08 | `/status` shows the provider and workplace account or tenant | `START-HERE.md` Stage 0 | Run `/status` on an enterprise account and read what is actually displayed | UNVERIFIED | | Stage 0 stops if this cannot be confirmed |
+| W09 | Installing a missing component may request administrator rights | `START-HERE.md` Stage 0, `README.md` install flows | Attempt an install as a standard user, record the elevation prompt | UNVERIFIED | | Determines whether the offer path is usable at all |
+| W10 | VS Code installs through an approved company method | `README.md` extension-first flow | Install through a managed deployment, confirm the starter flow still applies | UNVERIFIED | | Company method varies; verify at least one real one |
+| W11 | `claude` runs from a terminal opened in the starter folder | `README.md` CLI-first flow | Open the folder in Windows Terminal and PowerShell, run `claude` in each | UNVERIFIED | | Execution policy may block the CLI shim |
+| W12 | A managed machine may block installation with no bypass | `README.md`, `START-HERE.md` Stage 0 | On a machine with policy applied, confirm the block is reported and not worked around | UNVERIFIED | | The no-bypass behavior is the claim under test |
+| W13 | Stage 3 backup is created beside the existing file and reads back | `START-HERE.md` Stage 3 | With an existing instruction file present, approve the write, confirm the backup exists and opens | UNVERIFIED | | Verify the backup is readable, not merely created |
+| W14 | Stage 3 readback validates the written file matches the reviewed candidate | `START-HERE.md` Stage 3 | Corrupt the file between write and readback, confirm the mismatch is detected | UNVERIFIED | | Same drill as P3 in `tests/QA-RUNBOOK.md` |
+| W15 | Backup and readback preserve CRLF line endings and any byte order mark | `START-HERE.md` Stage 3, Stage 4 | Author the original as CRLF with a BOM, run the write, compare bytes before and after | UNVERIFIED | | Highest-risk unverified claim; a silent LF rewrite corrupts a managed file |
+| W16 | Stage 4 presents settings targets by profile label and merges into the selected one | `START-HERE.md` Stage 4 | With two profiles present, select the second, confirm the first is untouched | UNVERIFIED | | Stage 4 states it must not alter another profile |
+| W17 | The recursive merge preserves existing nested keys in a real settings file | `START-HERE.md` Stage 4 | Use a settings file with language-specific blocks, compare against `tests/merge-spec.mjs` output | UNVERIFIED | | The semantics are pinned; this checks them on real input |
+| W18 | `terminal.integrated.defaultProfile.windows` set to PowerShell takes effect | `config/vscode-settings.json` | Apply the setting, open a new terminal, confirm the profile is PowerShell | UNVERIFIED | | May be overridden by a managed policy |
+| W19 | Workspace Trust prompts appear at startup with the pinned trust settings | `config/vscode-settings.json`, `README.md` | Open an untrusted folder, confirm the startup prompt and the restricted-mode banner appear | UNVERIFIED | | Trust behavior is the settings candidate's main safeguard |
+| W20 | The `claudeCode.*` settings keys are honored by the installed extension | `config/vscode-settings.json` | Apply the candidate, confirm panel location, manual permission mode, and autosave off | UNVERIFIED | | Key names may drift between extension versions |
+| W21 | `%USERPROFILE%\.claude` resolves when the profile folder is redirected to OneDrive | Implied by every `%USERPROFILE%` path in `START-HERE.md` | On a machine with Known Folder Move enabled, run Stage 3 and confirm the write target | UNVERIFIED | | Common in enterprises and easy to get wrong |
+| W22 | Paths containing spaces are handled throughout setup | Implied by all Windows paths in `START-HERE.md` and `README.md` | Use a Windows account whose profile name contains a space, run Stages 0, 3, and 4 | UNVERIFIED | | Quoting defects surface here first |
+
+## Current status
+
+22 claims tracked. 22 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.
