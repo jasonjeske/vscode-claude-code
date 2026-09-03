@@ -50,7 +50,10 @@ a first-time user something untrue on a machine holding confidential records.
 | W20 | The `claudeCode.*` settings keys are honored by the installed extension | `config/vscode-settings.json` | Apply the candidate, confirm panel location, manual permission mode, and autosave off | UNVERIFIED | | Key names may drift between extension versions |
 | W21 | `%USERPROFILE%\.claude` resolves when the profile folder is redirected to OneDrive | Implied by every `%USERPROFILE%` path in `START-HERE.md` | On a machine with Known Folder Move enabled, run Stage 3 and confirm the write target | UNVERIFIED | | Common in enterprises and easy to get wrong |
 | W22 | Paths containing spaces are handled throughout setup | Implied by all Windows paths in `START-HERE.md` and `README.md` | Use a Windows account whose profile name contains a space, run Stages 0, 3, and 4 | UNVERIFIED | | Quoting defects surface here first |
+| W23 | `statusline.ps1` parses the real stdin JSON and prints a line without error | `config/statusline.ps1` | Wire it up per `guides/06-budget-aware-statusline.md`, start a session, confirm a line appears | UNVERIFIED | | Written against documented field names, never executed; no `pwsh` was available to authors |
+| W24 | `rate_limits.spend_limit` actually appears in the stdin JSON behind a real gateway spend limit, on Claude Code 2.1.251+ | `config/statusline.ps1`, `guides/06-budget-aware-statusline.md` | Behind an org gateway with a spend limit configured, confirm the `cap` segment appears and the percentage matches `/usage` | UNVERIFIED | | Requires organizational infrastructure the authors do not have access to |
+| W25 | The forward-slash `statusLine.command` path works whether Claude Code routes through Git Bash or PowerShell | `guides/06-budget-aware-statusline.md` | Configure the command as written on a machine with Git Bash installed, and again on one without it | UNVERIFIED | | The guide's own claim about why forward slashes matter is itself unverified |
 
 ## Current status
 
-22 claims tracked. 22 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.
+25 claims tracked. 25 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.

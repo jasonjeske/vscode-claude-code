@@ -154,7 +154,7 @@ content is processed by the approved Claude service; local storage does not mean
 Use generic redacted summaries only and confirm employer policy first. See the complete
 [work-memory design and limits](docs/WORK-MEMORY.md).
 
-## Five short guides
+## Six short guides
 
 Read them in order:
 
@@ -169,6 +169,9 @@ Read them in order:
    to read a plan before approving it, how to read a diff, and what a good refusal sounds like.
 5. [After onboarding, the growth path](guides/05-after-onboarding-growth-path.md) covers graduation,
    building more bounded skills, and why graduating unlocks no new machinery.
+6. [A budget-aware status line](guides/06-budget-aware-statusline.md) sets up an optional status line
+   that shows context usage, this session's cost, and, only when your organization's tooling actually
+   reports it, your spend-cap utilization, so a metered seat does not run out mid-project unnoticed.
 
 Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 

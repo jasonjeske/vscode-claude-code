@@ -22,13 +22,18 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `tests/QA-RUNBOOK.md`, a manual conformance protocol for the parts of the onboarding that a script
   cannot test, including a rollback drill.
 - `docs/WINDOWS-VERIFICATION.md`, a per-claim ledger of every Windows behavior this repository
-  asserts. All 22 rows start `UNVERIFIED` because nothing here has been exercised on Windows.
+  asserts. All 25 rows start `UNVERIFIED` because nothing here has been exercised on Windows.
 - `docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md`, a synthetic worked transcript of all nine stages, so you
   can see what the onboarding does before granting it any approval.
 - `guides/04-reviewing-claude-plans-and-diffs.md` on reviewing a plan, reading a diff, recognizing
   red flags, and refusing well.
 - `guides/05-after-onboarding-growth-path.md` on what growth looks like after onboarding, and why
   graduating does not unlock MCP servers, connectors, hooks, plugins, or subagents.
+- `guides/06-budget-aware-statusline.md`, `config/statusline.ps1`, and
+  `config/statusline-budget.example.json`: an optional Claude Code status line for a metered
+  workplace seat, showing context usage and this session's cost always, and a gateway spend-cap
+  percentage only when your organization's own tooling actually reports one. No dollar figure is
+  ever invented; it is calculated locally only from a number you type in yourself.
 
 ### Changed
 

@@ -25,3 +25,6 @@ backups/
 
 # Local project-ledger metadata is not part of the public repository.
 /PROJECT.md
+
+# The user's real monthly budget figure. Only the blank .example.json ships.
+config/statusline-budget.json
