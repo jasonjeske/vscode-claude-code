@@ -89,6 +89,11 @@ current [command reference](https://code.claude.com/docs/en/commands).
 7. Check `/usage` before a long task and `/context` before adding files.
 8. Stop at a clear, redacted handoff if safe completion exceeds remaining usage.
 
+Targeted recall can save context: inspect native project memory with `/memory`, or read only
+`NOW.md`, `INDEX.md`, and one approved cross-project topic. Native auto memory and the optional wiki
+are not free context; every recalled note consumes context and usage. Never load all notes to avoid
+writing a precise task prompt.
+
 ## No subagents or autonomous workflows in the starter
 
 A **job workflow** is the human end-to-end process. A **skill** is one invoked instruction for a
