@@ -1,0 +1,6 @@
+{
+  "claudeCode.initialPermissionMode": "manual",
+  "security.workspace.trust.startupPrompt": "always",
+  "editor.fontSize": 14,
+  "editor.renderWhitespace": "boundary"
+}
