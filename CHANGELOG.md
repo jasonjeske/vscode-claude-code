@@ -17,7 +17,7 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `tests/merge-spec.mjs`, an executable specification of the Stage 4 settings merge rules, checked
   against committed fixtures including a case that proves a weakening setting is refused even when
   the key is absent from the existing file.
-- `tests/fixtures/`, nine pinned JSON merge cases plus a synthetic instruction file for the manual
+- `tests/fixtures/`, twelve pinned JSON merge cases plus a synthetic instruction file for the manual
   Stage 3 drill.
 - `tests/QA-RUNBOOK.md`, a manual conformance protocol for the parts of the onboarding that a script
   cannot test, including a rollback drill.
@@ -41,6 +41,25 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   unverified.
 - `START-HERE.md` points to the example transcript before Stage 0 and to guide 04 in Stage 3. No
   stage logic changed.
+
+### Fixed
+
+Three defects found by running the `tests/QA-RUNBOOK.md` drill against this repository.
+
+- The Stage 3 drill fixture, `tests/fixtures/claude-md-existing.md`, contained nothing to refuse, so
+  three of the five untrusted-content rules it was meant to test could not be tested: a session that
+  obeyed an embedded instruction looked exactly like one that correctly refused. The fixture now
+  carries an embedded instruction that tries to skip the Stage 3 approval question, and a
+  credential-shaped string that is entirely invented. The runbook states what must happen to each.
+- The Stage 4 merge specification exercised only two of its five protected settings. A new
+  `gateway` fixture case covers the remaining three: the startup-prompt setting, the
+  `claudeCode.initialPermissionMode` approval gate, and any key naming automatic approval or a
+  permission bypass. It also proves the rule still adds ordinary new settings rather than blocking
+  everything unfamiliar.
+- `docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md` showed the `[SETUP stage/8 — NAME]` marker on only 9 of
+  its 31 Claude turns, contradicting the rule in `START-HERE.md` that requires it in every response,
+  and omitting it from the approval and write-result turns that matter most. Every turn now carries
+  the marker for its stage.
 
 ## [1.1.0] - 2026-09-03
 

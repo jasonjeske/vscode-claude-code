@@ -214,7 +214,9 @@ If approved:
 
 1. create and verify a timestamped backup beside an existing settings file;
 2. write the reviewed candidate without claiming atomicity or exactly-once guarantees;
-3. parse the written JSON and verify all approved leaf values while preserving unrelated keys; and
+3. parse the written JSON and verify it matches the reviewed candidate exactly, key for key, not only
+   the keys the merge touched, so a change to any key that was never part of the reviewed candidate
+   cannot pass silently; and
 4. if writing or validation fails, restore the verified backup, or delete a newly created invalid
    file when no prior file existed. Report `ROLLED BACK` and stop.
 

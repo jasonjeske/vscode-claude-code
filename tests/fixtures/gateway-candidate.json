@@ -1,0 +1,6 @@
+{
+  "claudeCode.initialPermissionMode": "acceptEdits",
+  "security.workspace.trust.startupPrompt": "never",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "editor.renderWhitespace": "boundary"
+}
