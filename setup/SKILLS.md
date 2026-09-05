@@ -28,6 +28,9 @@ own namespace. Check the installed source rather than assuming a project copy wi
    Preserve a dated backup **outside** the active `skills` directory and confirm its files open.
 4. Copy the complete selected folder. For example, copy `skills/prompt-coach` into the destination
    `skills` folder, giving `skills/prompt-coach/SKILL.md`. Avoid doubled nesting.
+   In Windows File Explorer, select the source folder, press **Ctrl+C**, open the destination
+   `skills` folder, then press **Ctrl+V**. If Windows asks to replace files unexpectedly, cancel
+   and return to the comparison/backup step.
 5. Compare the copied files with their source, including the research skill's `references` folder.
    In VS Code, select the source for comparison, then compare with the installed file.
 6. Open a fresh Claude conversation in the intended scope. Type `/` and select the installed skill.
@@ -58,9 +61,25 @@ For each upstream choice, review the exact source/revision, license, executable 
 network behavior, and any hooks or connector configuration. Use the employer-approved installation
 method. Preserve existing configuration. Do not run a whole collection's installer to get one skill.
 
-**Anthropic Office:** the documented marketplace route installs the Office bundle, including
-Excel, PDF, Word, and PowerPoint. After package use and installation are approved, run these in
-Claude Code's command interface or its supported terminal session, not in PowerShell:
+**Anthropic Office: optional, after the first lessons.** The marketplace route installs the Office
+bundle, including Excel, PDF, Word, and PowerPoint. After reviewing the package and obtaining the
+needed workplace approval, prefer the extension's plugin interface:
+
+1. Type `/plugins` in Claude's message box if offered. Open **Marketplaces**, add
+   `anthropics/skills`, then return to **Plugins**.
+2. Find `document-skills` from that marketplace and inspect its contents. Choose **Install for you**
+   for approved personal scope, or the specifically approved alternative scope.
+3. Apply the requested restart and check the actual installed command. Run the small synthetic
+   acceptance check below before using real workbooks.
+
+If this interface is unavailable or restricted, leave the optional install pending and ask IT for
+the supported route. The first text lessons still work.
+[Official plugin interface](https://code.claude.com/docs/en/vs-code#manage-plugins).
+
+**Command exception for a supported Claude session:** these equivalent commands are reference
+material for an approved installation. They are not PowerShell commands. If a terminal session is
+needed, follow [the terminal exception guide](../guides/00-use-vscode.md#6-use-the-terminal-only-for-a-named-exception)
+and have the standalone CLI and gateway configuration verified first.
 
 ```text
 /plugin marketplace add anthropics/skills
@@ -108,7 +127,7 @@ or database connection is available. Record blocked checks as UNVERIFIED and use
 | Research template missing | `references/research-memo.md` was copied with the skill |
 | Library or command missing | Approved runtime inventory; request the specific dependency through IT, or use a supported task |
 | No web access | Analyze supplied approved sources and label the research source-limited |
-| Plugin command unavailable in the panel | Use the supported VS Code plugin UI or approved Claude terminal; do not type slash commands into PowerShell |
+| Plugin command unavailable in the panel | Use the plugin UI above; otherwise leave the optional install pending and follow the terminal exception only with a verified setup |
 | Gateway/model error | Keep existing credentials private; use the organization's support route |
 | Workbook opens but results look stale | Check native Excel recalculation and feature preservation; parsing is not calculation |
 

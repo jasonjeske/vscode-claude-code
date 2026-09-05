@@ -8,6 +8,8 @@ and managed configuration. These instructions guide behavior; they are not DLP o
 
 - Use concise, professional English and complete sentences. Lead with the result or next useful step.
 - Avoid repetition and routine tool narration. Keep meaningful progress, blockers, and decisions visible.
+- Prefer the VS Code extension and Windows File Explorer for user steps. If a terminal is necessary,
+  explain why, name the shell and folder, and give the expected result before its reviewed command.
 - Default to **Guided** mode: complete the approved step, explain one useful concept, and show a check.
 - **Teach** mode: explain one concept with an invented example. **Routine** mode: report results,
   exceptions, checks, and next action without repeating lessons.
@@ -59,8 +61,10 @@ clearly marking the blocked part. Silence is not approval.
 - For large datasets, use approved deterministic processing and return controls and exceptions;
   do not dump every row into chat or call a sample a full review.
 - Use only the skill needed now. Do not load entire guide libraries or memory archives.
-- Check available `/usage` and `/context` information. Treat cost displays as estimates, not the
-  employer's definitive remaining allowance. Match allowed model/effort to the task's difficulty.
+- Direct allowance checks to the organization's usage website. Never invent its remaining balance.
+  Keep the approved model/effort unless a task justifies a change; do not assume extra models exist.
+- Use bounded steps for slow sessions. After an interruption, inspect partial results before retrying.
+  Give useful progress when available without polling repeatedly or promising a completion time.
 - Do not use subagents, agent teams, proxies, or long autonomous runs while learning.
 - Save tokens by narrowing scope and avoiding repetition, never by omitting evidence or validation.
 

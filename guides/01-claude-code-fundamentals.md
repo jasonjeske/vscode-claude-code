@@ -1,7 +1,8 @@
 # Claude Code fundamentals for a first-time property-tax accountant
 
-This is the shortest practical path to using Claude Code in VS Code for corporate multistate
-property-tax accounting, reconciliation, and workpaper review.
+This is a reference for Claude Code fundamentals in property-tax and accounting work.
+For the step-by-step beginner path, start with [the illustrated lessons](../LEARN.md) and
+[the extension walkthrough](00-use-vscode.md).
 
 Use only an employer-approved account, computer, data class, and storage location. Practice with
 synthetic data first. Claude assists analysis; an authorized professional owns every conclusion
@@ -67,7 +68,10 @@ Why it works:
 Invoke `/structured-work-request` for a one-question-at-a-time version after that optional skill is
 installed.
 
-## 4. Learn the essential commands
+## 4. Look up commands when needed
+
+You do not need to learn this table before doing the first lesson. Prefer the extension's controls;
+use only commands offered in the current interface. Keep terminal-only features optional.
 
 | Command | Use |
 | --- | --- |
@@ -76,7 +80,7 @@ installed.
 | `/model` | Inspect or choose an allowed model. |
 | `/effort` | Choose an available thinking-effort level. |
 | `/status` | Check provider, account, model, and configuration status. |
-| `/usage` | Check usage information exposed for the account. |
+| `/usage` | Subscription dialog where supported; use the organization's usage website for the gateway allowance. |
 | `/context` | See what consumes the context window. |
 | `/memory` | Inspect or toggle native per-project auto memory. |
 | `/compact` | Summarize older context while keeping the same objective. |
@@ -113,26 +117,21 @@ Review the redacted candidate and approve or decline the write.
 
 ## 5. Choose model and thinking effort separately
 
-Use `/model` for capability and `/effort` for supported reasoning depth. The workplace picker is
-authoritative. A practical start is the workplace default or Sonnet at `high` effort for
-substantive work. Use Haiku only for low-risk simple drafting, Opus for difficult reasoning or
-review, and Fable for the hardest or longest work when the approved account offers them.
+Keep the approved model and effort unchanged for the first lesson. Later, use the extension's
+supported controls to choose from available models. The default or Sonnet is a useful starting
+choice for guided work; optional Haiku suits simple wording, and optional Opus can help with a
+specific difficult reasoning problem. No additional model family is required.
 
-Effort levels are model-dependent. `low` and `medium` suit bounded routine work; `high` is the
-substantive-work default; `xhigh` is for complex planning; and `max` is rare and can consume more
-while overthinking. Haiku is not universally effort-capable. Effort is soft guidance, not a hard
-token cap or correctness guarantee.
-
-Read the authoritative [model, Fable, `opusplan`, effort, and usage guide][model-guide] before
-changing either control. A stronger model or higher effort never replaces source authority,
-tie-outs, exceptions, or human review.
+Effort support varies. Match it to the task without removing substantive checks to reduce usage.
+Read [models, effort, and workplace usage][model-guide] for suggested choices. A stronger model or
+higher effort never replaces source authority, tie-outs, exceptions, or human review.
 
 ## 6. Protect a limited workplace allowance
 
 1. Give one precise objective per conversation.
 2. Reference only the smallest sufficient approved inputs.
 3. Ask for a short plan before expensive analysis.
-4. Check `/usage` before long work and `/context` before adding files.
+4. Check the organization's usage website before long work; inspect `/context` if offered before adding files.
 5. Use `/compact` for the same objective and `/clear` for a new one.
 6. Stop at a documented checkpoint when safe completion exceeds remaining usage.
 7. Never save usage by removing controls, evidence, exceptions, citations, or review.

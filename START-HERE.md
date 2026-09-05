@@ -4,6 +4,11 @@ Use this path when Claude Code already works in VS Code through the approved wor
 or gateway. You need the downloaded repository, permission to add local instructions/skills, and
 an approved practice location separate from this checkout. You do not need a GitHub account or Git.
 
+**Follow this yourself:** keep this page open in your browser and complete one numbered step at a
+time. The default path uses the VS Code extension and Windows File Explorer. Read
+[where to click and type](guides/00-use-vscode.md) first if those are unfamiliar. No personal Claude
+subscription is required for this already configured gateway path. Skip optional tools until needed.
+
 If VS Code or Claude Code is missing, use the organization's installation process and
 [Anthropic's VS Code instructions](https://code.claude.com/docs/en/vs-code). The optional
 [full onboarding reference](setup/FULL-ONBOARDING.md) covers a more detailed fresh-install review.
@@ -11,13 +16,21 @@ Do not replace an existing gateway/API-key setup with a personal sign-in.
 
 ## 1. Open the starter and confirm the boundary
 
-Extract the ZIP. Read the README before trusting the folder in VS Code. Use **File > Open Folder**
+On the reviewed GitHub branch, choose **Code > Download ZIP**. In Windows File Explorer,
+right-click the downloaded ZIP and choose **Extract All**. Open the extracted folder containing
+`README.md`; do not work inside the ZIP. Read the README before trusting the folder in VS Code.
+Use **File > Open Folder**
 to open the extracted repository, then open the existing Claude Code extension.
 
 Confirm that the configured provider and intended work-data use are employer-approved. Use
 `/status` or the available account/settings view; do not paste account details or credentials into
 chat. If an optional installation is blocked, record it as unavailable and continue with the
 permitted materials. This kit does not require changes to managed settings.
+
+**Check:** send `Explain what a spreadsheet cell is in one sentence. Do not use files or tools.`
+in the extension. A readable answer confirms the basic chat path. If it fails, use the
+[waiting and support guide](guides/00-use-vscode.md); do not change credentials. If you prefer to
+learn before installing anything, complete [Lesson 1](learn/01-first-conversation.md) now and return.
 
 ## 2. Add a small global instruction file
 
@@ -37,6 +50,9 @@ Keep company-specific details in approved local project instructions. Do not cop
 library into the global file. Start a fresh Claude conversation and use `/memory`, where
 available, to inspect which instruction files are loaded.
 [Official instruction locations](https://code.claude.com/docs/en/memory).
+
+**Check:** the saved file is named exactly `CLAUDE.md`, and any predecessor has a readable backup.
+If the location is managed or blocked, leave it unchanged and continue with the text lessons.
 
 ## 3. Add the first local skills
 
@@ -74,7 +90,12 @@ I want a sheet map and one explanation of how to check a formula.
 It should help draft the request, not open work files or start editing. If the command is missing,
 use [the troubleshooting table](setup/SKILLS.md#troubleshooting).
 
+**Check:** the skill helps draft a request. If discovery is blocked, use the same request as plain
+chat and mark skill installation pending. You can still learn the workflow.
+
 ## 4. Add Excel tools when there is a task for them
+
+**Optional, later.** You can finish setup and the text-based lessons without this step.
 
 The local workbook-review skill provides an inspection procedure. For spreadsheet creation and
 editing, evaluate Anthropic's **xlsx** skill. Its Office bundle is linked, not redistributed here.
@@ -91,8 +112,11 @@ Open a new approved practice folder outside this repository. Add a project `CLAU
 [Project setup](setup/PROJECTS.md). Use only the invented examples in the
 [first-session exercise](practice/FIRST-SESSION.md).
 
-Start in **Guided** mode. Record `/usage` before and after the task if available. Confirm that the
-answer matches the answer key and that the user can explain one check. No real data is needed.
+Start in **Guided** mode. Check the organization's usage website before and after one exercise,
+allowing for reporting delay. Use [the usage steps](guides/00-use-vscode.md#3-check-usage-on-the-organizations-website).
+Keep the approved model default for this first task and send one prompt at a time.
+
+**Check:** your answer matches the answer key, and you can explain one check. No real data is needed.
 
 ## 6. Leave a usable handoff
 
@@ -103,6 +127,9 @@ passed, blocked features, and next task. Never commit the filled receipt here.
 Begin with [the illustrated learning guide](LEARN.md) for five step-by-step lessons.
 Bookmark the [daily desk guide](guides/DAILY-USE.md), [skill catalog](SKILLS.md), and
 [prompt library](prompts/PROMPT-LIBRARY.md). Stop installing when the first useful task works.
+
+**Check:** you can reopen the extension, find the next lesson, and locate the organization's usage
+page. Keep the last completed step and next action in your local receipt so you can resume alone.
 
 ## Prefer Claude to help with the copying?
 

@@ -15,9 +15,9 @@ It also generates output and may use reasoning tokens. Caching changes how repea
 priced; the employer's gateway may use its own allocation and reporting rules. A smaller answer
 does not necessarily mean a proportionally smaller bill or allowance deduction.
 
-Use `/usage` for available session statistics and `/context` to inspect context composition.
-Claude's dollar display is an estimate; the approved gateway/admin report determines the actual
-workplace allocation. Record usage before clearing a session if you need a comparison. Current
+Use the organization's usage website for the workplace allocation; follow the
+[usage walkthrough](00-use-vscode.md#3-check-usage-on-the-organizations-website). Use `/context`, if
+offered, for context composition. Session dollar displays are estimates, not a remaining balance. Record usage before clearing a session if you need a comparison. Current
 Claude versions reset the displayed session total with `/clear`; that does not refund consumption.
 [Anthropic cost and context guidance](https://code.claude.com/docs/en/costs).
 

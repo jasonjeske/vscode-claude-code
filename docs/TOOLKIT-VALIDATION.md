@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 262 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 285 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -52,6 +52,22 @@ The displayed calculation logic did not need changing.
   examples have not been executed in native Excel here.
 - Lesson behavior in Claude Code, GitHub page rendering, and target-PC display remain unverified.
   This illustration review does not change the financial dashboard's browser-testing status below.
+
+## Self-guided extension path
+
+- Reviewed the path from README to short setup, interface guide, first lesson, skill copies,
+  project-file creation, and daily use. Added per-step checks, optional-install fallbacks,
+  resume notes, and a help prompt. The baseline user steps use the extension and File Explorer.
+- Checked current Anthropic documentation for the graphical plugin manager, model/effort controls,
+  provider-specific usage limitations, and gateway credential/billing distinctions. Checked
+  Microsoft's integrated-terminal instructions. Sources are linked at the relevant instructions.
+- Made the organization's usage website the allowance reference, kept the approved default for
+  the first lesson, and removed any dependence on extra model families. Added slow-request and
+  partial-output recovery guidance without claiming a latency measurement or savings benchmark.
+- Aligned the global/learning templates and retained Stage 6 transcript with those choices. All
+  nine stage markers remain aligned. Model-executed P1-P4 onboarding drills remain NOT RUN.
+- This is documentation review, not a beginner usability study or managed-PC trial. W32 records
+  the outstanding unaided walkthrough; all 32 Windows claims remain UNVERIFIED.
 
 ## Not verified
 

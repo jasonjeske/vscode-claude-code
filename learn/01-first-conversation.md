@@ -9,10 +9,13 @@
 
 1. Use **File > Open Folder** in VS Code to select an approved practice folder outside this public
    starter. Use the existing workplace sign-in and gateway.
-2. Open the Claude Code panel through the installed extension. Its exact position can vary by
-   version; use the VS Code command palette if its button is not visible.
+2. Follow [open the Claude panel](../guides/00-use-vscode.md#1-find-the-right-place-to-type) if needed.
 3. Check the approved account/provider using the available status view. Keep credentials private.
 4. Begin a new conversation and paste the prompt below into Claude's input, not the terminal.
+
+Keep the approved model default. Send once and wait for the answer or an approval question.
+There is no time limit for this lesson; use [wait, respond, or stop](../guides/00-use-vscode.md#5-know-whether-to-wait-respond-or-stop)
+if progress is unclear.
 
 [Official VS Code guide](https://code.claude.com/docs/en/vs-code).
 
@@ -73,7 +76,7 @@ You should be able to explain why the $10 difference is an exception to investig
 file you authorized, and name the output you want. If not, ask Claude to explain that one point.
 
 For unrelated work, start a new conversation. For a correction to the same task, keep the relevant
-context. Use `/usage` and `/context` when available; never infer the employer's remaining balance
-from the length of the answer alone.
+context. Check the organization's usage website; `/context`, if offered, measures a different thing.
+Never infer the employer's remaining balance from the length of the answer alone.
 
 Next: **[Lesson 2: understand and check a spreadsheet](02-spreadsheet-work.md)**.

@@ -8,6 +8,11 @@ programming to start. All examples are invented and can later be adapted in an a
 with [Lesson 1](learn/01-first-conversation.md). No additional dashboard, website, or learning app
 is needed to use these pages.
 
+Keep the guide in your browser and Claude's extension beside it. Start with the approved default
+model; the lessons do not depend on extra model families. Send one prompt at a time, then use the
+check before moving on. There is no timed test. See [the interface and waiting guide](guides/00-use-vscode.md)
+for click-by-click help, gateway usage, and terminal exceptions. Save your last completed step locally.
+
 ![A five-step learning loop: name the task, select the input, ask Claude, check the evidence, and save the next step.](assets/learning/work-loop.svg)
 
 *Original teaching diagram. Each lesson follows the same loop; the check is part of the task.*

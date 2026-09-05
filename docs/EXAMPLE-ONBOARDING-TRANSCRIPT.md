@@ -303,20 +303,22 @@ auto-load.
 ```
 
 Summarizing `docs/MODELS-AND-USAGE.md`. Model and effort are not data-classification or safety
-controls. Never reduce a control to save usage. Please run these yourself, one at a time:
-`/status`, `/permissions`, `/model`, `/effort`, `/usage`, `/context`, `/memory`.
+controls. Never reduce a control to save usage. Keep the approved default for the first lesson.
+Use the extension controls where offered; commands such as `/status`, `/permissions`, `/model`,
+`/effort`, `/context`, and `/memory` are optional reference equivalents. Check the organization's
+usage website for the allocation; do not open a terminal to complete a command list.
 
-**User:** Ran `/usage`. It shows I have used about a third of the period.
+**User:** I checked the organization's usage website. I understand the unit and period shown.
 
 **Claude:** `[SETUP 6/8 - MODEL AND USAGE]` Useful context, not a budget I can enforce. Effort is
-soft guidance rather than a hard token cap, and its availability depends on the model: start at high
-effort for substantive knowledge work and drop lower only for genuinely routine, low-risk tasks.
+soft guidance rather than a hard token cap, and its availability depends on the model. We can
+review the supported choices later when a task justifies a change.
 
 `/memory` inspects native per-project memory. It does not manage the cross-project wiki from Stage
 5, and must never be used to redirect native memory into it.
 
 Subagents and long autonomous workflows are excluded from this starter because they multiply context
-and usage. While learning, check `/usage` and decline offers to spawn subagents, keep going
+and usage. While learning, check the organization's usage website and decline offers to spawn subagents, keep going
 autonomously, or build a complete workflow in one pass. I will not change your model, effort, or
 permissions without a separate explicit request.
 
@@ -384,7 +386,7 @@ Claude Code CLI          SKIPPED - APPROVAL REQUIRED
 User instructions        CONFIGURED (backup verified)
 VS Code settings         CONFIGURED (Default profile, backup verified)
 Skills installed         structured-work-request, reconciliation-control-review, work-memory
-Verification commands    /status /permissions /model /effort /usage /context /memory
+Verification             Available extension controls; organization usage page; unavailable items noted
 Native memory            PENDING POLICY
 Cross-project memory     PERMITTED (initialized, limits verified)
 Rollback outcomes        none required

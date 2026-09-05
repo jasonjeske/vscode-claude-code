@@ -275,14 +275,15 @@ Read and summarize `docs/MODELS-AND-USAGE.md`. Do not claim fixed allowances, pr
 availability. Explain that model and effort are not data classification or safety controls, and
 controls must never be reduced to save usage.
 
-Guide the user to run these commands themselves, one at a time, and explain results without
-reproducing account identifiers:
+Prefer the extension controls and the organization's usage website. These commands are optional
+reference equivalents: inspect only those the installed surface offers, one at a time, without
+reproducing account identifiers. Do not open a terminal simply to complete this list:
 
 1. `/status`
 2. `/permissions`
 3. `/model`
 4. `/effort`
-5. `/usage`
+5. Organization usage website; `/usage` only for a supported subscription session
 6. `/context`
 7. `/memory`
 
@@ -290,11 +291,11 @@ Explain that `/memory` inspects Claude Code's native per-project memory. It does
 repository's optional cross-project wiki and must not be used to redirect native memory into it.
 
 Explain that effort availability is model-dependent, adaptive thinking is distinct, and effort is
-soft guidance rather than a hard token cap. Start with high effort for substantive knowledge work
-when supported; use lower levels only for genuinely routine, low-risk tasks.
+soft guidance rather than a hard token cap. Keep the approved default for the first lesson.
+Later, match supported effort to the task and retain all required checks.
 
 Explain that subagents and long autonomous workflows are excluded from this starter because they
-can multiply context and usage. In the beginner path, check `/usage` and decline offers to spawn
+can multiply context and usage. In the beginner path, check the organization's usage website and decline offers to spawn
 subagents, keep going autonomously, or build a complete workflow.
 
 Do not change the model, effort, or permissions without a separate explicit request.
@@ -333,7 +334,8 @@ Print a receipt containing only:
 - neutral labels for files written and verified backups;
 - skills installed by name;
 - verification commands completed, including `/status`, `/permissions`, `/model`, `/effort`,
-  `/usage`, `/context`, and `/memory` when available;
+  `/context` and `/memory` when available, plus the organization's usage website; `/usage` is optional
+  for supported subscription sessions, not a gateway acceptance requirement;
 - native memory and cross-project memory status as `PERMITTED`, `SKIPPED`, or `PENDING POLICY`,
   without note contents;
 - rollback outcomes, unresolved policy questions, and next safe action.

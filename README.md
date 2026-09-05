@@ -9,6 +9,11 @@ with an already approved workplace account and a limited usage allowance.
 **Set up:** [START-HERE](START-HERE.md). **Learn:** [the illustrated beginner guide](LEARN.md).
 Follow five short lessons with prompts, expected results, and checks you can do yourself.
 
+Keep this guide open in your browser and work in the **VS Code extension**. The starter path uses
+an existing approved gateway connection and does not require a personal Claude subscription.
+Learn [where to click, where to type, and what to do while waiting](guides/00-use-vscode.md).
+Terminal instructions are optional exceptions; model choices and usage come from your workplace setup.
+
 | I want to... | Open this |
 | --- | --- |
 | Set up an already working Claude Code extension | [Short setup checklist](START-HERE.md) |

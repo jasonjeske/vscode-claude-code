@@ -7,6 +7,8 @@ Do not record credentials, account IDs, employer names, or confidential work exa
 - Starter snapshot/commit/release: [REFERENCE]
 - VS Code / Claude Code versions: [VERSIONS OR UNAVAILABLE]
 - Existing approved provider configuration preserved: [YES / ISSUE]
+- Approved default model and offered effort: [DISPLAYED CHOICES / UNKNOWN]
+- Organization usage page bookmarked locally: [YES / NEED HELP; NO URL HERE]
 - Installation scope: [PERSONAL / PROJECT]
 - Global instruction file: [CREATED / MERGED / UNCHANGED]
 - Verified backup locations: [APPROVED LOCAL REFERENCES]
@@ -20,6 +22,8 @@ Do not record credentials, account IDs, employer names, or confidential work exa
 - Required follow-up with IT or reviewer: [SPECIFIC ITEM]
 - Rollback instructions and verified predecessor: [REFERENCE]
 - Next useful task: [GENERIC TASK]
+- Last completed guide step and check: [STEP / RESULT]
+- Can reopen Claude in VS Code without the terminal: [YES / NEED HELP]
 - Learning mode: [TEACH / GUIDED / ROUTINE]
 - User can locate the daily guide, catalog, and prompt library: [YES / NOT YET]
 

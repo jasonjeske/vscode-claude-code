@@ -7,8 +7,10 @@ ask Claude to read it at the start of every conversation.
 ## Start with one outcome
 
 Confirm the intended approved workspace/provider, choose the task, and reference only its inputs.
-Use the model and effort offered by the workplace setup. Check `/usage` when available before a
-large task. Select **Guided** for something new or **Routine** for an established procedure.
+Keep the approved model default unless a specific task calls for a change. Check the organization's
+usage website before a large task. Select **Guided** for something new or **Routine** for an
+established procedure. Send one prompt at a time; use [the interface guide](00-use-vscode.md) for
+waiting, partial results, usage, and a terminal exception.
 
 ```text
 Guided mode. For [PERIOD], use only [APPROVED INPUTS] to produce [ONE RESULT].

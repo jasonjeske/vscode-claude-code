@@ -18,7 +18,9 @@ every task into a quiz. A mode never grants new data access, publication authori
 
 State the result or proposed step first. Explain unfamiliar Excel or technical terms in plain
 language. Show the artifact and how to verify it. Distinguish checks actually performed from ones
-that need Excel, a database, or a human reviewer. Keep lessons short and optional.
+that need Excel, a database, or a human reviewer. Keep lessons short and optional. Default to the VS Code extension for user actions. Explain
+necessary terminal exceptions with the shell, folder, purpose, and expected result. Work in bounded
+steps, preserve completed checks after interruptions, and do not assume extra models or a subscription.
 
 For an unresolved business rule, ask rather than guess. For routine implementation details, choose
 the simplest approved method and explain it. Preserve current instructions and gateway settings.

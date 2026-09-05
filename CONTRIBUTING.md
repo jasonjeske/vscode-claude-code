@@ -23,6 +23,10 @@ small context. The default path assumes the extension and approved gateway alrea
    customized work instructions, internal locations, or identifiable examples.
 2. Keep the already-working setup path short. Do not require the full onboarding interview to add
    a local skill. The full reference retains its staged merge contract for those who need it.
+   Default to the VS Code extension and Windows File Explorer. Label terminal exceptions with
+   purpose, shell, working folder, expected result, and a supported fallback. Use the organization
+   usage page as the allowance reference, never assume a personal subscription or extra models,
+   and give each beginner step a check and a way to resume.
 3. Respect approved scope. Preview configuration changes before approval; one explicit approval may
    cover a clearly listed batch. Preserve existing approved rules, verified backups, readback, and
    rollback. Silence does not authorize changes; managed policy can impose stricter requirements.

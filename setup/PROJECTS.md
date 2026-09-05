@@ -26,6 +26,12 @@ file back to this starter or a public issue.
 
 ## A small folder layout
 
+For a new practice project in Windows File Explorer, create a folder in the approved location,
+then copy your selected template into it. Rename that copy `CLAUDE.md` with file-name extensions
+visible. In VS Code, use **File > Open Folder**, select this project, open `CLAUDE.md`, edit its
+placeholders, and press **Ctrl+S**. Create any needed subfolders through File Explorer's **New > Folder**.
+Reopen the saved file to check it before starting the first project prompt. No terminal is needed.
+
 If the organization already has a workpaper layout, use it. Otherwise this is a suggested structure:
 
 ```text

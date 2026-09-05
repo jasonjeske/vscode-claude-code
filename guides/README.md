@@ -8,6 +8,7 @@ Its five lessons lead from your first conversation to adapting a real work proje
 
 | Step | Read | Practice |
 | --- | --- | --- |
+| Find your way around | [00: Use VS Code](00-use-vscode.md) | Find the chat box, check gateway usage, and handle a slow response |
 | First session | [First-session exercise](../practice/FIRST-SESSION.md) | Explain and check an invented comparison |
 | Everyday use | [Daily desk guide](DAILY-USE.md) | One task with an explicit output and check |
 | Core concepts | [01: Claude Code fundamentals](01-claude-code-fundamentals.md) | Files, prompts, permissions, model, context |
