@@ -17,6 +17,8 @@ the installation interview to use the learning materials.
 
 - [Recommended trusted skills and Windows installation](guides/07-trusted-skills-and-installation.md):
   Anthropic's Office, Data, Finance, and design skills, with source and compatibility findings.
+- [Six community skills worth adding](guides/11-community-skills-worth-adding.md): UI/UX Pro Max,
+  Impeccable, Pandas Pro, SQL Pro, Polars, and Matplotlib, with pinned source reviews and task prompts.
 - [Advanced Excel and reconciliation](guides/08-excel-and-reconciliation-playbook.md): formulas,
   PivotTables, Power Query, large files, matching, and controls.
 - [Dashboards and reporting](guides/09-dashboard-and-reporting-playbook.md), with an
@@ -218,6 +220,8 @@ Read them in order:
    presentation to checkable metrics and a synthetic exercise.
 10. [Four-week learning path](guides/10-four-week-learning-path.md) builds confidence through small,
     useful tasks and clear advancement checks.
+11. [Community skills worth adding](guides/11-community-skills-worth-adding.md) recommends focused
+    design and data tools beyond Anthropic's collection, with specific strengths and limitations.
 
 Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 

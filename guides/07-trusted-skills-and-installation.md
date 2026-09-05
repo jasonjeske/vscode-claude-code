@@ -4,6 +4,10 @@ Research checked **September 5, 2026 (UTC)**. This is a fit-based recommendation
 property-tax work, not a benchmark or a certification. No skill has been tested here against a
 production workbook, a managed Windows installation, or an organization's gateway.
 
+**Community skills are part of the recommendation too.** See
+[Guide 11](11-community-skills-worth-adding.md) for UI/UX Pro Max, Impeccable, Pandas Pro, SQL Pro,
+and focused K-Dense skills, with pinned sources, practical prompts, and installation notes.
+
 ## Start with these choices
 
 | Need | First choice | Why it fits | Important limitation |
@@ -11,6 +15,8 @@ production workbook, a managed Windows installation, or an organization's gatewa
 | Excel files | Anthropic **xlsx** | Official spreadsheet creation and editing skill | Requires a compatible local runtime; complex Excel features need native Excel validation |
 | Interactive dashboards | Anthropic Data **build-dashboard**, with **data-visualization** and **validate-data** | Covers presentation and analytical checks | Review its external chart dependencies and embedded data before sharing |
 | Visual polish | Anthropic **frontend-design** | Useful for typography, hierarchy, layout, and polished interfaces | Visual quality does not establish accounting accuracy |
+| Community dashboard design | **UI/UX Pro Max**, then **Impeccable** for refinement | Strong design direction and focused visual improvements | Review the complete package; Impeccable includes executable tooling |
+| Community data preparation | **Pandas Pro**, with **Polars** when scale justifies it | Reusable joins, transformations, and data diagnostics | Tax-specific null, precision, and matching rules must override generic examples |
 | Reconciliation methodology | Anthropic Finance **reconciliation** | Relevant to ledger/detail comparisons and reconciling items | Generic accounting guidance, not jurisdiction-specific property-tax rules |
 | Immediate learning | This repository's **prompt-coach** and **excel-workbook-review** | Small, explicit workflows that do not need Office libraries to begin | Review skill prepares findings; it does not control the Excel application |
 

@@ -37,6 +37,10 @@ Draft a short management explanation from the same numbers.
 
 **Advance when:** you can trace every figure to its source and explain what the dashboard cannot show.
 
+For additional design help, try UI/UX Pro Max from the
+[community shortlist](11-community-skills-worth-adding.md). Save deeper Impeccable refinement for
+an approved installation and a specific visual problem.
+
 ## Week 4: Make one recurring task repeatable
 
 Pick a stable task, such as combining the same approved exports each month. Record the schema,
@@ -50,6 +54,9 @@ connection. Do not schedule unattended jobs until the workflow is owned, tested,
 
 **Advance when:** another reviewer can reproduce the result using your instructions and identify
 the exact conditions where the workflow stops.
+
+Pandas Pro and SQL Pro are useful community additions at this stage. Evaluate Polars only when a
+measured bottleneck warrants a different processing tool. Guide 11 includes scoped trial prompts.
 
 ## A daily routine
 

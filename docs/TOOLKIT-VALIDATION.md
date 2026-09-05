@@ -13,6 +13,10 @@ It is not certification for production tax work.
 - Primary-source research inspected official Anthropic skill files/manifests/licenses, Claude Code
   documentation, Microsoft documentation, and the workbook-library documentation linked in the
   guides. Recommendations are dated research, not runtime acceptance results.
+- Community shortlist: inspected current public source trees, entrypoints, licenses, packaging,
+  selected references, and commit metadata for five repositories. Guide 11 records exact revisions
+  and distinguishes six recommendations from the restricted Excel Analyst Pro candidate. No
+  community skill, installer, engine, hook, or helper was installed or executed.
 
 The first independent total assertion exposed a wrong hand-written answer-key total. Recomputing
 the fixture confirmed $9,150 total book and $8,330 per paired side; the answer key was corrected.
