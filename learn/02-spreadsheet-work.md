@@ -108,7 +108,7 @@ review. Do this when workbook creation is today's useful next step, after the te
 ```text
 Use the installed Anthropic XLSX skill for one invented practice workbook. First confirm the
 skill and existing approved tools can create it; if unavailable, explain the missing capability
-and stop without installing anything. Do not read other files or browse.
+and stop without installing anything. Do not read unrelated work files or browse.
 Create a NEW outputs/practice.xlsx. If it exists, use a new unused filename and report it.
 One sheet, Practice: A1 Property, B1 Book, C1 Bill, D1 Difference.
 Row 2: P-002, 200, 210. In D2 put =IF(OR(B2="",C2=""),"Missing input",C2-B2).

@@ -212,6 +212,8 @@ git diff --check
 - Added three original navy-and-blue concept diagrams for folder/file relationships, personal
   skill installation, and request/slash/file selection. Rendered the SVGs with librsvg and inspected
   the images at 1000 pixels wide for readable labels and clipping. They are not application screenshots.
+  Also inspected the rendered GitHub installation diagram and Office steps in desktop Chrome;
+  followed the workbook-exercise link and verified its landing section and readable prompt.
 - Added the one-time update path for older manual-only copies and a synthetic workbook creation,
   native Excel check, and file-selection exercise. The workbook has not been generated or tested
   in the target environment. The intended 10/Missing input/-200 results specify acceptance criteria.
