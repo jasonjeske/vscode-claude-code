@@ -111,6 +111,13 @@ The displayed calculation logic did not need changing.
   identity is assumed. Its installed controls need a separate PC-specific check.
 - The prompt-file example uses an explicit bill correction from 210 to 215; the later case changes
   book 200 to 230. Expected signed results are +15 and -15, with unknown cause and distinct outputs.
+- Extracted a ZIP made from the committed Git tree into a temporary directory and copied its
+  practice project. Verified all five subfolders, CLAUDE.md, complete six-skill contents, and the
+  research reference. Simulated copying only missing skills while preserving two existing copies.
+  Created root/nested request fixtures and checked the +15/-15 arithmetic without invoking Claude.
+- In Chrome, checked the rendered GitHub README's ten ordered sections and visually inspected the
+  Markdown exercise. Expanded the second-result disclosure and verified its displayed -15 answer.
+  These are guide-rendering checks, not VS Code, installed-extension, or model behavior tests.
 - Target Windows/editor, gateway, @-reference, dictation interpretation, and skill behavior remain
   NOT RUN. W32, W34, and W35 track setup, editor operations, and current-file behavior separately.
 
