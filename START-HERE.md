@@ -20,11 +20,17 @@ Do not point Claude at the whole repo and ask it to configure everything.
 
 ## 1. Open the starter and confirm the boundary
 
-On the reviewed GitHub branch, choose **Code > Download ZIP**. In Windows File Explorer,
-right-click the downloaded ZIP and choose **Extract All**. Open the extracted folder containing
-`README.md`; do not work inside the ZIP. Read the README before trusting the folder in VS Code.
-Use **File > Open Folder**
-to open the extracted repository, then open the existing Claude Code extension.
+Open the [repository home page](https://github.com/jasonjeske/vscode-claude-code), then choose
+**Code > Download ZIP**. The Code button is on the repository home page, not this document page.
+You can also [download the current main-branch ZIP directly](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip).
+In Windows File Explorer, right-click the downloaded ZIP and choose **Extract All**. Open the
+extracted folder containing `README.md`, `START-HERE.md`, `setup`, `skills`, and `templates`.
+Windows may place that folder one level inside the extraction destination. Do not work inside
+the ZIP. Read the README before trusting the folder in VS Code.
+
+Use **File > Open Folder** in VS Code and select that exact folder, then open the Claude Code
+extension in the same VS Code window. Its Explorer file list should show `START-HERE.md` at the
+top level. This is a downloaded copy: no Git installation, cloning, or GitHub sign-in is needed.
 
 Confirm that the configured provider and intended work-data use are employer-approved. Use
 `/status` or the available account/settings view; do not paste account details or credentials into
@@ -137,12 +143,48 @@ page. Keep the last completed step and next action in your local receipt so you 
 
 ## Prefer Claude to help with the copying?
 
-After reviewing the above, paste this into Claude Code with the starter folder open:
+This is an **alternative to manually copying the files in steps 2 and 3**. If you already completed
+those steps, skip this section. Use it only when local instruction/skill installation is permitted.
+
+**A prompt copied from this web page does not give Claude the repository's files.** First put the
+starter on the PC and open it in VS Code. You do not need to clone a repository or use a terminal.
+
+1. Open [this repository's home page](https://github.com/jasonjeske/vscode-claude-code) and choose
+   **Code > Download ZIP**, or [download the ZIP directly](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip).
+2. In Windows File Explorer, right-click the ZIP, select **Extract All**, and open the extracted
+   folders until you see `START-HERE.md` beside `README.md`, `setup`, `skills`, and `templates`.
+3. In VS Code, choose **File > Open Folder** and select **that folder**, not the ZIP, its parent,
+   or a work-data folder. Confirm `START-HERE.md` appears at the top level of VS Code's Explorer.
+4. Open Claude Code in **that same VS Code window** and start a fresh conversation. An existing
+   conversation in another project is not the place to run this setup request.
+5. In Claude's message box, type `@START-HERE.md` and select the local file from the suggestions.
+   Add a second reference by typing `@setup/SKILLS.md` and selecting that file. If they do not
+   appear, return to step 3; do not paste the prompt into an unrelated project.
+6. With both references selected, paste the following request into the same message and send it
+   once. A typed filename alone is not confirmation that the file was attached or read.
+
+These references point Claude at the local instructions. The folder also contains the template
+and complete skill folders it needs to copy. [Official file-reference instructions](https://code.claude.com/docs/en/vs-code#reference-files-and-folders).
+
+**Paste into the Claude Code message box, not a terminal:**
 
 ```text
-Read START-HERE.md and setup/SKILLS.md from this starter. My workplace Claude Code and gateway
-already work. Help me add the global instruction template and prompt-coach and
-excel-workbook-review in personal scope. Use no work data and keep my provider/settings unchanged.
+I am setting up a downloaded copy of https://github.com/jasonjeske/vscode-claude-code.
+The URL identifies the source; it does not mean the files are available locally.
+Use the local START-HERE.md and setup/SKILLS.md references attached to this message.
+Before proposing changes, confirm they are readable and identify their shared starter root.
+Check these exact source paths within that root:
+- templates/GLOBAL-CLAUDE.md
+- skills/prompt-coach/SKILL.md
+- skills/excel-workbook-review/SKILL.md
+If either reference or a required source is missing, stop without changing anything. Tell me
+which download/open-folder/reference step is needed. Do not search my computer, guess file
+contents, fetch a replacement, or install anything to work around missing source files.
+
+Read only the two setup documents and the selected template/skill sources needed for this task.
+My workplace Claude Code and gateway already work. Help me add the global instruction template,
+prompt-coach, and excel-workbook-review in personal scope. Use no work data and keep my
+provider/settings unchanged.
 First inspect only the selected source files and whether the exact destinations exist. If existing
 instructions or same-name skills need reading, confirm their approved scope before reading.
 Show the precise proposed copies/merge and backup plan together. Wait for my approval of that
@@ -150,6 +192,14 @@ batch, then perform only those changes, verify readback, and report the actual r
 Ask one question only when an unresolved choice changes the result. Do not install upstream
 packages, run agents, scan my computer, or overwrite existing content without the reviewed plan.
 ```
+
+**Check before approving:** Claude identifies the local starter folder, reports whether the five
+named files were found, and shows the proposed destination files and backup plan. It has not copied
+anything yet. A reply that merely recognizes the GitHub URL is not enough.
+
+If file references or local copying are blocked, use the manual instructions in steps 2 and 3 where
+permitted, or leave installation pending and ask your organization's support contact. Do not change
+the gateway or enable a new connection. The text exercises in [LEARN.md](LEARN.md) remain usable.
 
 This is an instruction-guided procedure, not a tested Windows installer. Tool approval and managed
 policy still apply. Approval of one reviewed batch is enough for that batch; changed scope needs a

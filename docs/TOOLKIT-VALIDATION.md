@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 285 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 286 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -94,6 +94,19 @@ The displayed calculation logic did not need changing.
   stage markers are aligned. This review does not claim removal of files on another computer.
 - Repository checks and the existing calculation/merge fixtures passed after cleanup. Target-PC
   and native-Excel acceptance remains a documented deployment check, not a completed local test.
+
+## Web page to local setup handoff
+
+- Made the optional assisted-copy section self-contained: repository and direct ZIP links,
+  extraction, selecting the folder containing the starter files, opening Claude in that window,
+  and selecting two local file references before sending the request.
+- The request identifies the repository, verifies five exact source files, and stops on missing
+  references or sources without searching other folders, inventing content, or changing files.
+  The section is an alternative to completed manual copies, not a second installation pass.
+- Checked the anonymous source archive layout and file contents against the required source paths.
+  An empty practice folder lacks those files. This confirms the documented prerequisite, not
+  that Claude follows the missing-file instruction. W32 includes both success and wrong-folder trials;
+  actual Windows/extension/Claude behavior remains UNVERIFIED.
 
 ## Not verified
 
