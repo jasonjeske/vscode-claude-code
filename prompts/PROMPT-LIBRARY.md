@@ -1,5 +1,8 @@
 # A practical prompt library
 
+For step-by-step practice, start with [the illustrated guide](../LEARN.md). Learn to
+[adapt these templates to your work](../learn/05-adapt-to-your-work.md) in the final lesson.
+
 For skill purposes and ready-to-use invocation examples, see [the catalog](../SKILLS.md).
 For everyday context and usage habits, see [the daily desk guide](../guides/DAILY-USE.md).
 

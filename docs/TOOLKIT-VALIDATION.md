@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 211 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 259 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -37,6 +37,18 @@ tax work.
 The first independent total assertion exposed a wrong hand-written answer-key total. Recomputing
 the fixture confirmed $9,150 total book and $8,330 per paired side; the answer key was corrected.
 The displayed calculation logic did not need changing.
+
+## Illustrated beginner guide
+
+- Added five linked lessons with prompts, expected results, checks, and an adaptation walkthrough.
+- Three original self-contained SVG diagrams were rendered with librsvg and visually inspected as
+  PNG previews. Labels and numbers are readable with no observed clipping. Each has descriptive
+  title/description metadata and Markdown alt text. They are diagrams, not screenshots of a UI.
+- Independently checked the invented ten-day date calculation and reconciliation bridge. The
+  spreadsheet lesson links Microsoft guidance for subtraction and blank-input checks; its formula
+  examples have not been executed in native Excel here.
+- Lesson behavior in Claude Code, GitHub page rendering, and target-PC display remain unverified.
+  This illustration review does not change the financial dashboard's browser-testing status below.
 
 ## Not verified
 

@@ -4,12 +4,13 @@ An independent, public starter kit for using **Claude Code in VS Code on Windows
 property-tax research, reconciliation, dashboards, and reporting. Built for a first-time user
 with an already approved workplace account and a limited usage allowance.
 
-**Start here: [Set up the work PC](START-HERE.md).** Then try the
-[first guided exercise](practice/FIRST-SESSION.md).
+**Set up:** [START-HERE](START-HERE.md). **Learn:** [the illustrated beginner guide](LEARN.md).
+Follow five short lessons with prompts, expected results, and checks you can do yourself.
 
 | I want to... | Open this |
 | --- | --- |
 | Set up an already working Claude Code extension | [Short setup checklist](START-HERE.md) |
+| Learn the basics with step-by-step walkthroughs | [Illustrated learning guide](LEARN.md) |
 | Choose a skill and see an example | [Skill catalog](SKILLS.md) |
 | Learn what to do each day | [Daily desk guide](guides/DAILY-USE.md) |
 | Copy a prompt for a particular task | [Prompt library](prompts/PROMPT-LIBRARY.md) |
@@ -25,7 +26,8 @@ with an already approved workplace account and a limited usage allowance.
   Data and Finance packages, UI/UX Pro Max, Impeccable, Pandas Pro, SQL Pro, Polars, and Matplotlib.
   Each catalog entry explains its purpose, first example, and installation route.
 - **Global and project instruction templates** with Teach, Guided, and Routine modes.
-- **A gradual learning path**, reusable prompts, and invented practice data with answer keys.
+- **An illustrated beginner guide** with five linked walkthroughs, copyable prompts, expected
+  results, an adaptation lesson, and invented practice data with answer keys.
 - **A local dashboard example** with filters, charts, exception rows, and checkable totals.
 
 The kit is a set of instructions and learning materials. A skill does not provide an Excel

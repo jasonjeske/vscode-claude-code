@@ -100,6 +100,7 @@ Complete the blank [setup receipt](templates/SETUP-RECEIPT.md) in an approved lo
 Record the reviewed snapshot, chosen skill scope, installed names, backup locations, checks that
 passed, blocked features, and next task. Never commit the filled receipt here.
 
+Begin with [the illustrated learning guide](LEARN.md) for five step-by-step lessons.
 Bookmark the [daily desk guide](guides/DAILY-USE.md), [skill catalog](SKILLS.md), and
 [prompt library](prompts/PROMPT-LIBRARY.md). Stop installing when the first useful task works.
 
