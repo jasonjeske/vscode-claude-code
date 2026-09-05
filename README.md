@@ -245,15 +245,161 @@ fallback. A skill supplies a procedure, `@` supplies an input, and your request 
 Use focused conversations, the approved model, and the gateway's usage page. Avoid asking Claude
 to read every guide or all the files for every state. A saved prompt is reusable, not token-free.
 
-## Reference shelf
-
-- [State workflow and assignments](learn/STATE-WORKFLOW.md): the remaining sessions and transfer to work.
-- [Skill catalog](SKILLS.md): all six custom skills, official Office/Finance/Data choices, and community options.
-- [VS Code basics](guides/00-vscode-basics.md) and [saved prompts](guides/14-prompt-files-and-dictation.md).
-- [Plugin updates and manual-copy fallback](setup/SKILLS.md).
-- [Prompt library](prompts/PROMPT-LIBRARY.md) and [Excel preservation playbook](guides/08-excel-and-reconciliation-playbook.md).
-- [Validation and limits](docs/TOOLKIT-VALIDATION.md): local package checks do not establish managed Windows behavior.
-
 Official references: [Claude Code in VS Code](https://code.claude.com/docs/en/vs-code),
 [plugin installation](https://code.claude.com/docs/en/discover-plugins),
 [skill selection](https://code.claude.com/docs/en/skills).
+
+## Explore the repository: complete navigation index
+
+**Finished the first README task? Start with section A below**, then keep B nearby while working.
+Explore C and D when a task needs them. E is for setup changes or recovery; F explains supporting
+files and verification. You do not need to read everything or ask Claude to load the repository.
+Each link opens a page, file, or folder on GitHub. Use your separate local work folder for exercises
+and completed templates. Downloaded HTML and Excel examples open in their own applications.
+
+**Jump to:** [A. Lessons and practice](#a-lessons-and-practice) ·
+[B. Everyday references](#b-everyday-references) · [C. Skills](#c-skills-and-their-instructions) ·
+[D. Templates](#d-templates-to-adapt-in-your-work-folder) · [E. Setup](#e-setup-and-recovery) ·
+[F. Supporting files](#f-supporting-files-and-maintenance).
+
+### A. Lessons and practice
+
+Follow the state workflow first. The individual lessons are shorter alternatives when you want
+to practice just one operation. All sample records are invented.
+
+| Suggested order | Open | What you will find |
+| --- | --- | --- |
+| Next | [State workflow course](learn/STATE-WORKFLOW.md) | Continue the workbook through reconciliation, investigation, research, reporting, and reuse |
+| Choose today's task | [Learn through useful work](LEARN.md) | A task picker, coaching prompt, and checks for growing independence |
+| Practice a conversation | [Lesson 1: first conversation](learn/01-first-conversation.md) | Ask, clarify, and improve a small request |
+| Practice spreadsheet work | [Lesson 2: spreadsheets](learn/02-spreadsheet-work.md) | Formula checks, workbook review, and an official XLSX skill exercise |
+| Practice research | [Lesson 3: source-backed research](learn/03-source-backed-research.md) | Scope one question and check its citations |
+| Practice reporting | [Lesson 4: reports](learn/04-reports.md) | Turn checked evidence into a useful reviewer draft |
+| Reuse the method | [Lesson 5: adapt to your work](learn/05-adapt-to-your-work.md) | Adjust project instructions and repeat a bounded task |
+| Check your attempt | [State answer key](practice/STATE-ANSWER-KEY.md) | Expected counts, amounts, differences, and reconciliation bridge |
+| If Excel tools are unavailable | [Text-only first session](practice/FIRST-SESSION.md) | Work through a small reconciliation directly in chat |
+| Inspect the supplied project | [State project folder](state-project/) | The complete source that Claude copies during setup |
+| Inside that project | [Practice instructions](state-project/CLAUDE.md), [Excel input](state-project/inputs/state-practice.xlsx), [first task](state-project/prompts/first-workbook.md), [reconciliation task](state-project/prompts/reconcile.md) | The actual files used by the first two assignments |
+| Understand its empty folders | [Outputs](state-project/outputs/), [evidence](state-project/evidence/), [working](state-project/working/) | Places for generated results, source notes, and intermediate files; `.gitkeep` only keeps an empty folder in the download |
+| Explore a dashboard example | [Dashboard guide and answer key](examples/dashboard/README.md) | How to open the local example and check filters, totals, and print layout |
+| Dashboard files | [HTML page](examples/dashboard/index.html), [sample data](examples/dashboard/demo-data.js), [behavior code](examples/dashboard/dashboard.js) | Keep all three together when opening the downloaded example; GitHub displays their source |
+
+### B. Everyday references
+
+Use the first four as desk references. Read the specialist playbooks when that work arrives.
+
+| Open | Use it for |
+| --- | --- |
+| [Daily desk guide](guides/DAILY-USE.md) | Starting and finishing a focused work session |
+| [VS Code basics](guides/00-vscode-basics.md) | Explorer, folders, editor tabs, saving, Markdown, and workspaces |
+| [Claude Code panel guide](guides/00-use-vscode.md) | Where to type, usage views, waiting, and recovering from a blocked task |
+| [Saved prompts and dictation](guides/14-prompt-files-and-dictation.md) | Collecting rough notes in a file, saving, selecting with `@`, and revising the request |
+| [Prompt library](prompts/PROMPT-LIBRARY.md) | Ready-to-adapt requests for common work tasks |
+| [Claude Code fundamentals](guides/01-claude-code-fundamentals.md) | Task scope, context, commands, and how to check results |
+| [Review plans and changes](guides/04-reviewing-claude-plans-and-diffs.md) | Reading a proposed action or file comparison before accepting it |
+| [Excel and reconciliation playbook](guides/08-excel-and-reconciliation-playbook.md) | Complex workbook preservation, keys, duplicates, differences, and controls |
+| [Multistate work](guides/02-multistate-property-tax-workflows.md) | Organizing jurisdiction-specific work and evidence |
+| [Property-tax research](guides/12-property-tax-research.md) | Narrow legal questions, applicable years, source quality, and memo structure |
+| [Dashboards and reporting](guides/09-dashboard-and-reporting-playbook.md) | Choosing metrics, formats, charts, and reviewer checks |
+| [Token-efficient work](guides/13-token-efficient-work.md) | Avoiding unnecessary reads and retries; assessing Caveman-style compression |
+| [Models and workplace usage](docs/MODELS-AND-USAGE.md) | Model/effort choices within an existing managed gateway |
+| [Build independence](guides/10-four-week-learning-path.md) | Capability milestones; the filename does not require four weeks of study |
+| [Improve a recurring process](guides/05-after-onboarding-growth-path.md) | Deciding what to automate after the first tasks work |
+| [Guide index](guides/README.md) | An alternative topic-based entrance to the guides |
+
+### C. Skills and their instructions
+
+The README installs the **six custom skills together**. Open their source files below to understand
+their procedures, not to reinstall them. Official and community recommendations are separate packages.
+
+| Open | What it contains |
+| --- | --- |
+| [Skill catalog](SKILLS.md) | What each skill does, when to choose it, and a first prompt |
+| [Official skill recommendations](guides/07-trusted-skills-and-installation.md) | Anthropic Office, Data, and Finance options, sources, and runtime requirements |
+| [Community skill recommendations](guides/11-community-skills-worth-adding.md) | Design, data, SQL, and graphics choices with installation considerations |
+| [Skills by work category](guides/03-professional-skills-by-category.md) | How a job workflow, an agent skill, and VS Code tools fit together |
+| [Workbook review skill](skills/excel-workbook-review/SKILL.md) | Read-only structure, formula, and preservation review |
+| [Reconciliation review skill](skills/reconciliation-control-review/SKILL.md) | Matching and full-population control checks |
+| [Property-tax research skill](skills/property-tax-research/SKILL.md) | Scoped, cited research with applicability and uncertainty checks |
+| [Research memo format](skills/property-tax-research/references/research-memo.md) | The supporting memo structure used by the research skill |
+| [Financial dashboard skill](skills/financial-dashboard/SKILL.md) | Useful presentation with defined metrics and traceable totals |
+| [Prompt coach skill](skills/prompt-coach/SKILL.md) | Turn rough ideas into a clear request without executing it |
+| [Structured request skill](skills/structured-work-request/SKILL.md) | Clarify a complicated task's scope and requirements |
+| [All skill folders](skills/) | Browse the complete bundled skill sources |
+
+### D. Templates to adapt in your work folder
+
+These are blank starting points. They do not configure anything merely because you open them.
+Keep filled versions in approved local work storage, outside this public repository.
+
+| Open | Use it for |
+| --- | --- |
+| [Prompt notes](templates/PROMPT-NOTES.md) | A longer request you can type or dictate before sending |
+| [Work task note](templates/WORK-TASK-NOTE.md) | Save a successful method, prompt, and verification check |
+| [Project instructions](templates/PROJECT-CLAUDE.md) | Stable rules for one work folder |
+| [Reconciliation project](templates/projects/RECONCILIATION-CLAUDE.md) | Matching, exceptions, and review controls |
+| [Research project](templates/projects/RESEARCH-CLAUDE.md) | Jurisdiction, sources, and evidence rules |
+| [Exemption project](templates/projects/EXEMPTION-CLAUDE.md) | Organize exemption facts and research without assuming eligibility |
+| [Dashboard project](templates/projects/DASHBOARD-CLAUDE.md) | Audience, metrics, source data, and display checks |
+| [Learning and work preferences](templates/LEARNING-AND-WORK.md) | Choose teaching, guided, or routine assistance |
+| [Global instructions](templates/GLOBAL-CLAUDE.md) | Optional preferences across projects; apply using the setup guide below |
+| [Setup receipt](templates/SETUP-RECEIPT.md) | Record what was installed and which checks remain pending |
+| [All templates](templates/) | Browse the blank documents together |
+
+### E. Setup and recovery
+
+The current setup is already in this README. Return here only to maintain it, change scope,
+or use an alternative route. You do not need to run onboarding again for each assignment.
+
+| Open | When you need it |
+| --- | --- |
+| [Start Here](START-HERE.md) | A short signpost back to this README's ordered setup |
+| [Assisted workspace setup](setup/ASSISTED-SETUP.md) | Inspect the exact bounded instructions Claude follows in step 3 |
+| [Install and maintain skills](setup/SKILLS.md) | Plugin scope, updates, removal, and migration from old standalone copies |
+| [Optional global instructions](setup/GLOBAL-INSTRUCTIONS.md) | Reuse preferences without overwriting existing managed instructions |
+| [Project setup reference](setup/PROJECTS.md) | An alternative folder-copy method and project-specific templates; the state course also provides AI-assisted setup |
+| [Manual setup fallback](setup/MANUAL-SETUP.md) | File-copy installation when plugins cannot be used, plus optional editor exercises |
+| [Standalone skill files explained](guides/15-skills-made-visible.md) | Folder locations and unprefixed commands for that manual fallback |
+| [Full Windows onboarding](setup/FULL-ONBOARDING.md) | A longer setup protocol for a fresh or uncertain installation, preferably with support |
+| [Illustrative onboarding conversation](docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md) | A fictional example of that longer protocol, not a session to execute |
+| [Older text practice project](practice-project/) | Source folder used by the manual fallback; separate from the main `state-project` |
+| [Its instructions](practice-project/CLAUDE.md) and [example task](practice-project/prompts/example-task.md) | The text exercise files in that alternative project |
+| [Its inputs](practice-project/inputs/), [outputs](practice-project/outputs/), [evidence](practice-project/evidence/), [working](practice-project/working/) | Empty placeholders for the alternative practice route |
+| [Optional usage status line](guides/06-budget-aware-statusline.md) | A later terminal customization; not required for the native Claude panel |
+| [All setup references](setup/) | Browse the setup files together |
+
+### F. Supporting files and maintenance
+
+**You can skip this section for everyday work.** It explains the remaining folders so unfamiliar
+files do not look like extra assignments. Scripts and configuration candidates are for a helper
+or maintainer to review; opening their GitHub links does not run or install them.
+
+| Open | What it is for |
+| --- | --- |
+| [Teaching method](docs/TEACHING-METHOD.md) | Why the lessons pair useful work with a small independent check |
+| [Security and data boundaries](docs/SECURITY.md) | What the toolkit does and does not protect |
+| [Validation record](docs/TOOLKIT-VALIDATION.md) | Checks performed and their limits |
+| [Windows verification ledger](docs/WINDOWS-VERIFICATION.md) | Target-PC behaviors that still need hands-on verification |
+| [Skill selection checks](docs/SKILL-SELECTION-CHECKS.md) | Cases for checking automatic selection and explicit commands |
+| [All supporting documents](docs/) | Browse verification, usage, and design references |
+| [Configuration folder](config/) | Optional candidates, not automatically applied settings |
+| [VS Code settings candidate](config/vscode-settings.json) | Suggested editor settings for a reviewed merge |
+| [Status-line script](config/statusline.ps1) and [budget example](config/statusline-budget.example.json) | Optional PowerShell usage display and a blank configuration example |
+| [Plugin metadata](.claude-plugin/plugin.json) and [marketplace catalog](.claude-plugin/marketplace.json) | How Claude Code discovers and packages the six custom skills |
+| [QA runbook](tests/QA-RUNBOOK.md) | Manual verification procedures for maintainers |
+| [Repository checker](tests/validate-repo.mjs) | Checks local links, skill metadata, and configuration syntax |
+| [Merge checks](tests/merge-spec.mjs) and [test fixtures](tests/fixtures/) | Invented candidate/existing/expected files for settings-merge tests |
+| [Dashboard checks](tests/dashboard-spec.mjs) | Verifies synthetic calculations and filter combinations |
+| [Plugin checks](tests/plugin-spec.mjs) | Verifies the complete instruction-only package |
+| [Workbook checks](tests/state-workbook-spec.py) | Verifies the shipped Excel sample and reconciliation answer key |
+| [All tests](tests/) and [GitHub validation workflow](.github/workflows/validate.yml) | The verification files and the automation that runs checks after changes |
+| [Images and diagrams](assets/) | The README banner, earlier cover/flow artwork, and teaching illustrations |
+| [Learning illustrations](assets/learning/) | Folder, prompt, skill, spreadsheet, and workflow visual examples |
+| [VS Code screenshots](assets/reference/) and [their attribution](assets/reference/ATTRIBUTION.md) | Microsoft documentation images and reuse terms |
+| [Contributing](CONTRIBUTING.md) | Repository structure and how to maintain the guide |
+| [Change history](CHANGELOG.md) | Recorded release changes |
+| [License](LICENSE) | Repository reuse terms; separately attributed materials retain their own terms |
+| [Ignored-file rules](.gitignore) | Patterns reducing accidental staging of work files; not a data-protection system |
+
+When ready to continue, return to **[the state workflow](learn/STATE-WORKFLOW.md)** and choose the
+next useful result. This index is a map, not a reading assignment.
