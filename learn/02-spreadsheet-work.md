@@ -77,6 +77,10 @@ not proof that the bill is zero. For this tiny numeric example, one visible miss
 =IF(OR(B2="",C2=""),"Missing input",C2-B2)
 ```
 
+![The invented Practice sheet has book 200 and bill 210. Its guarded difference formula returns 10, Missing input for an empty bill cell, and negative 200 for numeric zero.](../assets/learning/excel-formula-checks.svg)
+
+*Worked example, not an Excel screenshot. Make these three changes yourself in a check copy.*
+
 Test the formula in a practice copy in Excel with 210, an empty C2, and a numeric zero in C2.
 Expected results: **10**, **Missing input**, and **-200**. This example does not validate text amounts,
 errors, or every import format. For larger work, separate numeric results and exception statuses

@@ -113,6 +113,10 @@ Practice-01/                   the folder open in VS Code
   evidence/                    checks and source notes
 ```
 
+![After step 3, Claude-Learning contains the downloaded starter and a separate Practice-01 working folder. Open Practice-01 in VS Code.](assets/learning/project-layout-example.svg)
+
+*Worked layout after this step. Selected contents are shown; the illustration is not a screenshot.*
+
 The four otherwise-empty folders contain `.gitkeep` placeholders so they survive the download.
 Leave those tiny files alone. The complete original starter stays in `vscode-claude-code-main`.
 
@@ -338,6 +342,10 @@ missing; do not search other folders. Report the actual new file and one check I
 5. When finished, choose **View > Explorer**, expand **outputs**, and double-click **exception-note.md**.
    Read it in the editor or Markdown preview. If file writing was blocked, Claude should say no
    file was saved; do not mark the file-creation exercise complete.
+
+![Save my-request.md, select it with at-sign in Claude, send the task, then open outputs/exception-note.md and verify 215 minus 200 equals positive 15 with cause unknown.](assets/learning/prompt-to-output-example.svg)
+
+*Expected example using invented amounts. The result must exist as a real file on your PC.*
 
 **Check:** Claude used **$200 and the corrected $215**, giving **+15**, with cause unknown.
 `my-request.md` remains intact. If it used $210, report that specific mismatch and point it to the

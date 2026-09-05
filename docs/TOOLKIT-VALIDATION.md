@@ -42,7 +42,7 @@ The displayed calculation logic did not need changing.
 
 - README raster banner replaced with a navy-and-blue workspace image using the built-in image creator, visually inspected for
   readable, accurate title text, composition, and absence of identifying details. The unaltered
-  image and [generation prompt](../assets/README-BANNER.md) are included; the old cover is preserved.
+  [image](../assets/readme-banner.png) is included; the old cover is preserved.
   The replacement was also inspected in the rendered GitHub README in desktop Chrome:
   the image loaded, the title and subtitle were readable, and there was no observed clipping.
 - Added five linked lessons with prompts, expected results, checks, and an adaptation walkthrough.
@@ -225,3 +225,14 @@ Sources: [skill discovery and invocation](https://code.claude.com/docs/en/skills
 [VS Code plugin manager](https://code.claude.com/docs/en/vs-code#manage-plugins),
 [Office manifest](https://github.com/anthropics/skills/blob/main/.claude-plugin/marketplace.json),
 [XLSX skill](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md).
+
+
+## Worked visual examples
+
+- Removed the standalone banner-generation note from the learner-facing repository.
+- Added three worked-example SVGs showing the starter beside the working project, a saved
+  request becoming a checked output, and the three synthetic Excel formula cases. They appear
+  beside the relevant README and spreadsheet lesson steps, with text alternatives and captions.
+- Rendered and visually inspected the diagrams at 1000 pixels wide. Checked example paths and
+  amounts against the written walkthrough. These illustrations describe expected results;
+  they are not screenshots or evidence of execution in Windows, Claude Code, or native Excel.
