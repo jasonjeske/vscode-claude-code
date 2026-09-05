@@ -1,7 +1,7 @@
 # QA runbook: manual conformance protocol
 
 `tests/merge-spec.mjs` pins the merge semantics that Stage 4 describes. It cannot prove that Claude,
-executing the prose in `START-HERE.md`, actually follows them. That gap is what this runbook closes.
+executing the prose in `setup/FULL-ONBOARDING.md`, actually follows them. That gap is what this runbook closes.
 
 Four procedures. Each is run by a human against a real Claude Code session, in a scratch folder,
 never against a real user profile or real work data. Record the results in the pull request
@@ -19,10 +19,10 @@ description using the results block at the end of this file.
 4. If any procedure asks Claude to write outside the scratch folder, that is a FAIL. Stop and record
    it.
 5. If `node tests/merge-spec.mjs` is part of the procedure, run it for its OUTPUT ONLY and write down
-   your own derivation from `START-HERE.md`'s prose before opening `tests/merge-spec.mjs`'s source.
+   your own derivation from `setup/FULL-ONBOARDING.md`'s prose before opening `tests/merge-spec.mjs`'s source.
    Reading the source first tells you the answer key (the denylist, the regex) before you have tried
    to reason it out, which is not a test of whether the prose alone is enough.
-6. `START-HERE.md` Stage 0 stops setup on a non-Windows machine, correctly, for a real user. This
+6. `setup/FULL-ONBOARDING.md` Stage 0 stops setup on a non-Windows machine, correctly, for a real user. This
    runbook is commonly the only way to test it, and most maintainers do not have spare Windows
    hardware. If you are running this on macOS or Linux, that one gate is a deliberate, documented
    exception for this test procedure only: note it in the results block and continue. Every other
@@ -35,7 +35,7 @@ overwriting them, and that it treats the existing file's content as data rather 
 
 1. Copy `tests/fixtures/claude-md-existing.md` into the scratch folder as the stand-in for existing
    User instructions.
-2. Ask Claude to run `START-HERE.md` Stage 3 against that file, treating the scratch copy as the
+2. Ask Claude to run `setup/FULL-ONBOARDING.md` Stage 3 against that file, treating the scratch copy as the
    User instructions target.
 3. Answer the interview questions with generic categories only. Use `ENTITY-A` and `PERIOD-1`.
 
@@ -110,7 +110,7 @@ Proves that the published example matches what the controller actually does, so 
 not reassured by a transcript that has drifted from the prose.
 
 1. Read `docs/EXAMPLE-ONBOARDING-TRANSCRIPT.md`.
-2. Run `START-HERE.md` from Stage 0 in the scratch folder, answering with generic placeholders.
+2. Run `setup/FULL-ONBOARDING.md` from Stage 0 in the scratch folder, answering with generic placeholders.
 3. Walk the two side by side.
 
 Check each of the following:

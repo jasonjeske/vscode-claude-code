@@ -34,7 +34,8 @@ Safe for the public repository:
 
 - generic onboarding instructions;
 - generic VS Code settings;
-- blank templates and exactly three generic skills; and
+- blank templates and six optional local skills;
+- the wholly invented practice tables, teaching dashboard, and fixed sample records; and
 - links to official documentation.
 
 Keep only in employer-approved locations:
@@ -48,22 +49,12 @@ Keep only in employer-approved locations:
 A personal private repository is still an external service. “Private” does not make it an approved
 location for company information.
 
-## Persistent local memory is sensitive plaintext
+## Keep instructions and evidence in approved storage
 
-Claude Code's native per-project memory and the optional cross-project work wiki are persistent
-plaintext assets. Local storage does not mean local inference: content is processed by the approved
-Claude service when recalled. A user-profile folder may also be managed, backed up, roamed, indexed,
-or synchronized by employer tooling.
-
-Use memory only when employer policy approves both the storage location and service processing.
-Store generic redacted summaries only. Never store credentials, names, taxpayer or property
-identifiers, addresses, row-level data, actual values or totals, internal URLs or exact paths,
-source documents, evidence, attachments, or chain-of-thought.
-
-The optional wiki is manual and bounded. It does not change Claude Code's native
-`autoMemoryDirectory`, and no memory layer is authoritative. Review stale dates, provenance,
-contradictions, and superseded entries before relying on a note. See
-[bounded local work memory](WORK-MEMORY.md).
+This kit configures no additional persistence system. Keep stable instructions in the standard
+`CLAUDE.md` locations and source evidence in approved project workpapers. Local content is still
+processed by the configured service when read. Follow organizational storage and processing rules;
+never treat a saved summary as current tax authority. Preserve managed Claude settings.
 
 ## Managed policy is authoritative
 

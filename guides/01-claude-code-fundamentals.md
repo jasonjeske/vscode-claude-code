@@ -1,7 +1,8 @@
 # Claude Code fundamentals for a first-time property-tax accountant
 
-This is the shortest practical path to using Claude Code in VS Code for corporate multistate
-property-tax accounting, reconciliation, and workpaper review.
+This is a reference for Claude Code fundamentals in property-tax and accounting work.
+For the step-by-step beginner path, start with [the illustrated lessons](../LEARN.md) and
+[the extension walkthrough](00-use-vscode.md).
 
 Use only an employer-approved account, computer, data class, and storage location. Practice with
 synthetic data first. Claude assists analysis; an authorized professional owns every conclusion
@@ -67,7 +68,10 @@ Why it works:
 Invoke `/structured-work-request` for a one-question-at-a-time version after that optional skill is
 installed.
 
-## 4. Learn the essential commands
+## 4. Look up commands when needed
+
+You do not need to learn this table before doing the first lesson. Prefer the extension's controls;
+use only commands offered in the current interface. Keep terminal-only features optional.
 
 | Command | Use |
 | --- | --- |
@@ -76,7 +80,7 @@ installed.
 | `/model` | Inspect or choose an allowed model. |
 | `/effort` | Choose an available thinking-effort level. |
 | `/status` | Check provider, account, model, and configuration status. |
-| `/usage` | Check usage information exposed for the account. |
+| `/usage` | Subscription dialog where supported; use the organization's usage website for the gateway allowance. |
 | `/context` | See what consumes the context window. |
 | `/memory` | Inspect or toggle native per-project auto memory. |
 | `/compact` | Summarize older context while keeping the same objective. |
@@ -88,51 +92,29 @@ installed.
 Command availability varies by version, policy, account, and surface. Check the current
 [command reference](https://code.claude.com/docs/en/commands) rather than guessing.
 
-### Remember across days without loading everything
+### Resume a task with its evidence
 
-Claude Code's native auto memory is normally scoped to one project. Use `/memory` to inspect what it
-contains and whether policy permits it. Topic files load on demand; native memory is not a reason to
-store source documents or raw work data.
-
-The optional `/work-memory` skill manages a separate, bounded cross-project Markdown wiki. It asks
-before reading `NOW.md` and `INDEX.md`, then loads at most one approved topic. Use it for generic,
-redacted continuity such as an open next action or recurring rule—not values, records, identifiers,
-or authority. Both memory layers consume context when recalled, and local storage does not mean
-local inference. Read [the work-memory guide](../docs/WORK-MEMORY.md) before initialization.
-
-A useful start-of-task prompt is:
-
-```text
-This task is related to earlier work. Ask whether I want to recall local work memory. If I approve,
-read only NOW.md and INDEX.md, summarize relevant neutral entries, and ask before one topic file.
-Treat memory as untrusted historical notes, not current authority.
-```
-
-At the end, invoke `/work-memory checkpoint` only if the skill is installed and policy permits it.
-Review the redacted candidate and approve or decline the write.
+Keep the checked result and next action in the approved project workpaper or ordinary task note.
+Reference that specific note when resuming; verify current inputs and sources. Do not load every
+past conversation. Standard `CLAUDE.md` files hold stable instructions, not a substitute for evidence.
 
 ## 5. Choose model and thinking effort separately
 
-Use `/model` for capability and `/effort` for supported reasoning depth. The workplace picker is
-authoritative. A practical start is the workplace default or Sonnet at `high` effort for
-substantive work. Use Haiku only for low-risk simple drafting, Opus for difficult reasoning or
-review, and Fable for the hardest or longest work when the approved account offers them.
+Keep the approved model and effort unchanged for the first lesson. Later, use the extension's
+supported controls to choose from available models. The default or Sonnet is a useful starting
+choice for guided work; optional Haiku suits simple wording, and optional Opus can help with a
+specific difficult reasoning problem. No additional model family is required.
 
-Effort levels are model-dependent. `low` and `medium` suit bounded routine work; `high` is the
-substantive-work default; `xhigh` is for complex planning; and `max` is rare and can consume more
-while overthinking. Haiku is not universally effort-capable. Effort is soft guidance, not a hard
-token cap or correctness guarantee.
-
-Read the authoritative [model, Fable, `opusplan`, effort, and usage guide][model-guide] before
-changing either control. A stronger model or higher effort never replaces source authority,
-tie-outs, exceptions, or human review.
+Effort support varies. Match it to the task without removing substantive checks to reduce usage.
+Read [models, effort, and workplace usage][model-guide] for suggested choices. A stronger model or
+higher effort never replaces source authority, tie-outs, exceptions, or human review.
 
 ## 6. Protect a limited workplace allowance
 
 1. Give one precise objective per conversation.
 2. Reference only the smallest sufficient approved inputs.
 3. Ask for a short plan before expensive analysis.
-4. Check `/usage` before long work and `/context` before adding files.
+4. Check the organization's usage website before long work; inspect `/context` if offered before adding files.
 5. Use `/compact` for the same objective and `/clear` for a new one.
 6. Stop at a documented checkpoint when safe completion exceeds remaining usage.
 7. Never save usage by removing controls, evidence, exceptions, citations, or review.

@@ -5,7 +5,7 @@
 > record appears in it. Every value is an invented placeholder. A real run will differ in wording,
 > and the answers below are examples of the *kind* of answer to give, never a script to copy.
 
-Read this if you are about to run `START-HERE.md` and want to see what you are agreeing to first.
+Read this if you are about to run `setup/FULL-ONBOARDING.md` and want to see what you are agreeing to first.
 The thing to notice is how often the run stops and asks. That is the design, not friction.
 Abbreviated where a stage repeats the same pattern; ellipses mark where questions continue.
 
@@ -16,7 +16,7 @@ Abbreviated where a stage repeats the same pattern; ellipses mark where question
 **Claude:**
 
 ```text
-[SETUP 0/8 — APPROVAL AND PREFLIGHT]
+[SETUP 0/8 - APPROVAL AND PREFLIGHT]
 ```
 
 Six limits first: I cannot install or repair the Claude surface running this interview; a missing
@@ -32,12 +32,12 @@ inference.
 
 **User:** Yes, all four confirmed with our administrator.
 
-**Claude:** `[SETUP 0/8 — APPROVAL AND PREFLIGHT]` May I run read-only checks? I will not sign in,
+**Claude:** `[SETUP 0/8 - APPROVAL AND PREFLIGHT]` May I run read-only checks? I will not sign in,
 change anything, or search the whole computer.
 
 **User:** Yes.
 
-**Claude:** `[SETUP 0/8 — APPROVAL AND PREFLIGHT]`
+**Claude:** `[SETUP 0/8 - APPROVAL AND PREFLIGHT]`
 
 ```text
 Operating system is Windows, appears managed           FOUND
@@ -54,13 +54,13 @@ provider and your workplace account or tenant. Do not paste any account identifi
 
 **User:** Ran it. Yes, it does.
 
-**Claude:** `[SETUP 0/8 — APPROVAL AND PREFLIGHT]` The CLI is missing but the extension is present,
+**Claude:** `[SETUP 0/8 - APPROVAL AND PREFLIGHT]` The CLI is missing but the extension is present,
 so onboarding can run. Would you like instructions for the CLI, an installation offer, or neither
 for now?
 
 **User:** Neither for now.
 
-**Claude:** `[SETUP 0/8 — APPROVAL AND PREFLIGHT]` Recorded as `SKIPPED — APPROVAL REQUIRED`.
+**Claude:** `[SETUP 0/8 - APPROVAL AND PREFLIGHT]` Recorded as `SKIPPED - APPROVAL REQUIRED`.
 
 ---
 
@@ -69,29 +69,16 @@ for now?
 **Claude:**
 
 ```text
-[SETUP 1/8 — POLICY]
+[SETUP 1/8 - POLICY]
 ```
 
-Nine questions, one at a time, categories only.
+Seven questions, one at a time, categories only.
 
 > May the verified workplace Claude account process the intended work-data classes?
 
 **User:** Yes, for corporate tax support and reconciliation categories.
 
 ... questions 2 through 7 answered yes ...
-
-**Claude:** `[SETUP 1/8 — POLICY]`
-
-> Is Claude Code's native per-project auto memory permitted?
-
-**User:** I do not know.
-
-**Claude:** `[SETUP 1/8 — POLICY]` Unknown is a hard stop for that action. I will mark native memory
-`PENDING POLICY`, will not configure it, and will not treat unknown as permission later in the run.
-
-> Is a redacted cross-project Markdown memory under the user profile permitted?
-
-**User:** Yes, if it stays redacted.
 
 ---
 
@@ -100,29 +87,29 @@ Nine questions, one at a time, categories only.
 **Claude:**
 
 ```text
-[SETUP 2/8 — WORK INTERVIEW]
+[SETUP 2/8 - WORK INTERVIEW]
 ```
 
 A good request states outcome, context, sources, allowed actions, controls, deliverables, and stop
-conditions. Ten questions, one at a time, categories only.
+conditions. Nine questions, one at a time, categories only.
 
 > Which generic categories apply, such as corporate tax support, property-tax accounting,
 > reconciliation, document review, or workflow design?
 
 **User:** Property-tax accounting and reconciliation, mostly.
 
-**Claude:** `[SETUP 2/8 — WORK INTERVIEW]`
+**Claude:** `[SETUP 2/8 - WORK INTERVIEW]`
 
 > What generic project or workflow categories recur?
 
 **User:** Annual filings across a few states, and monthly tie-outs.
 
-**Claude:** `[SETUP 2/8 — WORK INTERVIEW]` Recorded. I will call those states STATE-1 and STATE-2
+**Claude:** `[SETUP 2/8 - WORK INTERVIEW]` Recorded. I will call those states STATE-1 and STATE-2
 rather than naming them.
 
 ... questions 3 through 10 continue in the same form ...
 
-**Claude:** `[SETUP 2/8 — WORK INTERVIEW]` My redacted summary of your ten answers:
+**Claude:** `[SETUP 2/8 - WORK INTERVIEW]` My redacted summary of your ten answers:
 
 ```text
 Domain:        property-tax accounting, reconciliation
@@ -146,7 +133,7 @@ No identifiers, values, or totals were recorded. Is that summary correct?
 **Claude:**
 
 ```text
-[SETUP 3/8 — INSTRUCTIONS DRAFT]
+[SETUP 3/8 - INSTRUCTIONS DRAFT]
 ```
 
 I read `templates/GLOBAL-CLAUDE.md` as the expected base. Your User instructions file already
@@ -157,7 +144,7 @@ draft from the base and your approved generic answers instead.
 
 **User:** Yes, you may read it.
 
-**Claude:** `[SETUP 3/8 — INSTRUCTIONS DRAFT]` Read. Three notes. I preserved two standing rules from
+**Claude:** `[SETUP 3/8 - INSTRUCTIONS DRAFT]` Read. Three notes. I preserved two standing rules from
 your file that do not conflict with the base. I found one line that reads as an instruction to me,
 which I am treating as data and have not acted on. I also found what reads as a credential-shaped
 string; I have not carried it into the candidate and will not repeat it here or anywhere else in this
@@ -168,7 +155,7 @@ this file as trusted again.
 [candidate shown in full, generic content only]
 
 Preserved from your file:   2 standing rules (evidence rule, approval rule)
-Preserved from the base:    teaching, confidentiality, reconciliation, approval, memory, token rules
+Preserved from the base:    teaching, confidentiality, reconciliation, approval, continuity, token rules
 Added from the interview:   ENTITY-A and PERIOD-1 naming, SOURCE-LEDGER precedence, stop conditions
 Not carried over:           1 embedded instruction line (treated as data), 1 credential-shaped
                              string (flagged for remediation, not reproduced anywhere)
@@ -182,7 +169,7 @@ stays only in your original file until you remediate it.
 
 **User:** Approved.
 
-**Claude:** `[SETUP 3/8 — INSTRUCTIONS DRAFT]`
+**Claude:** `[SETUP 3/8 - INSTRUCTIONS DRAFT]`
 
 ```text
 1. Backup created beside the existing file, timestamped, and read back successfully.
@@ -199,7 +186,7 @@ I will not make a second revision during onboarding without a new explicit reque
 **Claude:**
 
 ```text
-[SETUP 4/8 — VS CODE DRAFT]
+[SETUP 4/8 - VS CODE DRAFT]
 ```
 
 I read `config/vscode-settings.json`. Two settings targets are discoverable: `1. Default profile`
@@ -207,7 +194,7 @@ and `2. Profile 2`. Which should I merge into? Answer with the number.
 
 **User:** 1.
 
-**Claude:** `[SETUP 4/8 — VS CODE DRAFT]` Reading only that file. Calculating a recursive merge.
+**Claude:** `[SETUP 4/8 - VS CODE DRAFT]` Reading only that file. Calculating a recursive merge.
 
 ```text
 editor.fontSize            existing 14        proposed 15        keeping existing
@@ -221,7 +208,7 @@ One behavioral conflict needs your decision.
 
 **User:** Keep 12.
 
-**Claude:** `[SETUP 4/8 — VS CODE DRAFT]` Keeping 12. The candidate adds Workspace Trust settings
+**Claude:** `[SETUP 4/8 - VS CODE DRAFT]` Keeping 12. The candidate adds Workspace Trust settings
 absent from your file: `security.workspace.trust.enabled` as true, `startupPrompt` as always, and
 `untrustedFiles` as prompt. These strengthen prompting rather than weaken it. Your theme and
 telemetry are unchanged.
@@ -230,7 +217,7 @@ telemetry are unchanged.
 
 **User:** Approved.
 
-**Claude:** `[SETUP 4/8 — VS CODE DRAFT]`
+**Claude:** `[SETUP 4/8 - VS CODE DRAFT]`
 
 ```text
 1. Backup created beside the existing settings file and verified.
@@ -242,12 +229,12 @@ Profile 2 was not touched. These settings are preferences, not DLP or policy enf
 
 ---
 
-## Stage 5: three optional public skills
+## Stage 5: two optional public skills
 
 **Claude:**
 
 ```text
-[SETUP 5/8 — SKILLS]
+[SETUP 5/8 - SKILLS]
 ```
 
 Three skills, each handled separately. A skill is instruction text, not enforcement, and runs only
@@ -257,7 +244,7 @@ First: `structured-work-request`, which turns a vague request into a controlled 
 
 **User:** Yes.
 
-**Claude:** `[SETUP 5/8 — SKILLS]`
+**Claude:** `[SETUP 5/8 - SKILLS]`
 
 ```text
 Frontmatter delimiters      OK
@@ -273,24 +260,11 @@ proof, stop conditions, and approval points.
 
 **User:** Yes.
 
-**Claude:** `[SETUP 5/8 — SKILLS]` No same-name destination existed, so nothing to back up. Copied.
+**Claude:** `[SETUP 5/8 - SKILLS]` No same-name destination existed, so nothing to back up. Copied.
 Every destination file matches the source exactly.
 
-... `reconciliation-control-review` and `work-memory` follow the same eight-step pattern, each
-validated, approved, copied, and verified separately ...
-
-**Claude:** `[SETUP 5/8 — SKILLS]` Since `work-memory` is installed, its real limits from
-`docs/WORK-MEMORY.md`: a local root under your user profile, holding `NOW.md`, a short `INDEX.md`,
-topic notes loaded one at a time, and archived snapshots. It warns at 5 MB and stops writes at
-10 MB. It is plaintext, and local files may be managed, backed up, indexed, or synchronized. Recall
-is manual and every change needs approval. Run `/work-memory init` now?
-
-**User:** Yes.
-
-**Claude:** `[SETUP 5/8 — SKILLS]` Preview: `work-memory/NOW.md` blank, `work-memory/INDEX.md`
-blank, `work-memory/topics/` empty, `work-memory/archive/` empty. Created, limits and contents
-verified. I have not changed `autoMemoryDirectory`, imported native memory, or set the wiki to
-auto-load.
+... `reconciliation-control-review` follows the same eight-step pattern, with separate review and
+approval. No other persistence or storage system is initialized.
 
 ---
 
@@ -299,24 +273,26 @@ auto-load.
 **Claude:**
 
 ```text
-[SETUP 6/8 — MODEL AND USAGE]
+[SETUP 6/8 - MODEL AND USAGE]
 ```
 
 Summarizing `docs/MODELS-AND-USAGE.md`. Model and effort are not data-classification or safety
-controls. Never reduce a control to save usage. Please run these yourself, one at a time:
-`/status`, `/permissions`, `/model`, `/effort`, `/usage`, `/context`, `/memory`.
+controls. Never reduce a control to save usage. Keep the approved default for the first lesson.
+Use the extension controls where offered; commands such as `/status`, `/permissions`, `/model`,
+`/effort`, `/context`, and `/memory` are optional reference equivalents. Check the organization's
+usage website for the allocation; do not open a terminal to complete a command list.
 
-**User:** Ran `/usage`. It shows I have used about a third of the period.
+**User:** I checked the organization's usage website. I understand the unit and period shown.
 
-**Claude:** `[SETUP 6/8 — MODEL AND USAGE]` Useful context, not a budget I can enforce. Effort is
-soft guidance rather than a hard token cap, and its availability depends on the model: start at high
-effort for substantive knowledge work and drop lower only for genuinely routine, low-risk tasks.
+**Claude:** `[SETUP 6/8 - MODEL AND USAGE]` Useful context, not a budget I can enforce. Effort is
+soft guidance rather than a hard token cap, and its availability depends on the model. We can
+review the supported choices later when a task justifies a change.
 
-`/memory` inspects native per-project memory. It does not manage the cross-project wiki from Stage
-5, and must never be used to redirect native memory into it.
+`/memory`, where available, can inspect standard instructions. This setup preserves managed
+settings and configures no automatic memory or storage redirection.
 
 Subagents and long autonomous workflows are excluded from this starter because they multiply context
-and usage. While learning, check `/usage` and decline offers to spawn subagents, keep going
+and usage. While learning, check the organization's usage website and decline offers to spawn subagents, keep going
 autonomously, or build a complete workflow in one pass. I will not change your model, effort, or
 permissions without a separate explicit request.
 
@@ -327,7 +303,7 @@ permissions without a separate explicit request.
 **Claude:**
 
 ```text
-[SETUP 7/8 — PRACTICE]
+[SETUP 7/8 - PRACTICE]
 ```
 
 Working through `guides/01-claude-code-fundamentals.md`, one topic at a time.
@@ -337,7 +313,7 @@ proof, and the stop condition. Which of those do your current requests usually l
 
 **User:** The proof, probably. I ask for an answer and not for how it was checked.
 
-**Claude:** `[SETUP 7/8 — PRACTICE]` That is the most common gap, and the one that matters most in
+**Claude:** `[SETUP 7/8 - PRACTICE]` That is the most common gap, and the one that matters most in
 reconciliation work.
 
 ... remaining topics: VS Code controls, permissions, commands, model and effort, usage discipline,
@@ -348,7 +324,7 @@ records, and not de-identified real records either.
 
 **User:** The tie-out template. Can I use the structured-work-request skill?
 
-**Claude:** `[SETUP 7/8 — PRACTICE]` Yes. Invoking `/structured-work-request`. The structured
+**Claude:** `[SETUP 7/8 - PRACTICE]` Yes. Invoking `/structured-work-request`. The structured
 request, restated in redacted form:
 
 ```text
@@ -364,7 +340,7 @@ Approval:     no filed value changes; this exercise produces no filing output
 
 **User:** Approved.
 
-**Claude:** `[SETUP 7/8 — PRACTICE]` ... exercise completed and reviewed ... Two optional reads, no
+**Claude:** `[SETUP 7/8 - PRACTICE]` ... exercise completed and reviewed ... Two optional reads, no
 install or configuration: `guides/02-multistate-property-tax-workflows.md` for the job lifecycle,
 and `guides/03-professional-skills-by-category.md` for designing bounded local skills.
 
@@ -375,21 +351,19 @@ and `guides/03-professional-skills-by-category.md` for designing bounded local s
 **Claude:**
 
 ```text
-[SETUP 8/8 — COMPLETE]
+[SETUP 8/8 - COMPLETE]
 Date: (run date)          Setup version: 1
 
 VS Code                  PRESENT
 Claude Code extension    PRESENT
-Claude Code CLI          SKIPPED — APPROVAL REQUIRED
+Claude Code CLI          SKIPPED - APPROVAL REQUIRED
 User instructions        CONFIGURED (backup verified)
 VS Code settings         CONFIGURED (Default profile, backup verified)
-Skills installed         structured-work-request, reconciliation-control-review, work-memory
-Verification commands    /status /permissions /model /effort /usage /context /memory
-Native memory            PENDING POLICY
-Cross-project memory     PERMITTED (initialized, limits verified)
+Skills installed         structured-work-request, reconciliation-control-review
+Verification             Available extension controls; organization usage page; unavailable items noted
 Rollback outcomes        none required
-Unresolved policy        native per-project auto memory
-Next safe action         confirm the native memory question with an authorized administrator
+Unresolved policy        none in this illustrative scenario
+Next useful action       choose one bounded task from LEARN.md
 ```
 
 This setup validated no tax, legal, or accounting conclusion. It configured tools and wrote two

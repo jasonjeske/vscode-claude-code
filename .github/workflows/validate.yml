@@ -18,3 +18,4 @@ jobs:
           node-version: '20'
       - run: node tests/validate-repo.mjs
       - run: node tests/merge-spec.mjs
+      - run: node tests/dashboard-spec.mjs

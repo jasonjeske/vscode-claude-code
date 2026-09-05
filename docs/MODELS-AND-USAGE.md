@@ -1,117 +1,86 @@
 # Models, thinking effort, and workplace usage
 
-A workplace Team or Enterprise account may be limited, metered, centrally configured, or changed by
-an administrator. Availability and limits vary. This guide states no fixed entitlement, price, or
-token allowance.
+This guide assumes an already working, organization-managed gateway/API connection. It does not
+assume a personal Pro/Max subscription or that every public model is available. Keep existing
+credentials and managed configuration. Your administrator determines access and allocation.
 
-Official references:
+For the beginner walkthrough, use [the extension guide](../guides/00-use-vscode.md). These are
+suggested task choices, not a benchmark, entitlement list, or guarantee of correctness.
 
-- [Model configuration](https://code.claude.com/docs/en/model-config)
-- [Manage costs](https://code.claude.com/docs/en/costs)
-- [Claude Code commands](https://code.claude.com/docs/en/commands)
+## Start with the approved default
 
-## Verify the account before sensitive work
+Complete the first text lesson without changing models or effort. Later, choose only from the
+working setup's offered models. Gateway aliases can map to specific versions, so do not infer a
+version or rate from a family name. Ask the administrator if the mapping matters to a task.
 
-Run `/status`. Confirm on screen that the provider and account or tenant are employer-approved. Do
-not paste, screenshot, or repeat account identifiers in chat or public logs. Stop if anything is
-wrong or uncertain.
+| Task | Suggested choice, if approved and available | Check |
+| --- | --- | --- |
+| First lesson or ordinary guided task | Workplace default or Sonnet | Follow the lesson's answer key |
+| Short wording or formatting of supplied text | Default; optional Haiku | No facts or conditions lost |
+| Reconciliation method or source-backed analysis | Default or Sonnet with appropriate reasoning | Keys, exceptions, controls, citations |
+| A difficult unresolved reasoning problem | Consider Opus for that bounded question | Compare with evidence; do not simply accept its confidence |
 
-Model and effort choices are not data classification, privacy boundaries, or safety controls.
-Approval to use a model does not imply approval to process a particular data class.
+If only one model is available, use it for smaller steps. A model change cannot supply a missing
+business rule, fix unavailable source evidence, or grant a database connection. No lesson requires
+Fable, automatic routing, or a new model installation.
 
-## Choose the model visibly
+## Adjust effort only when useful
 
-- **Haiku, if available:** low-risk formatting, classification, and draft wording. Do not use speed
-  to bypass difficult reconciliation logic or professional review.
-- **Sonnet or workplace default:** daily analysis, controlled drafting, document explanation, and
-  routine workflows. Verify sources, controls, and exceptions.
-- **Opus, if available:** difficult method design, ambiguous multi-source reasoning, or a demanding
-  independent challenge. A human still owns tax, legal, and accounting decisions.
-- **Fable, if available:** the hardest, longest, or most ambiguous work. The `fable` alias may
-  resolve to a newer Fable version, so use the picker rather than assuming Fable 5.
-- **Other allowed models:** select only from the current `/model` picker. Do not assume a model
-  name, version, entitlement, or alias from a public example.
+Use the supported model/effort control in the extension. If absent, keep the current setting; do
+not edit environment variables to make a slider appear. Supported levels vary by model and setup.
+Lower effort can reduce latency and usage, while deeper reasoning may help demanding work.
+[Official model and effort documentation](https://code.claude.com/docs/en/model-config).
 
-Claude Code documents `opusplan` as a scoped alias that uses Opus while planning and Sonnet while
-executing when those models are available. It is not a general classifier for job tasks, risk, or
-data sensitivity.
+Our suggested progression:
 
-## Choose thinking effort separately
+- Keep the existing setting for the first lesson.
+- Consider low or medium for simple wording or a well-defined repeat task, if offered.
+- Allow sufficient reasoning for ambiguous joins, complex formulas, or legal-source comparisons;
+  high is a reasonable option to evaluate where supported.
+- Treat higher levels as a deliberate experiment on one bounded problem, not an everyday upgrade.
 
-Run `/effort` to inspect levels supported by the current model and account. Depending on the model,
-Claude Code may offer `low`, `medium`, `high`, `xhigh`, or `max`.
+Effort is not a hard spending cap or a proof of accuracy. Some models have no effort control.
+The kit's Teach/Guided/Routine modes change explanation style, not the selected model or its effort.
+Typing “be quick” is not a reliable substitute for changing a supported control.
 
-| Effort | Starting use |
-| --- | --- |
-| `low` | Quick, low-risk wording or simple formatting. |
-| `medium` | Repetitive, well-defined routine work. |
-| `high` | Substantive knowledge work and reconciliation planning. |
-| `xhigh` | Complex multi-step or high-consequence planning, when supported. |
-| `max` | Rare capability-critical work; may consume more and overthink. |
+## Use the organization's usage page
 
-Haiku is not universally effort-capable. The picker and current account are authoritative.
+Bookmark the administrator-provided usage website locally. Check the displayed units, period,
+reset rules, and refresh time before comparing usage. Compare before and after one small task;
+include correction turns and allow for delayed reporting. Keep filled records outside this repo.
 
-Effort is soft guidance to the model, not a hard token cap, fixed budget, or correctness guarantee.
-Adaptive thinking is distinct: a capable model may vary its reasoning within the chosen effort
-guidance. Start at `high` for substantive professional work. Lower effort only for genuinely simple
-or repetitive tasks. Use `xhigh` selectively and `max` rarely.
+A gateway can centralize usage and limits. Billing depends on its credential and provider path,
+not simply the existence of a gateway URL. Follow the organization's actual reporting rules.
+[Official gateway guidance](https://code.claude.com/docs/en/llm-gateway).
 
-Never reduce evidence, controls, exceptions, or review merely to lower effort or usage.
+Use [the usage walkthrough](../guides/00-use-vscode.md#3-check-usage-on-the-organizations-website)
+for the difference between gateway allowance, subscription usage, session estimates, and context.
+Do not change a working login to obtain a usage dialog. Unavailable reporting means unknown,
+not unlimited or zero usage. Reading these GitHub pages does not itself send a Claude request;
+pasting them into chat does add input.
 
-## No general automatic router
+## Keep each request manageable
 
-This repository configures no model router. Choose visibly with `/model` and `/effort`, then confirm
-the active choice before consequential analysis. Model choice never replaces authoritative sources,
-control totals, exception queues, reproducible evidence, or human approval.
+1. Name one result, its approved inputs, and its required checks.
+2. Supply exact files or ranges; do not ask Claude to scan a drive or reread this whole guide.
+3. Keep related work in the same conversation. Start a new one for unrelated work after preserving
+   any necessary handoff. Do not switch models repeatedly without a task-specific reason.
+4. For large tables, use approved scripts or queries for deterministic calculations and retain
+   counts, totals, and complete exceptions. Keep chat output bounded; do not claim full review from a sample.
+5. Send once. Check for pending approvals before deciding a response is stuck. Stop and inspect
+   partial outputs after failures before retrying; use [the recovery steps](../guides/00-use-vscode.md).
+6. Pause at a useful checkpoint when the remaining allocation is insufficient. Do not remove
+   controls or citations to fit the budget.
 
-## Seven commands to learn
+## Commands are optional interface tools
 
-1. `/status` — verify the active provider and approved workplace account.
-2. `/permissions` — inspect the allowed action boundary.
-3. `/model` — inspect or choose an allowed model or documented alias.
-4. `/effort` — inspect or choose available thinking effort.
-5. `/usage` — inspect usage information exposed for the account.
-6. `/context` — see what consumes the context window.
-7. `/clear` — remove stale context before an unrelated objective.
+Type `/` in Claude's message box to discover supported commands. `/model`, `/effort`, `/status`,
+`/context`, `/memory`, and other commands vary by version and surface. Prefer the graphical control
+when offered. Items that open a terminal are exceptions, not requirements for the first lesson.
+Never type Claude slash commands directly at a PowerShell prompt. Do not share account identifiers.
+[Current command reference](https://code.claude.com/docs/en/commands).
 
-Do not reproduce account identifiers from command output. Behavior can change; use Anthropic's
-current [command reference](https://code.claude.com/docs/en/commands).
-
-## Keep a limited allowance productive
-
-1. Start with outcome, period, inputs, source hierarchy, rules, controls, deliverables, exceptions,
-   and approval boundary.
-2. Open only the smallest sufficient set of approved files. Never scan a drive or broad folder.
-3. Use one conversation for one related objective.
-4. Ask for a short plan and approve it before large analysis.
-5. Request concise status focused on decisions, exceptions, and checks.
-6. Reuse approved project instructions instead of repeating stable rules.
-7. Check `/usage` before a long task and `/context` before adding files.
-8. Stop at a clear, redacted handoff if safe completion exceeds remaining usage.
-
-Targeted recall can save context: inspect native project memory with `/memory`, or read only
-`NOW.md`, `INDEX.md`, and one approved cross-project topic. Native auto memory and the optional wiki
-are not free context; every recalled note consumes context and usage. Never load all notes to avoid
-writing a precise task prompt.
-
-## No subagents or autonomous workflows in the starter
-
-A **job workflow** is the human end-to-end process. A **skill** is one invoked instruction for a
-bounded repeated task. A **subagent** is a separate Claude instance with its own context and usage.
-They are not interchangeable.
-
-This starter does not install, teach, or invoke subagents, agent teams, or long autonomous
-workflows. Separate instances can multiply context and usage, obscure decisions, and exhaust a
-limited allowance. Check `/usage` and decline beginner offers to “spawn subagents,” “keep going,” or
-“build the full workflow.”
-
-Consider a subagent only after all of these are true:
-
-- the user understands prompts, permissions, context, model, effort, and verification;
-- at least one week of controlled single-session synthetic practice is complete;
-- the user understands normal usage consumption and remaining allowance;
-- the employer owns and approves the cost and data-processing boundary; and
-- a genuine independent review need cannot be met by a fresh, bounded human-reviewed session.
-
-Even then, define scope, input, output, budget, stop conditions, and review before use. Never add a
-subagent merely because it sounds advanced.
+No subagents, agent teams, proxies, or long autonomous runs are part of this beginner path.
+Learn one controlled session and its usage first. A more advanced workflow needs a concrete
+reason, approved scope and budget, and an explicit user decision. It is not required to become
+productive with Excel, research, or reports.

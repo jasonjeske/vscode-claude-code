@@ -5,10 +5,11 @@
 # What each number actually is, verified against Anthropic's own documentation
 # before this script was written (see guides/06-budget-aware-statusline.md):
 #
-#   - "ctx"     context_window.used_percentage. Live, always present after the
-#               first response in a session.
+#   - "ctx"     context_window.used_percentage. Live, generally populated after the
+#               first response in a session when available.
 #   - "session" cost.total_cost_usd. Claude Code's own client-side estimate at
-#               list price for THIS session only. Resets to zero on /clear. This
+#               list or configured managed pricing for THIS session only. Current
+#               versions reset to zero on /clear. This
 #               is never your organization's real bill or your monthly total.
 #   - "cap"     rate_limits.spend_limit.used_percentage. Present ONLY when your
 #               organization runs a Claude apps gateway with a spend limit set
@@ -23,7 +24,8 @@
 # monthly budget figure YOU type into statusline-budget.json next to this
 # script. If that file is absent, this script shows the percentage alone and
 # invents no dollar figure. Ask your Claude Code administrator for your real
-# monthly cap before filling in that file; do not guess.
+# monthly cap and matching reporting period before filling in that file; do not
+# guess. For a nonmonthly or unconfirmed period, leave the budget file absent.
 
 try {
     $input_json = $input | Out-String | ConvertFrom-Json

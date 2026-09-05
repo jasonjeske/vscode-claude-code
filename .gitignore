@@ -16,6 +16,15 @@ Thumbs.db
 *.csv
 *.pdf
 *.docx
+*.xlsm
+*.xlsb
+*.pptx
+*.pbix
+*.pbit
+*.accdb
+*.parquet
+*.duckdb
+*.sqlite
 .local-work/
 work-data/
 outputs/
