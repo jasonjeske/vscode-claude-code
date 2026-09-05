@@ -1,5 +1,7 @@
 # Claude Code for property-tax work
 
+![Claude Code for property-tax work: Excel, research, and reporting, illustrated with a spreadsheet, source document, charts, and buildings.](assets/readme-banner.png)
+
 An independent, public starter kit for using **Claude Code in VS Code on Windows** for Excel,
 property-tax research, reconciliation, dashboards, and reporting. Built for a first-time user
 with an already approved workplace account and a limited usage allowance.

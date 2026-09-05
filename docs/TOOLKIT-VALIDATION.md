@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 259 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 262 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -40,6 +40,9 @@ The displayed calculation logic did not need changing.
 
 ## Illustrated beginner guide
 
+- New README raster banner generated with the built-in image creator and visually inspected for
+  readable, accurate title text, composition, and absence of identifying details. The unaltered
+  image and [generation prompt](../assets/README-BANNER.md) are included; the old cover is preserved.
 - Added five linked lessons with prompts, expected results, checks, and an adaptation walkthrough.
 - Three original self-contained SVG diagrams were rendered with librsvg and visually inspected as
   PNG previews. Labels and numbers are readable with no observed clipping. Each has descriptive
