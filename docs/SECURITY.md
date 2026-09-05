@@ -34,7 +34,8 @@ Safe for the public repository:
 
 - generic onboarding instructions;
 - generic VS Code settings;
-- blank templates and exactly three generic skills; and
+- blank templates, three core skills, and three optional expansion skills;
+- the wholly invented teaching dashboard and its fixed sample records; and
 - links to official documentation.
 
 Keep only in employer-approved locations:

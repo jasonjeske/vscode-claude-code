@@ -19,7 +19,8 @@ Welcome:
 
 Not a fit, and likely to be declined:
 
-- New skills. Three is the number, chosen deliberately.
+- Unreviewed or overlapping skill collections. Keep the three core onboarding skills stable;
+  focused optional skills belong in the separately documented expansion path.
 - Any dependency, package manager file, or lockfile.
 - MCP servers, connectors, hooks, plugins, or subagent configuration.
 - Platform ports. This repository is Windows-only on purpose; a macOS or Linux variant is a
@@ -40,8 +41,9 @@ well it is written.
    or as a security control. See [`docs/SECURITY.md`](docs/SECURITY.md).
 4. **Backup, readback, rollback.** Every write path keeps all three. A backup that is not read back
    does not count.
-5. **Minimal trusted surface.** No MCP, connectors, hooks, plugins, subagents, or dependencies. This
-   is why the validation scripts use only the Node standard library.
+5. **Minimal trusted surface.** No configured MCP, connectors, hooks, plugins, subagents, or package
+   dependencies. Documented optional upstream recommendations are not automatic installations.
+   Validation scripts use only the Node standard library; the synthetic dashboard uses browser APIs.
 6. **Skills stay user-invoked.** `disable-model-invocation: true` is invariant.
 7. **CI never claims more than it tested.** No job may imply a verification it did not perform. This
    is why there is no `windows-latest` job.
@@ -49,11 +51,12 @@ well it is written.
 
 ## Before you open a pull request
 
-Run both checks from the repository root. Both must exit 0.
+Run all three checks from the repository root. Each must exit 0.
 
 ```sh
 node tests/validate-repo.mjs
 node tests/merge-spec.mjs
+node tests/dashboard-spec.mjs
 ```
 
 `node tests/validate-repo.mjs` is the lint for this repository. It checks skill frontmatter, every
@@ -66,8 +69,8 @@ request and say why in the description.
 
 Also:
 
-- Add an entry to the `## [Unreleased]` section of [`CHANGELOG.md`](CHANGELOG.md), describing the
-  user-visible change rather than the commit.
+- Describe user-visible changes in the pull request. Do not manually edit `CHANGELOG.md`; use the
+  maintainer's release process.
 - If your change touches Stage 3 or Stage 4 behavior, run the relevant procedure in
   [`tests/QA-RUNBOOK.md`](tests/QA-RUNBOOK.md) and paste the results block into the pull request
   description. `NOT RUN` is an acceptable entry; a blank one is not.
@@ -75,7 +78,7 @@ Also:
 
 ## Continuous integration
 
-`.github/workflows/validate.yml` runs both scripts on every push to `main` and on every pull
+`.github/workflows/validate.yml` runs all three scripts on every push to `main` and on every pull
 request, on `ubuntu-latest` with Node 20, with read-only permissions.
 
 CI does not check external links, and it does not test Windows behavior. Both are deliberate. See
@@ -86,14 +89,14 @@ decisions D2 and D8 in the project's design notes.
 For a maintainer cutting a release:
 
 1. CI is green on `main`.
-2. Both scripts pass locally from a clean checkout.
+2. All three scripts pass locally from a clean checkout.
 3. Manual external-link pass: open every external URL in `README.md`, `START-HERE.md`, and the
    guides, and confirm each still resolves to the intended page. CI does not do this.
 4. Windows ledger reviewed: read `docs/WINDOWS-VERIFICATION.md` and state the current status in the
    release notes, including how many rows remain `UNVERIFIED`. Do not imply verification that has
    not happened.
-5. Move the `## [Unreleased]` entries into a new dated version section in `CHANGELOG.md`.
-6. Tag the release and publish it, with the changelog section as the release notes.
+5. Use the maintainer's release process to generate the version's changelog; do not manually edit it.
+6. Tag the release and publish it, with the generated changelog section as the release notes.
 
 Steps 3 and 4 are the two a maintainer is most likely to skip and the two most likely to mislead a
 reader if skipped.

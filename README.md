@@ -10,6 +10,35 @@
 A guided starting point for a first-time Claude Code user doing confidential corporate tax,
 property-tax accounting, reconciliation, and evidence-heavy work in a large enterprise.
 
+## Already set up? Start with the Excel and dashboard toolkit
+
+Keep the working VS Code extension and approved gateway configuration. There is no need to repeat
+the installation interview to use the learning materials.
+
+- [Recommended trusted skills and Windows installation](guides/07-trusted-skills-and-installation.md):
+  Anthropic's Office, Data, Finance, and design skills, with source and compatibility findings.
+- [Advanced Excel and reconciliation](guides/08-excel-and-reconciliation-playbook.md): formulas,
+  PivotTables, Power Query, large files, matching, and controls.
+- [Dashboards and reporting](guides/09-dashboard-and-reporting-playbook.md), with an
+  [interactive synthetic example](examples/dashboard/index.html) and a checkable answer key.
+- [Twenty reusable task prompts](prompts/PROMPT-LIBRARY.md) and the new
+  [`prompt-coach` skill](skills/prompt-coach/SKILL.md).
+- [Four-week learning path](guides/10-four-week-learning-path.md) and
+  [Teach / Guided / Routine preferences](templates/LEARNING-AND-WORK.md).
+- Project templates for [reconciliation](templates/projects/RECONCILIATION-CLAUDE.md) and
+  [exemption evidence](templates/projects/EXEMPTION-CLAUDE.md).
+
+The recommended starting combination is Anthropic's XLSX skill for ordinary spreadsheet work,
+native Excel verification for complex workbooks, and Data dashboard/validation skills for reporting.
+See Guide 07 before installing: Office skills have restrictive per-skill terms and local runtime
+requirements. No upstream Office skill is redistributed here. Current Claude Code has bundled
+skills; an Office-ready environment is a separate matter.
+
+To view the demo, download the repository and open `examples/dashboard/index.html` in a browser.
+GitHub displays the source file, not the running dashboard. The example contains invented data only.
+See [the validation record](docs/TOOLKIT-VALIDATION.md) for completed checks and the browser,
+Windows, and native Excel checks still outstanding.
+
 The setup asks before each change. Interview responses are processed by the employer-approved
 Claude service. The resulting instruction and configuration files remain local on the approved
 work computer unless the user separately moves them.
@@ -18,7 +47,7 @@ work computer unless the user separately moves them.
 
 1. Obtain this repository from a reviewed, tagged release or another employer-approved snapshot.
 2. Put it in an empty starter folder that contains no work files, exports, evidence, or records.
-3. Review this README, [`START-HERE.md`](START-HERE.md), the templates, the three skills, and the
+3. Review this README, [`START-HERE.md`](START-HERE.md), the templates, the selected skills, and the
    settings candidate before trusting the folder.
 4. Keep future work artifacts in a separate employer-approved work directory, never in this
    checkout.
@@ -121,12 +150,21 @@ With separate approval for each action, Claude can:
 The VS Code candidate keeps the existing theme and telemetry choice unchanged. Its preferences and
 Workspace Trust prompts are usability safeguards, not DLP or policy enforcement.
 
-The repository includes exactly three optional skills:
+The core onboarding offers three optional skills:
 
 - `structured-work-request` turns vague requests into controlled, reviewable requests;
 - `reconciliation-control-review` applies a fixed `PASS`, `FAIL`, or `UNVERIFIED` review contract;
   and
 - `work-memory` maintains a bounded, redacted local Markdown wiki through explicit user commands.
+
+Three additional optional skills are available through [Guide 07](guides/07-trusted-skills-and-installation.md):
+
+- `prompt-coach` creates a concise reusable prompt and teaches one prompting habit;
+- `excel-workbook-review` inspects workbook structure and risks before any edits; and
+- `financial-dashboard` builds a reviewed report with defined metrics and verification.
+
+All six local skills are explicitly user-invoked. The additional three are not installed by the
+core onboarding. Upstream skill and plugin recommendations are separate, reviewed choices.
 
 No MCP servers, connectors, hooks, plugins, subagents, automatic task router, or permission bypass
 are configured. The beginner path does not use built-in or custom subagents or long autonomous
@@ -154,7 +192,7 @@ content is processed by the approved Claude service; local storage does not mean
 Use generic redacted summaries only and confirm employer policy first. See the complete
 [work-memory design and limits](docs/WORK-MEMORY.md).
 
-## Six short guides
+## Guides
 
 Read them in order:
 
@@ -172,13 +210,21 @@ Read them in order:
 6. [A budget-aware status line](guides/06-budget-aware-statusline.md) sets up an optional status line
    that shows context usage, this session's cost, and, only when your organization's tooling actually
    reports it, your spend-cap utilization, so a metered seat does not run out mid-project unnoticed.
+7. [Trusted skills and installation](guides/07-trusted-skills-and-installation.md) ranks official
+   sources and explains runtime, license, gateway, and installation checks.
+8. [Excel and reconciliation](guides/08-excel-and-reconciliation-playbook.md) maps real work to
+   appropriate tools and full-population controls.
+9. [Dashboard and reporting](guides/09-dashboard-and-reporting-playbook.md) connects professional
+   presentation to checkable metrics and a synthetic exercise.
+10. [Four-week learning path](guides/10-four-week-learning-path.md) builds confidence through small,
+    useful tasks and clear advancement checks.
 
 Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 
 ## Public and local boundary
 
-Safe to keep public: this generic repository, blank templates, settings candidate, and three
-skills.
+Safe to keep public: this generic repository, blank templates, settings candidate, six local
+skills, and the wholly invented teaching example.
 
 Keep only in employer-approved locations: customized instructions, interview results, company
 procedures, actual records, internal paths and URLs, system details, outputs, exception reports,

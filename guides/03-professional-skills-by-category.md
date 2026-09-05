@@ -14,11 +14,15 @@ replace bracketed placeholders with synthetic labels before pasting.
   from this starter because they can consume allowance quickly and complicate review.
 
 A skill is not an app, security boundary, professional license, or automatic workflow. This starter
-ships exactly three optional skills:
+offers three core optional skills through onboarding:
 
 - [`structured-work-request`](../skills/structured-work-request/SKILL.md)
 - [`reconciliation-control-review`](../skills/reconciliation-control-review/SKILL.md)
 - [`work-memory`](../skills/work-memory/SKILL.md)
+
+For an already working setup, [Guide 07](07-trusted-skills-and-installation.md) adds a researched
+upstream shortlist and three optional local skills: `prompt-coach`, `excel-workbook-review`, and
+`financial-dashboard`. These are a separate expansion, not additional Stage 5 installations.
 
 ## Folder and file inventories
 

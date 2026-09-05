@@ -224,6 +224,9 @@ Do not alter another profile. These settings are preferences, not DLP or policy 
 
 ## Stage 5: three optional public skills
 
+This stage installs the three core skills only. After onboarding, an already working setup may
+use the separate optional expansion in [Guide 07](guides/07-trusted-skills-and-installation.md).
+
 Marker: `[SETUP 5/8 — SKILLS]`
 
 Offer exactly these explicitly user-invoked skills:
