@@ -110,7 +110,11 @@ The displayed calculation logic did not need changing.
 - Checked numbered order, first-run link anchors, and temporary practice/skill-copy layouts against
   the actual source folders. Rechecked Claude's documented extension and personal skill paths.
   The two supplied requests are self-contained and use invented amounts with a +10 difference.
-- These are source, folder, and documentation checks. No Windows/Claude session, learner trial,
+- Browser check: inspected the rendered README on GitHub, verified the nine ordered headings,
+  and visually checked the skill-copy section. Followed the maintenance page's step-7 resume link
+  and confirmed it reaches the correct README anchor. This does not test the Windows application
+  steps, skill behavior, other lessons, or the local financial dashboard.
+- These are source, folder, documentation, and limited browser checks. No Windows/Claude session, learner trial,
   or installed-skill behavior was exercised. W32 covers the new route and blocked/existing cases.
 
 ## Not verified
