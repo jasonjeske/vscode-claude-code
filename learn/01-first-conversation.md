@@ -7,7 +7,7 @@
 
 ## Open a small practice space
 
-If you have not created a practice folder yet, use [the Windows first-run walkthrough](../START-HERE.md).
+If you have not created a practice folder yet, use [the Windows first-run walkthrough](../README.md).
 It includes every File Explorer and VS Code step. If you already completed its first output,
 you can use this lesson as a reference and move straight to today's task.
 

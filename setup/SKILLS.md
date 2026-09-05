@@ -1,4 +1,12 @@
-# Install, verify, update, and remove skills
+# Additional skills and skill maintenance
+
+**First-time setup: [follow the README walkthrough](../README.md).**
+It includes downloading, extracting, opening VS Code, copying the first two skills, finding them
+in the extension, and trying a supplied prompt. If your practice folder is already open and its
+instructions are saved, resume at [step 7: copy the two skills](../README.md#7-copy-the-two-starter-skills-into-claudes-skills-folder).
+You do not need this reference page to finish that walkthrough.
+
+Use this page later to add another skill, select a different scope, update a copy, or troubleshoot.
 
 Use the [catalog](../SKILLS.md) to choose a task. A skill is a folder containing `SKILL.md`, sometimes
 with scripts, data, or references. Putting this repository somewhere on the PC does not install its

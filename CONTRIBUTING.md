@@ -6,8 +6,8 @@ small context. The default path assumes the extension and approved gateway alrea
 
 ## Structure
 
-- `README.md`: short landing page and task navigation.
-- `START-HERE.md`: recommended setup for an existing installation.
+- `README.md`: the single canonical first-run walkthrough, including skill installation and a checked output.
+- `START-HERE.md`: compatibility entry point linking to that walkthrough; do not duplicate its steps.
 - `SKILLS.md`: every recommended skill, its purpose, example, and installation route.
 - `setup/`: skill lifecycle, project setup, and the retained full onboarding reference.
 - `skills/`: original, self-contained distribution folders, not auto-installed configuration.
@@ -21,8 +21,8 @@ small context. The default path assumes the extension and approved gateway alrea
 
 1. Keep the public content generic and technical. No credentials, company details, actual work data,
    customized work instructions, internal locations, or identifiable examples.
-2. Keep the already-working setup path short. Do not require the full onboarding interview to add
-   a local skill. The full reference retains its staged merge contract for those who need it.
+2. Keep the already-working setup path sequential and self-contained in README.md. Do not require
+   the full onboarding interview to add a local skill. The full reference retains its staged merge contract for those who need it.
    Default to the VS Code extension and Windows File Explorer. Label terminal exceptions with
    purpose, shell, working folder, expected result, and a supported fallback. Use the organization
    usage page as the allowance reference, never assume a personal subscription or extra models,
@@ -64,7 +64,7 @@ synthetic calculations and filters. None requires package installation.
 
 When changing Stage 3/4 or the global template, report the applicable manual results from
 [the QA runbook](tests/QA-RUNBOOK.md). `NOT RUN` is honest; a blank or implied pass is not. For the
-short setup, use W30/W31 in [the Windows ledger](docs/WINDOWS-VERIFICATION.md).
+first-run walkthrough, use W32; for optional global-file and skill updates, use W30/W31 in [the Windows ledger](docs/WINDOWS-VERIFICATION.md).
 
 Review the public diff for work data, credentials, personal details, and accidental artifacts.
 Inspect newly linked upstream entrypoints and installation behavior; URLs and package names drift.

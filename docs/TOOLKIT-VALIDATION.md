@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 283 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 270 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -95,31 +95,27 @@ The displayed calculation logic did not need changing.
 - Repository checks and the existing calculation/merge fixtures passed after cleanup. Target-PC
   and native-Excel acceptance remains a documented deployment check, not a completed local test.
 
-## Web page to local setup handoff
+## One-page first-run walkthrough
 
-- Made the optional assisted-copy section self-contained: repository and direct ZIP links,
-  extraction, selecting the folder containing the starter files, opening Claude in that window,
-  and selecting two local file references before sending the request.
-- The request identifies the repository, verifies five exact source files, and stops on missing
-  references or sources without searching other folders, inventing content, or changing files.
-  The section is an alternative to completed manual copies, not a second installation pass.
-- Checked the anonymous source archive layout and file contents against the required source paths.
-  An empty practice folder lacks those files. This confirms the documented prerequisite, not
-  that Claude follows the missing-file instruction. W32 includes both success and wrong-folder trials;
-  actual Windows/extension/Claude behavior remains UNVERIFIED.
-
-## Complete Windows first-run sequence
-
-- Replaced the fragmented start with seven ordered steps: learning location, ZIP extraction,
-  separate practice subfolders, opening the starter in VS Code, selecting the Claude Code panel,
-  switching to practice and saving instructions, then requesting/opening/checking one new output.
-- The README summarizes that same sequence. Optional global/skill/Office setup follows the first
-  useful result; assisted copying is labeled separately and retains its own source-reference checks.
-- Reviewed documented Windows extraction, VS Code Explorer/editor controls, and Claude extension
-  references. Confirmed the archive supplies the starter structure and the practice folders are
-  user-created outside it. The first exercise's expected signed difference is independently +10.
-- W32 now covers workspace switching, saving the local instruction file, and inspecting the actual
-  output or an explicitly unsaved chat fallback. These GUI and model-behavior trials remain NOT RUN.
+- Read the published GitHub README as a user-facing page. Its setup summary, task menu, and skill
+  references offered competing routes before the learner had finished configuring a workspace.
+- Consolidated the full route in README: open VS Code, prepare storage, extract, create practice,
+  open that folder, save instructions, copy two complete skill folders, discover/try the skills
+  in the extension, then create/open/check a result. Each step names the application and next step.
+- START-HERE is now a compatibility entry point. The skill catalog and maintenance page point to
+  the same route. The practice workspace stays open; reference files use Open File rather than
+  switching projects. The former optional assisted-copy route was removed to avoid a second flow.
+- Moved optional global instructions to a later reference. Upstream skills, project-scope alternatives,
+  updates, and catalogs follow first-time setup. Existing skill folders are preserved on the first run.
+- Checked numbered order, first-run link anchors, and temporary practice/skill-copy layouts against
+  the actual source folders. Rechecked Claude's documented extension and personal skill paths.
+  The two supplied requests are self-contained and use invented amounts with a +10 difference.
+- Browser check: inspected the rendered README on GitHub, verified the nine ordered headings,
+  and visually checked the skill-copy section. Followed the maintenance page's step-7 resume link
+  and confirmed it reaches the correct README anchor. This does not test the Windows application
+  steps, skill behavior, other lessons, or the local financial dashboard.
+- These are source, folder, documentation, and limited browser checks. No Windows/Claude session, learner trial,
+  or installed-skill behavior was exercised. W32 covers the new route and blocked/existing cases.
 
 ## Not verified
 
@@ -163,12 +159,14 @@ exceptions only, empty result, reset, keyboard focus, narrow layout, 125% zoom, 
 Check against [the answer key](../examples/dashboard/README.md). Keep claims marked unverified until
 observed. The synthetic example is optional; the researched guides and prompts are usable without it.
 
-## Short setup acceptance
+## First-run acceptance
 
-In a permitted Windows test profile, follow the short setup once with absent destinations and once
-with an existing global file and same-name skill. Approve only the displayed batch; check backup
-readability, preserved settings, complete copied references, discovery, and rollback. Exercise a
-path containing spaces and a policy-blocked optional install. See W30/W31. These trials are NOT RUN.
+In a permitted Windows test profile, follow README steps 1-9 once with absent destinations and
+once with a same-name skill. Confirm the existing copy is preserved. Check complete copies,
+menu discovery, the Prompt Coach reply, the saved output, and its +10 difference. Exercise a path
+containing spaces and a blocked copy, ensuring the fallback does not claim a skill is installed.
+See W32. Optional global-file merging and skill updates have separate backup and rollback checks
+in W30/W31. These Windows and Claude behavior trials are NOT RUN.
 
 The retained full onboarding marker punctuation and transcript were updated together. Its merge
 fixture semantics are unchanged; P1-P4 model-executed drills remain NOT RUN. Status-line changes

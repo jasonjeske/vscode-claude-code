@@ -9,8 +9,8 @@ You do not need a personal Claude subscription, terminal experience, or every re
 to follow this path with an already working, approved gateway setup.
 
 If you have only downloaded a ZIP and have not created or opened the folders yet, follow
-[START-HERE's complete Windows walkthrough](../START-HERE.md) first. It shows extraction, the
-starter/practice folder layout, opening VS Code, opening its Claude Code extension, and your first output.
+[the README walkthrough](../README.md) first. It shows extraction, the
+starter/practice folder layout, opening VS Code, installing and trying skills, and your first output.
 
 ## 1. Find the right place to type
 
