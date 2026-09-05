@@ -55,10 +55,21 @@ an instruction to install everything.**
 
 ## Download without a GitHub account
 
-On this public repository, choose **Code > Download ZIP**, then extract it with Windows Explorer.
-No Git, GitHub account, or terminal setup is needed to read the guides or copy the local skills.
-Download the reviewed branch, commit, or release you intend to use; a default-branch ZIP does not
-include unmerged pull requests. Keep the snapshot identifier in your local setup record.
+**The ZIP is a collection of files, not an app to run.** Use the
+[Windows first-run walkthrough](START-HERE.md) with VS Code and its Claude Code extension:
+
+1. Create a learning folder in an approved location using Windows File Explorer.
+2. Download the ZIP and use **Extract All** into that location.
+3. Find the populated starter folder; create a separate `Practice-01` folder with `inputs`,
+   `working`, `outputs`, and `evidence` subfolders.
+4. In **Visual Studio Code**, use **File > Open Folder** to open the extracted starter.
+5. Open **Claude Code** through **Ctrl+Shift+P**, select its message box, and reference the local guide.
+6. Switch VS Code to `Practice-01`, create its `CLAUDE.md`, and use the supplied prompt to make,
+   open, and check your first output.
+
+[START-HERE](START-HERE.md) gives every click, the exact text to paste, and what you should see.
+No cloning, GitHub account, or terminal is needed. Keep the reviewed snapshot identifier in your
+local setup record; a default-branch ZIP includes merged work, not unmerged pull requests.
 
 Read this kit in a clean starter folder. Put real work in a **separate employer-approved folder**.
 Keep credentials, company details, customized instructions, records, and outputs out of this public

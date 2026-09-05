@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 286 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 283 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -107,6 +107,19 @@ The displayed calculation logic did not need changing.
   An empty practice folder lacks those files. This confirms the documented prerequisite, not
   that Claude follows the missing-file instruction. W32 includes both success and wrong-folder trials;
   actual Windows/extension/Claude behavior remains UNVERIFIED.
+
+## Complete Windows first-run sequence
+
+- Replaced the fragmented start with seven ordered steps: learning location, ZIP extraction,
+  separate practice subfolders, opening the starter in VS Code, selecting the Claude Code panel,
+  switching to practice and saving instructions, then requesting/opening/checking one new output.
+- The README summarizes that same sequence. Optional global/skill/Office setup follows the first
+  useful result; assisted copying is labeled separately and retains its own source-reference checks.
+- Reviewed documented Windows extraction, VS Code Explorer/editor controls, and Claude extension
+  references. Confirmed the archive supplies the starter structure and the practice folders are
+  user-created outside it. The first exercise's expected signed difference is independently +10.
+- W32 now covers workspace switching, saving the local instruction file, and inspecting the actual
+  output or an explicitly unsaved chat fallback. These GUI and model-behavior trials remain NOT RUN.
 
 ## Not verified
 

@@ -7,6 +7,10 @@
 
 ## Open a small practice space
 
+If you have not created a practice folder yet, use [the Windows first-run walkthrough](../START-HERE.md).
+It includes every File Explorer and VS Code step. If you already completed its first output,
+you can use this lesson as a reference and move straight to today's task.
+
 1. Use **File > Open Folder** in VS Code to select an approved practice folder outside this public
    starter. Use the existing workplace sign-in and gateway.
 2. Follow [open the Claude panel](../guides/00-use-vscode.md#1-find-the-right-place-to-type) if needed.
