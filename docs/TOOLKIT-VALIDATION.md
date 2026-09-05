@@ -40,7 +40,7 @@ The displayed calculation logic did not need changing.
 
 ## Illustrated beginner guide
 
-- New README raster banner generated with the built-in image creator and visually inspected for
+- README raster banner replaced with a navy-and-blue workspace image using the built-in image creator, visually inspected for
   readable, accurate title text, composition, and absence of identifying details. The unaltered
   image and [generation prompt](../assets/README-BANNER.md) are included; the old cover is preserved.
 - Added five linked lessons with prompts, expected results, checks, and an adaptation walkthrough.
