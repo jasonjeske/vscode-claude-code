@@ -121,6 +121,16 @@ The displayed calculation logic did not need changing.
 - Target Windows/editor, gateway, @-reference, dictation interpretation, and skill behavior remain
   NOT RUN. W32, W34, and W35 track setup, editor operations, and current-file behavior separately.
 
+## First-assignment handoff
+
+- The README names one first assignment and pairs each editor operation with its Claude action:
+  short chat, saved Markdown request, selected file, nested revision, and independently checked output.
+- Added an end-of-assignment checklist, pause/resume guidance, and a narrow way to record an observed
+  failure. These are part of the same page, not another setup route or prerequisite lesson.
+- Rechecked the six bundled skills, official/community catalog, global/project templates, prompt
+  library, token guidance, and removal of the custom persistent-memory system. Target-PC trials
+  remain explicitly pending; readiness here means ready for repository review and a supervised trial.
+
 ## Not verified
 
 - **Browser rendering and interaction:** NOT VERIFIED. The preferred Chrome wrapper could open a
