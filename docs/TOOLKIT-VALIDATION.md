@@ -256,3 +256,8 @@ README uses plugin installation and AI-assisted state workspace preparation.
 - The local CLI installation test does not validate skill selection, the extension's GUI, workbook
   processing by a model, employer permissions, or gateway tools. The full target-PC trial is W37
   in the Windows ledger. No claim of target-PC readiness replaces that trial.
+- Installed the published GitHub branch package with Claude Code 2.1.259 in a second isolated
+  configuration. All seven installed skill/reference files matched the source bytes.
+- Reviewed the GitHub-rendered README, blue workflow diagram, workbook preview, and next-assignment
+  navigation in Chrome. Repository link/anchor checks passed. This is reading/navigation evidence,
+  not a claim that the Windows Claude workflow was executed.
