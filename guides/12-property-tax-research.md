@@ -1,19 +1,18 @@
 # Research state and local property-tax questions
 
-Use the optional [`property-tax-research`](../skills/property-tax-research/SKILL.md) skill for
+Use the included [`property-tax-research`](../skills/property-tax-research/SKILL.md) skill for
 specific legal research: property classification, exemption conditions, reporting requirements,
 assessment procedures, deadlines, historical treatment, or changes between tax years. It produces
 a cited research memo or comparison table for review. It does not contain a precomputed tax-law
 database, provide a legal-research subscription, or grant web access.
 
-## Add it when the first real research task arrives
+## Use the installed research skill
 
-Follow [the local installation instructions](07-trusted-skills-and-installation.md). Copy the
-**complete** `skills/property-tax-research/` folder, including `references/`, into the approved
-personal or project `.claude/skills/` folder. The personal Windows entrypoint is
-`%USERPROFILE%\.claude\skills\property-tax-research\SKILL.md`.
+The [README setup](../README.md#2-install-the-skills-inside-claude-code) installs this skill with
+the other five in `property-tax-workbench`. No second installation is needed. Ask a scoped
+research question normally, or explicitly choose `/property-tax-workbench:property-tax-research`.
+If you used the manual fallback, its command is unprefixed; check your actual slash menu.
 
-Invoke `/property-tax-research` explicitly. After the README setup, add this skill when a law-research task needs it; it is optional.
 Use existing employer-approved browsing or supplied official documents. If the gateway or managed
 tools cannot access the web, it should return source-limited analysis and list missing checks.
 Installation does not change those access controls.
@@ -25,7 +24,7 @@ internal property identifiers, privileged documents, or confidential business fa
 Real work inputs and saved results belong in an approved work location, not this public repository.
 
 ```text
-/property-tax-research
+/property-tax-workbench:property-tax-research
 Guided mode. Research whether [SPECIFIC PROPERTY CATEGORY] has an annual reporting requirement
 in [STATE AND LOCAL JURISDICTION] for [TAX YEAR], using [NEUTRAL OWNERSHIP/USE FACTS]. Use approved
 official sources. Explain the rule, exceptions, local requirements, and missing facts. Cite exact

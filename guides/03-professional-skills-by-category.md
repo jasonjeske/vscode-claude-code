@@ -72,7 +72,7 @@ match hierarchy, duplicate/unmatched/ambiguous populations, and reproducibility 
 
 **Safety boundary:** no original-file edits, silent CSV conversion, fuzzy matching, forced matches,
 hidden exceptions, unsupported formula repair, or final accounting decision. Invoke
-`/reconciliation-control-review` for its fixed control contract.
+`/property-tax-workbench:reconciliation-control-review` for its fixed control contract.
 
 ## Research and authoritative answers
 

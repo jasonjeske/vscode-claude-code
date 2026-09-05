@@ -13,7 +13,7 @@ Copy or merge into an approved project's `CLAUDE.md`. Complete locally; never pu
 
 ## Method
 
-Invoke `/property-tax-research` when installed. Inspect the applicable primary authority, pinpoint
+Invoke `/property-tax-workbench:property-tax-research` when installed. Inspect the applicable primary authority, pinpoint
 citations, historical versions, exceptions, and local implementation. Distinguish enacted law,
 pending proposals, controlling decisions, guidance, and forms. Do not assume a current page governs
 a historical year. Generic external searches only; no internal identifiers or confidential facts.

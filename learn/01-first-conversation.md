@@ -58,7 +58,7 @@ Here the missing file reference is a useful question. Claude should not scan the
 which workbook you meant. When you are ready, select the intended file with the available `@`
 file picker. Referencing a file lets Claude process its content through the configured service.
 
-If `/prompt-coach` is installed, it can help write the request. It is optional; a well-scoped normal
+If `/property-tax-workbench:prompt-coach` is installed, it can help write the request. It is optional; a well-scoped normal
 prompt works too. Type `/` to inspect the actual available commands rather than guessing names.
 
 ## Read a proposed action before approving it

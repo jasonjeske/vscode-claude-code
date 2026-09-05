@@ -94,7 +94,7 @@ Every workflow should address the controls that apply:
 - reproducible calculations and evidence references; and
 - explicit human approval before a filing, appeal, payment, posting, or conclusion.
 
-Use `/structured-work-request` to define a task and `/reconciliation-control-review` to test an
+Use `/property-tax-workbench:structured-work-request` to define a task and `/property-tax-workbench:reconciliation-control-review` to test an
 approved reconciliation. Both shipped skills are optional and user-invoked. For specific law questions, add the optional
 [`property-tax-research`](../skills/property-tax-research/SKILL.md) skill using
 [Guide 12](12-property-tax-research.md).

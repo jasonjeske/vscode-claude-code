@@ -141,7 +141,7 @@ path, whether formulas were calculated or only written, and any verification you
 8. In a fresh Claude conversation, type `@inputs/` and choose that actual workbook. Ask:
    **“Review this workbook's sheets and formula risks, read-only, using excel-workbook-review.
    Do not save or recalculate it. Name one limitation and one Excel check.”** If needed, choose
-   `/excel-workbook-review` explicitly. You have used Anthropic's creation skill and this kit's
+   `/property-tax-workbench:excel-workbook-review` explicitly. You have used Anthropic's creation skill and this kit's
    review skill for different parts of one task.
 
 **Keep:** the original workbook, your check copy, and a short local note of observed results.

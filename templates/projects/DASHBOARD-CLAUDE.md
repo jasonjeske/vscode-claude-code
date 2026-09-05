@@ -24,7 +24,7 @@ Every chart, total, filter, and table must use the same definitions and scoped s
 
 ## Presentation and verification
 
-Use `/financial-dashboard` when installed. Choose one design skill only when it adds useful guidance.
+Use `/property-tax-workbench:financial-dashboard` when installed. Choose one design skill only when it adds useful guidance.
 Use readable financial tables, consistent decimals, clear units and dates, restrained color, explicit
 status labels, and accessible filters. Display empty and partially missing states honestly.
 External assets/network behavior: [APPROVED LOCAL ASSETS / SPECIFIC APPROVED DEPENDENCIES].

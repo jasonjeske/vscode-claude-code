@@ -123,7 +123,7 @@ specific mismatch and practice selecting the saved revision again.
 | Personal skill folder | Reusable procedure | Select its `/skill-name` when needed; no reinstall per task |
 | `outputs/result.md` | A produced artifact | Open and verify; keep the source and checks alongside it |
 
-The installed `/prompt-coach` is text-only and drafts requests; it does not read files or execute
+The installed `/property-tax-workbench:prompt-coach` is text-only and drafts requests; it does not read files or execute
 the draft. Give it your description in chat. For saved-file execution, use the normal request above
 in a fresh conversation. Other skills may accept selected evidence within their documented scope.
 
