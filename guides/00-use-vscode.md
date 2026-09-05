@@ -1,9 +1,11 @@
-# Use the guide and Claude side by side
+# Claude Code panel and usage desk guide
 
 [Setup](../START-HERE.md) | [Lessons](../LEARN.md) | [Daily reference](DAILY-USE.md)
 
 Keep this GitHub guide open in your browser and do the exercise in the **Claude Code extension
 inside VS Code**. The guide is your instruction book; Claude's chat is where you ask for help.
+For editor fundamentals, use [VS Code basics](00-vscode-basics.md).
+For saved requests, use [prompt files and dictation](14-prompt-files-and-dictation.md).
 Read one section, try its prompt, check the result, then follow Next. You can pause at any check.
 You do not need a personal Claude subscription, terminal experience, or every recommended skill
 to follow this path with an already working, approved gateway setup.

@@ -4,9 +4,23 @@ Start with **one useful task you need to do today**. Keep this page in your brow
 approved work folder in the VS Code extension, and choose a task below. You do not need to ask
 Claude to read the repository or complete every lesson first.
 
-If the interface is unfamiliar, do [the first conversation](learn/01-first-conversation.md) once.
-If Claude already works, keep the approved model and gateway unchanged. Add a skill only when the
-chosen task needs it. [Setup](START-HERE.md) and [where to click](guides/00-use-vscode.md) are references.
+If VS Code or Claude is new to you, complete [the README first session](README.md) first. It installs
+all six local skills together and teaches files, Markdown, `@`, and `/`. Then use one installed skill
+when the task needs it. Keep the approved model and gateway unchanged. The [VS Code fundamentals](guides/00-vscode-basics.md)
+and [saved-request guide](guides/14-prompt-files-and-dictation.md) help with a specific operation.
+
+## Build on what you just practiced
+
+| You can already do this from the README | Use it for the next task |
+| --- | --- |
+| Open the right folder and find a file | Keep one work objective and its evidence in the intended workspace |
+| Write, dictate, save, and preview Markdown | Collect the task in `prompts/current-task.md` |
+| Select a root or nested file with `@` | Give Claude the saved request and specifically approved inputs |
+| Change an input and verify a new result | Detect stale values and preserve earlier work |
+| Find the six installed slash commands | Use the one procedure the task needs, with no new installation |
+
+For longer tasks, save the request in a local Markdown file, select it with `@`, and say what Claude
+should do. A normal request can execute the bounded work; `/prompt-coach` only drafts text.
 
 ## Choose today's small result
 

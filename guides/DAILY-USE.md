@@ -15,6 +15,14 @@ Keep a [short local task note](../templates/WORK-TASK-NOTE.md) if useful. No ext
 required. Useful output, fewer corrections, and the ability to catch a changed condition are
 better progress signals than the number of lessons or skills completed.
 
+## Reopen the project and saved request
+
+In VS Code choose **File > Open Recent** and select the intended project. Use **Ctrl+P** to find
+`prompts/current-task.md`, edit or dictate the next bounded request, then **Ctrl+S**. Open the
+Claude Code panel and select that exact file with `@`; explicitly ask it to read the saved version
+and perform the allowed task. Select each approved evidence file too. Start fresh for unrelated work.
+Your six personal skills stay installed. [Saved-request examples](14-prompt-files-and-dictation.md).
+
 ## Start with one outcome
 
 Confirm the intended approved workspace/provider, choose the task, and reference only its inputs.

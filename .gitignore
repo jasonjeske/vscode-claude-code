@@ -37,3 +37,11 @@ backups/
 
 # The user's real monthly budget figure. Only the blank .example.json ships.
 config/statusline-budget.json
+
+# Ship only the empty practice-folder markers, never generated work in those folders.
+!/practice-project/outputs/
+/practice-project/outputs/*
+!/practice-project/outputs/.gitkeep
+!/practice-project/evidence/
+/practice-project/evidence/*
+!/practice-project/evidence/.gitkeep

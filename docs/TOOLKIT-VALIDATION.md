@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 270 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 285 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -81,7 +81,7 @@ The displayed calculation logic did not need changing.
 - Replaced calendar-based progression with capability milestones while retaining the existing
   guide path for bookmarks. Added a blank local task note; no actual work examples or results included.
 - W33 tracks a first useful task and a later changed-case attempt. Neither was performed. All
-  33 Windows claims remain UNVERIFIED; model-executed P1-P4 drills also remain NOT RUN.
+  35 Windows claims remain UNVERIFIED; model-executed P1-P4 drills also remain NOT RUN.
 
 ## Final repository cleanup
 
@@ -95,27 +95,31 @@ The displayed calculation logic did not need changing.
 - Repository checks and the existing calculation/merge fixtures passed after cleanup. Target-PC
   and native-Excel acceptance remains a documented deployment check, not a completed local test.
 
-## One-page first-run walkthrough
+## VS Code fundamentals and batch setup
 
-- Read the published GitHub README as a user-facing page. Its setup summary, task menu, and skill
-  references offered competing routes before the learner had finished configuring a workspace.
-- Consolidated the full route in README: open VS Code, prepare storage, extract, create practice,
-  open that folder, save instructions, copy two complete skill folders, discover/try the skills
-  in the extension, then create/open/check a result. Each step names the application and next step.
-- START-HERE is now a compatibility entry point. The skill catalog and maintenance page point to
-  the same route. The practice workspace stays open; reference files use Open File rather than
-  switching projects. The former optional assisted-copy route was removed to avoid a second flow.
-- Moved optional global instructions to a later reference. Upstream skills, project-scope alternatives,
-  updates, and catalogs follow first-time setup. Existing skill folders are preserved on the first run.
-- Checked numbered order, first-run link anchors, and temporary practice/skill-copy layouts against
-  the actual source folders. Rechecked Claude's documented extension and personal skill paths.
-  The two supplied requests are self-contained and use invented amounts with a +10 difference.
-- Browser check: inspected the rendered README on GitHub, verified the nine ordered headings,
-  and visually checked the skill-copy section. Followed the maintenance page's step-7 resume link
-  and confirmed it reaches the correct README anchor. This does not test the Windows application
-  steps, skill behavior, other lessons, or the local financial dashboard.
-- These are source, folder, documentation, and limited browser checks. No Windows/Claude session, learner trial,
-  or installed-skill behavior was exercised. W32 covers the new route and blocked/existing cases.
+- Rebuilt README for someone new to both VS Code and Claude. Steps 1-5 copy the complete practice
+  workspace and all six bundled skills in one batch, then check discovery. Steps 6-10 teach chat,
+  Markdown editing and single-pane reading, selecting saved requests with @, nested paths, a changed
+  case, and using already installed skills. Catalogs and optional packages follow the first session.
+- Added a copyable practice project with instructions, five subfolders, and an invented request.
+  Exact .gitkeep exceptions retain the output/evidence folders while ignoring generated contents.
+  Existing installed skills are deselected before copying; the original starter remains separate.
+- Added editor fundamentals, a saved-request/dictation guide, and a blank prompt-note template.
+  Updated the learning path, project setup, daily guide, and prompt library to use saved requests.
+- Rechecked official VS Code interface, workspace, editing, Markdown preview, and extension-management
+  documentation, plus Claude's file references and skill-loading rules. No inline Markdown extension
+  identity is assumed. Its installed controls need a separate PC-specific check.
+- The prompt-file example uses an explicit bill correction from 210 to 215; the later case changes
+  book 200 to 230. Expected signed results are +15 and -15, with unknown cause and distinct outputs.
+- Extracted a ZIP made from the committed Git tree into a temporary directory and copied its
+  practice project. Verified all five subfolders, CLAUDE.md, complete six-skill contents, and the
+  research reference. Simulated copying only missing skills while preserving two existing copies.
+  Created root/nested request fixtures and checked the +15/-15 arithmetic without invoking Claude.
+- In Chrome, checked the rendered GitHub README's ten ordered sections and visually inspected the
+  Markdown exercise. Expanded the second-result disclosure and verified its displayed -15 answer.
+  These are guide-rendering checks, not VS Code, installed-extension, or model behavior tests.
+- Target Windows/editor, gateway, @-reference, dictation interpretation, and skill behavior remain
+  NOT RUN. W32, W34, and W35 track setup, editor operations, and current-file behavior separately.
 
 ## Not verified
 
@@ -161,12 +165,12 @@ observed. The synthetic example is optional; the researched guides and prompts a
 
 ## First-run acceptance
 
-In a permitted Windows test profile, follow README steps 1-9 once with absent destinations and
-once with a same-name skill. Confirm the existing copy is preserved. Check complete copies,
-menu discovery, the Prompt Coach reply, the saved output, and its +10 difference. Exercise a path
-containing spaces and a blocked copy, ensuring the fallback does not claim a skill is installed.
-See W32. Optional global-file merging and skill updates have separate backup and rollback checks
-in W30/W31. These Windows and Claude behavior trials are NOT RUN.
+In a permitted Windows test profile, follow README steps 1-10. Check bulk copies with absent and
+existing skill destinations, preserved originals, the copied project's five subfolders, six menu
+commands, editor/preview navigation, saved root and nested @ references, and +15/-15 outputs. Include
+unsaved edits, a missing reference, blocked copies, and ambiguity requiring clarification. See
+W32/W34/W35. Optional global-file merging and skill updates retain separate backup/rollback checks
+in W30/W31. These target-PC and Claude behavior trials are NOT RUN.
 
 The retained full onboarding marker punctuation and transcript were updated together. Its merge
 fixture semantics are unchanged; P1-P4 model-executed drills remain NOT RUN. Status-line changes
