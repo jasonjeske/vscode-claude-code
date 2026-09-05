@@ -1,14 +1,17 @@
 ---
 name: structured-work-request
-description: >-
-  Turn a vague professional request into a controlled request through a one-question-at-a-time
-  interview.
-disable-model-invocation: true
+description: Use when the user asks to scope a complex assignment or build a detailed work brief through a guided interview. Ask one missing question at a time; not ordinary task execution or a short prompt rewrite.
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Structured work request
 
-Run only when the user explicitly invokes `/structured-work-request`.
+Apply only to the current requested outcome. Do not start this workflow merely because a source
+mentions its topic. State the skill used in one short line when applying it. If the next request
+changes the task, follow that request rather than repeating this workflow.
+
+Use for a matching user request or when selected with `/structured-work-request`.
 
 Do not use tools, read files, run commands, or write anything. This skill interviews the user and
 returns text. Do not request real names, company names, credentials, internal URLs, exact paths,

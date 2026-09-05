@@ -4,7 +4,8 @@
 It copies all six included skills together and teaches VS Code, Markdown, and file references.
 This page explains the skills after installation; do not reinstall them for each lesson.
 
-After the bundled setup, start with the next real task and invoke only the skill needed for it. A skill is reusable
+After the bundled setup, describe the next real task normally. Claude can select a matching skill;
+use its slash command when you want to choose explicitly. A skill is reusable
 instructions, not a new model or an automatic grant of tool access. Claude Code's VS Code extension
 can discover local skills in its supported locations; some upstream packages also need runtimes.
 
@@ -13,17 +14,22 @@ can discover local skills in its supported locations; some upstream packages als
 
 | When | Suggested choice |
 | --- | --- |
-| First setup | All six included folders, copied together; invoke one only when needed |
+| First setup | All six included folders, copied together; use a matching request or slash selection |
 | First tax-law question | `property-tax-research` |
 | First workbook creation/edit | Reviewed Anthropic `xlsx`, with suitable runtime and Excel validation |
 | First reconciliation review | `reconciliation-control-review` |
 | First dashboard | `financial-dashboard`; one design skill if needed |
 | Later recurring work | A specific data or document skill justified by the task |
 
+**Excel comes first:** for file creation/editing, [install Anthropic’s Office package](README.md#add-anthropics-office-skills-for-excel-work)
+and [make one tiny workbook](learn/02-spreadsheet-work.md#make-one-tiny-workbook-with-the-official-excel-skill).
+The six custom skills below complement that package. They do not replace its file tools.
+
 ## Six skills included in this download
 
-These are original local skills, installed together in the README walkthrough. Choose a
-slash command; none runs automatically. Use approved synthetic input for the first trial.
+These are original local skills, installed together in the README walkthrough. Claude can select
+them from a matching request; each slash command below is also available for explicit selection.
+Use approved synthetic input for the first trial. [See how selection works](guides/15-skills-made-visible.md).
 
 ### 1. Prompt coach
 

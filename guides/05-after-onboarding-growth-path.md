@@ -19,7 +19,7 @@ If one of these is unfamiliar, practice it on a small invented example before en
 | Re-explaining the same scope | Small project `CLAUDE.md` | Fewer repeated questions without hidden assumptions |
 | Combining the same exports | Reviewed script, query, or Power Query procedure | Source counts/totals tie and schema changes are caught |
 | Rebuilding a report | Stable metric definitions and layout | Another reviewer can reproduce the figures |
-| Repeating a complex checklist | A narrow explicitly invoked skill | Synthetic cases catch missing evidence and wrong inputs |
+| Repeating a complex checklist | A narrowly scoped skill | Synthetic cases catch missing evidence and wrong inputs |
 | Losing the next step between sessions | Short approved project handoff | Only relevant context is recalled |
 
 Prefer an existing focused skill to a new overlapping one. Improve the prompt or project facts
@@ -28,7 +28,7 @@ first; a new skill is justified when the repeated procedure itself needs to be r
 ## A narrow skill contract
 
 State its purpose, authorized input/output, business rules, evidence, stop conditions, and what it
-cannot verify. Keep local skills explicitly invoked. Add a catalog entry with an example and test
+cannot verify. Give local skills narrow descriptions and keep slash selection available. Add a catalog entry with an example and test
 it on a normal case, missing evidence, and a misleading input. Do not describe a checklist as a
 security control or a guarantee of correctness.
 

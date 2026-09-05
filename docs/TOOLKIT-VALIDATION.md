@@ -197,3 +197,29 @@ node tests/dashboard-spec.mjs
 node --check examples/dashboard/dashboard.js
 git diff --check
 ```
+
+## Visual skill setup and natural-language selection
+
+- Rechecked Anthropic's skill documentation, VS Code plugin interface, Office marketplace manifest,
+  and XLSX source on September 5, 2026. The guide distinguishes personal/project scope, local
+  instruction skills, and the separately installed Office plugin.
+- Updated all six local skills to `disable-model-invocation: false` and `user-invocable: true`.
+  Descriptions distinguish drafting from execution, reviewing from creating, and simple questions
+  from full workflows. These are configuration and instruction changes, not proven runtime routing.
+  All 317 repository checks passed. In an isolated copied distribution, deliberately changing a
+  skill back to manual-only or hiding its slash command made validation fail as expected. The
+  settings merge fixtures and dashboard calculation/filter checks also passed.
+- Added three original navy-and-blue concept diagrams for folder/file relationships, personal
+  skill installation, and request/slash/file selection. Rendered the SVGs with librsvg and inspected
+  the images at 1000 pixels wide for readable labels and clipping. They are not application screenshots.
+- Added the one-time update path for older manual-only copies and a synthetic workbook creation,
+  native Excel check, and file-selection exercise. The workbook has not been generated or tested
+  in the target environment. The intended 10/Missing input/-200 results specify acceptance criteria.
+- [Selection checks](SKILL-SELECTION-CHECKS.md) specify positive and nearby nonmatching requests,
+  old-copy updates, task changes, missing tools, and the Office check. All Claude/Windows runtime
+  trials remain NOT RUN; [W36](WINDOWS-VERIFICATION.md) records that limit.
+
+Sources: [skill discovery and invocation](https://code.claude.com/docs/en/skills),
+[VS Code plugin manager](https://code.claude.com/docs/en/vs-code#manage-plugins),
+[Office manifest](https://github.com/anthropics/skills/blob/main/.claude-plugin/marketplace.json),
+[XLSX skill](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md).

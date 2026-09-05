@@ -35,7 +35,9 @@ small context. The default path assumes the extension and approved gateway alrea
    rollback. Silence does not authorize changes; managed policy can impose stricter requirements.
 4. Do not configure connectors, proxies, hooks, subagents, or dependencies in the baseline. Document
    optional upstream packages separately, including their full contents, licenses, and runtime needs.
-5. Local skills stay explicitly user-invoked with `disable-model-invocation: true`. Keep references
+5. Local skills support matching natural-language requests and slash selection with
+   `disable-model-invocation: false` and `user-invocable: true`. Keep descriptions narrowly scoped;
+   selection never expands task permission or proves a tool is installed. Keep references
    inside the distributed folder where possible. Explain every local skill with a catalog example.
 6. Keep specialized procedures out of global instructions. Ask only for material missing facts;
    use existing approved context without repeating the interview.
