@@ -36,6 +36,19 @@ retention percentage, token saving, or number of days to proficiency. Images cla
 they are not a substitute for practicing the operation. Avoid assigning fixed visual/auditory
 learner types or measuring progress by pages read.
 
+## Learn the editor before relying on it
+
+The first session assumes neither VS Code nor Claude familiarity. Setup is a single batch: copy
+a prepared workspace and all six local skills before teaching their individual uses. The learner
+then sends a small chat request, creates and previews Markdown, selects a root-level prompt with
+`@`, and repeats with a revised request in a subfolder. Installation is not repeated per lesson.
+
+The changed-case exercise deliberately changes the book amount and output path. The learner checks
+the sign before opening the optional answer, so success requires using current evidence rather
+than memorizing the first result. The existing inline Markdown editor is supported without assuming
+its identity; the built-in single-pane reading view is the fallback. Full instructions remain in
+the README, with editor and prompt-file references available afterward.
+
 ## Coaching boundaries
 
 Claude should use a practical coworker style while showing sources, checks, and uncertainty. It

@@ -7,6 +7,11 @@ Choose only the template needed for the result in front of you. Use
 For skill purposes and ready-to-use invocation examples, see [the catalog](../SKILLS.md).
 For everyday context and usage habits, see [the daily desk guide](../guides/DAILY-USE.md).
 
+You can paste a short request into Claude chat or save a longer one in `prompts/current-task.md`
+in your work project. Press **Ctrl+S**, then select it with `@` in Claude's message box and ask
+Claude to perform its allowed task. [The saved-file walkthrough](../guides/14-prompt-files-and-dictation.md)
+shows subfolders, dictation, rereading corrections, and review-versus-execution prompts.
+
 Use one prompt for one job. Replace bracketed fields inside an employer-approved project, not in
 this public checkout. Do not paste credentials or confidential records into public tools. If a
 rule is unknown, say `unknown`. These prompts do not grant access or override company policy.

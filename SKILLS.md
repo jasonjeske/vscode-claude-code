@@ -1,9 +1,10 @@
 # Skill catalog: what to use, why, and the first prompt
 
 **New here? Complete [the one-page setup walkthrough](README.md) first.**
-It installs and tries the starter skills inside VS Code. This page is a reference menu for later.
+It copies all six included skills together and teaches VS Code, Markdown, and file references.
+This page explains the skills after installation; do not reinstall them for each lesson.
 
-Start with the next real task, then install only the skill needed for it. A skill is reusable
+After the bundled setup, start with the next real task and invoke only the skill needed for it. A skill is reusable
 instructions, not a new model or an automatic grant of tool access. Claude Code's VS Code extension
 can discover local skills in its supported locations; some upstream packages also need runtimes.
 
@@ -12,7 +13,7 @@ can discover local skills in its supported locations; some upstream packages als
 
 | When | Suggested choice |
 | --- | --- |
-| First setup | `prompt-coach`, `excel-workbook-review` |
+| First setup | All six included folders, copied together; invoke one only when needed |
 | First tax-law question | `property-tax-research` |
 | First workbook creation/edit | Reviewed Anthropic `xlsx`, with suitable runtime and Excel validation |
 | First reconciliation review | `reconciliation-control-review` |
@@ -21,7 +22,7 @@ can discover local skills in its supported locations; some upstream packages als
 
 ## Six skills included in this download
 
-These are original local skills. Copy the complete selected folder from `skills/`. Invoke by its
+These are original local skills, installed together in the README walkthrough. Choose a
 slash command; none runs automatically. Use approved synthetic input for the first trial.
 
 ### 1. Prompt coach

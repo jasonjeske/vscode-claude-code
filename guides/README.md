@@ -1,6 +1,8 @@
 # Learning and reference index
 
-Start with [setup](../START-HERE.md) and [the illustrated beginner guide](../LEARN.md).
+Start with [the complete README setup and first session](../README.md), then [the work guide](../LEARN.md).
+For editor operations, use [VS Code fundamentals](00-vscode-basics.md); for saved requests, use
+[prompt files and dictation](14-prompt-files-and-dictation.md).
 Its five lessons lead from your first conversation to adapting a real work project. Keep
 [daily use](DAILY-USE.md) as a reference. You do not need to read all the guides before doing useful work.
 

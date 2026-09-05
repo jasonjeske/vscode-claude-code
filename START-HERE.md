@@ -1,15 +1,13 @@
 # Start here
 
-**[Open the step-by-step setup guide in the README](README.md).**
+**[Open the complete README walkthrough](README.md).**
 
-The README now contains the whole first-time walkthrough on one page: open VS Code, download and
-extract the ZIP, create and open a practice folder, save its instructions, copy two skills, find
-them in the Claude Code extension, and create and check your first result.
+It assumes no prior VS Code experience. Steps 1-5 download and extract the kit, copy the ready-made
+practice project, open it in VS Code, install all six included skills together, and check the
+Claude Code panel. Steps 6-10 teach chat, Markdown editing/reading, saved requests with `@`,
+subfolder paths, and using the skills already installed. No terminal is needed.
 
-Keep that page open in your browser and follow steps 1-9 in order. You do not need to move between
-setup pages or ask Claude to install this repository. The guide gives the exact folder names,
-clicks, text to paste, and a check at each step.
-
-If you already started an earlier version of this guide, use the corresponding README step and
-check what you completed. Keep existing files; do not copy or overwrite them again. Skill copying
-is in step 7; opening Claude and checking skills is in step 8; the first output is in step 9.
+Keep the README open in your browser and follow its steps in order. If you started an earlier
+version, preserve your existing practice files and installed skills. This version uses a fresh
+copy of `practice-project`; use an unused practice-folder name. Skip skill folders already present
+instead of replacing them. The README explains the batch selection and checks.

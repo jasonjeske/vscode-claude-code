@@ -116,14 +116,15 @@ already uses the required Microsoft surface.
 
 ## Install our small local skills first
 
-Use [the short setup](../START-HERE.md) for an already working extension. The
+Use [the batch setup](../README.md) for an already working extension. The
 [skill catalog](../SKILLS.md) gives all six local skills with examples, and the
 [installation guide](../setup/SKILLS.md) covers complete-folder copying, scope, backups,
 discovery, updates, removal, and troubleshooting. No marketplace or runtime installer is required
 for these instruction-only folders. Copy the research skill's `references/` folder too.
 
 The optional full onboarding protocol offers two optional skills in Stage 5. It is not required
-for the short setup. Keep the existing gateway configuration and install only the next useful skill.
+for the short setup. Keep the existing gateway configuration. The README copies the six local skills together;
+additional upstream packages remain separate choices.
 
 ## Install upstream skills only through the reviewed route
 

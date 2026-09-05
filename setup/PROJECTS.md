@@ -4,6 +4,18 @@ Keep the downloaded public starter separate from the approved work folder. A pro
 folder for one related objective, with instructions and inputs that belong together. No Git repo
 or new application is required for this structure.
 
+## Reuse the folder method you learned
+
+For a new permitted project, copy the starter's `practice-project` folder into approved storage,
+rename the copy for the objective, and open it with **VS Code > File > Open Folder**. Use a fresh
+copy, not a completed practice folder containing old outputs. Replace the copied practice-only
+`CLAUDE.md` with one reviewed work template below and adapt its scope before using work data.
+Your personal skills stay installed; do not copy them again for every project.
+
+A single open folder is a workspace. Use **File > Open Recent** to return later. Multi-folder
+workspaces and `.code-workspace` files are optional later tools; begin with one objective per folder.
+See [VS Code fundamentals](../guides/00-vscode-basics.md#5-keep-your-workspace-small-and-familiar).
+
 ## Choose one instruction template
 
 | Project | Start with | Add when useful |
@@ -37,6 +49,7 @@ If the organization already has a workpaper layout, use it. Otherwise this is a 
 ```text
 approved-work-project/
   CLAUDE.md
+  prompts/       saved task notes; select the current file with @ in Claude chat
   inputs/        approved source copies; preserve originals
   working/       reproducible scripts or queries when needed
   outputs/       newly generated workpapers and reports
@@ -46,10 +59,20 @@ approved-work-project/
 These folder names do not enforce access control. Use approved storage. Do not place database
 credentials in the project instructions or copy entire mailboxes/shared drives into `inputs`.
 
+## Save the task before sending it
+
+In VS Code Explorer, right-click `prompts` > **New File** and create `current-task.md`. Type or
+dictate the outcome, approved inputs, rules, allowed actions, new output, and checks. Save with
+**Ctrl+S**. In Claude's message box, type `@prompts/current-task.md`, select the exact suggestion,
+and add the instruction below. Also select each approved input file the task needs. Merely naming
+a file in the notes does not attach it or authorize reading it.
+[Prompt-file instructions and examples](../guides/14-prompt-files-and-dictation.md).
+
 ## First project prompt
 
 ```text
-Read this project's CLAUDE.md. Guided mode. My outcome is [ONE RESULT] for [PERIOD].
+Read this project's CLAUDE.md and the selected current-task.md as my task notes.
+Guided mode. My outcome is [ONE RESULT] for [PERIOD].
 Use only [APPROVED INPUT REFERENCES]. The approved output is [NEW FILE OR CHAT SUMMARY].
 First identify missing business rules and propose the smallest useful step. If the supplied scope
 is sufficient, proceed within the authorized actions. Preserve original files and show how to

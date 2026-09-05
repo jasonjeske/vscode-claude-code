@@ -1,9 +1,9 @@
 # Additional skills and skill maintenance
 
 **First-time setup: [follow the README walkthrough](../README.md).**
-It includes downloading, extracting, opening VS Code, copying the first two skills, finding them
-in the extension, and trying a supplied prompt. If your practice folder is already open and its
-instructions are saved, resume at [step 7: copy the two skills](../README.md#7-copy-the-two-starter-skills-into-claudes-skills-folder).
+It includes downloading, extracting, opening VS Code, copying all six bundled skills in one batch, finding them
+in the extension, and trying a supplied prompt. If your copied practice project is already
+open, resume at [step 4: install the six skills](../README.md#4-install-all-six-included-skills-in-one-copy-operation).
 You do not need this reference page to finish that walkthrough.
 
 Use this page later to add another skill, select a different scope, update a copy, or troubleshoot.
