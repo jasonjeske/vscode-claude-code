@@ -6,6 +6,25 @@
 **You need:** Claude chat for the text exercises; an approved file reader for workbook inspection.
 Workbook creation requires the approved XLSX tools and native Excel checks described in setup.
 
+## Apply it to today's work
+
+Choose one operation: explain a formula **or** investigate one exception. Work from an approved
+copy in the separate work folder. Use the tiny example below only if that operation is new.
+
+```text
+Guided mode. Using only [APPROVED WORKBOOK/SOURCE REFERENCES], help me [EXPLAIN ONE FORMULA /
+DRAFT ONE EXCEPTION NOTE] for [SHEET, CELL OR RECORD; PERIOD]. Read-only; preserve originals.
+Follow [KNOWN MATCH/SIGN RULES]. Give the useful explanation or note, cite the actual input
+locations, and show the calculation if supported. Explain one unfamiliar step briefly.
+Identify missing evidence; do not infer a cause or claim the whole workbook reconciles.
+Give me one check I can perform in Excel. Do not refresh connections or run macros.
+```
+
+**Your part:** open the cited source and trace the inputs yourself. Report any mismatch specifically.
+**Keep:** the checked explanation or exception note in the approved workpaper, including gaps.
+**Next similar task:** write the request and name the check before looking back. Try a blank input
+or duplicate key as a changed case; a method that silently treats either as resolved needs correction.
+
 ![An invented comparison with three paired properties, one book-only property, and one bill-only property. The complete $110 difference is $10 paired difference plus $500 bill-only minus $400 book-only.](../assets/learning/reconciliation-map.svg)
 
 *Original diagram of the [first-session exercise](../practice/FIRST-SESSION.md). All amounts are invented USD dollars.*

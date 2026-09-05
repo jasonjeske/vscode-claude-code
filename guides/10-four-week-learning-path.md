@@ -1,85 +1,67 @@
-# Guide 10: Learn while doing useful work
+# Build independence through useful work
 
-Start here if Claude Code already works in VS Code. Keep the working gateway configuration and
-read only the next relevant guide. The weeks below are suggested pacing; advance when the checks
-are comfortable, not because a date arrives.
+Choose the stage that matches today's task. These are capability milestones, not four weeks of
+required study. The existing filename is retained so bookmarks keep working. Begin with
+[today's task picker and coaching prompt](../LEARN.md); use these milestones to decide what to learn next.
 
-## Week 1: Understand and ask
+## 1. Request and check one useful result
 
-Use one short session each day, roughly 15-25 minutes. Begin with invented examples, then a small
-approved work copy when permitted.
+Pick one formula explanation, exception note, source check, or short memo. Use a small approved
+work copy, or the corresponding invented example when the method or permitted access is unclear.
+Learn only the Claude operation that helps finish that result. Keep the approved model default.
 
-1. Review [global instructions](../templates/GLOBAL-CLAUDE.md) and merge them through the existing
-   quick-start procedure. Do not replace company instructions or copy credentials.
-2. Use `/prompt-coach` to describe one outcome. Notice how naming the output and proof improves it.
-3. Ask for a workbook map without edits. Learn sheet, table, formula, cached value, and row grain.
-4. Explain one formula and work through a tiny example by hand.
-5. Review a proposed change and practice saying what is wrong or incomplete.
+Claude demonstrates an unfamiliar step briefly and helps complete the authorized task. You select
+the input and trace one result to evidence. This learning check accompanies, rather than replaces,
+the complete controls required for the work.
 
-**Advance when:** you can explain which files Claude read, what it changed, and how you checked it.
+**Move toward less help when:** you can identify the input, request the result, and perform the check.
+If an operation is unfamiliar, use its reference lesson rather than restarting all the training.
 
-## Week 2: Reconcile a small population
+## 2. Repeat the method with a changed input
 
-Choose one comparison, one period, and an approved exact key. Use the
-[reconciliation project template](../templates/projects/RECONCILIATION-CLAUDE.md). Inventory first;
-then approve a small transformation to new output files. Review duplicates, unmatched records,
-net and gross differences, and source totals. Use `/reconciliation-control-review` to check evidence.
+At the next similar task, write the request and name the check before looking at your saved example.
+Compare, correct omissions, then proceed. Try one relevant changed condition in an approved practice
+copy: blank amount, duplicate identifier, different year, or missing citation. Never inject test
+errors into live work records.
 
-**Advance when:** every input record is accounted for and you can explain an exception without
-guessing. Review the Excel runtime and skill installation only when this work needs them.
+Use Guided if the change confuses you; ask for a hint or one example of that specific operation.
+You do not need a separate quiz conversation, timer, or new skill.
 
-## Week 3: Turn checked results into a dashboard
+**Move toward Routine when:** you can recognize the changed condition and explain when the method
+must stop or needs review. A correct output from Claude alone does not demonstrate that ability.
 
-Try the synthetic demo in [Guide 09](09-dashboard-and-reporting-playbook.md), then define one real
-report's audience and metric dictionary. Ask for a wireframe first, approve it, then create a new
-local report from the approved summary. Test filters, missing values, empty results, and print.
-Draft a short management explanation from the same numbers.
+## 3. Expand only when today's deliverable needs it
 
-**Advance when:** you can trace every figure to its source and explain what the dashboard cannot show.
+For a full reconciliation, define the source populations, grain, keys, exceptions, and source/output
+controls before processing. One checked exception is not a completed reconciliation.
+For research, expand to another locality only after verifying the first issue's sources and scope.
+For reporting, build Word, slides, or a dashboard from checked findings when the audience needs it.
 
-For additional design help, try UI/UX Pro Max from the
-[community shortlist](11-community-skills-worth-adding.md). Save deeper Impeccable refinement for
-an approved installation and a specific visual problem.
+Install the relevant approved tool at this point. Keep [the skill catalog](../SKILLS.md) nearby as a
+reference. A missing file reader or policy restriction calls for the supported fallback or IT help,
+not more unrelated study. Use the [Excel](08-excel-and-reconciliation-playbook.md),
+[research](12-property-tax-research.md), or [reporting](09-dashboard-and-reporting-playbook.md) playbook
+for the specific checks the larger task needs.
 
-## Week 4: Make one recurring task repeatable
+**Expand when:** the scoped output is checked, outstanding limits are understood, and the next
+scope is explicitly defined. Professional review still applies.
 
-Pick a stable task, such as combining the same approved exports each month. Record the schema,
-inputs, output, match rules, and checks. Ask for a small reproducible script or Power Query plan.
-Test on the same data twice, on a changed schema, and on missing/duplicate records. Keep the manual
-fallback. An automation that saves time but loses records has failed.
+## 4. Make a stable recurring method reproducible
 
-Add Word, PowerPoint, SQL, or a source-research workflow only when there is a concrete task for it.
-For specific state/local law questions, add [`property-tax-research`](12-property-tax-research.md)
-and practice checking one cited provision before expanding to a multistate comparison.
-Database access remains a separate organizational decision. A skill can help draft SQL without a
-connection. Do not schedule unattended jobs until the workflow is owned, tested, and approved.
+Keep the request pattern, assumptions, and check in [a short local note](../templates/WORK-TASK-NOTE.md).
+When the same task recurs reliably, consider a small approved script, query, or Power Query process.
+Test repeat runs, changed schemas, missing records, and duplicate keys. Keep the manual fallback.
+Automation must preserve data and controls, not just reduce clicks. A new skill is optional.
 
-**Advance when:** another reviewer can reproduce the result using your instructions and identify
-the exact conditions where the workflow stops.
+**Ready for reuse when:** another reviewer can reproduce the result and identify its stop conditions.
+Scheduling, connectors, and unattended runs require a separate approved need; they are not learning goals.
 
-Pandas Pro and SQL Pro are useful community additions at this stage. Evaluate Polars only when a
-measured bottleneck warrants a different processing tool. Guide 11 includes scoped trial prompts.
+## Check progress after a gap
 
-## A daily routine
+At a later recurrence, try naming the input, result, and check without rereading. Then consult the
+note and current evidence. If a detail is forgotten, restore the smallest needed hint. There is
+no fixed schedule or proficiency deadline; use real opportunities to revisit the method.
 
-Start one conversation per related task. State the result, approved inputs, and success checks.
-Use `Teach` mode for new concepts, `Guided` for unfamiliar work, and `Routine` for a known approved
-method. See [the learning/work instructions](../templates/LEARNING-AND-WORK.md). Ask for a brief
-summary of checks and one next action at the end. A checkpoint should record method and status,
-not raw work data.
-
-## Measure improvement honestly
-
-Privately record the task type, hands-on time, total elapsed time, review time, corrections, missing
-records, failed controls, and whether another person reproduced it. Compare similar tasks over
-several runs before claiming savings. Include the time spent checking Claude's output. Do not
-reward speed when quality worsens, and do not put employer results into this repository.
-
-## A useful first prompt
-
-```text
-I am learning Claude Code and want to understand one synthetic workbook. Teach mode.
-Use only the file I select. Start with a read-only map of its sheets, tables, and formulas.
-Explain one unfamiliar term briefly. Identify what your tools cannot inspect.
-Do not save, refresh, run macros, or change the file. Give me one check I can do myself.
-```
+Privately compare similar tasks: output quality, missed conditions, corrections, review time,
+hands-on time, total elapsed time, and gateway usage. Do not claim savings from one fast run or
+reward speed when controls fail. Keep workplace measurements out of this public repository.

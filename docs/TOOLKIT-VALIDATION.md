@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 285 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 296 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -67,7 +67,21 @@ The displayed calculation logic did not need changing.
 - Aligned the global/learning templates and retained Stage 6 transcript with those choices. All
   nine stage markers remain aligned. Model-executed P1-P4 onboarding drills remain NOT RUN.
 - This is documentation review, not a beginner usability study or managed-PC trial. W32 records
-  the outstanding unaided walkthrough; all 32 Windows claims remain UNVERIFIED.
+  the outstanding unaided walkthrough; the unaided walkthrough remains UNVERIFIED.
+
+## Work-based teaching revision
+
+- Added a task-first entry page, an immediately usable coaching prompt, and an approved-work path
+  in each substantive lesson. The worked examples remain available when an operation is unfamiliar.
+- Adapted guided apprenticeship, worked examples, spaced reuse, and brief retrieval from the
+  primary sources reviewed in `docs/TEACHING-METHOD.md`. This is an instructional-design rationale,
+  not evidence that this kit improves workplace performance or retention.
+- Updated global and project learning preferences to complete authorized work, teach one operation,
+  and reduce help based on observable checks. No extra coaching skill, agent, or installation added.
+- Replaced calendar-based progression with capability milestones while retaining the existing
+  guide path for bookmarks. Added a blank local task note; no actual work examples or results included.
+- W33 tracks a first useful task and a later changed-case attempt. Neither was performed. All
+  33 Windows claims remain UNVERIFIED; model-executed P1-P4 drills also remain NOT RUN.
 
 ## Not verified
 

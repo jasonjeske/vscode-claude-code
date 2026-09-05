@@ -1,7 +1,8 @@
 # A practical prompt library
 
-For step-by-step practice, start with [the illustrated guide](../LEARN.md). Learn to
-[adapt these templates to your work](../learn/05-adapt-to-your-work.md) in the final lesson.
+Start with [today's work and the coaching prompt](../LEARN.md#copy-this-into-claude-for-todays-task).
+Choose only the template needed for the result in front of you. Use
+[adaptation guidance](../learn/05-adapt-to-your-work.md) when the method becomes repeatable.
 
 For skill purposes and ready-to-use invocation examples, see [the catalog](../SKILLS.md).
 For everyday context and usage habits, see [the daily desk guide](../guides/DAILY-USE.md).

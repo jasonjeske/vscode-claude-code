@@ -26,7 +26,9 @@ small context. The default path assumes the extension and approved gateway alrea
    Default to the VS Code extension and Windows File Explorer. Label terminal exceptions with
    purpose, shell, working folder, expected result, and a supported fallback. Use the organization
    usage page as the allowance reference, never assume a personal subscription or extra models,
-   and give each beginner step a check and a way to resume.
+   and give each beginner step a check and a way to resume. Start teaching from today's useful
+   output: demonstrate only an unfamiliar operation, let the learner check evidence, and reduce
+   help on later attempts. Do not require course completion, extra quiz turns, or bulk setup.
 3. Respect approved scope. Preview configuration changes before approval; one explicit approval may
    cover a clearly listed batch. Preserve existing approved rules, verified backups, readback, and
    rollback. Silence does not authorize changes; managed policy can impose stricter requirements.

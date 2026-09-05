@@ -62,6 +62,8 @@ a first-time user something untrue on a machine holding confidential records.
 
 | W32 | A beginner can follow setup and Lesson 1 through the extension, recognize a pending approval, and find gateway usage without terminal coaching | `guides/00-use-vscode.md`, `START-HERE.md`, `learn/01-first-conversation.md` | Observe an unaided synthetic session; check unavailable-command fallback, interrupted-output recovery, usage units, and resume note | UNVERIFIED | | Documentation walkthrough only; no learner or target-PC trial |
 
+| W33 | Work-based coaching produces a useful checked result and supports a later changed-case attempt with less help | `LEARN.md`, `templates/LEARNING-AND-WORK.md`, `docs/TEACHING-METHOD.md` | Observe an approved small task and a later similar task; learner selects inputs, writes the request, verifies evidence, and catches one changed condition; record output quality, help needed, and usage privately | UNVERIFIED | | No learner, retention, or coaching-behavior trial |
+
 ## Current status
 
-32 claims tracked. 32 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.
+33 claims tracked. 33 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.

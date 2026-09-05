@@ -7,7 +7,8 @@ property-tax research, reconciliation, dashboards, and reporting. Built for a fi
 with an already approved workplace account and a limited usage allowance.
 
 **Set up:** [START-HERE](START-HERE.md). **Learn:** [the illustrated beginner guide](LEARN.md).
-Follow five short lessons with prompts, expected results, and checks you can do yourself.
+Choose today's task, produce one useful result, check it, and reuse the method with less help.
+Five reference lessons provide examples when needed; there is no course to finish before starting.
 
 Keep this guide open in your browser and work in the **VS Code extension**. The starter path uses
 an existing approved gateway connection and does not require a personal Claude subscription.
@@ -17,7 +18,7 @@ Terminal instructions are optional exceptions; model choices and usage come from
 | I want to... | Open this |
 | --- | --- |
 | Set up an already working Claude Code extension | [Short setup checklist](START-HERE.md) |
-| Learn the basics with step-by-step walkthroughs | [Illustrated learning guide](LEARN.md) |
+| Learn while completing a useful task today | [Choose a task and copy the coaching prompt](LEARN.md) |
 | Choose a skill and see an example | [Skill catalog](SKILLS.md) |
 | Learn what to do each day | [Daily desk guide](guides/DAILY-USE.md) |
 | Copy a prompt for a particular task | [Prompt library](prompts/PROMPT-LIBRARY.md) |

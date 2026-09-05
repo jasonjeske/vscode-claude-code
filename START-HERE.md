@@ -14,6 +14,10 @@ If VS Code or Claude Code is missing, use the organization's installation proces
 [full onboarding reference](setup/FULL-ONBOARDING.md) covers a more detailed fresh-install review.
 Do not replace an existing gateway/API-key setup with a personal sign-in.
 
+**Already able to chat and ready for work?** Go to [choose today's useful task](LEARN.md).
+These setup steps are references for a specific missing capability, not a course prerequisite.
+Do not point Claude at the whole repo and ask it to configure everything.
+
 ## 1. Open the starter and confirm the boundary
 
 On the reviewed GitHub branch, choose **Code > Download ZIP**. In Windows File Explorer,

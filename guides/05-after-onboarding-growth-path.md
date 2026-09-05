@@ -1,7 +1,7 @@
 # Improve one established process at a time
 
 Once the first tasks feel comfortable, focus on repeatability, better evidence, and faster review.
-Use [the four-week path](10-four-week-learning-path.md) for a sequence or choose a concrete recurring
+Use [the work-based progression](10-four-week-learning-path.md) for a sequence or choose a concrete recurring
 problem from the [skill catalog](../SKILLS.md).
 
 ## Ready for the next step

@@ -5,6 +5,19 @@
 **Goal:** adapt a reusable method to one approved task without turning the public kit into a store
 of work data. You can customize the examples, prompts, and project instructions locally.
 
+## Apply it to today's work
+
+Take one method you have already used and checked. Save its request pattern and check in an
+approved local note using [this small template](../templates/WORK-TASK-NOTE.md). You do not need to
+create a skill or configure memory to reuse a prompt.
+
+**Your part:** on a later similar task, supply the new input and period yourself. Before running,
+check whether the old rule and sources still apply. Use the note to catch omissions.
+**Keep:** a reusable method with explicit conditions and a checked new result, not copied old facts.
+**Use Routine mode when:** you can identify the inputs, request the operation, check its evidence,
+and spot a changed condition that needs review. If one of those is difficult, use Guided for that
+part. These are local learning cues, not certification or permission to skip professional review.
+
 ![Three instruction layers: global CLAUDE.md for stable preferences, project CLAUDE.md for the outcome and approved rules, and the current prompt for today's inputs and deliverable. Source files remain in approved work storage.](../assets/learning/instruction-map.svg)
 
 *Original teaching diagram of where to put information. These layers guide Claude; they do not
@@ -71,4 +84,4 @@ Record what worked, what remained unavailable, and the next useful step. Expand 
 more jurisdictions, or richer reports only when the method and checks are understood.
 
 Continue with [daily use](../guides/DAILY-USE.md), [the prompt library](../prompts/PROMPT-LIBRARY.md),
-or [the four-week path](../guides/10-four-week-learning-path.md). Return to any lesson when needed.
+or [the work-based progression](../guides/10-four-week-learning-path.md). Return to any lesson when needed.

@@ -6,6 +6,26 @@
 **You need:** Claude chat for a memo draft. Word, PowerPoint, or visual reports are later options
 when the corresponding approved tools are available.
 
+## Apply it to today's work
+
+Choose findings already checked for the current work task. If none are ready, use the invented
+example below to learn the reporting operation; do not create plausible work figures.
+
+```text
+Guided mode. Draft a short reviewer memo in chat using only [APPROVED CHECKED FINDINGS].
+The audience is [ROLE]; the purpose is [REVIEW QUESTION]. Include the scope/period, findings,
+source references, unresolved questions, and next action. Preserve uncertainty and exact figures.
+Explain one presentation choice briefly. Give me one claim to trace back to the evidence.
+Do not invent causes, savings, approvals, or new metrics. Do not publish or send the memo.
+```
+
+**Your part:** trace the selected claim and its qualifications to the source, then inspect the rest
+of the draft before use. One teaching check does not replace the full review.
+**Keep:** the checked draft and any unresolved items. Formatting into Word or slides can follow
+when a deliverable requires it; you do not need those installs to produce the first useful memo.
+**Next similar task:** write the audience, evidence, and check yourself. Try a missing source figure
+as the changed case; the draft must preserve the gap rather than fill it in.
+
 ## Begin with checked findings
 
 Use the original unique-key case from the [first-session exercise](../practice/FIRST-SESSION.md),

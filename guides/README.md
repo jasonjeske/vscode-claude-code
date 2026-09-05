@@ -12,7 +12,7 @@ Its five lessons lead from your first conversation to adapting a real work proje
 | First session | [First-session exercise](../practice/FIRST-SESSION.md) | Explain and check an invented comparison |
 | Everyday use | [Daily desk guide](DAILY-USE.md) | One task with an explicit output and check |
 | Core concepts | [01: Claude Code fundamentals](01-claude-code-fundamentals.md) | Files, prompts, permissions, model, context |
-| Progress gradually | [10: Four-week learning path](10-four-week-learning-path.md) | Workbook, reconciliation, dashboard, repeatability |
+| Progress gradually | [10: Build independence](10-four-week-learning-path.md) | Workbook, reconciliation, dashboard, repeatability |
 | Use a limited allowance | [13: Token-efficient work](13-token-efficient-work.md) | Narrow context and concise professional answers |
 
 ## Pick the work topic

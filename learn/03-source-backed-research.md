@@ -6,6 +6,19 @@
 **You need:** Claude chat for the invented example; approved browsing or supplied official sources
 for actual legal research. The `property-tax-research` skill is helpful but does not provide access.
 
+## Apply it to today's work
+
+Start with one narrow provision you need to understand, not a survey of every state. Use the
+real-question prompt below with approved facts and sources. The fictional counting exercise is
+optional when you need practice distinguishing the rule from its application.
+
+**Useful output:** one cited provision, the applicable year/locality, and unresolved facts for review.
+**Your part:** open that citation and follow the five checks below. Identify one supporting phrase
+in the source yourself. Ask Claude to correct the specific claim if the source does not support it.
+**Keep:** the reviewed source note and gaps in approved work storage; a draft is not a filing position.
+**Next similar task:** state the required jurisdiction, year, and evidence before reopening the prompt.
+Change the tax year as a practice variation. Reuse the research method, never assume the same rule applies.
+
 ## Start with a source-reading exercise
 
 Paste this exercise as text. It is deliberately fictional and must never enter a real calendar.

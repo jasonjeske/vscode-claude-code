@@ -4,6 +4,17 @@ Set up once using [START-HERE](../START-HERE.md). For daily work, open the appro
 in VS Code, not the public starter. Keep this page available as a reference; there is no need to
 ask Claude to read it at the start of every conversation.
 
+## Learn one operation while doing the work
+
+Choose [today's useful result](../LEARN.md), rather than asking Claude to teach the whole tool.
+For something new: see one example if needed, get the bounded work result, and check one source
+or calculation yourself. On the next similar task, try the request and check before consulting
+your saved prompt. Use Routine when you can do that; keep Guided for unfamiliar parts.
+
+Keep a [short local task note](../templates/WORK-TASK-NOTE.md) if useful. No extra quiz chat is
+required. Useful output, fewer corrections, and the ability to catch a changed condition are
+better progress signals than the number of lessons or skills completed.
+
 ## Start with one outcome
 
 Confirm the intended approved workspace/provider, choose the task, and reference only its inputs.
@@ -83,5 +94,5 @@ does not refund prior usage, and memory does not replace the original evidence.
 | Low remaining allowance | Finish a bounded checkpoint; narrow the next task rather than omitting controls |
 | Conflicting instructions | Preserve existing policy; resolve the affected conflict before its action |
 
-Progress to [the four-week learning path](10-four-week-learning-path.md) when the first exercise
+Progress to [the work-based progression](10-four-week-learning-path.md) when the first exercise
 and its checks are comfortable.
