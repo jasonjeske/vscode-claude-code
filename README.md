@@ -20,6 +20,21 @@ Local files read by Claude are processed by the configured provider.
 “All six skills” means the six instruction folders supplied here. Linked Anthropic Office and
 community packages are separate products with their own installation and runtime requirements.
 
+## Your first assignment
+
+**Create and check a small exception note from invented amounts, then revise it without losing
+the first result.** Follow the numbered walkthrough below. Each task teaches the VS Code action
+at the moment you need it; there is no separate editor course to finish first.
+
+| During the assignment | Practice in VS Code | Practice with Claude Code |
+| --- | --- | --- |
+| Get a short explanation, step 6 | Open the right panel and click its message box | Send one bounded request and check the calculation |
+| Make a saved request, steps 7-8 | Create, save, and preview a Markdown file | Select that file with `@` and ask for one new output |
+| Revise the task, step 9 | Save a copy in a subfolder and find it again | Ask Claude to reread the new file and check the changed result |
+
+You can pause after any step's check. Keep the last completed step and next action in an approved
+local note. If setup is already complete, start at step 6. If it is new, start at step 1.
+
 ## 1. Open VS Code and know the three places you will use
 
 1. Open Windows Start, type **Visual Studio Code**, and launch it. Microsoft Visual Studio is a
@@ -345,6 +360,21 @@ text-only skill to open files or perform its draft.
 Check the organization's usage website again after its reporting delay, comparing the same unit
 and period. The saved prompt improves editing and reuse; sending it to Claude still uses context.
 Use only the current request and needed evidence, not an entire folder of old prompts.
+
+### Finish the assignment
+
+Before moving to real work, check what you actually completed:
+
+- [ ] I can identify the open project and find a file inside `prompts`.
+- [ ] I can edit, save, and read a Markdown request in a comfortable view.
+- [ ] I can explain when to use `@` for a file and `/` for a skill.
+- [ ] I opened both new notes, checked their calculations, and confirmed the cause stayed unknown.
+- [ ] The first request and output are preserved after the revised task.
+- [ ] I can name one operation to repeat next time and any step that is still blocked.
+
+If something failed, note the exact step, what you saw, and the expected check. Keep that note
+local and omit confidential details. Revisit that operation rather than repeating installations.
+An unfinished file-writing or skill check stays pending even if the chat exercise worked.
 
 **Next time:** open VS Code > **File > Open Recent** > your practice or approved work folder > open
 **Claude Code** > select the saved request with **`@`**. Start a fresh conversation for unrelated work.
