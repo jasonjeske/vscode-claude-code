@@ -1,5 +1,8 @@
 # Skill catalog: what to use, why, and the first prompt
 
+**New here? Complete [the one-page setup walkthrough](README.md) first.**
+It installs and tries the starter skills inside VS Code. This page is a reference menu for later.
+
 Start with the next real task, then install only the skill needed for it. A skill is reusable
 instructions, not a new model or an automatic grant of tool access. Claude Code's VS Code extension
 can discover local skills in its supported locations; some upstream packages also need runtimes.
