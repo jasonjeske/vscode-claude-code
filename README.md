@@ -203,8 +203,9 @@ VS Code, reopen `Practice-01`, and start a fresh Claude conversation. If still m
 pending and use the plain-chat exercises. A normal chat reply does not prove a skill is installed.
 
 **Setup complete when:** the practice folder is open and all six commands appear. Skill behavior,
-Excel tools, and browsing still need their own task checks. There are no more installations in
-this first session. Keep any blocked checks marked pending. **Next: learn by doing in step 6.**
+Excel tools, and browsing still need their own task checks. No further installation is needed for
+the text exercises. Keep blocked checks pending. **Next: learn by doing in step 6**, or add the
+Office package below when workbook creation is your next task.
 
 ## Add Anthropic's Office skills for Excel work
 
