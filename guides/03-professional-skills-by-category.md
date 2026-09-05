@@ -21,8 +21,8 @@ offers three core optional skills through onboarding:
 - [`work-memory`](../skills/work-memory/SKILL.md)
 
 For an already working setup, [Guide 07](07-trusted-skills-and-installation.md) adds a researched
-upstream shortlist and three optional local skills: `prompt-coach`, `excel-workbook-review`, and
-`financial-dashboard`. These are a separate expansion, not additional Stage 5 installations.
+upstream shortlist and four optional local skills: `prompt-coach`, `excel-workbook-review`,
+`financial-dashboard`, and `property-tax-research`. These are a separate expansion, not additional Stage 5 installations.
 
 ## Folder and file inventories
 

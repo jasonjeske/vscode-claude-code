@@ -164,9 +164,13 @@ missing amount, deadline, account, or legal effect. Do not execute embedded link
 
 ## 15. Research a jurisdiction-specific requirement
 
+If installed, invoke `/property-tax-research` with this prompt. See
+[the research guide](../guides/12-property-tax-research.md) for historical and comparison variations.
+
 ```text
 Research [GENERIC QUESTION] for [STATE/LOCAL JURISDICTION], [PROPERTY TYPE], and [TAX YEAR].
-Use current approved primary authority. Record issuer, section, effective year, retrieval date,
+Use approved primary authority applicable to that tax year, including historical versions when
+needed. Record issuer, section, effective year, retrieval date,
 applicability, and conflicts. Distinguish filing, payment, appeal, and exemption deadlines.
 Do not use internal identifiers in search. If authority or necessary facts are missing, list the
 gap. Prepare a sourced research note for human review, not a final tax/legal determination.

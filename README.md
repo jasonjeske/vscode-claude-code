@@ -159,13 +159,14 @@ The core onboarding offers three optional skills:
   and
 - `work-memory` maintains a bounded, redacted local Markdown wiki through explicit user commands.
 
-Three additional optional skills are available through [Guide 07](guides/07-trusted-skills-and-installation.md):
+Four additional optional skills are available through [Guide 07](guides/07-trusted-skills-and-installation.md):
 
 - `prompt-coach` creates a concise reusable prompt and teaches one prompting habit;
-- `excel-workbook-review` inspects workbook structure and risks before any edits; and
-- `financial-dashboard` builds a reviewed report with defined metrics and verification.
+- `excel-workbook-review` inspects workbook structure and risks before any edits;
+- `financial-dashboard` builds a reviewed report with defined metrics and verification; and
+- `property-tax-research` researches state/local rules with pinpoint citations and applicability checks.
 
-All six local skills are explicitly user-invoked. The additional three are not installed by the
+All seven local skills are explicitly user-invoked. The additional four are not installed by the
 core onboarding. Upstream skill and plugin recommendations are separate, reviewed choices.
 
 No MCP servers, connectors, hooks, plugins, subagents, automatic task router, or permission bypass
@@ -223,11 +224,14 @@ Read them in order:
 11. [Community skills worth adding](guides/11-community-skills-worth-adding.md) recommends focused
     design and data tools beyond Anthropic's collection, with specific strengths and limitations.
 
+12. [Property-tax research](guides/12-property-tax-research.md) teaches specific jurisdiction questions,
+    historical rules, exemptions, and source-backed comparison memos.
+
 Future guides use `guides/NN-topic.md` and build on Guide 01 rather than repeating fundamentals.
 
 ## Public and local boundary
 
-Safe to keep public: this generic repository, blank templates, settings candidate, six local
+Safe to keep public: this generic repository, blank templates, settings candidate, seven local
 skills, and the wholly invented teaching example.
 
 Keep only in employer-approved locations: customized instructions, interview results, company

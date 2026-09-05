@@ -9,13 +9,18 @@ Research [EXEMPTION QUESTION] for [PROPERTY TYPE], [STATE AND LOCAL JURISDICTION
 and [RELEVANT EFFECTIVE/VALUATION DATE]. Entity and ownership/use facts: [APPROVED SOURCE LABELS].
 Final decision-maker: [AUTHORIZED REVIEWER ROLE].
 
+If installed, invoke `/property-tax-research` for a specific authority question. Keep research
+evidence coverage separate from the fact-evidence status in the exemption matrix below.
+
 ## Authority
 
-Use current applicable statutes, regulations, official forms/instructions, and assessor guidance
+Use authority applicable to the tax year, including historical versions, controlling decisions,
+statutes, regulations, local rules, official forms/instructions, and assessor guidance
 in the hierarchy approved by [REVIEWER]. For each source record issuer, title, URL or approved
 document reference, section/page, effective period, retrieval date, and applicability.
 Do not assume a current webpage governs a prior year. Preserve conflicting authorities and stop
-for review. Secondary sources are research leads, not proof of eligibility.
+the affected conclusion for review; continue unaffected research. Secondary sources are research
+leads, not proof of eligibility.
 
 ## Evidence matrix
 
@@ -28,7 +33,8 @@ valuation, filing history, or deadlines. Track renewal and initial application s
 
 Draft a sourced memo, evidence index, missing-items list, and questions for human review. Extracted
 dates remain unverified until checked against the applicable rule, year, and local instructions.
-No filing, payment, portal action, legal conclusion, or final exemption determination.
+Explain source findings and interpretations for review. No filing, payment, portal action,
+final tax position, or final exemption determination.
 
 ## Boundaries and teaching
 

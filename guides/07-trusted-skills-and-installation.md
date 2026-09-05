@@ -127,8 +127,9 @@ skills; the additional skills are a separate optional expansion.
    `Help me ask for a read-only explanation of a synthetic workbook.`
 6. Confirm it asks a useful question and does not open files or perform the underlying task.
 
-Repeat separately for `excel-workbook-review` and `financial-dashboard` when needed. No script or
-marketplace is necessary for these instruction-only folders. This repository's root `skills/`
+Repeat separately for `excel-workbook-review`, `financial-dashboard`, and
+[`property-tax-research`](12-property-tax-research.md) when needed. Include the research skill's
+`references/` folder. No script or marketplace is necessary for these instruction-only folders. This repository's root `skills/`
 folder is a distribution folder, not a Claude auto-install location. To undo an installation,
 remove only that installed folder or restore its verified predecessor, then verify menu discovery.
 [Skill locations and invocation](https://code.claude.com/docs/en/skills).

@@ -49,6 +49,8 @@ Test on the same data twice, on a changed schema, and on missing/duplicate recor
 fallback. An automation that saves time but loses records has failed.
 
 Add Word, PowerPoint, SQL, or a source-research workflow only when there is a concrete task for it.
+For specific state/local law questions, add [`property-tax-research`](12-property-tax-research.md)
+and practice checking one cited provision before expanding to a multistate comparison.
 Database access remains a separate organizational decision. A skill can help draft SQL without a
 connection. Do not schedule unattended jobs until the workflow is owned, tested, and approved.
 

@@ -30,9 +30,14 @@ appeals, payments, journal entries, or professional conclusions.
 
 ## Source hierarchy
 
-Use the most current applicable authority available through employer-approved access:
+Use authority applicable to the issue and tax year through employer-approved access. Historical
+questions require historical versions. This is a discovery order, not a universal rule of legal
+precedence: constitutions, controlling decisions, and delegated local authority may determine the
+answer. Distinguish their legal force from agency guidance and commentary.
 
-1. current statute and regulation;
+Start with:
+
+1. applicable constitutions, statutes/session laws, regulations, and adopted local ordinances;
 2. official state or local assessor, appraiser, collector, board, court, or tax-agency material;
 3. current official forms, notices, instructions, calendars, and filing portals;
 4. official bulletins, rulings, manuals, and published guidance;
@@ -49,8 +54,9 @@ For each relied-on source, record:
 - retrieval date; and
 - authorized reviewer and review status.
 
-When sources conflict, stop. Preserve both references and escalate under the approved source
-hierarchy. Do not silently choose the more convenient answer.
+When sources conflict, stop the affected conclusion. Preserve both references and escalate under
+the approved source hierarchy; continue unaffected research. Do not silently choose the more
+convenient answer.
 
 ## Build a jurisdiction matrix, not a stale deadline table
 
@@ -89,7 +95,9 @@ Every workflow should address the controls that apply:
 - explicit human approval before a filing, appeal, payment, posting, or conclusion.
 
 Use `/structured-work-request` to define a task and `/reconciliation-control-review` to test an
-approved reconciliation. Both shipped skills are optional and user-invoked.
+approved reconciliation. Both shipped skills are optional and user-invoked. For specific law questions, add the optional
+[`property-tax-research`](../skills/property-tax-research/SKILL.md) skill using
+[Guide 12](12-property-tax-research.md).
 
 ## Copy-and-paste workflow templates
 
