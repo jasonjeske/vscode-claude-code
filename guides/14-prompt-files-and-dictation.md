@@ -1,9 +1,16 @@
 # Use saved files as requests to Claude
 
-The [README exercises](../setup/MANUAL-SETUP.md#7-write-a-larger-request-as-a-markdown-file) show the full first
-attempt. This reference helps you adapt the method to longer work. Use approved storage and data.
-A prompt file here is an ordinary `.md` document, not a special executable format or a Copilot-specific
-prompt feature. You can write it gradually and send a short instruction to Claude when it is ready.
+The [README introduction](../README.md#first-read-the-saved-request-what-a-markdown-file-looks-like)
+shows how to read your first saved request. This reference helps you write your own and adapt the
+method to longer work. Use approved storage and data.
+
+**A `.md` file is a Markdown document:** ordinary text with optional marks for headings and lists.
+Your inline editor may show a formatted page, then reveal the raw text of a line when you click
+to edit it. Both views are the same saved file. You can dictate ordinary sentences without adding
+any formatting. Click where the text cursor appears before dictating, then check and save the text.
+
+A prompt file here is not a special executable format or a Copilot-specific prompt feature.
+You can write it gradually and send a short instruction to Claude when it is ready.
 
 ## Capture thoughts before opening chat
 

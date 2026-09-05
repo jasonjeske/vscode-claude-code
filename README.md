@@ -17,6 +17,10 @@ approved workbook for the state you actually handle. No full-drive scan or all-s
 
 ## 1. Open the starter in VS Code
 
+**What is `README.md`?** It is this guide saved as a **Markdown** file. The `.md` ending identifies
+an ordinary text document that can display headings, bold words, and lists. GitHub shows its
+formatted reading view. You will use the same kind of file for saved requests to Claude.
+
 1. [Download the ZIP](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip).
    In your browser's downloads list choose **Show in folder**.
 2. Right-click the ZIP > **Extract All**. Choose an approved learning location, then **Extract**.
@@ -133,6 +137,39 @@ State-Practice/               open this folder for the exercises
 `prompts` and confirm those files exist. The original starter remains separate. **Next: useful work.**
 
 ## 4. Inspect one workbook and check the result in Excel
+
+### First, read the saved request: what a Markdown file looks like
+
+In **View > Explorer**, expand **prompts** and double-click **first-workbook.md**. This document
+contains the task you will give Claude. It is text, not an Excel workbook or a program to run.
+
+Markdown has two appearances: the **source text** you edit and the **formatted view** you read.
+They represent the same document:
+
+| Text stored in the file | What the formatted view shows |
+| --- | --- |
+| `# Review the workbook` | A large heading saying “Review the workbook” |
+| `- Preserve the original` | A bullet followed by “Preserve the original” |
+| `**Check the total**` | **Check the total** |
+| `Use the Book sheet.` | Use the Book sheet. |
+
+**Using an inline Markdown editor?** It can show a formatted page while letting you edit in the
+same place. In editors that reveal the active line, clicking a heading may expose its `#`, or
+clicking bold words may expose `**`. That is the underlying text, sometimes called **raw Markdown**.
+The file has not broken or become code. Keep those marks if you want to keep the formatting.
+Moving out of the line may restore its formatted appearance; the exact behavior depends on the
+installed extension. There is no need to open two panes or install a second Markdown editor.
+
+**If you see plain text instead:** that works too. You can read and edit it directly. VS Code's
+built-in **Ctrl+Shift+V** opens a formatted reading preview; return to the text editor to edit.
+[Reading and editing controls](guides/00-vscode-basics.md#4-read-and-edit-markdown-in-one-pane).
+
+Read the supplied request without changing it for this first task. When you later type or dictate
+your own requests, save with **Ctrl+S** before sending them. Ordinary sentences are enough; headings
+only organize your thoughts. **Opening, formatting, or saving a request does not run it.** Next,
+you will select that saved file in Claude chat and explicitly ask Claude to perform the task.
+
+### Give the saved request to Claude
 
 1. In Claude's message box, type **`@prompts/first-workbook.md`** and choose that exact file from
    the suggestions. `@` selects a saved file for Claude to read; it is not a Windows command.

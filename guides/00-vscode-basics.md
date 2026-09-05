@@ -80,8 +80,23 @@ filename and save. **Check:** both request files remain; no task has run. Next, 
 
 ## 4. Read and edit Markdown in one pane
 
-Markdown is plain text with simple formatting. `# Heading`, `## Subheading`, `- list item`, and
-`**important text**` are enough to start. Claude reads the saved text; fancy formatting is optional.
+**Markdown is a way to format an ordinary text document.** Its filenames end in `.md`, such as
+`first-workbook.md`. You can use it for notes, instructions, or a saved request. It is not a special
+programming language you must learn before asking Claude for help.
+
+The text `# Workbook review` displays as a heading; `- Check the total` becomes a bullet;
+`**Keep the original**` displays as bold text. A space follows `#` or `-`. Ordinary sentences stay
+ordinary sentences. Claude reads the saved text; these formatting marks are optional for a request.
+
+**Why does clicking a line show symbols?** Some inline editors format inactive lines for reading
+and reveal a line's source text while you edit it. Seeing `#` or `**` after clicking is normal in
+that kind of editor. It is the same document, not a second file. Edit the words and leave the
+formatting marks when you want to keep the style. Moving to another line may format it again.
+This behavior belongs to the installed editor extension, not Claude Code.
+
+**Try it when writing your own request:** type `# My task` in a new `.md` file, press Enter twice,
+and write one ordinary sentence. Save with **Ctrl+S**, then read it in the formatted view. You
+should see a heading and your sentence. Saving does not submit either to Claude.
 
 **Already using an approved inline Markdown extension?** Continue using it. To see which one is
 installed, press **Ctrl+Shift+X**, type **`@installed markdown`** in the Extensions search box,
