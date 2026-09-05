@@ -1,12 +1,12 @@
 # Toolkit validation and remaining checks
 
-Checked September 5, 2026 (UTC). This record applies to the Excel/dashboard learning expansion
-and property-tax research skill.
-It is not certification for production tax work.
+Checked September 5, 2026 (UTC). This record covers the restructured setup/learning kit,
+Excel/dashboard expansion, and property-tax research skill. It is not certification for production
+tax work.
 
 ## Completed locally
 
-- Repository lint: frontmatter and local Markdown links validated.
+- Repository lint: 211 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -22,6 +22,18 @@ It is not certification for production tax work.
   official Florida/Texas source gateways. This is a workflow review, not a substantive tax opinion
   or a Claude Code behavioral test.
 
+- Restructure: reviewed anonymous ZIP instructions, short setup, skill lifecycle, project templates,
+  catalog, daily guide, and lesson links. Short setup supports an explicitly reviewed batch while
+  the retained full onboarding keeps its more granular protocol. Neither is an executed installer.
+- Official catalog: fetched all 20 linked skill entrypoints and checked frontmatter. Four are
+  supporting skills hidden from direct invocation; the catalog labels these explicitly.
+- Token guidance: inspected current Caveman instructions/accounting notes and Anthropic usage,
+  skill-loading, and status-line documentation. No Caveman installation or savings benchmark ran.
+- Practice: independently recomputed the four-row source totals, unmatched bridge, and duplicate
+  scenario from the published invented tables. See the answer key in `practice/FIRST-SESSION.md`.
+- The quoted status-line example parses as JSON and keeps a path containing spaces as one shell
+  argument. This does not establish PowerShell execution or managed Windows compatibility.
+
 The first independent total assertion exposed a wrong hand-written answer-key total. Recomputing
 the fixture confirmed $9,150 total book and $8,330 per paired side; the answer key was corrected.
 The displayed calculation logic did not need changing.
@@ -34,7 +46,7 @@ The displayed calculation logic did not need changing.
   screenshots, responsive/zoom checks, print checks, or offline network tests were completed.
   Static inspection shows only local scripts, but that is not an offline browser test.
 - **Windows, native Excel, gateway, and upstream installations:** NOT RUN. Track these through
-  [W26-W29](WINDOWS-VERIFICATION.md). No employer environment was accessed.
+  [W26-W31](WINDOWS-VERIFICATION.md). No employer environment was accessed.
 - **New skills in Claude Code:** NOT RUN. The repository's Claude-specific frontmatter validator
   passes. A Codex-specific validator rejects Claude's `disable-model-invocation` extension; that
   field is intentionally retained for the target product. Schema validation does not establish
@@ -48,6 +60,8 @@ data or organizational configuration into a public issue.
 
 | Skill | Request | Expected observable behavior |
 | --- | --- | --- |
+| `structured-work-request` | Supply all ten scope fields upfront | Reuse the supplied facts and produce the contract without repeating ten questions |
+| `reconciliation-control-review` | Supply approved scope and controls upfront | Start the review without repeating resolved questions; mark missing evidence UNVERIFIED |
 | `prompt-coach` | Supply outcome, inputs, and output; omit the match rule | Ask one relevant question; do not repeat supplied facts or execute the task |
 | `prompt-coach` | Ask for a dashboard with no source data | Draft a prompt preserving the data gap or explicitly synthetic scope; do not invent company metrics |
 | `excel-workbook-review` | Review a small workbook with a hidden sheet and an unknown formula cache age | Map accessible structure and mark calculation freshness unknown; do not save |
@@ -65,6 +79,17 @@ Run the dashboard exercise in a supported browser: default totals, state and per
 exceptions only, empty result, reset, keyboard focus, narrow layout, 125% zoom, and print preview.
 Check against [the answer key](../examples/dashboard/README.md). Keep claims marked unverified until
 observed. The synthetic example is optional; the researched guides and prompts are usable without it.
+
+## Short setup acceptance
+
+In a permitted Windows test profile, follow the short setup once with absent destinations and once
+with an existing global file and same-name skill. Approve only the displayed batch; check backup
+readability, preserved settings, complete copied references, discovery, and rollback. Exercise a
+path containing spaces and a policy-blocked optional install. See W30/W31. These trials are NOT RUN.
+
+The retained full onboarding marker punctuation and transcript were updated together. Its merge
+fixture semantics are unchanged; P1-P4 model-executed drills remain NOT RUN. Status-line changes
+correct documentation and comments; actual PowerShell execution remains UNVERIFIED.
 
 ## Reproduce automated checks
 

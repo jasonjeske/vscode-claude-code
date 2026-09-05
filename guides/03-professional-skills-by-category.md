@@ -14,15 +14,13 @@ replace bracketed placeholders with synthetic labels before pasting.
   from this starter because they can consume allowance quickly and complicate review.
 
 A skill is not an app, security boundary, professional license, or automatic workflow. This starter
-offers three core optional skills through onboarding:
+contains seven optional local skills. Use the [catalog](../SKILLS.md) for each skill's purpose,
+first prompt, and installation route. Start with `prompt-coach` and `excel-workbook-review`, adding
+`property-tax-research` when the immediate task is law research. Add review, dashboard, scoping,
+and memory skills only as needed.
 
-- [`structured-work-request`](../skills/structured-work-request/SKILL.md)
-- [`reconciliation-control-review`](../skills/reconciliation-control-review/SKILL.md)
-- [`work-memory`](../skills/work-memory/SKILL.md)
-
-For an already working setup, [Guide 07](07-trusted-skills-and-installation.md) adds a researched
-upstream shortlist and four optional local skills: `prompt-coach`, `excel-workbook-review`,
-`financial-dashboard`, and `property-tax-research`. These are a separate expansion, not additional Stage 5 installations.
+The retained [full onboarding reference](../setup/FULL-ONBOARDING.md) has its original three-skill
+Stage 5. That optional protocol is separate from the recommended [short setup](../START-HERE.md).
 
 ## Folder and file inventories
 

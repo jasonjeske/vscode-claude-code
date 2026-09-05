@@ -76,15 +76,15 @@ writes except an explicitly approved archive purge that reduces usage. Never aut
 
 The optional `/work-memory` skill supports:
 
-- `init` — preview and create the bounded folder from blank templates;
-- `status` — report neutral counts, sizes, limits, and conflicts;
-- `checkpoint` — propose a redacted update to `NOW.md`;
-- `remember <topic>` — preview a durable topic update and index entry;
-- `recall <topic>` — read one approved topic and report freshness and conflicts;
-- `compact <topic>` — preview a shorter note and archive the prior version;
-- `forget <topic|NOW>` — archive first, then remove only after separate approval;
-- `restore <archive>` — preview restoring an archived snapshot; and
-- `purge-archive <archive>` — permanently remove one named snapshot after two confirmations.
+- `init` - preview and create the bounded folder from blank templates;
+- `status` - report neutral counts, sizes, limits, and conflicts;
+- `checkpoint` - propose a redacted update to `NOW.md`;
+- `remember <topic>` - preview a durable topic update and index entry;
+- `recall <topic>` - read one approved topic and report freshness and conflicts;
+- `compact <topic>` - preview a shorter note and archive the prior version;
+- `forget <topic|NOW>` - archive first, then remove only after separate approval;
+- `restore <archive>` - preview restoring an archived snapshot; and
+- `purge-archive <archive>` - permanently remove one named snapshot after two confirmations.
 
 `status` and `recall` grant read access only to the named memory scope. Every write, move, archive,
 or delete requires a preview and separate explicit approval.

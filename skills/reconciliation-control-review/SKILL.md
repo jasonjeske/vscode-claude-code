@@ -29,7 +29,8 @@ policy. Use neutral input and evidence labels.
 
 ## Before review
 
-Ask one question at a time until the user has approved:
+Use the already approved request and project context first. Ask one question at a time only for
+missing material details or unresolved approval. Establish:
 
 1. neutral labels for each input, its version, and period;
 2. the authoritative source hierarchy and conflict rule;
@@ -47,21 +48,21 @@ tolerance, source rule, or value. Missing information remains unresolved.
 
 Evaluate every control below. None may be omitted:
 
-1. **Input identity and version** — each input has a neutral label, version or timestamp category,
+1. **Input identity and version** - each input has a neutral label, version or timestamp category,
    period, and approved scope.
-2. **Source hierarchy** — authoritative sources and conflict escalation are defined and followed.
-3. **Row counts** — source, transformed, matched, unmatched, duplicate, ambiguous, excluded, and
+2. **Source hierarchy** - authoritative sources and conflict escalation are defined and followed.
+3. **Row counts** - source, transformed, matched, unmatched, duplicate, ambiguous, excluded, and
    malformed populations reconcile where applicable.
-4. **Control totals** — each approved amount or quantity total ties within its stated tolerance.
-5. **Duplicate population** — duplicates are detected under an approved key and remain separately
+4. **Control totals** - each approved amount or quantity total ties within its stated tolerance.
+5. **Duplicate population** - duplicates are detected under an approved key and remain separately
    reported.
-6. **Unmatched and ambiguous populations** — neither is forced, hidden, or silently netted; each has
+6. **Unmatched and ambiguous populations** - neither is forced, hidden, or silently netted; each has
    a count, control-total result where applicable, and disposition.
-7. **Representation handling** — sign, decimal precision, date meaning, leading zeros, source keys,
+7. **Representation handling** - sign, decimal precision, date meaning, leading zeros, source keys,
    and blank/null distinctions are preserved or transformed only by an approved rule.
-8. **Formula/value distinction** — formulas, cached or displayed values, and recalculation state are
+8. **Formula/value distinction** - formulas, cached or displayed values, and recalculation state are
    distinguished where applicable.
-9. **Reproducibility** — input versions, rules, normalization, match hierarchy, calculations,
+9. **Reproducibility** - input versions, rules, normalization, match hierarchy, calculations,
    exceptions, and reviewer decisions are sufficient for another reviewer to repeat the work.
 
 A missing expectation, tolerance, source rule, calculation, or evidence makes that control

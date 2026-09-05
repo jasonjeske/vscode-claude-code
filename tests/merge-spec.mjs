@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Executable specification of START-HERE.md Stage 4's settings merge rules.
+// Executable specification of setup/FULL-ONBOARDING.md Stage 4's settings merge rules.
 // The prose in Stage 4 is executed by a language model and cannot be run by a script.
 // What CAN be pinned is the merge semantics themselves, which this file encodes and
 // checks against committed fixtures.

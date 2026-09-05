@@ -66,13 +66,13 @@ control totals, exception queues, reproducible evidence, or human approval.
 
 ## Seven commands to learn
 
-1. `/status` — verify the active provider and approved workplace account.
-2. `/permissions` — inspect the allowed action boundary.
-3. `/model` — inspect or choose an allowed model or documented alias.
-4. `/effort` — inspect or choose available thinking effort.
-5. `/usage` — inspect usage information exposed for the account.
-6. `/context` — see what consumes the context window.
-7. `/clear` — remove stale context before an unrelated objective.
+1. `/status` - verify the active provider and approved workplace account.
+2. `/permissions` - inspect the allowed action boundary.
+3. `/model` - inspect or choose an allowed model or documented alias.
+4. `/effort` - inspect or choose available thinking effort.
+5. `/usage` - inspect usage information exposed for the account.
+6. `/context` - see what consumes the context window.
+7. `/clear` - remove stale context before an unrelated objective.
 
 Do not reproduce account identifiers from command output. Behavior can change; use Anthropic's
 current [command reference](https://code.claude.com/docs/en/commands).

@@ -1,5 +1,8 @@
 # A practical prompt library
 
+For skill purposes and ready-to-use invocation examples, see [the catalog](../SKILLS.md).
+For everyday context and usage habits, see [the daily desk guide](../guides/DAILY-USE.md).
+
 Use one prompt for one job. Replace bracketed fields inside an employer-approved project, not in
 this public checkout. Do not paste credentials or confidential records into public tools. If a
 rule is unknown, say `unknown`. These prompts do not grant access or override company policy.

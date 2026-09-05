@@ -13,7 +13,7 @@ Follow [the local installation instructions](07-trusted-skills-and-installation.
 personal or project `.claude/skills/` folder. The personal Windows entrypoint is
 `%USERPROFILE%\.claude\skills\property-tax-research\SKILL.md`.
 
-Invoke `/property-tax-research` explicitly. This skill is not installed by the core onboarding.
+Invoke `/property-tax-research` explicitly. Choose it in the short setup when law research is the first task; it is optional.
 Use existing employer-approved browsing or supplied official documents. If the gateway or managed
 tools cannot access the web, it should return source-limited analysis and list missing checks.
 Installation does not change those access controls.

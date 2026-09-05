@@ -45,6 +45,10 @@ These are upstream recommendations, not copies bundled with this repository.
 | Later | Finance `close-management`, `audit-support` | Close checklists and evidence organization | [Finance package](https://github.com/anthropics/knowledge-work-plugins/tree/main/finance) |
 | Later | `doc-coauthoring`, `skill-creator` | Improve repeatable documentation and tested local skills | [Anthropic skill collection](https://github.com/anthropics/skills/tree/main/skills) |
 
+The upstream `data-visualization`, `sql-queries`, `close-management`, and `audit-support` entries
+are supporting skills marked `user-invocable: false`; they are not direct slash-menu commands.
+Ask Claude to use their guidance in a normal request when the reviewed package is installed.
+
 Choose the next skill from the next real task. Installing every item on day one creates more
 configuration to understand without proving any benefit. The Finance and Data repositories say
 they also support Claude Code, although their primary target is Cowork.
@@ -112,27 +116,14 @@ already uses the required Microsoft surface.
 
 ## Install our small local skills first
 
-If Claude Code already works through the approved gateway, keep that setup. Do not run the full
-onboarding again merely to add skills. The starter's existing Stage 5 still offers its three core
-skills; the additional skills are a separate optional expansion.
+Use [the short setup](../START-HERE.md) for an already working extension. The
+[skill catalog](../SKILLS.md) gives all seven local skills with examples, and the
+[installation guide](../setup/SKILLS.md) covers complete-folder copying, scope, backups,
+discovery, updates, removal, and troubleshooting. No marketplace or runtime installer is required
+for these instruction-only folders. Copy the research skill's `references/` folder too.
 
-1. In VS Code, inspect one folder under `skills/` and read its `SKILL.md`.
-2. Choose **personal** scope for use across projects or **project** scope for one work folder.
-3. Preview the copy and any same-name destination. Preserve and verify an existing folder before
-   replacing it. Do not install two different skills with the same name accidentally.
-4. After approving that exact copy, put the complete folder at either:
-   - `%USERPROFILE%\.claude\skills\prompt-coach\SKILL.md`, or
-   - `<approved-project>\.claude\skills\prompt-coach\SKILL.md`.
-5. Start a new Claude conversation if discovery has not refreshed. Type `/prompt-coach` and try:
-   `Help me ask for a read-only explanation of a synthetic workbook.`
-6. Confirm it asks a useful question and does not open files or perform the underlying task.
-
-Repeat separately for `excel-workbook-review`, `financial-dashboard`, and
-[`property-tax-research`](12-property-tax-research.md) when needed. Include the research skill's
-`references/` folder. No script or marketplace is necessary for these instruction-only folders. This repository's root `skills/`
-folder is a distribution folder, not a Claude auto-install location. To undo an installation,
-remove only that installed folder or restore its verified predecessor, then verify menu discovery.
-[Skill locations and invocation](https://code.claude.com/docs/en/skills).
+The optional full onboarding protocol retains its original three-skill Stage 5. It is not required
+for the short setup. Keep the existing gateway configuration and install only the next useful skill.
 
 ## Install upstream skills only through the reviewed route
 

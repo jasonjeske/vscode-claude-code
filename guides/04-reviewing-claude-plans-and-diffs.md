@@ -20,7 +20,7 @@ because they carry different risk.
 
 The read case is the one people underestimate. Approving "may I read your existing instructions
 file" is not a small yes if that file contains something confidential. Stage 3 of
-[START-HERE.md](../START-HERE.md) asks separately for exactly this reason.
+[setup/FULL-ONBOARDING.md](../setup/FULL-ONBOARDING.md) asks separately for exactly this reason.
 
 ## 2. How to read a plan before approving it
 

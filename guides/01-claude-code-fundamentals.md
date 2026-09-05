@@ -96,7 +96,7 @@ store source documents or raw work data.
 
 The optional `/work-memory` skill manages a separate, bounded cross-project Markdown wiki. It asks
 before reading `NOW.md` and `INDEX.md`, then loads at most one approved topic. Use it for generic,
-redacted continuity such as an open next action or recurring rule—not values, records, identifiers,
+redacted continuity such as an open next action or recurring rule - not values, records, identifiers,
 or authority. Both memory layers consume context when recalled, and local storage does not mean
 local inference. Read [the work-memory guide](../docs/WORK-MEMORY.md) before initialization.
 

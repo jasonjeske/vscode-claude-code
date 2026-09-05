@@ -29,8 +29,9 @@ approved handling process.
 
 ## Interview
 
-Explain that a precise request prevents silent assumptions and enables review. Ask exactly one
-focused question at a time, in this order:
+Explain briefly that a precise request prevents silent assumptions and enables review. Extract
+answers already supplied in the approved request and project context; do not ask for them again.
+Ask one focused question at a time for remaining material gaps, in this order:
 
 1. What outcome should the work produce?
 2. What generic context and reporting period apply?

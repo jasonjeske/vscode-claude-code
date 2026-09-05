@@ -1,102 +1,75 @@
 # Contributing
 
-This is a small, deliberately conservative repository. Its audience is a first-time Claude Code user
-handling confidential corporate tax and reconciliation work on a managed Windows machine. That
-audience shapes every rule below.
+This public kit helps a first-time property-tax/accounting user work with Claude Code in VS Code
+on a managed Windows PC. Optimize for a useful first task, clear examples, correct evidence, and
+small context. The default path assumes the extension and approved gateway already work.
 
-## What contributions fit
+## Structure
 
-Welcome:
+- `README.md`: short landing page and task navigation.
+- `START-HERE.md`: recommended setup for an existing installation.
+- `SKILLS.md`: every recommended skill, its purpose, example, and installation route.
+- `setup/`: skill lifecycle, project setup, and the retained full onboarding reference.
+- `skills/`: original, self-contained distribution folders, not auto-installed configuration.
+- `templates/`: blank global, project, and handoff templates. Filled copies stay outside this repo.
+- `practice/` and `examples/`: wholly invented exercises and answer keys.
+- `guides/`: daily use, learning, and topic references; `guides/README.md` is the index.
+- `docs/`: source/validation records, Windows checks, and deeper operational references.
+- `tests/`: standard-library checks and manual QA procedures.
 
-- Corrections. A wrong path, a stale command, an incorrect claim about Windows or VS Code behavior.
-  These are the most valuable contributions here.
-- Windows verification. Running a procedure in [`docs/WINDOWS-VERIFICATION.md`](docs/WINDOWS-VERIFICATION.md)
-  on real Windows and reporting what happened, whether it confirms the claim or breaks it.
-- Clarity. Prose that is easier for a non-developer to follow without becoming vaguer.
-- Additional guides, following the `guides/NN-topic.md` convention and building on Guide 01 rather
-  than repeating it.
-- Test cases. New fixtures for `tests/merge-spec.mjs` that pin a merge behavior currently untested.
+## Contribution rules
 
-Not a fit, and likely to be declined:
+1. Keep the public content generic and technical. No credentials, company details, actual work data,
+   customized work instructions, internal locations, or identifiable examples.
+2. Keep the already-working setup path short. Do not require the full onboarding interview to add
+   a local skill. The full reference retains its staged merge contract for those who need it.
+3. Respect approved scope. Preview configuration changes before approval; one explicit approval may
+   cover a clearly listed batch. Preserve existing approved rules, verified backups, readback, and
+   rollback. Silence does not authorize changes; managed policy can impose stricter requirements.
+4. Do not configure connectors, proxies, hooks, subagents, or dependencies in the baseline. Document
+   optional upstream packages separately, including their full contents, licenses, and runtime needs.
+5. Local skills stay explicitly user-invoked with `disable-model-invocation: true`. Keep references
+   inside the distributed folder where possible. Explain every local skill with a catalog example.
+6. Keep specialized procedures out of global instructions. Ask only for material missing facts;
+   use existing approved context without repeating the interview.
+7. Verify numerical answer keys independently. Never imply that a source review, schema validator,
+   or synthetic test establishes behavior in managed Windows, native Excel, or Claude Code.
+8. Use American English and plain dashes. Do not edit `CHANGELOG.md` manually or modify the existing
+   release cover asset. Use the maintainer's release process for changelog generation.
 
-- Unreviewed or overlapping skill collections. Keep the three core onboarding skills stable;
-  focused optional skills belong in the separately documented expansion path.
-- Any dependency, package manager file, or lockfile.
-- MCP servers, connectors, hooks, plugins, or subagent configuration.
-- Platform ports. This repository is Windows-only on purpose; a macOS or Linux variant is a
-  different project.
-- Automation of anything currently gated behind human approval.
+Useful contributions include source corrections, clearer examples, narrow skills for repeated
+tasks, and actual Windows verification. Avoid overlapping skill collections and unsupported claims
+of guaranteed savings or tax accuracy.
 
-## Design principles a change may not weaken
+## Before pushing
 
-These are not preferences. A pull request that erodes one of them will be declined regardless of how
-well it is written.
-
-1. **Approval before every write.** No change may make a write implicit, batched, or inferred from
-   an earlier approval.
-2. **Redaction first.** No real names, employers, credentials, taxpayer or property identifiers,
-   addresses, internal URLs, absolute paths, row-level data, or actual values. Placeholders only,
-   using the `ENTITY-A` and `PERIOD-1` convention.
-3. **Instructions are not enforcement.** Nothing here may be described as enforcing confidentiality
-   or as a security control. See [`docs/SECURITY.md`](docs/SECURITY.md).
-4. **Backup, readback, rollback.** Every write path keeps all three. A backup that is not read back
-   does not count.
-5. **Minimal trusted surface.** No configured MCP, connectors, hooks, plugins, subagents, or package
-   dependencies. Documented optional upstream recommendations are not automatic installations.
-   Validation scripts use only the Node standard library; the synthetic dashboard uses browser APIs.
-6. **Skills stay user-invoked.** `disable-model-invocation: true` is invariant.
-7. **CI never claims more than it tested.** No job may imply a verification it did not perform. This
-   is why there is no `windows-latest` job.
-8. **`assets/cover.svg` is untouchable.** It ships in tagged releases.
-
-## Before you open a pull request
-
-Run all three checks from the repository root. Each must exit 0.
+Run from the repository root:
 
 ```sh
 node tests/validate-repo.mjs
 node tests/merge-spec.mjs
 node tests/dashboard-spec.mjs
+git diff --check
 ```
 
-`node tests/validate-repo.mjs` is the lint for this repository. It checks skill frontmatter, every
-relative Markdown link, strict JSON parsing, and the changelog's shape. There is no other linter and
-none will be added.
+The first script checks local Markdown links, Claude skill frontmatter, JSON, and changelog shape.
+The merge fixtures specify the retained full onboarding Stage 4 behavior. The dashboard tests check
+synthetic calculations and filters. None requires package installation.
 
-`node tests/merge-spec.mjs` checks the Stage 4 merge rules against the committed fixtures. If you
-change merge behavior, the fixtures are the contract: update them deliberately in the same pull
-request and say why in the description.
+When changing Stage 3/4 or the global template, report the applicable manual results from
+[the QA runbook](tests/QA-RUNBOOK.md). `NOT RUN` is honest; a blank or implied pass is not. For the
+short setup, use W30/W31 in [the Windows ledger](docs/WINDOWS-VERIFICATION.md).
 
-Also:
+Review the public diff for work data, credentials, personal details, and accidental artifacts.
+Inspect newly linked upstream entrypoints and installation behavior; URLs and package names drift.
+Record source checks separately from actual runtime trials in
+[the validation record](docs/TOOLKIT-VALIDATION.md).
 
-- Describe user-visible changes in the pull request. Do not manually edit `CHANGELOG.md`; use the
-  maintainer's release process.
-- If your change touches Stage 3 or Stage 4 behavior, run the relevant procedure in
-  [`tests/QA-RUNBOOK.md`](tests/QA-RUNBOOK.md) and paste the results block into the pull request
-  description. `NOT RUN` is an acceptable entry; a blank one is not.
-- Use American English spelling, and no em dashes in prose.
+## CI and release
 
-## Continuous integration
+The read-only GitHub Actions job runs the three scripts on Linux with Node 20 for pull requests
+and main-branch pushes. It does not test a managed Windows desktop or check external links.
 
-`.github/workflows/validate.yml` runs all three scripts on every push to `main` and on every pull
-request, on `ubuntu-latest` with Node 20, with read-only permissions.
-
-CI does not check external links, and it does not test Windows behavior. Both are deliberate. See
-decisions D2 and D8 in the project's design notes.
-
-## Release checklist
-
-For a maintainer cutting a release:
-
-1. CI is green on `main`.
-2. All three scripts pass locally from a clean checkout.
-3. Manual external-link pass: open every external URL in `README.md`, `START-HERE.md`, and the
-   guides, and confirm each still resolves to the intended page. CI does not do this.
-4. Windows ledger reviewed: read `docs/WINDOWS-VERIFICATION.md` and state the current status in the
-   release notes, including how many rows remain `UNVERIFIED`. Do not imply verification that has
-   not happened.
-5. Use the maintainer's release process to generate the version's changelog; do not manually edit it.
-6. Tag the release and publish it, with the generated changelog section as the release notes.
-
-Steps 3 and 4 are the two a maintainer is most likely to skip and the two most likely to mislead a
-reader if skipped.
+Before release, confirm CI, current source links, and the Windows ledger's actual statuses.
+State outstanding checks in release notes. Do not claim that published instructions were installed
+or tested on a work PC unless that was actually done.
