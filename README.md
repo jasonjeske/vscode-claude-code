@@ -1,6 +1,6 @@
 # Learn VS Code and Claude Code together
 
-![Claude Code for property-tax work: Excel, research, and reporting, illustrated with a spreadsheet, source document, charts, and buildings.](assets/readme-banner.png)
+![Claude Code in VS Code. Learn by doing: Excel, research, and reporting. A blue-lit workspace illustrates spreadsheets, charts, and an assistant panel.](assets/readme-banner.png)
 
 **Never used VS Code? Start here.** Set up the complete local kit once, then learn by making a
 small result. Everything you need for the first session is on this page. Keep it open in your
