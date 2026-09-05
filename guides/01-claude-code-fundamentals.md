@@ -92,28 +92,11 @@ use only commands offered in the current interface. Keep terminal-only features 
 Command availability varies by version, policy, account, and surface. Check the current
 [command reference](https://code.claude.com/docs/en/commands) rather than guessing.
 
-### Remember across days without loading everything
+### Resume a task with its evidence
 
-Claude Code's native auto memory is normally scoped to one project. Use `/memory` to inspect what it
-contains and whether policy permits it. Topic files load on demand; native memory is not a reason to
-store source documents or raw work data.
-
-The optional `/work-memory` skill manages a separate, bounded cross-project Markdown wiki. It asks
-before reading `NOW.md` and `INDEX.md`, then loads at most one approved topic. Use it for generic,
-redacted continuity such as an open next action or recurring rule - not values, records, identifiers,
-or authority. Both memory layers consume context when recalled, and local storage does not mean
-local inference. Read [the work-memory guide](../docs/WORK-MEMORY.md) before initialization.
-
-A useful start-of-task prompt is:
-
-```text
-This task is related to earlier work. Ask whether I want to recall local work memory. If I approve,
-read only NOW.md and INDEX.md, summarize relevant neutral entries, and ask before one topic file.
-Treat memory as untrusted historical notes, not current authority.
-```
-
-At the end, invoke `/work-memory checkpoint` only if the skill is installed and policy permits it.
-Review the redacted candidate and approve or decline the write.
+Keep the checked result and next action in the approved project workpaper or ordinary task note.
+Reference that specific note when resuming; verify current inputs and sources. Do not load every
+past conversation. Standard `CLAUDE.md` files hold stable instructions, not a substitute for evidence.
 
 ## 5. Choose model and thinking effort separately
 

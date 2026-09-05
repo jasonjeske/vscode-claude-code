@@ -44,7 +44,6 @@ how to ask, use `/prompt-coach`. If the assignment has many unresolved requireme
 | Create a management dashboard | `/financial-dashboard` | Metric definitions, source/as-of date, filters, chart/table totals |
 | Improve a dashboard's appearance | One approved design skill | Readability, accessibility, and unchanged metric meaning |
 | Draft a memo or slide deck | Approved `docx` or `pptx` | Source-backed claims and actual Word/PowerPoint rendering |
-| Remember a generic recurring lesson | `/work-memory remember <topic>` if approved | Redacted preview, storage scope, and explicit write approval |
 
 See [the catalog](../SKILLS.md) for full examples and upstream command names. The local review
 skills inspect and report; they do not perform reconciliation edits or create a workbook by themselves.

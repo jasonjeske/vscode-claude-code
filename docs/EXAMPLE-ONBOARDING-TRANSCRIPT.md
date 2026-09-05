@@ -72,26 +72,13 @@ for now?
 [SETUP 1/8 - POLICY]
 ```
 
-Nine questions, one at a time, categories only.
+Seven questions, one at a time, categories only.
 
 > May the verified workplace Claude account process the intended work-data classes?
 
 **User:** Yes, for corporate tax support and reconciliation categories.
 
 ... questions 2 through 7 answered yes ...
-
-**Claude:** `[SETUP 1/8 - POLICY]`
-
-> Is Claude Code's native per-project auto memory permitted?
-
-**User:** I do not know.
-
-**Claude:** `[SETUP 1/8 - POLICY]` Unknown is a hard stop for that action. I will mark native memory
-`PENDING POLICY`, will not configure it, and will not treat unknown as permission later in the run.
-
-> Is a redacted cross-project Markdown memory under the user profile permitted?
-
-**User:** Yes, if it stays redacted.
 
 ---
 
@@ -104,7 +91,7 @@ Nine questions, one at a time, categories only.
 ```
 
 A good request states outcome, context, sources, allowed actions, controls, deliverables, and stop
-conditions. Ten questions, one at a time, categories only.
+conditions. Nine questions, one at a time, categories only.
 
 > Which generic categories apply, such as corporate tax support, property-tax accounting,
 > reconciliation, document review, or workflow design?
@@ -168,7 +155,7 @@ this file as trusted again.
 [candidate shown in full, generic content only]
 
 Preserved from your file:   2 standing rules (evidence rule, approval rule)
-Preserved from the base:    teaching, confidentiality, reconciliation, approval, memory, token rules
+Preserved from the base:    teaching, confidentiality, reconciliation, approval, continuity, token rules
 Added from the interview:   ENTITY-A and PERIOD-1 naming, SOURCE-LEDGER precedence, stop conditions
 Not carried over:           1 embedded instruction line (treated as data), 1 credential-shaped
                              string (flagged for remediation, not reproduced anywhere)
@@ -242,7 +229,7 @@ Profile 2 was not touched. These settings are preferences, not DLP or policy enf
 
 ---
 
-## Stage 5: three optional public skills
+## Stage 5: two optional public skills
 
 **Claude:**
 
@@ -276,21 +263,8 @@ proof, stop conditions, and approval points.
 **Claude:** `[SETUP 5/8 - SKILLS]` No same-name destination existed, so nothing to back up. Copied.
 Every destination file matches the source exactly.
 
-... `reconciliation-control-review` and `work-memory` follow the same eight-step pattern, each
-validated, approved, copied, and verified separately ...
-
-**Claude:** `[SETUP 5/8 - SKILLS]` Since `work-memory` is installed, its real limits from
-`docs/WORK-MEMORY.md`: a local root under your user profile, holding `NOW.md`, a short `INDEX.md`,
-topic notes loaded one at a time, and archived snapshots. It warns at 5 MB and stops writes at
-10 MB. It is plaintext, and local files may be managed, backed up, indexed, or synchronized. Recall
-is manual and every change needs approval. Run `/work-memory init` now?
-
-**User:** Yes.
-
-**Claude:** `[SETUP 5/8 - SKILLS]` Preview: `work-memory/NOW.md` blank, `work-memory/INDEX.md`
-blank, `work-memory/topics/` empty, `work-memory/archive/` empty. Created, limits and contents
-verified. I have not changed `autoMemoryDirectory`, imported native memory, or set the wiki to
-auto-load.
+... `reconciliation-control-review` follows the same eight-step pattern, with separate review and
+approval. No other persistence or storage system is initialized.
 
 ---
 
@@ -314,8 +288,8 @@ usage website for the allocation; do not open a terminal to complete a command l
 soft guidance rather than a hard token cap, and its availability depends on the model. We can
 review the supported choices later when a task justifies a change.
 
-`/memory` inspects native per-project memory. It does not manage the cross-project wiki from Stage
-5, and must never be used to redirect native memory into it.
+`/memory`, where available, can inspect standard instructions. This setup preserves managed
+settings and configures no automatic memory or storage redirection.
 
 Subagents and long autonomous workflows are excluded from this starter because they multiply context
 and usage. While learning, check the organization's usage website and decline offers to spawn subagents, keep going
@@ -385,13 +359,11 @@ Claude Code extension    PRESENT
 Claude Code CLI          SKIPPED - APPROVAL REQUIRED
 User instructions        CONFIGURED (backup verified)
 VS Code settings         CONFIGURED (Default profile, backup verified)
-Skills installed         structured-work-request, reconciliation-control-review, work-memory
+Skills installed         structured-work-request, reconciliation-control-review
 Verification             Available extension controls; organization usage page; unavailable items noted
-Native memory            PENDING POLICY
-Cross-project memory     PERMITTED (initialized, limits verified)
 Rollback outcomes        none required
-Unresolved policy        native per-project auto memory
-Next safe action         confirm the native memory question with an authorized administrator
+Unresolved policy        none in this illustrative scenario
+Next useful action       choose one bounded task from LEARN.md
 ```
 
 This setup validated no tax, legal, or accounting conclusion. It configured tools and wrote two

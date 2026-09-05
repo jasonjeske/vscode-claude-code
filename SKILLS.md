@@ -14,9 +14,9 @@ can discover local skills in its supported locations; some upstream packages als
 | First workbook creation/edit | Reviewed Anthropic `xlsx`, with suitable runtime and Excel validation |
 | First reconciliation review | `reconciliation-control-review` |
 | First dashboard | `financial-dashboard`; one design skill if needed |
-| Later recurring work | A specific data, document, or memory skill justified by the task |
+| Later recurring work | A specific data or document skill justified by the task |
 
-## Seven skills included in this download
+## Six skills included in this download
 
 These are original local skills. Copy the complete selected folder from `skills/`. Invoke by its
 slash command; none runs automatically. Use approved synthetic input for the first trial.
@@ -98,25 +98,6 @@ do not run both by default. [Read the skill](skills/structured-work-request/SKIL
 Help me define a multistate fixed-asset reconciliation for PERIOD-1. The permitted inputs are
 approved copies of EXPORT-A and MASTER-A. Produce a reviewable scope and ask one missing question
 at a time. Do not open files or execute the reconciliation.
-```
-
-### 7. Work memory
-
-**Does:** maintains small, explicitly approved, redacted cross-project notes. **Use when:** a recurring
-generic lesson is worth remembering. It is optional and separate from native Claude auto memory;
-it is not a storage location for records, values, or tax authority. [Read the skill](skills/work-memory/SKILL.md)
-and [setup/commands](docs/WORK-MEMORY.md).
-
-```text
-/work-memory status
-```
-
-After storage is approved and initialization completed using the blank memory templates:
-
-```text
-/work-memory remember join-controls
-Propose a generic note: define row grain and test key uniqueness before joining exports.
-Keep company details and data out. Show the note for approval before writing it.
 ```
 
 ## Official upstream skills

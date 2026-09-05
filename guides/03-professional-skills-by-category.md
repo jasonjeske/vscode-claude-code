@@ -14,12 +14,12 @@ replace bracketed placeholders with synthetic labels before pasting.
   from this starter because they can consume allowance quickly and complicate review.
 
 A skill is not an app, security boundary, professional license, or automatic workflow. This starter
-contains seven optional local skills. Use the [catalog](../SKILLS.md) for each skill's purpose,
+contains six optional local skills. Use the [catalog](../SKILLS.md) for each skill's purpose,
 first prompt, and installation route. Start with `prompt-coach` and `excel-workbook-review`, adding
-`property-tax-research` when the immediate task is law research. Add review, dashboard, scoping,
-and memory skills only as needed.
+`property-tax-research` when the immediate task is law research. Add review, dashboard, and scoping
+skills only as needed.
 
-The retained [full onboarding reference](../setup/FULL-ONBOARDING.md) has its original three-skill
+The retained [full onboarding reference](../setup/FULL-ONBOARDING.md) offers two optional skills in
 Stage 5. That optional protocol is separate from the recommended [short setup](../START-HERE.md).
 
 ## Folder and file inventories
@@ -122,25 +122,6 @@ action list, dependencies, unresolved items, and confirmation request.
 **Safety boundary:** do not infer commitments, attendees, deadlines, or approval. Do not connect to
 calendar, email, ticketing, or task systems.
 
-## Local work memory
-
-**Use when:** a small redacted handoff, recurring rule, or open item should survive across related
-projects or days without loading every prior conversation.
-
-```text
-Invoke /work-memory checkpoint. Draft a generic redacted checkpoint with current state, open items,
-next action, and neutral provenance. Show the complete candidate and limits. Do not write until I
-approve it.
-```
-
-**Required output and evidence:** neutral note label, updated date, source category, confidence,
-status, conflicts, size limits, and one next action.
-
-**Safety boundary:** memory is plaintext and processed by the approved Claude service when recalled.
-Never store source documents, credentials, names, taxpayer or property identifiers, addresses,
-row-level data, actual values or totals, internal URLs, exact paths, or chain-of-thought. Recall one
-topic at a time. See [bounded local work memory](../docs/WORK-MEMORY.md).
-
 ## Role and domain skills
 
 **Use when:** a stable professional method repeats and requires a fixed source hierarchy, question
@@ -199,7 +180,6 @@ fresh evidence review. Do not silently fix findings or approve the result.
 | One prompt | The task is one-time, narrow, and fully described now. |
 | Project `CLAUDE.md` | Stable rules apply to almost every task in one approved project. |
 | Skill | A bounded task repeats and needs the same interview and output contract. |
-| Work memory | A redacted, durable fact or handoff must be recalled across related work. |
 | No automation | Authority, evidence, policy, or required human judgment blocks the task. |
 
 Do not create a skill after one occurrence. Repetition alone is not enough: the task also needs a

@@ -39,7 +39,6 @@ Its five lessons lead from your first conversation to adapting a real work proje
 | Improve an established process | [05: Growth path](05-after-onboarding-growth-path.md) |
 | Optional usage display | [06: Status line](06-budget-aware-statusline.md) |
 | Model, effort, and allowance details | [Models and usage](../docs/MODELS-AND-USAGE.md) |
-| Optional redacted cross-project notes | [Work memory](../docs/WORK-MEMORY.md) |
 
 ## Setup and validation references
 

@@ -20,7 +20,7 @@ If one of these is unfamiliar, practice it on a small invented example before en
 | Combining the same exports | Reviewed script, query, or Power Query procedure | Source counts/totals tie and schema changes are caught |
 | Rebuilding a report | Stable metric definitions and layout | Another reviewer can reproduce the figures |
 | Repeating a complex checklist | A narrow explicitly invoked skill | Synthetic cases catch missing evidence and wrong inputs |
-| Losing the next step between sessions | Short approved handoff or redacted memory | Only relevant context is recalled |
+| Losing the next step between sessions | Short approved project handoff | Only relevant context is recalled |
 
 Prefer an existing focused skill to a new overlapping one. Improve the prompt or project facts
 first; a new skill is justified when the repeated procedure itself needs to be reusable.

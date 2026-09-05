@@ -6,7 +6,7 @@ with scripts, data, or references. Putting this repository somewhere on the PC d
 
 ## Local skills bundled here
 
-These seven original skills are explicitly invoked and require no installer. Their instructions
+These six original skills are explicitly invoked and require no installer. Their instructions
 use the tools already available to Claude; file parsing, browsing, and Office execution still
 depend on the approved environment. No local skill grants new access or automatically installs tools.
 
@@ -37,7 +37,7 @@ own namespace. Check the installed source rather than assuming a project copy wi
    Use the catalog example. Record the actual command and observed result in the setup receipt.
 
 No administrator shell, execution-policy change, shell installer, or new account is needed for
-these manual file copies, assuming the destination is permitted. All seven use
+these manual file copies, assuming the destination is permitted. All six use
 `disable-model-invocation: true`; they do not run merely because a task sounds relevant.
 
 ### Update or undo

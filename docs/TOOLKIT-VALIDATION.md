@@ -6,7 +6,7 @@ tax work.
 
 ## Completed locally
 
-- Repository lint: 296 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
+- Repository lint: 285 checks passed for frontmatter, local Markdown links, JSON, and changelog shape.
 - Existing settings merge fixtures: basic, conflict, gateway, and weakening cases passed.
 - Dashboard: fixed-source totals, null bill treatment, offsetting differences, empty selection,
   and all 24 state/period/exception filter combinations passed in Node.
@@ -82,6 +82,18 @@ The displayed calculation logic did not need changing.
   guide path for bookmarks. Added a blank local task note; no actual work examples or results included.
 - W33 tracks a first useful task and a later changed-case attempt. Neither was performed. All
   33 Windows claims remain UNVERIFIED; model-executed P1-P4 drills also remain NOT RUN.
+
+## Final repository cleanup
+
+- Removed the custom persistent-memory skill, its guide and blank wiki templates, and all setup,
+  catalog, transcript, and daily-use references to that system. Six task skills remain.
+- Standard instruction files and ordinary project workpapers remain. This repository initializes
+  no custom memory store; existing managed Claude settings are preserved.
+- Checked the current distribution for stale deleted-file links and obsolete skill counts.
+  Stage 5 and its illustrative transcript now offer the same two optional skills. All nine
+  stage markers are aligned. This review does not claim removal of files on another computer.
+- Repository checks and the existing calculation/merge fixtures passed after cleanup. Target-PC
+  and native-Excel acceptance remains a documented deployment check, not a completed local test.
 
 ## Not verified
 

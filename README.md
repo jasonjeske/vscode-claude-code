@@ -28,8 +28,8 @@ Terminal instructions are optional exceptions; model choices and usage come from
 
 ## What this gives you
 
-- **Seven original, optional skills** for better prompts, workbook inspection, reconciliation
-  review, property-tax research, dashboard building, and redacted work memory.
+- **Six original, optional skills** for better prompts, workbook inspection, reconciliation
+  review, property-tax research, and dashboard building.
 - **Reviewed official and community recommendations**, including Anthropic's Excel/Office skills,
   Data and Finance packages, UI/UX Pro Max, Impeccable, Pandas Pro, SQL Pro, Polars, and Matplotlib.
   Each catalog entry explains its purpose, first example, and installation route.
@@ -49,8 +49,8 @@ that first task is a state/local law question. Evaluate Anthropic's `xlsx` next 
 editing spreadsheets, after checking its license and runtime requirements.
 
 Add `reconciliation-control-review` for review work and `financial-dashboard` for the first report.
-Choose one design skill when visual design becomes the task. Save the longer request interview,
-cross-project memory, and large-data tools for a demonstrated need. **The catalog is a menu, not
+Choose one design skill when visual design becomes the task. Save the longer request interview
+and large-data tools for a demonstrated need. **The catalog is a menu, not
 an instruction to install everything.**
 
 ## Download without a GitHub account

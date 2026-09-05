@@ -73,8 +73,7 @@ clearly marking the blocked part. Silence is not approval.
 
 ## Continuity
 
-Keep project facts in that project's approved instructions and evidence. Recalled memory is
-historical guidance, not current authority. Use `/memory` to inspect native memory when needed;
-load only relevant approved notes. Optional `/work-memory` is a separate, explicitly invoked skill.
-Preview and obtain approval before changing instructions or saving a redacted memory/checkpoint.
-Never store source documents, secrets, raw records, or hidden reasoning in memory.
+Keep project facts in that project's approved instructions and evidence. For a handoff, summarize
+completed work, checks, unresolved items, and the next action in the approved workpaper or chat.
+Do not build a custom memory store, initialize a wiki, or auto-save facts across projects.
+Preview and obtain approval before changing instructions. Preserve existing managed configuration.
