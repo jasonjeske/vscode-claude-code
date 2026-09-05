@@ -43,6 +43,8 @@ The displayed calculation logic did not need changing.
 - README raster banner replaced with a navy-and-blue workspace image using the built-in image creator, visually inspected for
   readable, accurate title text, composition, and absence of identifying details. The unaltered
   image and [generation prompt](../assets/README-BANNER.md) are included; the old cover is preserved.
+  The replacement was also inspected in the rendered GitHub README in desktop Chrome:
+  the image loaded, the title and subtitle were readable, and there was no observed clipping.
 - Added five linked lessons with prompts, expected results, checks, and an adaptation walkthrough.
 - Three original self-contained SVG diagrams were rendered with librsvg and visually inspected as
   PNG previews. Labels and numbers are readable with no observed clipping. Each has descriptive

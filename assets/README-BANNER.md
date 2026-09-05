@@ -10,7 +10,9 @@ realistic blue-lit workspace. The display is a conceptual illustration, not a sc
 or a promise of a particular extension layout. All charts and document marks are abstract.
 
 The generated PNG was copied without alteration. The title, spelling, composition, and
-absence of identifying data were visually inspected. The original release asset `cover.svg`
+absence of identifying data were visually inspected, including the rendered GitHub README
+in desktop Chrome. The title and subtitle remained readable at the page's content width.
+The original release asset `cover.svg`
 remains unchanged.
 
 ## Generation prompt
