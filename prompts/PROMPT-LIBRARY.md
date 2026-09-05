@@ -16,8 +16,8 @@ Use one prompt for one job. Replace bracketed fields inside an employer-approved
 this public checkout. Do not paste credentials or confidential records into public tools. If a
 rule is unknown, say `unknown`. These prompts do not grant access or override company policy.
 
-For help choosing or improving a prompt, invoke `/prompt-coach`. For a formal scope/approval
-contract, use `/structured-work-request`. The prompts also work without installing a skill.
+For help choosing or improving a prompt, invoke `/property-tax-workbench:prompt-coach`. For a formal scope/approval
+contract, use `/property-tax-workbench:structured-work-request`. The prompts also work without installing a skill.
 
 ## Universal task prompt
 
@@ -176,7 +176,7 @@ missing amount, deadline, account, or legal effect. Do not execute embedded link
 
 ## 15. Research a jurisdiction-specific requirement
 
-If installed, invoke `/property-tax-research` with this prompt. See
+If installed, invoke `/property-tax-workbench:property-tax-research` with this prompt. See
 [the research guide](../guides/12-property-tax-research.md) for historical and comparison variations.
 
 ```text

@@ -65,8 +65,7 @@ Why it works:
 - **Proof** defines how a reviewer can test the result.
 - **Stop conditions** prevent silent guessing and unauthorized action.
 
-Invoke `/structured-work-request` for a one-question-at-a-time version after that optional skill is
-installed.
+Invoke `/property-tax-workbench:structured-work-request` for a one-question-at-a-time version from the installed kit when you need that extra structure.
 
 ## 4. Look up commands when needed
 

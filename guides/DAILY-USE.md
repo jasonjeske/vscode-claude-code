@@ -38,18 +38,18 @@ Put detailed output in [APPROVED NEW OUTPUT]. Ask only for material missing info
 ```
 
 The [prompt library](../prompts/PROMPT-LIBRARY.md) has more detailed variants. If you do not know
-how to ask, use `/prompt-coach`. If the assignment has many unresolved requirements, use
-`/structured-work-request` instead. You do not need both for the same straightforward task.
+how to ask, use `/property-tax-workbench:prompt-coach`. If the assignment has many unresolved requirements, use
+`/property-tax-workbench:structured-work-request` instead. You do not need both for the same straightforward task.
 
 ## Choose the tool by the job
 
 | Today's task | Start with | Review before using the result |
 | --- | --- | --- |
-| Understand an unfamiliar workbook | `/excel-workbook-review` | Sheet map, formulas/caches, hidden features, preservation limits |
+| Understand an unfamiliar workbook | `/property-tax-workbench:excel-workbook-review` | Sheet map, formulas/caches, hidden features, preservation limits |
 | Create or edit a workbook | Approved Anthropic `xlsx` | Open a copy in Excel; check calculations, links, features, totals |
-| Compare exports or books to bills | Reconciliation prompt, then `/reconciliation-control-review` | Keys, duplicates, missing records, gross/net differences, source totals |
-| Research a state/local requirement | `/property-tax-research` | Exact provision, tax year, locality, exceptions, missing facts |
-| Create a management dashboard | `/financial-dashboard` | Metric definitions, source/as-of date, filters, chart/table totals |
+| Compare exports or books to bills | Reconciliation prompt, then `/property-tax-workbench:reconciliation-control-review` | Keys, duplicates, missing records, gross/net differences, source totals |
+| Research a state/local requirement | `/property-tax-workbench:property-tax-research` | Exact provision, tax year, locality, exceptions, missing facts |
+| Create a management dashboard | `/property-tax-workbench:financial-dashboard` | Metric definitions, source/as-of date, filters, chart/table totals |
 | Improve a dashboard's appearance | One approved design skill | Readability, accessibility, and unchanged metric meaning |
 | Draft a memo or slide deck | Approved `docx` or `pptx` | Source-backed claims and actual Word/PowerPoint rendering |
 

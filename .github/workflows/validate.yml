@@ -19,3 +19,5 @@ jobs:
       - run: node tests/validate-repo.mjs
       - run: node tests/merge-spec.mjs
       - run: node tests/dashboard-spec.mjs
+      - run: node tests/plugin-spec.mjs
+      - run: python3 tests/state-workbook-spec.py

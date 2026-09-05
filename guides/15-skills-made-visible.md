@@ -1,4 +1,8 @@
-# Skills made visible: install, select, use
+# Standalone skill files explained: manual fallback
+
+**The default is now a plugin installation through Claude Code.** See [README step 2](../README.md#2-install-the-skills-inside-claude-code).
+This page explains the older manual file route and its unprefixed commands. Plugin commands instead
+use `/property-tax-workbench:skill-name`; their files are managed by Claude, not copied here.
 
 [Back to the README walkthrough](../README.md) | [Skill catalog](../SKILLS.md)
 
@@ -23,14 +27,14 @@ inside `prompts`, relative to the project folder. `Ctrl+P` finds it for you; `@`
 
 ![Copy six complete folders from the starter skills folder into the personal .claude skills folder; multiple local projects use the same installed copies.](../assets/learning/skill-locations.svg)
 
-**The default walkthrough installs personal skills**, sometimes called global skills. The exact
+**The manual fallback installs personal standalone skills**, sometimes called global skills. The exact
 folder is `%USERPROFILE%\.claude\skills`, not `.Claude Code/skills`. `%USERPROFILE%` is a Windows
 shortcut to your user folder. The dot in `.claude` is part of its name.
 
 **Try it in Windows File Explorer:** press **Windows+E**, click the address bar, type
 `%USERPROFILE%\.claude\skills`, and press **Enter**. Open `excel-workbook-review`; it should contain
 `SKILL.md`. Research also has a `references` subfolder. If the path is missing, return to
-[README step 4](../README.md#4-install-all-six-included-skills-in-one-copy-operation).
+[Manual setup step 4](../setup/MANUAL-SETUP.md#4-install-all-six-included-skills-in-one-copy-operation).
 
 | What it is | Example | What it does |
 | --- | --- | --- |
@@ -104,7 +108,7 @@ agent unless configured to do so; these six do not configure subagents or model 
 If you installed an earlier ZIP, it used `disable-model-invocation: true`. Updating the GitHub
 page or downloading another ZIP does **not** update the folders already installed on the PC.
 
-1. Download and extract the current ZIP into a new starter folder using README step 2. Preserve
+1. Download and extract the current ZIP into a new starter folder using README step 1. Preserve
    your existing `Practice-01` and its outputs.
 2. In Windows File Explorer, open `%USERPROFILE%\.claude\skills`. Select only these six folders:
    `excel-workbook-review`, `financial-dashboard`, `prompt-coach`, `property-tax-research`,

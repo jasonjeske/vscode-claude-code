@@ -9,7 +9,7 @@ Research [EXEMPTION QUESTION] for [PROPERTY TYPE], [STATE AND LOCAL JURISDICTION
 and [RELEVANT EFFECTIVE/VALUATION DATE]. Entity and ownership/use facts: [APPROVED SOURCE LABELS].
 Final decision-maker: [AUTHORIZED REVIEWER ROLE].
 
-If installed, invoke `/property-tax-research` for a specific authority question. Keep research
+If installed, invoke `/property-tax-workbench:property-tax-research` for a specific authority question. Keep research
 evidence coverage separate from the fact-evidence status in the exemption matrix below.
 
 ## Authority

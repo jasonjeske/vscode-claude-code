@@ -1,6 +1,6 @@
 # Use saved files as requests to Claude
 
-The [README exercises](../README.md#7-write-a-larger-request-as-a-markdown-file) show the full first
+The [README exercises](../setup/MANUAL-SETUP.md#7-write-a-larger-request-as-a-markdown-file) show the full first
 attempt. This reference helps you adapt the method to longer work. Use approved storage and data.
 A prompt file here is an ordinary `.md` document, not a special executable format or a Copilot-specific
 prompt feature. You can write it gradually and send a short instruction to Claude when it is ready.
@@ -123,7 +123,7 @@ specific mismatch and practice selecting the saved revision again.
 | Personal skill folder | Reusable procedure | Select its `/skill-name` when needed; no reinstall per task |
 | `outputs/result.md` | A produced artifact | Open and verify; keep the source and checks alongside it |
 
-The installed `/prompt-coach` is text-only and drafts requests; it does not read files or execute
+The installed `/property-tax-workbench:prompt-coach` is text-only and drafts requests; it does not read files or execute
 the draft. Give it your description in chat. For saved-file execution, use the normal request above
 in a fresh conversation. Other skills may accept selected evidence within their documented scope.
 

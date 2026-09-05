@@ -38,16 +38,13 @@ learner types or measuring progress by pages read.
 
 ## Learn the editor before relying on it
 
-The first session assumes neither VS Code nor Claude familiarity. Setup is a single batch: copy
-a prepared workspace and all six local skills before teaching their individual uses. The learner
-then sends a small chat request, creates and previews Markdown, selects a root-level prompt with
-`@`, and repeats with a revised request in a subfolder. Installation is not repeated per lesson.
-
-The changed-case exercise deliberately changes the book amount and output path. The learner checks
-the sign before opening the optional answer, so success requires using current evidence rather
-than memorizing the first result. The existing inline Markdown editor is supported without assuming
-its identity; the built-in single-pane reading view is the fallback. Full instructions remain in
-the README, with editor and prompt-file references available afterward.
+The first session assumes neither VS Code nor Claude familiarity. Install the custom plugin and
+Office package once, then ask Claude to prepare the state workspace. Each editor action serves a
+work result: select the saved task, inspect an actual workbook, locate its output, and check Excel.
+Later sessions introduce request editing, scoped research, reporting, and reuse. The changed-case
+exercise changes both property ID and output path so the learner must use current evidence.
+The approved inline Markdown editor is supported without assuming its identity; built-in preview
+is the fallback. Manual file installation is a separate recovery route, not the main lesson.
 
 ## Coaching boundaries
 

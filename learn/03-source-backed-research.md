@@ -42,7 +42,7 @@ For a permitted research task, replace the placeholders below with a public juri
 approved neutral facts. Use generic external search terms, never internal property/account IDs.
 
 ```text
-/property-tax-research
+/property-tax-workbench:property-tax-research
 Guided mode. Research [SPECIFIC REQUIREMENT] for [PROPERTY TYPE] in [STATE AND LOCALITY] for
 [TAX YEAR]. The relevant approved facts are [NEUTRAL FACTS]. Use approved official sources.
 Explain the rule, exceptions, effective period, local implementation, and missing facts. Cite

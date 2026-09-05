@@ -44,3 +44,7 @@ Also check:
 A missed automatic selection can be handled with slash selection. An incorrect output or scope
 violation needs correction before real use, even when the correct skill was invoked. Automatic
 selection is optional model behavior, not a guarantee in the published guide.
+
+For the plugin route, explicit commands use `/property-tax-workbench:skill-name`. Standalone
+manual copies use `/skill-name`. Test one installation route at a time; normal matching requests
+should not need either command, but verify the actual invoked skill and resulting scope.

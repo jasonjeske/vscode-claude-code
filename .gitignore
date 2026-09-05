@@ -45,3 +45,12 @@ config/statusline-budget.json
 !/practice-project/evidence/
 /practice-project/evidence/*
 !/practice-project/evidence/.gitkeep
+
+# Only the reviewed invented course workbook and empty output markers ship.
+!/state-project/inputs/state-practice.xlsx
+!/state-project/outputs/
+/state-project/outputs/*
+!/state-project/outputs/.gitkeep
+!/state-project/evidence/
+/state-project/evidence/*
+!/state-project/evidence/.gitkeep

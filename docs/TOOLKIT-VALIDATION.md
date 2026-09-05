@@ -177,7 +177,7 @@ observed. The synthetic example is optional; the researched guides and prompts a
 
 ## First-run acceptance
 
-In a permitted Windows test profile, follow README steps 1-10. Check bulk copies with absent and
+For the manual fallback, in a permitted Windows test profile, follow setup/MANUAL-SETUP.md steps 1-10. Check bulk copies with absent and
 existing skill destinations, preserved originals, the copied project's five subfolders, six menu
 commands, editor/preview navigation, saved root and nested @ references, and +15/-15 outputs. Include
 unsaved edits, a missing reference, blocked copies, and ambiguity requiring clarification. See
@@ -236,3 +236,28 @@ Sources: [skill discovery and invocation](https://code.claude.com/docs/en/skills
 - Rendered and visually inspected the diagrams at 1000 pixels wide. Checked example paths and
   amounts against the written walkthrough. These illustrations describe expected results;
   they are not screenshots or evidence of execution in Windows, Claude Code, or native Excel.
+
+## Plugin-first state course verification
+
+The earlier manual-copy walkthrough above is preserved as `setup/MANUAL-SETUP.md`; the current
+README uses plugin installation and AI-assisted state workspace preparation.
+
+- Validated the plugin and marketplace using Claude Code's validator. Added the local marketplace
+  and installed `property-tax-workbench@property-tax-learning` into an isolated temporary Claude
+  configuration. Confirmed version 1.0.0, enabled status, six skills, and the research reference.
+  No changes were made to the operator's normal Claude installation or gateway.
+- Added CI checks for the marketplace/root plugin relationship, complete skill inventory, and
+  absence of active hooks, agents, commands, MCP, LSP, or settings components.
+- Authored and rendered both tabs of the invented state workbook. Independently read its XLSX
+  XML to verify leading-zero string IDs, formula caches, detail totals, offsetting differences,
+  both unmatched populations, and the full bridge. Native Excel execution remains NOT RUN.
+- Added unchanged Microsoft VS Code screenshots under their documentation license, with source
+  links and attribution. The workbook preview is a rendering, not a native Excel screenshot.
+- The local CLI installation test does not validate skill selection, the extension's GUI, workbook
+  processing by a model, employer permissions, or gateway tools. The full target-PC trial is W37
+  in the Windows ledger. No claim of target-PC readiness replaces that trial.
+- Installed the published GitHub branch package with Claude Code 2.1.259 in a second isolated
+  configuration. All seven installed skill/reference files matched the source bytes.
+- Reviewed the GitHub-rendered README, blue workflow diagram, workbook preview, and next-assignment
+  navigation in Chrome. Repository link/anchor checks passed. This is reading/navigation evidence,
+  not a claim that the Windows Claude workflow was executed.

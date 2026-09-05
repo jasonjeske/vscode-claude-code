@@ -1,0 +1,16 @@
+{
+  "name": "property-tax-learning",
+  "owner": {
+    "name": "Property Tax Workbench maintainers"
+  },
+  "metadata": {
+    "description": "Skills accompanying the VS Code and Claude Code property-tax learning guide."
+  },
+  "plugins": [
+    {
+      "name": "property-tax-workbench",
+      "source": "./",
+      "description": "Install all six custom work skills together. No hooks, agents, connectors, or runtime installers."
+    }
+  ]
+}

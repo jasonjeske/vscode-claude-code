@@ -114,17 +114,14 @@ extension, despite sharing a `SKILL.md` convention. Evaluate that separately onl
 already uses the required Microsoft surface.
 [Microsoft runtime documentation](https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-skills).
 
-## Install our small local skills first
+## Install our six skills together
 
-Use [the batch setup](../README.md) for an already working extension. The
-[skill catalog](../SKILLS.md) gives all six local skills with examples, and the
-[installation guide](../setup/SKILLS.md) covers complete-folder copying, scope, backups,
-discovery, updates, removal, and troubleshooting. No marketplace or runtime installer is required
-for these instruction-only folders. Copy the research skill's `references/` folder too.
-
-The optional full onboarding protocol offers two optional skills in Stage 5. It is not required
-for the short setup. Keep the existing gateway configuration. The README copies the six local skills together;
-additional upstream packages remain separate choices.
+Use [README step 2](../README.md#2-install-the-skills-inside-claude-code) to install the
+`property-tax-workbench` plugin through Claude Code's plugin panel. The
+[catalog](../SKILLS.md) gives each skill's purpose and namespaced example. The
+[maintenance guide](../setup/SKILLS.md) covers scope, updates, removal, and migration from old copies.
+A complete-folder copy remains available only as a fallback when plugins cannot be used.
+Keep the existing gateway configuration. Upstream packages remain separate installations.
 
 ## Install upstream skills only through the reviewed route
 

@@ -6,12 +6,14 @@ small context. The default path assumes the extension and approved gateway alrea
 
 ## Structure
 
-- `README.md`: the single canonical first-run walkthrough, including batch installation of all six local skills, editor basics, and checked prompt-file exercises.
+- `README.md`: the single canonical first-run walkthrough, including plugin installation, AI-assisted workspace preparation, and the first checked Excel task.
 - `START-HERE.md`: compatibility entry point linking to that walkthrough; do not duplicate its steps.
 - `SKILLS.md`: every recommended skill, its purpose, example, and installation route.
 - `setup/`: skill lifecycle, project setup, and the retained full onboarding reference.
 - `skills/`: original, self-contained distribution folders, not auto-installed configuration.
 - `templates/`: blank global, project, and handoff templates. Filled copies stay outside this repo.
+- `.claude-plugin/`: marketplace and plugin metadata for the six root skills.
+- `state-project/`: invented workbook and bounded tasks for the main state workflow course.
 - `practice-project/`: copyable single-folder workspace with practice instructions and synthetic prompt example.
 - `practice/` and `examples/`: wholly invented exercises and answer keys.
 - `guides/`: daily use, learning, and topic references; `guides/README.md` is the index.
