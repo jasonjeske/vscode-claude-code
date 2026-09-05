@@ -174,8 +174,9 @@ working gateway and existing skills. The source links below pin the reviewed rev
    a verified existing copy, and verify the completed copy. Personal scope is
    `%USERPROFILE%\.claude\skills\<skill-name>\SKILL.md`; project scope is
    `<approved-project>\.claude\skills\<skill-name>\SKILL.md`.
-5. Community skills may auto-trigger. If adopting the starter's explicit-only convention, add
-   `disable-model-invocation: true` in a reviewed local adaptation where its license permits;
+5. Community skills may auto-trigger, as the starter now allows. If a particular workflow should
+   require manual selection, use `disable-model-invocation: true` in a reviewed local adaptation
+   where its license permits;
    retain notices and record the change. Do not alter managed or signed package files in place.
 6. Run one synthetic task using the exact slash name shown in Claude Code. Keep runtime installation,
    network connections, and any new automation separate from copying an instruction file.

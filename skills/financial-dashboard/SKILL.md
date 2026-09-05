@@ -1,12 +1,17 @@
 ---
 name: financial-dashboard
-description: Build a professional accounting dashboard from approved validated data, with defined metrics, consistent filters, visible exceptions, and source-to-display checks.
-disable-model-invocation: true
+description: Use when asked to plan, build, or improve an accounting dashboard or visual financial report from approved data. Define metrics, filters, exceptions, and source-to-display checks; not for a simple arithmetic answer.
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Financial dashboard
 
-Run when explicitly invoked with `/financial-dashboard`. Work within the user's approved task,
+Apply only to the current requested outcome. Do not start this workflow merely because a source
+mentions its topic. State the skill used in one short line when applying it. If the next request
+changes the task, follow that request rather than repeating this workflow.
+
+Use for a matching user request or when selected with `/financial-dashboard`. Work within the user's approved task,
 inputs, runtime, and output location. Propose the metric definitions and output before writing;
 use the project's approval process. Do not connect to databases, install dependencies, publish,
 send, or upload without separate authorization. Never put work records into this public starter.

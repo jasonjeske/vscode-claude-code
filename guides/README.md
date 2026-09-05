@@ -44,6 +44,9 @@ Its five lessons lead from your first conversation to adapting a real work proje
 
 ## Setup and validation references
 
+- [Skills made visible](15-skills-made-visible.md): folders, personal installation, natural requests, slash selection, and updating older copies.
+
+
 - [Short setup](../START-HERE.md) for a working extension; [full onboarding](../setup/FULL-ONBOARDING.md)
   for a fresh or uncertain installation.
 - [Security and data boundaries](../docs/SECURITY.md).

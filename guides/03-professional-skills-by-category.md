@@ -8,7 +8,7 @@ replace bracketed placeholders with synthetic labels before pasting.
 
 - **Job workflow:** the end-to-end human process, including systems, controls, reviewers, and
   decisions. Example: assessment notice through appeal decision.
-- **Skill:** one explicitly invoked instruction with a fixed interview and output. Example: turn a
+- **Skill:** reusable task instructions selected by a matching request or slash command with a fixed interview and output. Example: turn a
   vague request into a controlled work request.
 - **Subagent:** a separate Claude instance with separate context and usage. Subagents are excluded
   from this starter because they can consume allowance quickly and complicate review.
@@ -206,7 +206,8 @@ Minimal `SKILL.md`:
 ---
 name: example-controlled-review
 description: Review an approved synthetic input against a fixed checklist and report evidence.
-disable-model-invocation: true
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Example controlled review

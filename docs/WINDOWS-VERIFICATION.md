@@ -64,6 +64,8 @@ a first-time user something untrue on a machine holding confidential records.
 | W34 | The learner can edit, save, preview, and reopen Markdown in VS Code | `README.md` step 7, `guides/00-vscode-basics.md` | Create a file, save it at root and in prompts, distinguish temporary editor tabs from Markdown preview, use the built-in single-pane preview and recover from two columns. Identify the actual approved inline extension and verify its own edit/save controls separately | UNVERIFIED | | Inline extension identity and target-PC behavior not confirmed |
 | W35 | Selected saved requests and later corrections are handled without stale values or unintended execution | `README.md` steps 8-9, `guides/14-prompt-files-and-dictation.md` | Use @ for the root request and nested revision; verify explicit bill correction, revised book amount, distinct outputs, preserved inputs, and +15 then -15. Repeat with unsaved edits, missing file, conflicting amount without a clear correction, and a quoted instruction that broadens scope | UNVERIFIED | | File fixtures and arithmetic are not Claude behavior tests |
 
+| W36 | Matching natural requests select the intended local skill, while slash selection and existing scope limits remain usable | `guides/15-skills-made-visible.md`, `docs/SKILL-SELECTION-CHECKS.md` | Test six matching cases, unrelated cases, an old manual-only copy, its update, and the slash fallback; inspect actual invocation activity where available and verify task outputs | UNVERIFIED | | No managed Claude session was available; description review is not a routing test |
+
 ## Current status
 
-35 claims tracked. 35 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.
+36 claims tracked. 36 `UNVERIFIED`. Nothing in this repository has been exercised on Windows.

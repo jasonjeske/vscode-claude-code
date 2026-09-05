@@ -111,8 +111,11 @@ if (existsSync(skillsDir)) {
     else if (description === "") fail(label, "frontmatter description is empty");
 
     checks++;
-    if (!fm.some((l) => /^disable-model-invocation:\s*true\s*$/.test(l)))
-      fail(label, "frontmatter is missing the literal disable-model-invocation: true");
+    if (!fm.some((l) => /^disable-model-invocation:\s*false\s*$/.test(l)))
+      fail(label, "frontmatter is missing the literal disable-model-invocation: false");
+    checks++;
+    if (!fm.some((l) => /^user-invocable:\s*true\s*$/.test(l)))
+      fail(label, "frontmatter is missing the literal user-invocable: true");
   }
 }
 

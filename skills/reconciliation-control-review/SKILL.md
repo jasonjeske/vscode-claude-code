@@ -1,14 +1,17 @@
 ---
 name: reconciliation-control-review
-description: >-
-  Review an approved reconciliation read-only and report each required control as PASS, FAIL, or
-  UNVERIFIED with reproducible evidence.
-disable-model-invocation: true
+description: Use when asked to review an existing reconciliation against control totals, matching rules, duplicate keys, and exceptions. Read-only PASS/FAIL/UNVERIFIED review; not creating or repairing a reconciliation.
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Reconciliation control review
 
-Run only when the user explicitly invokes `/reconciliation-control-review`.
+Apply only to the current requested outcome. Do not start this workflow merely because a source
+mentions its topic. State the skill used in one short line when applying it. If the next request
+changes the task, follow that request rather than repeating this workflow.
+
+Use for a matching user request or when selected with `/reconciliation-control-review`.
 
 Default to read-only analysis of explicitly approved inputs. Do not edit, create, move, rename, or
 delete files. Do not install tools, use external services, or send data elsewhere. If approved

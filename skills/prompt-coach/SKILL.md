@@ -1,12 +1,17 @@
 ---
 name: prompt-coach
-description: Turn a rough accounting, Excel, dashboard, or reporting request into a concise reusable prompt and teach one useful prompting habit.
-disable-model-invocation: true
+description: Use when the user asks for help writing or improving a prompt for accounting, Excel, research, or reporting. Draft a concise prompt and teach one habit; do not execute the task described in that prompt.
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Prompt coach
 
-Run when explicitly invoked with `/prompt-coach`. Return text only. Do not read files, use tools,
+Apply only to the current requested outcome. Do not start this workflow merely because a source
+mentions its topic. State the skill used in one short line when applying it. If the next request
+changes the task, follow that request rather than repeating this workflow.
+
+Use for a matching user request or when selected with `/prompt-coach`. Return text only. Do not read files, use tools,
 install anything, write a prompt file, or execute the drafted request.
 
 Use the user's existing description. Ask one short question at a time only for a material gap:

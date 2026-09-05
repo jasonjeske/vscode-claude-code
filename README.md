@@ -20,6 +20,15 @@ Local files read by Claude are processed by the configured provider.
 “All six skills” means the six instruction folders supplied here. Linked Anthropic Office and
 community packages are separate products with their own installation and runtime requirements.
 
+**What is included:** six custom task skills, installed for your Windows account and reusable
+across local projects. **For creating/editing Excel, Word, PowerPoint, and PDF files:** we recommend
+Anthropic's separate `document-skills` package. The [Office steps below](#add-anthropics-office-skills-for-excel-work)
+explain its installation. Our Excel review skill helps inspect risks; it is not that Office toolkit.
+
+**Already installed an earlier ZIP?** It used manual-only skill activation. Follow the
+[one-time update steps](guides/15-skills-made-visible.md#5-update-older-manual-only-copies-once)
+to enable natural-language selection in the installed copies.
+
 ## Your first assignment
 
 **Create and check a small exception note from invented amounts, then revise it without losing
@@ -47,6 +56,10 @@ local note. If setup is already complete, start at step 6. If it is new, start a
 | Windows File Explorer, opened with **Windows+E** | Download, extract, and copy folders on the PC |
 | VS Code's **Explorer** file list and **editor** tabs | Open your project, write notes, and read results |
 | **Claude Code** panel inside VS Code | Send a request, select a file with `@`, or choose a skill with `/` |
+
+![A folder holds related items; prompts is a subfolder of Practice-01; example-task.md is the file to read.](assets/learning/folders-and-files.svg)
+
+*Concept diagram, not a screenshot. You will open these actual folders in step 3.*
 
 A **project** is a folder for related work. A **workspace** is what VS Code has open; in this
 walkthrough it is one project folder. An **extension** adds a feature to VS Code. Claude Code
@@ -113,6 +126,10 @@ copy. This single folder is your workspace; no `.code-workspace` file is needed.
 The six folders below contain task instructions and, for research, a supporting template.
 Copying them does not run their tasks, install Office tools, or change the gateway.
 
+![Copy the six complete skill folders from the downloaded starter to the personal .claude skills folder once; every local project can use them.](assets/learning/skill-locations.svg)
+
+*Concept diagram. The destination is personal to this Windows account, not inside Practice-01.*
+
 ### Prepare the source and destination
 
 1. Press **Windows+E**, return to the extracted **starter**, and open its **skills** folder.
@@ -159,9 +176,10 @@ structured-work-request
 
 **Check:** there is no extra `skills\skills` layer. You copied complete folders, not six loose
 `SKILL.md` files. Existing copies were preserved, so their version may differ. These are personal
-skills, available across this Windows account's Claude projects. All six bundled skills are
-manually invoked; installing them does not run six tasks or load all their full instructions into
-every conversation. **Next: step 5.**
+skills, available across this Windows account's Claude projects. All six bundled skills support
+natural-language selection and slash commands. Claude can see their short descriptions and load
+a relevant skill when needed; installing them does not start six tasks. Selection is not guaranteed.
+The full loaded instructions consume context, so use a focused request and check the result. **Next: step 5.**
 
 ## 5. Open Claude Code and confirm setup
 
@@ -185,8 +203,44 @@ VS Code, reopen `Practice-01`, and start a fresh Claude conversation. If still m
 pending and use the plain-chat exercises. A normal chat reply does not prove a skill is installed.
 
 **Setup complete when:** the practice folder is open and all six commands appear. Skill behavior,
-Excel tools, and browsing still need their own task checks. There are no more installations in
-this first session. Keep any blocked checks marked pending. **Next: learn by doing in step 6.**
+Excel tools, and browsing still need their own task checks. No further installation is needed for
+the text exercises. Keep blocked checks pending. **Next: learn by doing in step 6**, or add the
+Office package below when workbook creation is your next task.
+
+## Add Anthropic's Office skills for Excel work
+
+**For the first text exercises, continue to step 6. For workbook creation/editing, add this package
+once when its use and tools are permitted by your workplace.** It supplies the official `xlsx`,
+`docx`, `pptx`, and `pdf` skills. They are recommended, but not bundled in this public ZIP.
+
+Stay in **VS Code > Claude Code**, with `Practice-01` open:
+
+1. Click Claude's message box, type `/plugins`, and open **Manage plugins**.
+2. Open **Marketplaces**. Add `anthropics/skills`, then return to **Plugins**.
+3. Find **document-skills** from **anthropic-agent-skills**. Inspect the package and select
+   **Install**, then **Install for you** for permitted personal scope. This makes the plugin
+   available across your local projects; its manager maintains the installed files.
+4. Apply the requested restart. In a fresh Claude conversation, type `/` and look for the actual
+   XLSX entry, such as `/document-skills:xlsx`. Finding it confirms discovery, not workbook tools.
+5. When ready to work with Excel, follow the
+   [tiny workbook exercise](learn/02-spreadsheet-work.md#make-one-tiny-workbook-with-the-official-excel-skill).
+   It starts with invented data and ends with opening and checking the file in Excel.
+
+If the plugin interface, installation, or required runtime is blocked, keep this step pending.
+The text exercises still work; get the supported package/runtime through workplace support.
+The Office sources have specific license terms, and XLSX processing can need Python libraries
+and LibreOffice. A gateway key does not supply those dependencies or establish license eligibility.
+[Source and runtime review](guides/07-trusted-skills-and-installation.md#findings-that-change-the-recommendation),
+[Anthropic's package](https://github.com/anthropics/skills),
+[official VS Code plugin steps](https://code.claude.com/docs/en/vs-code#manage-plugins).
+
+**Use it naturally after installation:** “Use the XLSX skill to create a new workbook from these
+invented rows.” For Word, ask for the DOCX skill; for a presentation, ask for PPTX. Select the exact
+slash command if you want to choose directly. Do not install the package again for each file.
+
+**Check:** record separately whether the package is installed and whether its first file opens
+and passes checks in the native Office app. **Next: step 6**, or the linked Excel exercise if
+that is today's task.
 
 ## 6. Send one short request in Claude's message box
 
@@ -338,9 +392,19 @@ small request yourself before consulting the example. Check every changed amount
 
 ## 10. Use the skills you already installed
 
-Installation is finished. Use one skill for the task at hand; you do not need to run all six.
-In Claude's message box, type `/`, choose the named skill, and add the request. For an input file,
-also use `@` to select the exact approved file. Then send the message once.
+Installation is finished. **Start with an ordinary request:** Claude can select a relevant skill
+from its description. You do not need to remember six commands or run all six.
+For example: "Help me write a prompt for a read-only workbook review. Draft the prompt only."
+This matches Prompt Coach. Read the response to check that it drafts rather than executes.
+
+**To choose a skill explicitly**, type `/` in Claude's message box, choose its name, and add the
+request. Use this when automatic selection is missing or you want a particular procedure.
+For an input file, use `@` to select the exact approved file. Then send once. A file reference
+identifies the input; it does not choose a skill by itself.
+
+![A normal request can select a matching skill; a slash command selects a skill explicitly; an at-sign reference selects the input file.](assets/learning/skill-selection.svg)
+
+*Concept diagram, not a screenshot. [Selection examples and troubleshooting](guides/15-skills-made-visible.md).*
 
 | Installed skill | What it does | A first request after selecting it |
 | --- | --- | --- |

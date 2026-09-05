@@ -250,7 +250,8 @@ First: `structured-work-request`, which turns a vague request into a controlled 
 Frontmatter delimiters      OK
 name                        structured-work-request (matches expected)
 description                 present, non-empty
-disable-model-invocation    true
+disable-model-invocation    false
+user-invocable              true
 ```
 
 It interviews you one question at a time and produces a request stating outcome, inputs, rules,

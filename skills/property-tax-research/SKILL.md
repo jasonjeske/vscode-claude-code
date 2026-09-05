@@ -1,12 +1,17 @@
 ---
 name: property-tax-research
-description: Research specific US state and local property-tax questions, historical rules, exemptions, deadlines, and changes using cited applicable authority and explicit evidence gaps.
-disable-model-invocation: true
+description: Use when asked to research a specific US state or local property-tax rule, exemption, deadline, or historical change. Produce applicable citations and evidence gaps; not for arithmetic or a final filing decision.
+disable-model-invocation: false
+user-invocable: true
 ---
 
 # Property-tax research
 
-Run when explicitly invoked with `/property-tax-research`. Prepare useful, source-backed research
+Apply only to the current requested outcome. Do not start this workflow merely because a source
+mentions its topic. State the skill used in one short line when applying it. If the next request
+changes the task, follow that request rather than repeating this workflow.
+
+Use for a matching user request or when selected with `/property-tax-research`. Prepare useful, source-backed research
 for an authorized tax or legal reviewer. Use only approved web access and approved input copies.
 Return the memo in chat unless an output location is authorized. Do not edit workpapers, submit
 forms, access filing accounts, contact authorities, or decide the organization's tax position.

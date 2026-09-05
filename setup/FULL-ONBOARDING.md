@@ -233,7 +233,7 @@ use the separate optional expansion in [Guide 07](../guides/07-trusted-skills-an
 
 Marker: `[SETUP 5/8 - SKILLS]`
 
-Offer exactly these explicitly user-invoked skills:
+Offer exactly these skills, selectable by a matching request or slash command:
 
 1. `structured-work-request` - turns a vague request into a controlled work request.
 2. `reconciliation-control-review` - performs a read-only review with a fixed `PASS`, `FAIL`, or
@@ -244,7 +244,7 @@ For each skill separately:
 1. explain that a skill is instruction text, not enforcement;
 2. ask whether to review it;
 3. validate frontmatter delimiters, the exact expected `name`, a non-empty `description`, and
-   `disable-model-invocation: true`;
+   `disable-model-invocation: false` and `user-invocable: true`;
 4. show the neutral source and destination labels and a redacted summary;
 5. ask whether to install that exact reviewed skill;
 6. back up and verify any same-name destination folder;
