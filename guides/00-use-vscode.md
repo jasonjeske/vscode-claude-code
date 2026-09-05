@@ -8,6 +8,10 @@ Read one section, try its prompt, check the result, then follow Next. You can pa
 You do not need a personal Claude subscription, terminal experience, or every recommended skill
 to follow this path with an already working, approved gateway setup.
 
+If you have only downloaded a ZIP and have not created or opened the folders yet, follow
+[START-HERE's complete Windows walkthrough](../START-HERE.md) first. It shows extraction, the
+starter/practice folder layout, opening VS Code, opening its Claude Code extension, and your first output.
+
 ## 1. Find the right place to type
 
 1. In VS Code, use **File > Open Folder** to open your approved practice folder.
