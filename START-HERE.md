@@ -1,13 +1,13 @@
 # Start here
 
-**[Open the complete README walkthrough](README.md).**
+**[Follow the README in order](README.md).** Keep it open in your browser while using VS Code.
 
-It assumes no prior VS Code experience. Steps 1-5 download and extract the kit, copy the ready-made
-practice project, open it in VS Code, install all six included skills together, and check the
-Claude Code panel. Steps 6-10 teach chat, Markdown editing/reading, saved requests with `@`,
-subfolder paths, and using the skills already installed. No terminal is needed.
+1. Download and extract the starter, then open it in VS Code.
+2. Install the six-skill plugin and the official Office package in Claude Code's plugin panel.
+3. Ask Claude to prepare a separate state workspace, then open that folder in VS Code.
+4. Select the supplied saved request and inspect the actual practice Excel workbook.
+5. Continue through reconciliation, research, and reporting in the linked state workflow.
 
-Keep the README open in your browser and follow its steps in order. If you started an earlier
-version, preserve your existing practice files and installed skills. This version uses a fresh
-copy of `practice-project`; use an unused practice-folder name. Skip skill folders already present
-instead of replacing them. The README explains the batch selection and checks.
+No terminal or GitHub login is required for the normal guide. Preserve existing projects and skill
+adaptations. If you used the earlier manual-copy guide, follow the
+[migration instructions](setup/SKILLS.md#switch-from-manual-copies-to-the-plugin).

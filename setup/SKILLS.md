@@ -1,20 +1,47 @@
-# Additional skills and skill maintenance
+# Install and maintain skills
 
-**First-time setup: [follow the README walkthrough](../README.md).**
-It includes downloading, extracting, opening VS Code, copying all six bundled skills in one batch, finding them
-in the extension, and trying a supplied prompt. If your copied practice project is already
-open, resume at [step 4: install the six skills](../README.md#4-install-all-six-included-skills-in-one-copy-operation).
-You do not need this reference page to finish that walkthrough.
+**First setup: [README step 2](../README.md#2-install-the-skills-inside-claude-code).**
+Use Claude Code's **/plugins** panel to install `property-tax-workbench` from marketplace
+`property-tax-learning`, supplied by `jasonjeske/vscode-claude-code`. One install provides all six
+custom skills. Install Anthropic's `document-skills` separately for its Office procedures.
 
-Use this page later to add another skill, select a different scope, update a copy, or troubleshoot.
+## Plugin scope and everyday use
 
-Use the [catalog](../SKILLS.md) to choose a task. A skill is a folder containing `SKILL.md`, sometimes
-with scripts, data, or references. Putting this repository somewhere on the PC does not install its
-`skills/` distribution folder. Claude Code has specific discovery locations.
+Choose **Install for you** for personal scope when permitted. The plugin is available across your
+local projects. Claude manages its files and cache; this is different from manually creating
+`%USERPROFILE%\.claude\skills`. Do not move files out of the plugin cache. If workplace policy
+requires project scope, install only in the intended working folder and check its availability there.
 
-## Local skills bundled here
+Describe a matching task normally. Automatic selection is possible, not guaranteed. To choose
+explicitly, use the actual slash menu, for example `/property-tax-workbench:excel-workbook-review`.
+A plugin prefix prevents command-name collisions. Skill availability does not establish that Excel
+libraries or web access work. Test the [small supplied workbook](../README.md#4-inspect-one-workbook-and-check-the-result-in-excel).
 
-These six original skills support natural-language selection and slash commands, with no installer. Their instructions
+## Update or remove the plugin
+
+Open **/plugins**, refresh the marketplace using the offered controls, and inspect the available
+version before updating the installed package. Apply the requested restart. Retest one synthetic
+example after updating. Use the plugin panel to disable or uninstall only the selected package.
+The working folder and outputs are separate and should remain intact. Do not delete `.claude`.
+Managed policies may control updates; use the workplace-supported route if controls are blocked.
+
+## Switch from manual copies to the plugin
+
+1. Install the plugin using README step 2 and check its **namespaced** commands in a fresh chat.
+2. If you previously installed standalone copies, inspect only the six names listed in the
+   [catalog](../SKILLS.md) in the personal or project `skills` location you used.
+3. Preserve those specific folders, including any adaptations, in a dated backup **outside**
+   every active `.claude/skills` directory. Check the backup files open before removing anything.
+4. Remove only the verified old standalone copies, then open a fresh conversation and check the
+   plugin commands. Keep unrelated skills and configuration. If the plugin test fails, restore
+   the original copies and disable the plugin while troubleshooting.
+
+Do not leave both routes active accidentally: command names differ, but both descriptions could
+match a normal request. A downloaded ZIP alone does not install either route.
+
+## Manual-copy fallback
+
+If plugins are unavailable, these six original skills also support standalone installation. Their instructions
 use the tools already available to Claude; file parsing, browsing, and Office execution still
 depend on the approved environment. No local skill grants new access or automatically installs tools.
 
@@ -72,7 +99,7 @@ For each upstream choice, review the exact source/revision, license, executable 
 network behavior, and any hooks or connector configuration. Use the employer-approved installation
 method. Preserve existing configuration. Do not run a whole collection's installer to get one skill.
 
-**Anthropic Office: optional, after the first lessons.** The marketplace route installs the Office
+**Anthropic Office: install during README setup when permitted.** The marketplace route installs the Office
 bundle, including Excel, PDF, Word, and PowerPoint. After reviewing the package and obtaining the
 needed workplace approval, prefer the extension's plugin interface:
 

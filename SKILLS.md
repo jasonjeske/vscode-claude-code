@@ -1,7 +1,7 @@
 # Skill catalog: what to use, why, and the first prompt
 
 **New here? Complete [the one-page setup walkthrough](README.md) first.**
-It copies all six included skills together and teaches VS Code, Markdown, and file references.
+It installs the six-skill plugin, adds Office skills, and starts with one state workbook.
 This page explains the skills after installation; do not reinstall them for each lesson.
 
 After the bundled setup, describe the next real task normally. Claude can select a matching skill;
@@ -9,12 +9,12 @@ use its slash command when you want to choose explicitly. A skill is reusable
 instructions, not a new model or an automatic grant of tool access. Claude Code's VS Code extension
 can discover local skills in its supported locations; some upstream packages also need runtimes.
 
-**Install:** [local copies and upstream packages](setup/SKILLS.md).
+**Install:** [plugins and the manual fallback](setup/SKILLS.md).
 **Learn:** [daily use](guides/DAILY-USE.md). **More prompts:** [library](prompts/PROMPT-LIBRARY.md).
 
 | When | Suggested choice |
 | --- | --- |
-| First setup | All six included folders, copied together; use a matching request or slash selection |
+| First setup | One plugin with all six skills; use a matching request or namespaced slash selection |
 | First tax-law question | `property-tax-research` |
 | First workbook creation/edit | Reviewed Anthropic `xlsx`, with suitable runtime and Excel validation |
 | First reconciliation review | `reconciliation-control-review` |
@@ -27,7 +27,7 @@ The six custom skills below complement that package. They do not replace its fil
 
 ## Six skills included in this download
 
-These are original local skills, installed together in the README walkthrough. Claude can select
+These are original skills, installed together as `property-tax-workbench` in the README walkthrough. Claude can select
 them from a matching request; each slash command below is also available for explicit selection.
 Use approved synthetic input for the first trial. [See how selection works](guides/15-skills-made-visible.md).
 
@@ -38,7 +38,7 @@ Use approved synthetic input for the first trial. [See how selection works](guid
 [Read the skill](skills/prompt-coach/SKILL.md).
 
 ```text
-/prompt-coach
+/property-tax-workbench:prompt-coach
 Help me ask for a read-only review of a synthetic workbook. I need a sheet map, formula risks,
 and one verification lesson. Ask only for material missing details; do not perform the review.
 ```
@@ -50,7 +50,7 @@ and one verification lesson. Ask only for material missing details; do not perfo
 refresh, run macros, or control the Excel application. [Read the skill](skills/excel-workbook-review/SKILL.md).
 
 ```text
-/excel-workbook-review
+/property-tax-workbench:excel-workbook-review
 Guided mode. Review only the approved synthetic workbook I selected. Map the sheets and tables,
 identify formula/cache and PivotTable risks, and recommend a processing route. Do not save or
 refresh anything. Mark features the available tools cannot inspect as UNVERIFIED.
@@ -64,7 +64,7 @@ exemption, deadline, or change. Requires approved web access or supplied sources
 a filing position. [Read the skill](skills/property-tax-research/SKILL.md) and [guide](guides/12-property-tax-research.md).
 
 ```text
-/property-tax-research
+/property-tax-workbench:property-tax-research
 Guided mode. Research [SPECIFIC REQUIREMENT] for [PROPERTY TYPE] in [STATE/LOCALITY] for [TAX YEAR].
 Use approved official sources. Explain the rule and exceptions with exact citations, effective
 periods, and missing facts. Return a short research memo for review, not a final filing decision.
@@ -77,7 +77,7 @@ periods, and missing facts. Return a short research memo for review, not a final
 it does not edit or repair records. [Read the skill](skills/reconciliation-control-review/SKILL.md).
 
 ```text
-/reconciliation-control-review
+/property-tax-workbench:reconciliation-control-review
 Review the approved synthetic comparison using the supplied exact keys, control totals, and
 zero tolerance. Read-only. Check duplicate/unmatched populations, gross and net differences,
 and reproducibility. Preserve all missing evidence as UNVERIFIED. Use the fixed review format.
@@ -90,7 +90,7 @@ and reproducibility. Preserve all missing evidence as UNVERIFIED. Use the fixed 
 format and suitable tools; publication is separate. [Read the skill](skills/financial-dashboard/SKILL.md).
 
 ```text
-/financial-dashboard
+/property-tax-workbench:financial-dashboard
 Build a local HTML dashboard from our approved synthetic summary in the selected practice folder.
 Show totals, gross/net differences, missing amounts, and state/period filters. Use local assets,
 clear units, and accessible status labels. Agree metric definitions before building, then verify
@@ -104,7 +104,7 @@ chart/table totals and empty states. Do not publish it.
 do not run both by default. [Read the skill](skills/structured-work-request/SKILL.md).
 
 ```text
-/structured-work-request
+/property-tax-workbench:structured-work-request
 Help me define a multistate fixed-asset reconciliation for PERIOD-1. The permitted inputs are
 approved copies of EXPORT-A and MASTER-A. Produce a reviewable scope and ask one missing question
 at a time. Do not open files or execute the reconciliation.

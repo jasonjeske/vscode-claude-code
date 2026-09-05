@@ -1,6 +1,6 @@
 # Use saved files as requests to Claude
 
-The [README exercises](../README.md#7-write-a-larger-request-as-a-markdown-file) show the full first
+The [README exercises](../setup/MANUAL-SETUP.md#7-write-a-larger-request-as-a-markdown-file) show the full first
 attempt. This reference helps you adapt the method to longer work. Use approved storage and data.
 A prompt file here is an ordinary `.md` document, not a special executable format or a Copilot-specific
 prompt feature. You can write it gradually and send a short instruction to Claude when it is ready.

@@ -144,5 +144,5 @@ If the panel shows selected editor text from an unrelated file, remove that cont
 [Claude Code's file-reference controls](https://code.claude.com/docs/en/vs-code#reference-files-and-folders).
 
 Next: [saved prompt and dictation patterns](14-prompt-files-and-dictation.md), or return to the
-[README exercise](../README.md#7-write-a-larger-request-as-a-markdown-file). Focus on one remaining
+[README exercise](../setup/MANUAL-SETUP.md#7-write-a-larger-request-as-a-markdown-file). Focus on one remaining
 operation you need help with, then use it for a small checked task.

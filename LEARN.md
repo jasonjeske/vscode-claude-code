@@ -5,9 +5,13 @@ approved work folder in the VS Code extension, and choose a task below. You do n
 Claude to read the repository or complete every lesson first.
 
 If VS Code or Claude is new to you, complete [the README first session](README.md) first. It installs
-all six local skills together and teaches files, Markdown, `@`, and `/`. Then use one installed skill
+the custom plugin and Office skills, then teaches files and `@` through one Excel task. Then use one installed skill
 when the task needs it. Keep the approved model and gateway unchanged. The [VS Code fundamentals](guides/00-vscode-basics.md)
 and [saved-request guide](guides/14-prompt-files-and-dictation.md) help with a specific operation.
+
+**Continue in order: [the state workflow course](learn/STATE-WORKFLOW.md).** It builds from the
+supplied workbook through reconciliation, an exception note, a cited rule memo, a report, and a
+reusable request. The references below are available when you need a specific operation.
 
 ## Build on what you just practiced
 
@@ -20,7 +24,7 @@ and [saved-request guide](guides/14-prompt-files-and-dictation.md) help with a s
 | Find the six installed slash commands | Use the one procedure the task needs, with no new installation |
 
 For longer tasks, save the request in a local Markdown file, select it with `@`, and say what Claude
-should do. A normal request can execute the bounded work; `/prompt-coach` only drafts text.
+should do. A normal request can execute the bounded work; `/property-tax-workbench:prompt-coach` only drafts text.
 
 ## Choose today's small result
 
@@ -65,8 +69,7 @@ I already know [RELEVANT KNOWLEDGE / NEW TO THIS OPERATION].
 Focus on using Claude Code; do not reteach the accounting I already understand.
 Use a practical coworker style: complete the authorized step, explain one unfamiliar operation
 briefly, and give me one specific check I can do myself. Use a tiny worked example only if needed.
-Ask only for missing facts that change the work. Do not turn this into a course or withhold the
-useful result for a quiz. Do not read the whole repository, install tools, or start other agents.
+Ask only for missing facts that change the work. Do not withhold the useful result for a quiz. Do not read the whole repository, install tools, or start other agents.
 Prefer the VS Code extension. End with the result, evidence, one check, and a reusable prompt line.
 ```
 
