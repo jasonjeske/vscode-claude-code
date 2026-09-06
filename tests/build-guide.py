@@ -1,6 +1,7 @@
 """Generate the learner PDF from the single Markdown course. Maintainer use only."""
 from pathlib import Path
 import hashlib
+import os
 import re
 import textwrap
 from html import escape
@@ -17,6 +18,9 @@ from reportlab.platypus import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
+# ReportLab hashes image filenames into PDF resource names. Use repository-relative
+# paths so the same screenshots produce identical bytes on Mac and in Linux CI.
+os.chdir(ROOT)
 OUTPUT = ROOT / 'output/pdf/claude-code-office-guide.pdf'
 BASE = 'https://github.com/jasonjeske/vscode-claude-code/blob/main/'
 source = (ROOT / 'README.md').read_text()
@@ -121,7 +125,7 @@ while i < len(tokens):
             image_path = (ROOT / image_token.attrGet('src')).resolve()
             if not image_path.is_relative_to(ROOT / 'assets/walkthrough'):
                 raise ValueError('Only reviewed walkthrough captures belong in the course')
-            picture = Image(str(image_path))
+            picture = Image(str(image_path.relative_to(ROOT)))
             scale = min(516 / picture.imageWidth, 270 / picture.imageHeight, 1)
             picture.drawWidth = picture.imageWidth * scale
             picture.drawHeight = picture.imageHeight * scale
