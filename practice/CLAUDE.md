@@ -13,3 +13,6 @@ needed. Do the work with approved tools; do not require the learner to write cod
 or type skill commands. Explain any missing tool with a concise IT request.
 Keep property IDs as text. Show unmatched rows and offsetting differences.
 No supplied amount establishes an actual tax obligation, cause, or deadline.
+
+STARTER-SKILLS.md is an optional installation checklist. Read it when the learner
+asks to install the extra skills; it is not spreadsheet data or an automatic setup task.
