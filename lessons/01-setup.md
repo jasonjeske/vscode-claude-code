@@ -52,7 +52,7 @@ The separate VS Code Chat button can open another assistant. Look for **Claude C
 
 ![Illustration: extract the downloaded ZIP, copy the practice folder, and rename the copy Tax Practice.](../images/folder.svg)
 
-[Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/ff00cbe215563d730e5022b734987ea01a303fd0.zip).
+[Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/b97741cd80be676a52e9ea956bcef9841d27f820.zip).
 In Windows **File Explorer**, open **Downloads**, right-click the ZIP, and choose **Extract All**,
 then **Extract**. On Mac, double-click the ZIP in Finder.
 
