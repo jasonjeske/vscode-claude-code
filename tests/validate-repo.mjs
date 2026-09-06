@@ -40,7 +40,9 @@ const market = JSON.parse(read(resolve(root, '.claude-plugin/marketplace.json'))
 assert.equal(market.plugins[0].name, manifest.name);
 assert.equal(market.plugins[0].source, './');
 assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
-const skills = readdirSync(resolve(root, 'skills'));
+const skills = readdirSync(resolve(root, 'skills'), { withFileTypes: true })
+  .filter(entry => entry.isDirectory())
+  .map(entry => entry.name);
 for (const name of skills) {
   const skill = read(resolve(root, 'skills', name, 'SKILL.md'));
   assert.match(skill, new RegExp(`^---\\nname: ${name}\\n`));
