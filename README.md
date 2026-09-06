@@ -62,7 +62,7 @@ Our Office practice requests go in the same Claude message box. [Image attributi
 
 ![Illustration of Tax Practice in the Explorer and Claude's message box beside it.](images/open-folder.svg)
 
-4. [Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/b97741cd80be676a52e9ea956bcef9841d27f820.zip).
+4. [Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/e1aff7e1586856a639c11f8214885e9d8a461708.zip).
    In Windows Downloads, right-click the ZIP, choose **Extract All**, then **Extract**.
    On Mac, double-click the ZIP.
 5. Open the extracted folder. Copy **practice** to your approved learning location and rename the
