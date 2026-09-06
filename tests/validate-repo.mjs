@@ -1,200 +1,57 @@
-#!/usr/bin/env node
-// Repo lint: skill frontmatter, internal Markdown links, strict JSON, CHANGELOG shape.
-// Node standard library only. No dependencies, by design.
-//
-// Usage: node tests/validate-repo.mjs [rootDir]
-// Exit:  0 all checks pass, 1 one or more FAIL lines, 2 usage or unreadable root.
-
-import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
-import { join, dirname, resolve } from "node:path";
-
-const root = process.argv[2] ?? ".";
-
-if (process.argv.length > 3) {
-  console.log("usage: node tests/validate-repo.mjs [rootDir]");
-  process.exit(2);
+// Maintainer checks. No package installation needed.
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { resolve, dirname, relative, extname } from 'node:path';
+const root = process.cwd();
+function walk(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap(e => {
+    if (e.name === '.git') return [];
+    const path = resolve(dir, e.name);
+    return e.isDirectory() ? walk(path) : [path];
+  });
 }
-
-try {
-  if (!statSync(root).isDirectory()) throw new Error("not a directory");
-} catch {
-  console.log(`FAIL ${root}: root is not a readable directory`);
-  process.exit(2);
+const files = walk(root);
+const read = path => readFileSync(path, 'utf8');
+const markdown = files.filter(p => extname(p) === '.md' && !p.endsWith('/CHANGELOG.md'));
+function anchors(path) {
+  const seen = new Map();
+  return [...read(path).matchAll(/^#{1,6}\s+(.+)$/gm)].map(m => {
+    let slug = m[1].toLowerCase().replace(/[^\p{L}\p{N}_\-\s]/gu, '').replace(/ /g, '-');
+    const count = seen.get(slug) ?? 0;
+    seen.set(slug, count + 1);
+    return count ? `${slug}-${count}` : slug;
+  });
 }
-
-const failures = [];
-const warnings = [];
-let checks = 0;
-
-const fail = (path, reason) => failures.push(`FAIL ${path}: ${reason}`);
-const rel = (abs) => abs.slice(resolve(root).length + 1) || abs;
-
-function walk(dir, out = []) {
-  for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === ".git") continue;
-    const full = join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, out);
-    else out.push(full);
-  }
-  return out;
-}
-
-// ---------------------------------------------------------------------------
-// Check 1: skill frontmatter
-// ---------------------------------------------------------------------------
-
-function frontmatterLines(text) {
-  const lines = text.split(/\r?\n/);
-  if (lines[0].trim() !== "---") return null;
-  for (let i = 1; i < lines.length; i++) {
-    if (lines[i].trim() === "---") return lines.slice(1, i);
-  }
-  return null;
-}
-
-// Reads a scalar, or a folded/literal block (key line plus indented continuation).
-function frontmatterValue(fmLines, key) {
-  const idx = fmLines.findIndex((l) => l.startsWith(`${key}:`));
-  if (idx === -1) return null;
-  let value = fmLines[idx].slice(key.length + 1).trim();
-  if (["", ">", ">-", "|", "|-"].includes(value)) {
-    const parts = [];
-    for (let i = idx + 1; i < fmLines.length; i++) {
-      const line = fmLines[i];
-      if (line.trim() === "") continue;
-      if (!/^\s/.test(line)) break;
-      parts.push(line.trim());
-    }
-    value = parts.join(" ").trim();
-  }
-  if (
-    (value.startsWith('"') && value.endsWith('"')) ||
-    (value.startsWith("'") && value.endsWith("'"))
-  ) {
-    value = value.slice(1, -1);
-  }
-  return value;
-}
-
-const skillsDir = join(root, "skills");
-if (existsSync(skillsDir)) {
-  for (const entry of readdirSync(skillsDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const dirName = entry.name;
-    const skillPath = join(skillsDir, dirName, "SKILL.md");
-    const label = `skills/${dirName}/SKILL.md`;
-
-    checks++;
-    if (!existsSync(skillPath)) {
-      fail(`skills/${dirName}`, "directory contains no SKILL.md");
-      continue;
-    }
-
-    const text = readFileSync(skillPath, "utf8");
-    const fm = frontmatterLines(text);
-
-    checks++;
-    if (fm === null) {
-      fail(label, "no YAML frontmatter delimited by --- at the start of the file");
-      continue;
-    }
-
-    checks++;
-    const name = frontmatterValue(fm, "name");
-    if (name === null) fail(label, "frontmatter has no name key");
-    else if (name !== dirName)
-      fail(label, `frontmatter name "${name}" does not equal directory name "${dirName}"`);
-
-    checks++;
-    const description = frontmatterValue(fm, "description");
-    if (description === null) fail(label, "frontmatter has no description key");
-    else if (description === "") fail(label, "frontmatter description is empty");
-
-    checks++;
-    if (!fm.some((l) => /^disable-model-invocation:\s*false\s*$/.test(l)))
-      fail(label, "frontmatter is missing the literal disable-model-invocation: false");
-    checks++;
-    if (!fm.some((l) => /^user-invocable:\s*true\s*$/.test(l)))
-      fail(label, "frontmatter is missing the literal user-invocable: true");
+let links = 0;
+for (const path of markdown) {
+  const source = read(path);
+  for (const m of source.matchAll(/!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)/g)) {
+    if (/^[a-z][a-z0-9+.-]*:/i.test(m[1])) continue;
+    const [target, hash] = m[1].split('#');
+    const dest = target ? resolve(dirname(path), decodeURIComponent(target)) : path;
+    assert(existsSync(dest), `Broken link in ${relative(root, path)}: ${m[1]}`);
+    if (hash && extname(dest) === '.md') assert(anchors(dest).includes(decodeURIComponent(hash)), `Missing anchor: ${m[1]}`);
+    links++;
   }
 }
-
-// ---------------------------------------------------------------------------
-// Check 2: relative Markdown link and image targets resolve
-// ---------------------------------------------------------------------------
-
-const INLINE = /!?\[[^\]]*\]\(\s*([^)\s]+)(?:\s+"[^"]*")?\s*\)/g;
-const REFERENCE = /^\[[^\]]+\]:\s*(\S+)/gm;
-
-const isExternal = (t) => /^(https?:|mailto:|#|<)/.test(t);
-
-for (const file of walk(root).filter((f) => f.endsWith(".md"))) {
-  const text = readFileSync(file, "utf8");
-  const base = dirname(file);
-  const targets = [];
-  for (const m of text.matchAll(INLINE)) targets.push(m[1]);
-  for (const m of text.matchAll(REFERENCE)) targets.push(m[1]);
-
-  for (const raw of targets) {
-    const target = raw.trim();
-    if (isExternal(target)) continue;
-    const path = target.split("#")[0];
-    if (path === "") continue;
-    checks++;
-    if (!existsSync(resolve(base, path)))
-      fail(rel(file), `link target does not resolve: ${target}`);
-  }
+for (const path of files.filter(p => extname(p) === '.json')) JSON.parse(read(path));
+const manifest = JSON.parse(read(resolve(root, '.claude-plugin/plugin.json')));
+const market = JSON.parse(read(resolve(root, '.claude-plugin/marketplace.json')));
+assert.equal(market.plugins[0].name, manifest.name);
+assert.equal(market.plugins[0].source, './');
+assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
+const skills = readdirSync(resolve(root, 'skills'));
+for (const name of skills) {
+  const skill = read(resolve(root, 'skills', name, 'SKILL.md'));
+  assert.match(skill, new RegExp(`^---\\nname: ${name}\\n`));
+  assert.match(skill, /\ndescription: .+\n/);
+  assert(!skill.includes('TODO'), `Unfinished skill ${name}`);
 }
-
-// ---------------------------------------------------------------------------
-// Check 3: strict JSON
-// ---------------------------------------------------------------------------
-
-function parseStrict(path, label) {
-  checks++;
-  try {
-    JSON.parse(readFileSync(path, "utf8"));
-  } catch (error) {
-    fail(label, `not strict JSON: ${error.message}`);
-  }
+const illustrations = files.filter(p => p.includes('/images/') && extname(p) === '.svg');
+for (const path of illustrations) {
+  const svg = read(path);
+  assert.match(svg, /<title id="title">[^<]+<\/title>/);
+  assert.match(svg, /<desc id="desc">[^<]+<\/desc>/);
+  assert(!/<script|<foreignObject|https?:\/\/[^" ]+\.(?:js|css)/i.test(svg), `Active content: ${path}`);
 }
-
-const settings = join(root, "config", "vscode-settings.json");
-if (existsSync(settings)) parseStrict(settings, "config/vscode-settings.json");
-
-const fixtures = join(root, "tests", "fixtures");
-if (existsSync(fixtures)) {
-  for (const name of readdirSync(fixtures).filter((f) => f.endsWith(".json")))
-    parseStrict(join(fixtures, name), `tests/fixtures/${name}`);
-}
-
-// ---------------------------------------------------------------------------
-// Check 4: CHANGELOG shape
-// ---------------------------------------------------------------------------
-
-const changelog = join(root, "CHANGELOG.md");
-if (!existsSync(changelog)) {
-  warnings.push("WARN CHANGELOG.md missing");
-} else {
-  const text = readFileSync(changelog, "utf8");
-
-  checks++;
-  if (!/^## \[Unreleased\]/m.test(text))
-    fail("CHANGELOG.md", "no ## [Unreleased] section");
-
-  checks++;
-  const released = text
-    .split(/\r?\n/)
-    .filter((l) => /^## \[\d+\.\d+\.\d+\]/.test(l));
-  if (released.length < 2)
-    fail("CHANGELOG.md", `expected at least 2 released version sections, found ${released.length}`);
-}
-
-// ---------------------------------------------------------------------------
-
-for (const warning of warnings) console.log(warning);
-for (const failure of failures) console.log(failure);
-
-if (failures.length > 0) process.exit(1);
-
-console.log(`OK ${checks} checks`);
+console.log(`OK: ${links} local links, ${skills.length} discoverable skills, ${illustrations.length} accessible illustrations, JSON manifests`);

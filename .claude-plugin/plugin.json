@@ -1,7 +1,7 @@
 {
   "name": "property-tax-workbench",
-  "version": "1.0.0",
-  "description": "Six focused skills for Excel review, reconciliation controls, tax research, dashboards, and clear work requests.",
+  "version": "2.0.0",
+  "description": "Two beginner-friendly skills for Excel reconciliation and accounting dashboards.",
   "license": "MIT",
   "author": {
     "name": "Property Tax Workbench maintainers"
