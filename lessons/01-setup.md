@@ -60,7 +60,8 @@ Open the extracted folder until you see **practice**. Copy that folder to your a
 location and rename the copy **Tax Practice**. Keep its contents together.
 
 **You are there when:** Tax Practice contains **practice.xlsx**, **OH-bills.xlsx**, **TX-bills.xlsx**,
-and two text documents. Everything in these spreadsheets is invented.
+and three text documents, including **STARTER-SKILLS.md**, the optional extra-skill checklist.
+Everything in these spreadsheets is invented.
 
 ## 5. Open that folder in VS Code
 

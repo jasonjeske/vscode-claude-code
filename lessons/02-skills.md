@@ -42,13 +42,16 @@ If company policy blocks it, ask IT to review this repository.
 
 In **Marketplaces**, add **anthropics/skills** the same way.
 Back in **Plugins**, find **document-skills** from **anthropic-agent-skills**.
-Click **Install > Install for you**. This is Anthropic's document package, including its Excel skill.
+Click **Install > Install for you**. This is Anthropic's document package, including Excel,
+Word, PowerPoint, and PDF skills. [See the Office exercises and five selected extras](../README.md#try-office-work).
 
 Click the banner to **restart Claude Code** when prompted. If no banner appears, follow
 [Reload the window](../HELP.md#reload-the-window). Start a fresh conversation after restarting.
 
 **You are there when:** both plugins appear installed and enabled.
 You do not need to reinstall them every time you open VS Code.
+The [optional five extras](../README.md#install-the-five-extras) are installed selectively by Claude;
+you do not need to add another entire marketplace collection.
 
 ## 4. Try it with your own words
 
