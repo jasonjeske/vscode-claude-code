@@ -1,3 +1,5 @@
+![Everyday work. Extraordinary results. Claude Code in VS Code, with illustrated spreadsheets, documents, and a dashboard.](assets/readme-banner.png)
+
 # Claude Code in VS Code: your everyday Office assistant
 
 **A practical beginner course for property-tax accounting work.**

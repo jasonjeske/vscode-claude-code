@@ -111,6 +111,11 @@ while i < len(tokens):
         continue
     if t.type == 'paragraph_open':
         token = tokens[i+1]
+        # The README cover is decorative; keep the printable course compact.
+        if (len(token.children or []) == 1 and token.children[0].type == 'image'
+                and token.children[0].attrGet('src') == 'assets/readme-banner.png'):
+            i += 3
+            continue
         body = inline(token.children)
         prefix = item_prefix or ''
         item_prefix = None

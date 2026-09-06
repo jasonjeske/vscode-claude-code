@@ -57,7 +57,10 @@ for (const path of markdown.filter(p => p.includes('/lessons/') || /\/(README|HE
 // Prompts must remain real copyable text in the beginner reading path.
 const learnerFiles = markdown.filter(p => p.includes('/lessons/') || /\/(README|HELP|GLOBAL-CLAUDE)\.md$/.test(p));
 for (const path of learnerFiles) {
-  assert(!/!\[[^\]]*\]\(/.test(read(path)), `Prompt image in learner path: ${path}`);
+  const withoutCover = path === resolve(root, 'README.md')
+    ? read(path).replace(/^!\[[^\]]*\]\(assets\/readme-banner\.png\)\n\n/, '')
+    : read(path);
+  assert(!/!\[[^\]]*\]\(/.test(withoutCover), `Prompt image in learner path: ${path}`);
   assert(!/^> /m.test(read(path)), `Use a fenced block for copyable requests: ${path}`);
 }
 const course = read(resolve(root, 'README.md'));
