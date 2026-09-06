@@ -61,16 +61,48 @@ For learning, see [Claude Academy's Code section](https://academy.claude.com/cod
 [Getting started with Claude.ai video](https://www.youtube.com/watch?v=0vZ_UVLhSQQ).
 The latter demonstrates the website; it is not a VS Code extension installation video.
 
-## Pictures
+## Course-format research
 
-The **claude-** reference images are real screenshots from Anthropic's documentation, copied
-unchanged. They illustrate the extension's actual interface with Anthropic's programming examples.
-They are not screenshots of this course being executed. See [attribution](assets/reference/ATTRIBUTION.md).
+Reviewed September 6, 2026. The design uses short lessons, copyable requests,
+a continuing work example, and observable checks. It is an original accounting course;
+no upstream course text, prompt library, or paid lesson was copied.
 
-The SVG images are original, simplified interface illustrations with property-tax examples.
-They are visibly labeled **ILLUSTRATED EXAMPLE**. Replies, filenames, and dashboard arrangements
-are teaching examples, not fabricated execution evidence. UI layout and button labels may differ
-by version, platform, and managed configuration.
+| Source inspected | Useful structural pattern | Adaptation here |
+| --- | --- | --- |
+| [Anthropic Claude Code 101](https://academy.claude.com/courses/claude-code-101) | Concepts, first prompt, daily workflow, then customization | Extension setup first; reusable skills after a checked task |
+| [Claude How To](https://github.com/luongnv89/claude-howto) | An ordered path with copyable examples and self-assessment | A text block for each request and a concrete output check |
+| [Claude Code Ultimate Guide learning path](https://github.com/FlorianBruniaux/claude-code-ultimate-guide/tree/main/guide/learning-path) | Fundamentals separated from optional depth; practice and validation | Terminal use is optional; the main path stays in the extension |
+| [Delba Oliveira's Learn Claude Code](https://github.com/delbaoliveira/learn-claude-code) | One project evolves across conversational lessons | A bill review evolves into a meeting dashboard and briefing |
+
+GitHub metadata showed approximately **41,400 stars** for Claude How To and **5,900**
+for Claude Code Ultimate Guide when checked. This supports calling them established
+community references, not claiming a measured best course or verified learning outcomes.
+Delba's smaller repository was selected for its continuous-project format, not popularity.
+We inspected public curricula and source material; we did not complete paid courses.
+
+The [DeepLearning.AI and Anthropic course](https://www.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant)
+was also located, but direct retrieval was blocked. Its unavailable lesson content was not
+used as implementation evidence or a claim of full course review.
+
+Optional video: [Anthropic's Getting started with Claude.ai](https://www.youtube.com/watch?v=0vZ_UVLhSQQ)
+introduces conversation on the website, not this extension.
+[Krish Naik's VS Code introduction listing](https://www.classcentral.com/course/youtube-getting-started-with-claude-code-with-vs-code-482334)
+describes a short terminal-in-VS-Code tutorial. Its listing was inspected, not its full video;
+it is not the authoritative source for current extension buttons. Use the official
+[VS Code guide](https://code.claude.com/docs/en/vs-code) and
+[terminal quickstart](https://code.claude.com/docs/en/quickstart) for current behavior.
+No claim is made about video popularity, course pricing, or guaranteed access.
+
+## Text, screenshots, and PDF
+
+The learner path uses selectable text and fenced prompt blocks. It does not require
+reading prompts from pictures. Earlier illustrations remain in Git history.
+The unchanged Anthropic reference screenshots remain under assets/reference for attribution
+and optional reference, not as course instructions. See [attribution](assets/reference/ATTRIBUTION.md).
+
+The full PDF is generated from README.md. Its prompts are text, with a linked contents list
+and document bookmarks. The build script wraps long lines rather than clipping them.
+The standalone GLOBAL-CLAUDE.md block must match the preference prompt in the course.
 
 ## Checks and limits
 
@@ -79,10 +111,12 @@ Maintainers run:
 ~~~sh
 node tests/validate-repo.mjs
 python3 tests/state-workbook-spec.py
+python3 tests/check-guide.py
 ~~~
 
 The first checks local links, configuration, discoverable skill structure, automatic-invocation
-availability, and accessible SVG markup. It rejects long workbench commands in the learner path.
+availability, and copyable learner prompts. It rejects long workbench commands and prompt images
+in the learner path. It also checks that all installed skill names are covered by the course.
 
 The workbook check independently reads the shipped XLSX files. It checks text identifiers,
 source counts and totals, formulas and stored results, reconciliation differences, and the four-row
@@ -100,7 +134,7 @@ The source review and independent format checks do not establish runtime behavio
 
 This revision was not tested end to end in a beginner's managed Windows environment.
 We have not verified a live Claude session completing these prompts, selecting every skill, or
-producing the illustrated replies. Structural checks do not establish that. The in-app success
+producing every requested output. Structural checks do not establish that. The in-app success
 checks in each lesson are therefore part of the walkthrough, and should be tried on the learner's
 approved connection before introducing real work data.
 
@@ -115,3 +149,8 @@ Custom procedures belong in a separate project or user skill location so plugin 
 overwrite personal adaptations. Claude should save and test them for the learner.
 
 Earlier versions remain in Git history. CHANGELOG.md is historical and is not edited manually.
+
+To refresh the PDF after editing the course, run `python3 tests/build-guide.py`, then
+`python3 tests/check-guide.py`. Maintainers need ReportLab, markdown-it-py, and pypdf;
+the learner needs none of those tools. CI rebuilds the PDF and checks that the committed
+copy matches, so the printable course cannot silently lag behind the Markdown.

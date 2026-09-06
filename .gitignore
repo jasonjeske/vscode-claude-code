@@ -41,3 +41,7 @@ backups/
 # Local adaptations and source evidence stay in approved work folders.
 skill-backups/
 sources/
+
+# Public course PDF, generated from README.md.
+!/output/pdf/claude-code-office-guide.pdf
+__pycache__/

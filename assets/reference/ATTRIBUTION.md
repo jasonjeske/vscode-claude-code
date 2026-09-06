@@ -11,5 +11,5 @@ does not relicense these reference images. No endorsement is implied.
 | Spark icon in the editor toolbar | [claude-open.png source](https://mintcdn.com/claude-code/mfM-EyoZGnQv8JTc/images/vs-code-editor-icon.png) |
 | Proposed edit and permission prompt | [claude-review.png source](https://mintcdn.com/claude-code/FVYz38sRY-VuoGHA/images/vs-code-edits.png) |
 
-These show Anthropic's programming examples, not this course's execution. They are interface
-references alongside original, clearly labeled property-tax workflow illustrations.
+These show Anthropic's programming examples, not this course's execution. They are optional interface
+references. The course instructions and prompts are selectable text.

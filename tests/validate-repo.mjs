@@ -54,11 +54,15 @@ for (const name of skills) {
 for (const path of markdown.filter(p => p.includes('/lessons/') || /\/(README|HELP)\.md$/.test(p))) {
   assert(!/\/property-tax-workbench:/.test(read(path)), `Explicit skill command in learner path: ${path}`);
 }
-const illustrations = files.filter(p => p.includes('/images/') && extname(p) === '.svg');
-for (const path of illustrations) {
-  const svg = read(path);
-  assert.match(svg, /<title id="title">[^<]+<\/title>/);
-  assert.match(svg, /<desc id="desc">[^<]+<\/desc>/);
-  assert(!/<script|<foreignObject|https?:\/\/[^" ]+\.(?:js|css)/i.test(svg), `Active content: ${path}`);
+// Prompts must remain real copyable text in the beginner reading path.
+const learnerFiles = markdown.filter(p => p.includes('/lessons/') || /\/(README|HELP|GLOBAL-CLAUDE)\.md$/.test(p));
+for (const path of learnerFiles) {
+  assert(!/!\[[^\]]*\]\(/.test(read(path)), `Prompt image in learner path: ${path}`);
+  assert(!/^> /m.test(read(path)), `Use a fenced block for copyable requests: ${path}`);
 }
-console.log(`OK: ${links} local links, ${skills.length} discoverable skills, ${illustrations.length} accessible illustrations, JSON manifests`);
+const course = read(resolve(root, 'README.md'));
+for (const name of [...skills, 'xlsx', 'docx', 'pptx', 'pdf', 'doc-coauthoring', 'file-organizer', 'content-research-writer', 'academy-guide', 'skill-creator']) {
+  assert(course.includes(name), `Skill missing from course: ${name}`);
+}
+assert(course.includes('```text\n'), 'Course needs copyable prompt blocks');
+console.log(`OK: ${links} local links, ${skills.length} discoverable skills, copyable course, JSON manifests`);
