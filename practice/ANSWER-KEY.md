@@ -23,5 +23,21 @@ D9 on each sheet is `=SUM(D4:D7)`. IDs in column C are text with leading zeros.
 Three matched records do not mean three equal amounts. Missing is not zero.
 The file's stored formula results match these inputs; check recalculation in Excel separately.
 
+## Combining the two bill files
+
+These files are a separate exercise from practice.xlsx. All amounts are invented USD.
+
+| File | Detail rows | Text IDs | Bill total |
+| --- | --- | --- | --- |
+| OH-bills.xlsx | Bills rows 5-6 | 000101, 000102 | $300 |
+| TX-bills.xlsx | Bills rows 5-6 | 000201, 000202 | $700 |
+| Combined result | 4 | Four distinct IDs | $1,000 |
+
+Each source total is in Bills D8, calculated with SUM(D5:D6).
+The combined result must not count either Total row as a detail bill.
+Keep source filename, sheet, and row references. The dashboard uses these same four
+records: 4 bills, Ohio $300, Texas $700, total $1,000. A research addition must not
+change these financial amounts.
+
 Return to the [Excel lesson](../lessons/03-excel.md) when reading in the downloaded guide.
 If you copied this folder on its own, keep the course open in your browser.
