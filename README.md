@@ -17,6 +17,16 @@ for the state, local jurisdiction, tax year, and property type.
 | **[3. Analyze Excel](lessons/03-excel.md)** | Inspect, reconcile, and verify the practice workbook |
 | **[4. Make a dashboard](lessons/04-dashboard.md)** | Create a local report; check its numbers; repeat on approved work |
 
+## After your first dashboard
+
+Choose one next lesson when you need it. You can stop after the first four lessons.
+
+| Next useful task | What you will learn |
+| --- | --- |
+| **[5. Research and save findings](lessons/05-research.md)** | Check official sources; carry citations into Excel and dashboards |
+| **[6. Create or modify skills](lessons/06-your-skills.md)** | Ask Claude to make a small skill; test, improve, and reuse it |
+| **[7. Everyday productivity](lessons/07-productivity.md)** | Get formula help, prepare reviewer notes, and save useful prompts |
+
 **Keep this guide open in your browser and VS Code beside it.** Instructions use Windows.
 `Ctrl+C` copies, `Ctrl+V` pastes, and `Ctrl+S` saves. Hold the keys together.
 Each numbered step has an illustration, a small action, and a success check.
@@ -45,12 +55,12 @@ The numbered images are original teaching illustrations, not screenshots or proo
 installation. Button placement may vary. Two real Microsoft reference screenshots are credited
 [in their attribution file](assets/reference/ATTRIBUTION.md).
 
-The course replaces the older overlapping guides and six-skill kit. The new kit retains workbook
-analysis and dashboards. Earlier material remains in Git history. Existing users can update the
+The course replaces the older overlapping guides and six-skill kit. The kit now includes workbook
+analysis, dashboards, property-tax research, formula help, and workpaper summaries. Earlier material remains in Git history. Existing users can update the
 installed `property-tax-workbench` through `/plugins`; locally copied skills are separate and
 should be reviewed before removing any personal adaptations.
 
 Setup references were checked September 5, 2026. [Sources and checks](SOURCES.md).
-The `skills`, `.claude-plugin`, and `tests` folders support the course; learners do not edit them.
+The `skills`, `.claude-plugin`, and `tests` folders support the course; the core lessons do not require editing them. Lesson 6 creates your own local skill copies.
 
 </details>
