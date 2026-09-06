@@ -45,3 +45,16 @@ sources/
 # Public course PDF, generated from README.md.
 !/output/pdf/claude-code-office-guide.pdf
 __pycache__/
+
+# Local document-generation dependencies.
+.venv/
+
+# Public fictional course fixtures and checked example outputs only.
+!/practice/meeting-inputs/*.xlsx
+!/practice/meeting-inputs/*.docx
+!/practice/meeting-inputs/*.pptx
+!/practice/meeting-results/*.xlsx
+!/practice/meeting-results/*.docx
+!/practice/meeting-results/*.pptx
+!/practice/meeting-results/*.pdf
+~$*

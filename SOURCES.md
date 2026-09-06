@@ -95,14 +95,15 @@ No claim is made about video popularity, course pricing, or guaranteed access.
 
 ## Text, screenshots, and PDF
 
-The learner path uses selectable text and fenced prompt blocks. It does not require
-reading prompts from pictures. Earlier illustrations remain in Git history.
-The unchanged Anthropic reference screenshots remain under assets/reference for attribution
-and optional reference, not as course instructions. See [attribution](assets/reference/ATTRIBUTION.md).
+The learner path pairs real screenshots with selectable text and fenced prompt blocks.
+The walkthrough was performed in a separate clone on a Mac Studio using VS Code's
+Anthropic Claude Code extension and native Microsoft Excel, Word, PowerPoint, and Preview.
+See [capture provenance](assets/walkthrough/README.md). No Windows screenshots are simulated.
+The unchanged upstream reference images remain in assets/reference with their attribution.
 
-The full PDF is generated from README.md. Its prompts are text, with a linked contents list
-and document bookmarks. The build script wraps long lines rather than clipping them.
-The standalone GLOBAL-CLAUDE.md block must match the preference prompt in the course.
+The complete PDF is generated from README.md. Requests remain selectable text, with a
+linked contents list and bookmarks. Images explain where to act; they never replace a
+copyable prompt. The standalone GLOBAL-CLAUDE.md preference block matches the course.
 
 ## Checks and limits
 
@@ -111,35 +112,75 @@ Maintainers run:
 ~~~sh
 node tests/validate-repo.mjs
 python3 tests/state-workbook-spec.py
+python3 tests/build-guide.py
 python3 tests/check-guide.py
 ~~~
 
-The first checks local links, configuration, discoverable skill structure, automatic-invocation
-availability, and copyable learner prompts. It rejects long workbench commands and prompt images
-in the learner path. It also checks that all installed skill names are covered by the course.
+The checks verify local links, JSON manifests, six discoverable custom skills, automatic
+invocation availability, and copyable prompts for all fifteen selected skills. Reviewed
+walkthrough screenshots are allowed; long workbench commands are excluded from the course.
+The PDF check verifies every text block and heading, source hash, bookmarks, and preferences.
 
-The workbook check independently reads the shipped XLSX files. It checks text identifiers,
-source counts and totals, formulas and stored results, reconciliation differences, and the four-row
-consolidation fixture. The two new bill workbooks were authored and rendered with Artifact Tool.
-Its preview renderer drops leading zeros visually; the exported XML stores all four IDs correctly
-as text, which the independent check verifies. Native Excel display and recalculation remain
-a separate check.
+The workbook test independently reads the shipped XLSX archives. It verifies text IDs,
+source counts, amounts, reconciliation populations, matched net and gross differences,
+and the bridge. The four-input meeting fixture is kept separate from the tiny exercises.
+The checked meeting reconciliation was opened, recalculated, and saved in native Excel:
+all twelve checks were OK. Its public copy removes personal author and local-path metadata while preserving
+worksheet bytes and Excel's cached results.
 
-For the five extra recommendations, we fetched all 23 files in the selected upstream directories
-to a temporary review folder and independently parsed all five YAML headers. Each has a matching
-name, a description, and automatic invocation enabled by default. No personal skills were installed.
-Claude Code 2.1.263's native validator returned an empty contents list for the staged personal-skill
-layout, so its success status is **not** counted as evidence that those five files were validated.
-The source review and independent format checks do not establish runtime behavior.
+### What the real Mac run established
 
-This revision was not tested end to end in a beginner's managed Windows environment.
-We have not verified a live Claude session completing these prompts, selecting every skill, or
-producing every requested output. Structural checks do not establish that. The in-app success
-checks in each lesson are therefore part of the walkthrough, and should be tried on the learner's
-approved connection before introducing real work data.
+- VS Code Git: Clone downloaded the public project into a separate demonstration folder.
+- The official Anthropic extension was installed in a clean VS Code profile. The configured
+  Claude connection was retained; a fresh account/sign-in flow was not tested.
+- The property-tax marketplace already existed. Anthropic's skills marketplace was added.
+  Both the workbench and document-skills plugins were installed locally to the project,
+  followed by a real Reload Window.
+- Plain-language requests in the extension produced the four source workbooks, the input
+  Word brief and three-slide agenda, the reconciliation, and the meeting outputs.
+- Excel recalculation and source totals were checked independently. Native Office review
+  found a count formatted as currency and two presentation defects. The count format,
+  overlapping slide text, and truncated chart axis were corrected and reviewed again.
+- The final one-page Word briefing and all five PowerPoint slides were inspected in their
+  native apps. The corrected briefing was exported through Word and opened in Preview.
+- PDF extraction, official-source research, saving findings into a separate Research sheet,
+  and creating a project review skill were run through the extension. These are actual
+  saved outputs, not promises based solely on skill names.
+- The PDF summary was opened and recalculated in Excel: all 24 comparisons were OK.
+  The research workbook retained all twelve OK financial checks and whole-number counts.
+- A new conversation selected the new project skill automatically from a request that
+  did not name it. The first revision saved a backup and a 292-word checklist with a
+  separate detailed check note.
+- The optional Open in Terminal action launched Claude Code. A read-only request
+  read MY-MEETING.md and correctly summarized the deliverables and checks. The session
+  was exited and the graphical extension reopened. Personal terminal status details
+  were excluded from published screenshots.
+- The five optional helpers were fetched from the selected snapshots into the demo project's
+  .claude/skills directory with supporting files. Nothing was installed globally. Source
+  provenance and missing dependencies were reported. Installation is not a claim that every
+  optional workflow or evaluation tool has been executed.
 
-The guide supplies no state tax-law conclusion or deadline. Research steps require current,
-applicable official sources and human review. No source finding is treated as filing approval.
+The dashboard's data and calculation logic were checked without a browser. Browser rendering,
+filter interaction, empty state, print layout, and screenshots remain pending the local-preview
+permission after the browser tool rejected a local file URL. This is an automation limitation,
+not a reason for learners to change their security settings. Do not describe that stage as
+completed until its real browser checks have passed.
+
+### Platform and work limits
+
+This revision was not tested in a beginner's managed Windows environment. Windows shortcuts
+and file-opening differences are supplied, but company authentication, allowed tools, Office
+versions, and plugin policy can differ. Macros, Power Query, PivotTables, unusual PDFs, and
+employer data sources require their own native tests. A skill supplies a procedure, not an
+Office license, desktop-control connection, or permission to access work systems.
+
+The research is a worked source-review example. It is not a filing determination for any
+property. The official [TCAD page](https://traviscad.org/renditions),
+[Comptroller Form 50-144 (03-26)](https://comptroller.texas.gov/forms/50-144.pdf), and
+[HB 9 enrolled text](https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00009F.htm)
+were inspected; applicability and election timing remain review questions. No forms were
+submitted, no exemption was applied to practice amounts, and no financial totals were changed
+by research. Saved findings must be rechecked before real use.
 
 ## Maintainer notes
 

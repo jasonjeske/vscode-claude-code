@@ -13,7 +13,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle,
-    XPreformatted, KeepTogether, CondPageBreak,
+    XPreformatted, KeepTogether, CondPageBreak, Image,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,7 +68,7 @@ def inline(items):
         elif t.type == 'html_inline':
             out.append(escape(t.content))
         elif t.type == 'image':
-            raise ValueError('Course prompts must not be images')
+            raise ValueError('Place instructional screenshots in their own paragraph')
     return ''.join(out)
 
 
@@ -114,6 +114,20 @@ while i < len(tokens):
         # The README cover is decorative; keep the printable course compact.
         if (len(token.children or []) == 1 and token.children[0].type == 'image'
                 and token.children[0].attrGet('src') == 'assets/readme-banner.png'):
+            i += 3
+            continue
+        if len(token.children or []) == 1 and token.children[0].type == 'image':
+            image_token = token.children[0]
+            image_path = (ROOT / image_token.attrGet('src')).resolve()
+            if not image_path.is_relative_to(ROOT / 'assets/walkthrough'):
+                raise ValueError('Only reviewed walkthrough captures belong in the course')
+            picture = Image(str(image_path))
+            scale = min(516 / picture.imageWidth, 270 / picture.imageHeight, 1)
+            picture.drawWidth = picture.imageWidth * scale
+            picture.drawHeight = picture.imageHeight * scale
+            picture.hAlign = 'LEFT'
+            caption = Paragraph(escape(image_token.content), styles['TableCourse'])
+            story.append(KeepTogether([picture, Spacer(1, 5), caption, Spacer(1, 8)]))
             i += 3
             continue
         body = inline(token.children)

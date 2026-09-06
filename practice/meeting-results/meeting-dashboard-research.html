@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property-Tax Review Meeting Dashboard with Research</title>
+<style>
+  :root{
+    --navy:#1E2761; --navy-2:#34508F; --copper:#B87333; --copper-2:#D9915A; --ivory:#FAF6EF; --ivory-2:#F1EADF;
+    --ink:#1B1B1F; --ink-2:#4A4A55; --muted:#7A7A86; --line:#DDD3C2;
+    --teal:#0093A3; --gold:#9C7A1E; --ok:#2E7D32; --warn:#B3261E;
+    --radius:14px; --shadow:0 4px 18px rgba(30,39,97,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ivory);color:var(--ink);font:18px/1.45 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+  h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:600;margin:0}
+  header{background:var(--navy);color:var(--ivory);padding:28px 40px 24px}
+  header h1{font-size:34px;letter-spacing:.2px}
+  header .sub{margin-top:8px;font-size:18px;color:#CADCFC}
+  .banner{background:var(--copper);color:#fff;padding:12px 40px;font-weight:700;font-size:18px;letter-spacing:.3px}
+  main{max-width:1380px;margin:0 auto;padding:28px 40px 60px}
+  .filters{display:flex;flex-wrap:wrap;gap:18px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow)}
+  .filters label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:16px;color:var(--ink-2)}
+  select{font:inherit;font-size:19px;padding:10px 14px;border:2px solid var(--navy-2);border-radius:10px;background:#fff;color:var(--ink);min-width:220px}
+  select:focus,button:focus{outline:3px solid var(--copper);outline-offset:2px}
+  button{font:inherit;font-size:18px;font-weight:700;padding:12px 22px;border-radius:10px;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer}
+  button:hover{background:var(--navy-2)}
+  .active{margin-left:auto;font-size:17px;color:var(--ink-2)}
+  .active strong{color:var(--navy)}
+  .cards{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);min-height:132px}
+  .card .k{font-size:15px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-2)}
+  .card .v{font-size:38px;font-weight:700;color:var(--navy);margin-top:8px;line-height:1.1;font-variant-numeric:tabular-nums}
+  .card .v.copper{color:var(--copper)}
+  .card .v.small{font-size:24px}
+  .card .d{font-size:15px;color:var(--muted);margin-top:8px}
+  .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px;margin-top:20px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+  .panel h2{font-size:22px;color:var(--navy);margin-bottom:4px}
+  .panel .note{font-size:15px;color:var(--muted);margin-bottom:12px}
+  svg text{font-family:inherit}
+  .legend{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:10px;font-size:16px}
+  .legend span::before{content:"";display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:8px;vertical-align:-1px;background:var(--sw)}
+  .bridge-row{display:grid;grid-template-columns:230px 1fr 130px;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--ivory-2);font-size:17px}
+  .bridge-row:last-child{border-bottom:none}
+  .bridge-row .lbl{color:var(--ink-2)}
+  .bridge-row .amt{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;color:var(--navy)}
+  .bridge-row.total .lbl,.bridge-row.total .amt{color:var(--copper);font-weight:700}
+  .bar-track{height:18px;background:var(--ivory-2);border-radius:4px;position:relative}
+  .bar-fill{position:absolute;top:0;height:18px;border-radius:4px}
+  .tie{margin-top:12px;font-weight:700;font-size:17px}
+  .tie.ok{color:var(--ok)} .tie.bad{color:var(--warn)}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:17px}
+  th{text-align:left;background:var(--navy);color:#fff;padding:12px 12px;font-size:15px;letter-spacing:.4px;text-transform:uppercase}
+  td{padding:12px 12px;border-bottom:1px solid var(--ivory-2);vertical-align:top}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  td.pid{font-family:"SF Mono",Menlo,Consolas,monospace;font-weight:700}
+  .missing{color:var(--warn);font-weight:700}
+  .status{display:inline-block;padding:4px 10px;border-radius:999px;font-size:14px;font-weight:700;color:#fff;background:var(--sw)}
+  .src{font-size:14px;color:var(--muted)}
+  .empty{padding:36px;text-align:center;color:var(--ink-2);font-size:19px;background:var(--ivory-2);border-radius:10px;margin-top:10px}
+  .empty strong{display:block;font-size:22px;color:var(--navy);margin-bottom:6px}
+  .foot{margin-top:26px;font-size:15px;color:var(--ink-2)}
+  .foot table{font-size:15px;max-width:760px} .foot th{font-size:13px;padding:8px 10px} .foot td{padding:8px 10px}
+  .ok{color:var(--ok);font-weight:700} .bad{color:var(--warn);font-weight:700}
+  .sr{position:absolute;left:-9999px}
+  @media (max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}}
+  @media (max-width:640px){.cards{grid-template-columns:1fr 1fr}main,header,.banner{padding-left:16px;padding-right:16px}.bridge-row{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Property-Tax Review Meeting</h1>
+  <div class="sub">Book-to-bill reconciliation, Ohio and Texas, tax year 2026. Five-minute review view.</div>
+</header>
+<div class="banner" role="note">FICTIONAL 2026 USD TRAINING DATA. Static snapshot, not live data, not tax advice.</div>
+<main>
+  <section class="filters" aria-label="Filters">
+    <label>State
+      <select id="fState" aria-label="Filter by state">
+        <option value="ALL">All states</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="fStatus" aria-label="Filter by status">
+        <option value="ALL">All statuses</option>
+      </select>
+    </label>
+    <button id="reset" type="button">Reset</button>
+    <div class="active" id="active" aria-live="polite"></div>
+  </section>
+
+  <section class="cards" aria-label="Key numbers">
+    <div class="card"><div class="k">Book total</div><div class="v" id="cBook"></div><div class="d" id="cBookD"></div></div>
+    <div class="card"><div class="k">Bill total</div><div class="v copper" id="cBill"></div><div class="d" id="cBillD"></div></div>
+    <div class="card"><div class="k">Bill minus Book</div><div class="v" id="cDiff"></div><div class="d" id="cDiffD"></div></div>
+    <div class="card"><div class="k">Exact matches</div><div class="v" id="cExact"></div><div class="d" id="cExactD"></div></div>
+    <div class="card"><div class="k">Exceptions</div><div class="v copper" id="cExc"></div><div class="d" id="cExcD"></div></div>
+    <div class="card"><div class="k">Matched net vs gross</div><div class="v small" id="cNet"></div><div class="d" id="cNetD"></div></div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>State comparison</h2>
+      <div class="note">Book total and Bill total for each state in the current selection. Amounts in USD.</div>
+      <div id="bars"></div>
+      <div class="legend"><span style="--sw:#34508F">Book</span><span style="--sw:#B87333">Bill</span></div>
+    </div>
+    <div class="panel">
+      <h2>Status mix</h2>
+      <div class="note">Each property has one status. The center shows the exact-match share and its denominator.</div>
+      <div id="donut"></div>
+      <div class="legend" id="donutLegend"></div>
+    </div>
+    <div class="panel">
+      <h2>Reconciliation bridge</h2>
+      <div class="note">Matched net + Bill-only − Book-only must equal Bill minus Book.</div>
+      <div id="bridge"></div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top:20px" aria-label="Exceptions">
+    <h2>Exceptions</h2>
+    <div class="note" id="excNote">Every property in the selection that is not an exact match, with the source file and row for each side.</div>
+    <div id="excTable"></div>
+  </section>
+
+  <section class="panel" style="margin-top:20px" aria-label="Research" id="research">
+<h2>Research: Travis County, TX, business personal property, tax year 2026</h2>
+<div class="note">Research is separate from the financial figures above and changes no amount. Three findings from official sources only (TCAD, Texas Comptroller, Texas Legislature). Checked 2026-09-06. Every finding is <strong>Needs review</strong>. Source sections, dates and other metadata: outputs/research-note.md.</div>
+<table><thead><tr><th>Topic</th><th>Short finding</th><th>Official source</th><th>Review status</th><th>Checked date</th></tr></thead><tbody>
+<tr><td>R1. Rendition deadline stated by the sources</td><td>TCAD&#x27;s page states an April 15 rendition deadline. Form 50-144 (rev. 03-26) states due after January 1 and by April 15, extendable to May 15 on written request plus 15 days for good cause. Whether a property must render is not decided here.</td><td class="src"><a href="https://traviscad.org/renditions">traviscad.org</a> <a href="https://comptroller.texas.gov/forms/50-144.pdf">comptroller.texas.gov</a></td><td><span class="status" style="--sw:#9C7A1E">Needs review</span></td><td class="src">2026-09-06</td></tr>
+<tr><td>R2. Where to file</td><td>File with TCAD, not the Comptroller: online portal, mail to PO Box 141864, Austin, TX 78714-1864, or drop box at 850 E Anderson Ln, Austin, TX 78752. The portal link reads like a staging address; confirm the live portal before use.</td><td class="src"><a href="https://traviscad.org/renditions">traviscad.org</a> <a href="https://traviscad.org/faq_category/bpp/">traviscad.org</a></td><td><span class="status" style="--sw:#9C7A1E">Needs review</span></td><td class="src">2026-09-06</td></tr>
+<tr><td>R3. $125,000 exemption and election not to render (unresolved)</td><td>HB 9 (effective 2026-01-01 only if voters approved HJR 1) exempts $125,000 per location and adds Tax Code 22.01(j-1) to (j-3). An election not to render takes effect the tax year after it is filed, so a 2026 election does not by itself remove a 2026 obligation. Applicability in Travis County is unresolved.</td><td class="src"><a href="https://capitol.texas.gov/tlodocs/89R/billtext/html/HB00009F.htm">capitol.texas.gov</a> <a href="https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&amp;Bill=HB9">capitol.texas.gov</a></td><td><span class="status" style="--sw:#9C7A1E">Needs review</span></td><td class="src">2026-09-06</td></tr>
+</tbody></table><div class="note" style="margin-top:10px">Unresolved: whether the exemption and election apply in Travis County for 2026; the election takes effect the tax year after it is filed (Tax Code 22.01(j-3)); leased or regulated property may follow different exemption or deadline rules, not researched. Source sections, dates and other metadata: outputs/research-note.md.</div></section>
+  <section class="foot">
+    <p><strong>Scope.</strong> Grain is one row per State + Tax year + Property ID. Source files: the four workbooks in practice/meeting-inputs, detail rows 5 to 10 of each, and outputs/meeting-reconciliation.xlsx. Source total rows were excluded. Book amounts are invented accruals; bill amounts are invented bills. No assessments, rates, payments, deadlines, or causes are included.</p>
+    <p><strong>Snapshot.</strong> Generated <span id="genDate"></span>. This file does not refresh. To update it, rebuild it from the workbooks.</p>
+    <p><strong>Source totals cross-check.</strong> The rows embedded in this page are added up and compared with each file's own Source total.</p>
+    <div id="srcCheck"></div>
+  </section>
+</main>
+<script>
+const DATA = {"generated": "2026-09-06", "properties": [{"state": "OH", "year": "2026", "id": "010001", "name": "OH Training Property 1", "book": 12000, "bill": 12000, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 5}, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 5}}, {"state": "OH", "year": "2026", "id": "010002", "name": "OH Training Property 2", "book": 18000, "bill": 18500, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 6}, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 6}}, {"state": "OH", "year": "2026", "id": "010003", "name": "OH Training Property 3", "book": 9000, "bill": 8500, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 7}, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 7}}, {"state": "OH", "year": "2026", "id": "010004", "name": "OH Training Property 4", "book": 15000, "bill": 15000, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 8}, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 8}}, {"state": "OH", "year": "2026", "id": "010005", "name": "OH Training Property 5", "book": 22000, "bill": 22000, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 9}, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 9}}, {"state": "OH", "year": "2026", "id": "010006", "name": "OH Training Property 6", "book": 14000, "bill": null, "bookSrc": {"file": "OH-book.xlsx", "sheet": "Book", "row": 10}, "billSrc": null}, {"state": "OH", "year": "2026", "id": "010007", "name": "OH Training Property 7", "book": null, "bill": 16000, "bookSrc": null, "billSrc": {"file": "OH-bills.xlsx", "sheet": "Bills", "row": 10}}, {"state": "TX", "year": "2026", "id": "020001", "name": "TX Training Property 1", "book": 20000, "bill": 20000, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 5}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 5}}, {"state": "TX", "year": "2026", "id": "020002", "name": "TX Training Property 2", "book": 16000, "bill": 16000, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 6}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 6}}, {"state": "TX", "year": "2026", "id": "020003", "name": "TX Training Property 3", "book": 24000, "bill": 25200, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 7}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 7}}, {"state": "TX", "year": "2026", "id": "020004", "name": "TX Training Property 4", "book": 10000, "bill": 10000, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 8}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 8}}, {"state": "TX", "year": "2026", "id": "020005", "name": "TX Training Property 5", "book": 18000, "bill": 18000, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 9}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 9}}, {"state": "TX", "year": "2026", "id": "020006", "name": "TX Training Property 6", "book": 12000, "bill": 12000, "bookSrc": {"file": "TX-book.xlsx", "sheet": "Book", "row": 10}, "billSrc": {"file": "TX-bills.xlsx", "sheet": "Bills", "row": 10}}], "sourceTotals": [{"file": "OH-book.xlsx", "state": "OH", "rows": 6, "total": 90000}, {"file": "OH-bills.xlsx", "state": "OH", "rows": 6, "total": 92000}, {"file": "TX-book.xlsx", "state": "TX", "rows": 6, "total": 100000}, {"file": "TX-bills.xlsx", "state": "TX", "rows": 6, "total": 101200}]};
+const STATUS = ["Exact match","Amount difference","Book only","Bill only"];
+const SW = {"Exact match":"#34508F","Amount difference":"#B87333","Book only":"#0093A3","Bill only":"#9C7A1E"};
+const usd = n => (n<0?"-":"") + "$" + Math.abs(n).toLocaleString("en-US");
+const sgn = n => n>0 ? "+"+usd(n) : usd(n);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const statusOf = p => p.book==null ? "Bill only" : p.bill==null ? "Book only" : p.book===p.bill ? "Exact match" : "Amount difference";
+const PROPS = DATA.properties.map(p => ({...p, status: statusOf(p), diff: (p.book!=null && p.bill!=null) ? p.bill-p.book : null}));
+const STATES = [...new Set(PROPS.map(p=>p.state))].sort();
+const fState = document.getElementById("fState"), fStatus = document.getElementById("fStatus");
+STATES.forEach(s => fState.append(new Option(s, s)));
+STATUS.forEach(s => fStatus.append(new Option(s, s)));
+
+function readHash(){
+  const h = new URLSearchParams(location.hash.replace(/^#/,""));
+  if (h.get("state") && [...fState.options].some(o=>o.value===h.get("state"))) fState.value = h.get("state");
+  if (h.get("status") && [...fStatus.options].some(o=>o.value===h.get("status"))) fStatus.value = h.get("status");
+}
+function compute(rows){
+  const m = {n: rows.length, bookN:0, book:0, billN:0, bill:0, pos:0, neg:0, bookOnly:0, billOnly:0, counts:{}};
+  STATUS.forEach(s => m.counts[s]=0);
+  for (const p of rows){
+    m.counts[p.status]++;
+    if (p.book!=null){ m.bookN++; m.book+=p.book; }
+    if (p.bill!=null){ m.billN++; m.bill+=p.bill; }
+    if (p.diff!=null){ if (p.diff>0) m.pos+=p.diff; else if (p.diff<0) m.neg+=p.diff; }
+    if (p.status==="Book only") m.bookOnly+=p.book;
+    if (p.status==="Bill only") m.billOnly+=p.bill;
+  }
+  m.net = m.pos+m.neg; m.gross = m.pos-m.neg;
+  m.full = m.bill - m.book; m.bridge = m.net + m.billOnly - m.bookOnly;
+  m.exact = m.counts["Exact match"]; m.exc = m.n - m.exact;
+  return m;
+}
+function render(){
+  const st = fState.value, ss = fStatus.value;
+  const rows = PROPS.filter(p => (st==="ALL"||p.state===st) && (ss==="ALL"||p.status===ss));
+  const m = compute(rows);
+  document.getElementById("active").innerHTML =
+    `Showing <strong>${m.n}</strong> of ${PROPS.length} properties · State: <strong>${esc(st==="ALL"?"All":st)}</strong> · Status: <strong>${esc(ss==="ALL"?"All":ss)}</strong>`;
+  const set = (id, v) => document.getElementById(id).textContent = v;
+  // cards
+  set("cBook", m.bookN ? usd(m.book) : "None"); set("cBookD", m.bookN ? `${m.bookN} book record${m.bookN===1?"":"s"}` : "No book records in this selection");
+  set("cBill", m.billN ? usd(m.bill) : "None"); set("cBillD", m.billN ? `${m.billN} bill record${m.billN===1?"":"s"}` : "No bill records in this selection");
+  set("cDiff", m.n ? sgn(m.full) : "n/a"); set("cDiffD", m.n ? "Bill total minus Book total, known amounts only" : "Nothing selected");
+  set("cExact", m.n ? `${(100*m.exact/m.n).toFixed(1)}%` : "n/a"); set("cExactD", m.n ? `${m.exact} of ${m.n} properties match exactly` : "No properties selected");
+  set("cExc", m.n ? m.exc : "n/a"); set("cExcD", m.n ? `${m.counts["Amount difference"]} amount differences, ${m.counts["Book only"]} book-only, ${m.counts["Bill only"]} bill-only` : "No properties selected");
+  set("cNet", m.n ? `${sgn(m.net)} vs ${usd(m.gross)}` : "n/a"); set("cNetD", m.n ? "Net = offsetting differences cancel. Gross = sum of absolute matched differences." : "No properties selected");
+  renderBars(rows); renderDonut(m); renderBridge(m); renderTable(rows, m, ss);
+}
+function renderBars(rows){
+  const el = document.getElementById("bars");
+  const states = STATES.filter(s => rows.some(p=>p.state===s));
+  if (!states.length){ el.innerHTML = `<div class="empty"><strong>No data for this selection</strong>Choose a different state or status, or press Reset.</div>`; return; }
+  const per = states.map(s => { const c = compute(rows.filter(p=>p.state===s)); return {s, book:c.book, bookN:c.bookN, bill:c.bill, billN:c.billN}; });
+  const max = Math.max(1, ...per.flatMap(x=>[x.book,x.bill]));
+  const W=520, left=70, right=115, gh=64, top=14; const H = top + per.length*gh + 30;
+  const scale = v => (W-left-right) * v / max;
+  let g = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Book and bill totals by state">`;
+  per.forEach((x,i) => {
+    const y = top + i*gh;
+    g += `<text x="${left-12}" y="${y+30}" text-anchor="end" font-size="20" font-weight="700" fill="#1B1B1F">${esc(x.s)}</text>`;
+    [["book","#34508F",0,"Book"],["bill","#B87333",24,"Bill"]].forEach(([k,c,dy,lab]) => {
+      const v = x[k], n = x[k+"N"], w = scale(v);
+      g += `<rect x="${left}" y="${y+dy}" width="${Math.max(w,0)}" height="20" rx="4" fill="${c}"><title>${esc(x.s)} ${lab}: ${n?usd(v):"no records"}</title></rect>`;
+      g += `<text x="${left+w+8}" y="${y+dy+15}" font-size="15" fill="#4A4A55">${n ? esc(usd(v)) : "no "+lab.toLowerCase()+" records"}</text>`;
+    });
+  });
+  g += `<line x1="${left}" y1="${top-4}" x2="${left}" y2="${H-24}" stroke="#DDD3C2" stroke-width="1"/></svg>`;
+  el.innerHTML = g;
+}
+function renderDonut(m){
+  const el = document.getElementById("donut"), lg = document.getElementById("donutLegend");
+  if (!m.n){ el.innerHTML = `<div class="empty"><strong>No properties</strong>Nothing matches the current filters.</div>`; lg.innerHTML=""; return; }
+  const R=88, r=56, cx=130, cy=110; let a0 = -Math.PI/2; let g = `<svg viewBox="0 0 260 220" width="100%" role="img" aria-label="Status mix">`;
+  STATUS.forEach(s => {
+    const c = m.counts[s]; if (!c) return;
+    const a1 = a0 + 2*Math.PI*c/m.n;
+    if (c===m.n){ g += `<circle cx="${cx}" cy="${cy}" r="${(R+r)/2}" fill="none" stroke="${SW[s]}" stroke-width="${R-r}"><title>${esc(s)}: ${c}</title></circle>`; }
+    else {
+      const p = (a,rad)=>[cx+rad*Math.cos(a), cy+rad*Math.sin(a)];
+      const [x0,y0]=p(a0,R),[x1,y1]=p(a1,R),[x2,y2]=p(a1,r),[x3,y3]=p(a0,r); const big = (a1-a0)>Math.PI?1:0;
+      g += `<path d="M${x0},${y0} A${R},${R} 0 ${big} 1 ${x1},${y1} L${x2},${y2} A${r},${r} 0 ${big} 0 ${x3},${y3} Z" fill="${SW[s]}" stroke="#fff" stroke-width="2"><title>${esc(s)}: ${c} of ${m.n}</title></path>`;
+    }
+    a0 = a1;
+  });
+  g += `<text x="${cx}" y="${cy-4}" text-anchor="middle" font-size="30" font-weight="700" fill="#1E2761">${(100*m.exact/m.n).toFixed(1)}%</text>`;
+  g += `<text x="${cx}" y="${cy+20}" text-anchor="middle" font-size="14" fill="#4A4A55">exact, ${m.exact} of ${m.n}</text></svg>`;
+  el.innerHTML = g;
+  lg.innerHTML = STATUS.map(s => `<span style="--sw:${SW[s]}">${esc(s)}: <strong>${m.counts[s]}</strong></span>`).join("");
+}
+function renderBridge(m){
+  const el = document.getElementById("bridge");
+  if (!m.n){ el.innerHTML = `<div class="empty"><strong>No bridge</strong>Nothing matches the current filters.</div>`; return; }
+  const rows = [["Matched net difference", m.net, "#34508F"], ["+ Bill-only amounts", m.billOnly, "#9C7A1E"], ["− Book-only amounts", -m.bookOnly, "#0093A3"], ["= Bill minus Book", m.full, "#B87333"]];
+  const max = Math.max(1, ...rows.map(x=>Math.abs(x[1])));
+  el.innerHTML = rows.map(([l,v,c],i) => {
+    const w = 50*Math.abs(v)/max, left = v<0 ? 50-w : 50;
+    return `<div class="bridge-row${i===3?" total":""}"><div class="lbl">${esc(l)}</div><div class="bar-track"><div class="bar-fill" style="left:${left}%;width:${w}%;background:${c}"></div></div><div class="amt">${sgn(v)}</div></div>`;
+  }).join("") + `<div class="tie ${m.bridge===m.full?"ok":"bad"}">${m.bridge===m.full ? "Bridge ties: " : "Bridge does NOT tie: "}${sgn(m.bridge)} vs ${sgn(m.full)}</div>
+  <div class="note" style="margin-top:8px">Gross matched difference ${usd(m.gross)} is the size of the matched items to review; it does not enter the bridge.</div>`;
+}
+function renderTable(rows, m, ss){
+  const el = document.getElementById("excTable"), note = document.getElementById("excNote");
+  const exc = rows.filter(p => p.status!=="Exact match");
+  if (!m.n){ el.innerHTML = `<div class="empty"><strong>No properties match these filters</strong>Press Reset or pick another state or status.</div>`; return; }
+  if (!exc.length){ el.innerHTML = `<div class="empty"><strong>No exceptions in this selection</strong>${ss==="Exact match" ? "Exact matches are not exceptions. " : ""}${m.exact} exact match${m.exact===1?"":"es"} selected; those rows are on the All properties sheet of the workbook.</div>`; return; }
+  const src = p => p ? `${esc(p.file)} · ${esc(p.sheet)} row ${p.row}` : `<span class="missing">Missing</span>`;
+  el.innerHTML = `<table><thead><tr><th>State</th><th>Tax year</th><th>Property ID</th><th>Property name</th><th class="num">Book USD</th><th class="num">Bill USD</th><th class="num">Bill minus Book</th><th>Status</th><th>Book source</th><th>Bill source</th></tr></thead><tbody>` +
+    exc.map(p => `<tr><td>${esc(p.state)}</td><td>${esc(p.year)}</td><td class="pid">${esc(p.id)}</td><td>${esc(p.name)}</td>
+      <td class="num">${p.book!=null ? esc(usd(p.book)) : '<span class="missing">Missing (no book row)</span>'}</td>
+      <td class="num">${p.bill!=null ? esc(usd(p.bill)) : '<span class="missing">Missing (no bill)</span>'}</td>
+      <td class="num">${p.diff!=null ? esc(sgn(p.diff)) : "n/a"}</td>
+      <td><span class="status" style="--sw:${SW[p.status]}">${esc(p.status)}</span></td>
+      <td class="src">${src(p.bookSrc)}</td><td class="src">${src(p.billSrc)}</td></tr>`).join("") + `</tbody></table>`;
+}
+function renderSourceCheck(){
+  const el = document.getElementById("srcCheck");
+  const rows = DATA.sourceTotals.map(s => {
+    const side = s.file.includes("book") ? "book" : "bill";
+    const sum = PROPS.filter(p=>p.state===s.state && p[side]!=null).reduce((a,p)=>a+p[side],0);
+    const n = PROPS.filter(p=>p.state===s.state && p[side]!=null).length;
+    const ok = sum===s.total && n===s.rows;
+    return `<tr><td>${esc(s.file)}</td><td class="num">${s.rows}</td><td class="num">${esc(usd(s.total))}</td><td class="num">${n}</td><td class="num">${esc(usd(sum))}</td><td class="${ok?"ok":"bad"}">${ok?"OK":"CHECK"}</td></tr>`;
+  });
+  el.innerHTML = `<table><thead><tr><th>Source file</th><th class="num">File rows</th><th class="num">File total</th><th class="num">Rows here</th><th class="num">Total here</th><th>Result</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
+}
+document.getElementById("genDate").textContent = DATA.generated;
+fState.addEventListener("change", render); fStatus.addEventListener("change", render);
+document.getElementById("reset").addEventListener("click", () => { fState.value="ALL"; fStatus.value="ALL"; history.replaceState(null,"",location.pathname); render(); });
+readHash(); renderSourceCheck(); render();
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "label": "FICTIONAL TRAINING DATA - NOT TAX ADVICE",
+  "scenario": "September 2026 property-tax book-to-bill review",
+  "currency": "USD",
+  "meaning": "Amounts are invented book accruals and bills, not assessments, tax rates, payments, or legal deadlines.",
+  "key": [
+    "state",
+    "tax_year",
+    "property_id"
+  ],
+  "book": [
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010001",
+      "property_name": "OH Training Property 1",
+      "book_usd": 12000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010002",
+      "property_name": "OH Training Property 2",
+      "book_usd": 18000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010003",
+      "property_name": "OH Training Property 3",
+      "book_usd": 9000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010004",
+      "property_name": "OH Training Property 4",
+      "book_usd": 15000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010005",
+      "property_name": "OH Training Property 5",
+      "book_usd": 22000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010006",
+      "property_name": "OH Training Property 6",
+      "book_usd": 14000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020001",
+      "property_name": "TX Training Property 1",
+      "book_usd": 20000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020002",
+      "property_name": "TX Training Property 2",
+      "book_usd": 16000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020003",
+      "property_name": "TX Training Property 3",
+      "book_usd": 24000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020004",
+      "property_name": "TX Training Property 4",
+      "book_usd": 10000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020005",
+      "property_name": "TX Training Property 5",
+      "book_usd": 18000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020006",
+      "property_name": "TX Training Property 6",
+      "book_usd": 12000
+    }
+  ],
+  "bills": [
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010001",
+      "property_name": "OH Training Property 1",
+      "bill_usd": 12000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010002",
+      "property_name": "OH Training Property 2",
+      "bill_usd": 18500
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010003",
+      "property_name": "OH Training Property 3",
+      "bill_usd": 8500
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010004",
+      "property_name": "OH Training Property 4",
+      "bill_usd": 15000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010005",
+      "property_name": "OH Training Property 5",
+      "bill_usd": 22000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020001",
+      "property_name": "TX Training Property 1",
+      "bill_usd": 20000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020002",
+      "property_name": "TX Training Property 2",
+      "bill_usd": 16000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020003",
+      "property_name": "TX Training Property 3",
+      "bill_usd": 25200
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020004",
+      "property_name": "TX Training Property 4",
+      "bill_usd": 10000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020005",
+      "property_name": "TX Training Property 5",
+      "bill_usd": 18000
+    },
+    {
+      "state": "TX",
+      "tax_year": 2026,
+      "property_id": "020006",
+      "property_name": "TX Training Property 6",
+      "bill_usd": 12000
+    },
+    {
+      "state": "OH",
+      "tax_year": 2026,
+      "property_id": "010007",
+      "property_name": "OH Training Property 7",
+      "bill_usd": 16000
+    }
+  ]
+}

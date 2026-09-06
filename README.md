@@ -7,16 +7,22 @@ Copy a prompt, let Claude do the work, open the result, and check it.
 
 [Download the full PDF](https://raw.githubusercontent.com/jasonjeske/vscode-claude-code/main/output/pdf/claude-code-office-guide.pdf) ·
 [Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip) ·
-[Quick help](HELP.md)
+[Quick help](HELP.md) · [Example results](practice/meeting-results/README.md)
 
 The main path uses the **Claude Code extension inside Visual Studio Code**.
 You talk in its message box, much like a chat assistant. Claude can also read and
 create files in your work folder using its available tools. You do not need the
 Claude desktop app, Cowork, programming knowledge, or a Node.js course.
 
-**Your finished project:** two bill spreadsheets become a checked master workbook,
+**Your finished project:** four fictional Ohio and Texas spreadsheets become a checked master workbook,
 a browser dashboard for a meeting, a Word briefing, and a short PowerPoint.
 You will also practice reconciliation, PDF extraction, and sourced tax research.
+
+**Real walkthrough:** the screenshots were captured while doing these tasks on a Mac
+with VS Code, its Claude Code extension, and Microsoft Office. The files are invented.
+Windows differences are written beside the steps. Windows itself was not tested.
+Sign-in was already configured on the capture computer; model labels and menus may differ.
+Click a screenshot on GitHub to enlarge it. Always copy the text block, not the picture.
 
 ## How to use this course
 
@@ -29,8 +35,7 @@ You will also practice reconciliation, PDF extraction, and sourced tax research.
    block only after the first request finishes. Do not paste a whole lesson at once.
 5. Open the saved output in the appropriate app and do the check below the prompt.
 
-These gray blocks contain **ordinary requests, not programming code**. The only
-shell commands appear in the optional terminal lesson and are clearly labeled.
+These gray blocks contain **ordinary requests, not programming code**. Shell commands are separately labeled and optional.
 In the PDF, select the prompt text and copy it; the words are selectable, not pictures.
 Review pasted text before sending. You can also type or dictate your own wording.
 
@@ -55,97 +60,162 @@ free; your employer's Claude access and Microsoft Office licensing are separate.
 
 ## 1. Open your workspace
 
-**Goal:** see your files on the left and Claude's conversation beside them.
+**Goal:** open one course folder, see its files, and get a reply from Claude.
+A **project** here simply means a folder of related work.
 
-### Install and open the extension
+### Get the practice folder
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/download) through
-   your company software portal or Microsoft's installer. Open it.
-2. Press **Ctrl+Shift+X** (Mac: **Cmd+Shift+X**) to open Extensions.
-   Search **Claude Code**, check that the publisher is **Anthropic**, and click **Install**.
-3. Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**). This opens the **Command Palette**,
-   a search box for VS Code actions. Type **Claude Code** and select **Open in New Tab**.
-4. Follow your employer's sign-in or connection instructions. If already configured,
-   use that setup. Do not substitute a personal account or paste credentials into chat.
+Install [VS Code](https://code.visualstudio.com/download) from your company portal or
+Microsoft. Open it. If your employer already installed it, start there.
+
+The screenshots use **Git: Clone**, which downloads a working copy of this repository.
+Git must be available on your computer. If VS Code asks you to install Git and you
+cannot, use the ZIP option below instead.
+
+1. Press **Ctrl+Shift+P** on Windows or **Cmd+Shift+P** on Mac.
+   This opens the **Command Palette**, a search box for actions.
+2. Type **Git: Clone** and select that action.
+
+![VS Code Command Palette with Git: Clone selected](assets/walkthrough/01-git-clone-command.jpg)
+
+3. Paste this into the repository URL field and press **Enter**:
+
+```text
+https://github.com/jasonjeske/vscode-claude-code.git
+```
+
+![Repository URL entered in the Git Clone field](assets/walkthrough/02-repository-url.jpg)
+
+4. Select an approved learning folder, such as **Documents > Tax Training**.
+   Create it first if needed. The example uses an empty folder named **demo**.
+   Click **Select as Repository Destination**.
+
+![An empty destination folder selected for the clone](assets/walkthrough/03-clone-destination.jpg)
+
+5. When VS Code asks whether to open the repository, click **Open**.
+   The project is the new **vscode-claude-code** folder inside your destination.
+   If asked about folder trust, review the source and your company policy first.
+
+![Open the newly cloned repository dialog](assets/walkthrough/04-open-cloned-repository.jpg)
+
+**ZIP alternative:** download the practice kit at the top. In Windows Downloads,
+right-click the ZIP and choose **Extract All**. On Mac, double-click the ZIP.
+In VS Code choose **File > Open Folder** and select the extracted folder.
+Open the whole repository, not just its practice subfolder, so every prompt below
+uses the same paths.
+
+**Optional command alternative:** if you already use Git, open a terminal in your
+chosen learning folder and run this shell command:
+
+```sh
+git clone https://github.com/jasonjeske/vscode-claude-code.git
+```
+
+Then use **File > Open Folder** in VS Code and choose **vscode-claude-code**.
+You do not need to learn more Git commands for this course.
+
+### Install and open Claude Code
+
+1. Press **Ctrl+Shift+X** (Mac: **Cmd+Shift+X**) to open Extensions.
+   Search **Claude Code**. Check that the publisher is **Anthropic**, then click **Install**.
+
+![Official Anthropic Claude Code extension and Install button](assets/walkthrough/05-install-anthropic-extension.jpg)
+
+2. Open the Command Palette again. Type **Claude Code** and select **Open in New Tab**.
+
+![Claude Code Open in New Tab in the Command Palette](assets/walkthrough/06-open-claude-command.jpg)
+
+3. Follow your employer's sign-in or connection instructions. If already configured,
+   use that connection. Do not paste credentials into chat.
+4. Click the message box at the bottom of the **Claude Code** tab.
+   Paste the block below, then press **Enter**. Wait for the reply.
 
 **Copy into Claude's message box:**
 
 ```text
-I'm new to the Claude Code extension in VS Code.
-Help me with Office work one step at a time, using plain language.
-Tell me what to click and what success looks like. Can you reply here?
+I am learning property-tax accounting with fictional practice files. Look only
+in the practice folder. Tell me which Excel files are there, what each is for,
+and the first small task I should try. Do not change any files yet.
 ```
 
-**Check:** Claude replies in a tab labeled Claude Code. VS Code's separate Chat
-button may open another assistant. You want the Anthropic extension.
+![A normal-language request entered in Claude Code before sending](assets/walkthrough/15-first-prompt.jpg)
 
-### Open the practice folder
+**Check:** Claude identifies the files inside **practice** and explains a first task.
+Its wording will differ. It should not claim to have checked a file it cannot read.
+VS Code's separate Chat button may open another assistant; use the Anthropic tab.
 
-1. Download the **practice kit** using the link at the top of this guide.
-2. In Windows Downloads, right-click the ZIP and choose **Extract All > Extract**.
-   On Mac, double-click it.
-3. Inside the extracted repository folder, copy **practice** to your approved
-   learning location. Rename this copy **Tax Practice**.
-4. In VS Code choose **File > Open Folder** and select **Tax Practice**.
-   Review the source and company policy before accepting a folder-trust prompt.
-5. Open **View > Explorer**. Explorer is VS Code's list of files and folders.
+### Find your way around
 
-**Copy into Claude:**
-
-```text
-List the files in this work folder. Do not change anything yet.
-Tell me which files are the practice spreadsheets.
-```
-
-**Check:** you have **practice.xlsx**, **OH-bills.xlsx**, **TX-bills.xlsx**, and three
-text files: **CLAUDE.md**, **ANSWER-KEY.md**, and **STARTER-SKILLS.md**.
-Keep the answer key for your later check. Claude should analyze the workbooks themselves.
-
-### Know where each thing belongs
-
-| Place | Use it for |
+| Place | What you do here |
 | --- | --- |
-| Claude Code message box | Type, paste, or dictate requests and follow-ups |
-| VS Code Explorer | Find files, create folders, and open text notes |
-| VS Code text editor | Read or edit Markdown notes and longer written requests |
-| Excel, Word, PowerPoint, PDF reader | Open and review finished Office documents |
-| Browser | Read this course and present your saved dashboard |
+| Claude Code message box | Ask for work, answer questions, request changes |
+| VS Code Explorer on the left | Expand folders and find files |
+| VS Code text editor | Read or edit .md notes and saved requests |
+| Excel / Word / PowerPoint | Review .xlsx / .docx / .pptx files in their real apps |
+| Browser | Present the saved .html dashboard |
 
-An **.xlsx** file opens in Excel, **.docx** in Word, **.pptx** in PowerPoint.
-VS Code does not replace these apps. Claude may use code internally to make files;
-you describe the result and review it. A skill cannot supply a missing file tool.
+Choose **View > Explorer** if the file list is hidden. A small arrow expands a folder.
+A path such as **practice/meeting-inputs/OH-book.xlsx** means open **practice**, then
+**meeting-inputs**, then that file. **outputs** is where Claude will save your new work.
+Claude may use code internally; you describe the result and check it. You do not
+need to write JavaScript, Python, or Node.js code.
 
 ## 2. Add the skills
 
-**Goal:** install once, then ask for work in ordinary language.
-A **skill** is a saved procedure Claude can select when your request fits.
-A **plugin** installs a group of skills. You do not need to type their names to use them.
+**Goal:** install once, then describe your work in ordinary language.
+A **skill** is a saved procedure Claude can select when the request fits.
+A **plugin** installs a group of skills. You do not need to type skill names.
 
-### Install the two essential packages
+### Install the accounting package
 
-1. Beside Claude's message box, click the small **/** menu button.
-   Choose **Customize > Plugins**. This is a setup menu, not a work prompt.
-2. Open **Marketplaces**, add the source below, then return to **Plugins**.
-   Install **property-tax-workbench** and choose **Install for you**.
+1. Click the small **/** button beside Claude's message box.
+   Choose **Customize > Manage plugins**. Some versions say **Plugins**.
+   This is a setup menu, not a special way to ask for work.
 
-**Copy into the marketplace source field:**
+![The Claude Code command menu includes Manage plugins](assets/walkthrough/07-manage-plugins-menu.jpg)
+
+2. Open **Marketplaces**. Paste this into the source field and click **Add**:
 
 ```text
 jasonjeske/vscode-claude-code
 ```
 
-3. Add this second marketplace source. In Plugins, install **document-skills**
-   from **anthropic-agent-skills**, choosing **Install for you**.
+![The property-tax marketplace source field and existing source listing](assets/walkthrough/08-property-tax-marketplace.jpg)
 
-**Copy into the marketplace source field:**
+**Check:** **property-tax-learning** appears in the list. It was already added on
+our capture computer, so we skipped adding it twice. If yours is already listed,
+you should skip the duplicate too. Adding a marketplace alone does not install its plugin.
+
+3. Return to **Plugins**. Find **property-tax-workbench** and click **Install**.
+
+![Property-tax-workbench in the plugin list with its Install button](assets/walkthrough/11-accounting-plugin-install.jpg)
+
+4. Choose **Install locally (only you, only this repo)** for this practice run.
+   This is the option used in our screenshots. **Install for you** makes the plugin
+   available in other folders too; use that scope later if your company permits it.
+
+![Plugin installation scope choices, including local to this repository](assets/walkthrough/12-plugin-install-scope.jpg)
+
+### Install the Office package
+
+1. In **Marketplaces**, add the official Anthropic source:
 
 ```text
 anthropics/skills
 ```
 
-4. Follow the restart banner, or use [lesson 10](#10-restart-and-recover).
-   Open a new Claude conversation afterward. Menu labels can differ by version;
-   if Plugins is missing or blocked, ask IT to update or enable your approved setup.
+![The official anthropics/skills marketplace source entered before Add](assets/walkthrough/09-office-marketplace-source.jpg)
+
+2. In **Plugins**, find **document-skills** from **anthropic-agent-skills**.
+   Click **Install** and choose the same local scope.
+
+![Anthropic document-skills plugin ready to install](assets/walkthrough/13-office-plugin-install.jpg)
+
+3. Save any text files. Open the Command Palette, type **Developer: Reload Window**,
+   and select it. Wait for VS Code to return, then open Claude Code again.
+   Start a new conversation so it sees the new skills.
+
+![Developer Reload Window selected in the Command Palette](assets/walkthrough/14-reload-window.jpg)
 
 **Copy into Claude:**
 
@@ -156,8 +226,11 @@ Tell me which are available and which file tools are missing.
 Do not install extra software or change company settings.
 ```
 
-**Check:** both packages are enabled. Then complete a small file task in lesson 4;
-a list of names alone does not prove file creation works.
+**Check:** the two packages are enabled. A skill list alone is not proof that file
+creation works. The next exercises test that. If a needed library is missing,
+Claude should explain it and your approved installation options. In our Mac run,
+Claude used project-local document libraries. Your company's setup may differ.
+A skill does not install Office or grant access to employer systems.
 
 ### Your complete skill map
 
@@ -184,13 +257,13 @@ The names identify what is installed; the requests describe the actual work.
 
 ### Add the five optional helpers when ready
 
-In Tax Practice, **STARTER-SKILLS.md** contains the reviewed source list.
+In **practice**, **STARTER-SKILLS.md** contains the reviewed source list.
 The five helpers are the last five rows above. No additional collection is needed.
 
 **Copy into Claude:**
 
 ```text
-Read STARTER-SKILLS.md. Check what I already have, then install only
+Read practice/STARTER-SKILLS.md. Check what I already have, then install only
 missing skills from its five selected sources. Show me the additions.
 Preserve existing skills and include the required supporting files.
 Tell me what installed successfully and what is still unavailable.
@@ -203,356 +276,462 @@ are not all running at once. Avoid duplicates and start with one task at a time.
 
 ## 3. Work with files and longer prompts
 
-**Goal:** give Claude the right inputs without retyping their contents.
+**Goal:** open your sample documents and save a request Claude can read later.
+The ready-made files are included, so you can start without creating them yourself.
+All names, properties, and money amounts are invented. They are not actual tax bills,
+assessments, tax rates, filing deadlines, or customer records.
 
-### Add a work file
+### Open the practice inputs
 
-Use **File Explorer** on Windows or **Finder** on Mac to **copy** an approved file
-into Tax Practice. Return to VS Code: it should appear in Explorer. Name the exact
-file in your request. There is no requirement to upload a workbook into a chat website.
-You can also hold **Shift** while dragging a file from Explorer into Claude's message
-box to reference it. Referencing a file does not guarantee a tool can read its format.
+1. Expand **practice > meeting-inputs** in VS Code Explorer.
+2. For Office files, open the same folder in **File Explorer** (Windows) or **Finder**
+   (Mac). Double-click a workbook to open Excel. Alternatively use Excel's **File > Open**.
+   On Mac choose **On My Mac**; on Windows choose **Browse** or **This PC**.
+3. Open **meeting-brief.docx** in Word. Read the one-page review task.
+
+![Fictional meeting brief opened and reviewed in Microsoft Word](assets/walkthrough/20-word-practice-brief.jpg)
+
+4. Open **meeting-starter.pptx** in PowerPoint. Click the three thumbnails on the
+   left to read the purpose, review method, and next steps.
+
+![The first agenda slide opened in native PowerPoint](assets/walkthrough/22-powerpoint-agenda.jpg)
 
 **Copy into Claude:**
 
 ```text
-Look at OH-bills.xlsx in this folder. Tell me its sheet names,
-column headings, and what each row represents. Do not change it.
+Read the four Excel files and the meeting brief in practice/meeting-inputs.
+Explain what we are reviewing and which fields can match book records
+to bill records. Do not change the inputs. Ask one question if needed.
 ```
 
-**Check:** Claude identifies actual workbook content. If it cannot read Excel,
-ask it to name the missing tool and give you a short request for IT.
+**Check:** four Excel files, two states, one 2026 review. The matching fields are
+**State + Tax year + Property ID**. IDs are text so leading zeros are retained.
+The source total is a check, not another property row.
+
+| Input file | Detail rows | Source amount, USD |
+| --- | --- | --- |
+| OH-book.xlsx | 6 | 90,000 |
+| OH-bills.xlsx | 6 | 92,000 |
+| TX-book.xlsx | 6 | 100,000 |
+| TX-bills.xlsx | 6 | 101,200 |
+
+### Optional: have Claude make a fresh practice kit
+
+The supplied inputs were actually created through the extension using the request
+below. To repeat it, ask Claude to use **practice/my-meeting-inputs** instead so the
+supplied files stay unchanged. Use that new path in later requests too.
+
+**Copy into Claude, after choosing your new folder:**
+
+```text
+Create a fictional meeting practice kit from practice/meeting-case.json.
+Save OH-book.xlsx, OH-bills.xlsx, TX-book.xlsx, and TX-bills.xlsx
+in practice/my-meeting-inputs. Keep IDs as text and include source totals.
+Also create a one-page meeting-brief.docx and a three-slide meeting-starter.pptx.
+Use the available Office skills. Label all files fictional training data.
+Preserve existing files. Explain any missing tools before installing them.
+Check the new files and tell me what to open.
+```
+
+**Check:** open every file in Office. Each workbook's **E12** total should match
+the table above. If Excel shows a formula error or a repair warning, stop and ask
+Claude to correct the copy before using its numbers.
 
 ### Save a longer request as Markdown
 
-**Markdown** is ordinary text with simple formatting. A filename ending in **.md**
-is a text note, not a program. It does not execute when saved.
+**Markdown** is a plain text note with simple formatting. A **.md** file is not a
+program and does not run when saved. It is useful for a request you want to reuse.
 
-1. In VS Code Explorer, right-click an empty area and choose **New File**.
-   Name it **WORK-REQUEST.md**.
-2. Paste the block below **into that text file**, not into chat.
-3. Save with **Ctrl+S** (Mac: **Cmd+S**). **Ctrl+Shift+V** (Mac: **Cmd+Shift+V**)
-   previews the formatted note; return to its text tab to edit.
+1. Choose **File > New Text File** in VS Code.
+2. Paste the following into the editor, not Claude's chat box.
+3. Choose **File > Save As**, name it **MY-MEETING.md**, and save it in the project root,
+   beside README.md. **Ctrl+S** (Mac: **Cmd+S**) saves later edits.
 
-**Copy into WORK-REQUEST.md:**
-
-```text
-# My work request
-Goal: Prepare a clear bill-review report for a team meeting.
-Inputs: OH-bills.xlsx and TX-bills.xlsx in this folder.
-Outputs: A combined Excel workbook and a browser dashboard in outputs.
-Rules: Keep originals. Preserve property IDs and source references.
-Checks: Reconcile every source count and amount to the combined result.
-Audience: A manager who needs totals, exceptions, and next actions.
-First step: Inspect the files and ask about any unclear requirement.
-```
-
-**Then copy into Claude:**
+**Copy into MY-MEETING.md:**
 
 ```text
-Read WORK-REQUEST.md. Summarize the task in three bullets.
-Ask one question if needed, then give me a short plan.
-Wait before creating the outputs.
+# My meeting request
+
+Use plain beginner-friendly language.
+
+## Files
+Read practice/meeting-inputs/meeting-brief.docx and meeting-starter.pptx.
+Use outputs/meeting-reconciliation.xlsx for the verified numbers.
+
+## What I need
+Create outputs/meeting-briefing.docx: a one-page summary for my reviewer.
+Create outputs/meeting-results.pptx: five readable slides for a five-minute
+meeting.
+Include totals, a state comparison chart, exceptions, the reconciliation
+bridge,
+and the questions we need to resolve. Keep amounts consistent with Excel.
+
+## Checks
+Label everything fictional training data. Do not invent causes or tax rules.
+Use USD and 2026. Keep inputs unchanged. Tell me what to check in Office.
 ```
 
-**Follow-up when the plan is right:**
+![Save As dialog for MY-MEETING.md in the project folder](assets/walkthrough/27-save-markdown-request.jpg)
 
-```text
-The plan is right. Carry out the first step and tell me what you found.
-```
+4. Press **Ctrl+Shift+V** (Mac: **Cmd+Shift+V**) to preview the formatted note.
+   Click its text tab to edit again.
 
-**Check:** the plan uses the named inputs and output folder. A new chat can read
-this note later; it does not need you to paste the whole request again.
+![Saved Markdown request preview beside the Claude Code conversation](assets/walkthrough/28-markdown-preview.jpg)
+
+**Check:** the request names the inputs, two outputs, audience, and checks.
+Save it now; Claude will execute it in lesson 6 after the reconciliation is ready.
+To use an approved work document later, copy it into the project folder and name its
+path in your request. You do not need to upload it through the Claude website.
 
 ## 4. Combine and check Excel files
 
-**Goal:** build the workpaper that will support the meeting report.
-Use one conversation for the following steps so follow-ups have context.
+**Goal:** combine four inputs, find differences, and prove the totals in Excel.
+A **reconciliation** matches records from two sources and identifies differences.
+Keep using one Claude conversation for the next few steps.
 
-### Combine two bill workbooks
-
-**Copy into Claude:**
-
-```text
-Combine OH-bills.xlsx and TX-bills.xlsx into outputs/combined-bills.xlsx.
-Put the detail bill rows in one list. Exclude source total rows.
-Keep property IDs as text and retain source filename, sheet, and row.
-Preserve originals. Check each source count and amount against the output.
-```
-
-**Follow-up:**
-
-```text
-Add a Checks sheet showing each source's detail count and amount,
-the combined totals, and any unresolved issues. Save the workbook.
-```
-
-**Open and check:** in File Explorer or Finder, open **outputs**, then double-click
-**combined-bills.xlsx** to open Excel. Expect **4 bill rows**, **Ohio $300**,
-**Texas $700**, **total $1,000**. IDs such as **000101** must keep leading zeros.
-Do not include **practice.xlsx** or prior outputs in this consolidation.
-
-### Review and reconcile a different workbook
-
-**practice.xlsx** is a separate exercise with a Book sheet and a Bill sheet.
-A **reconciliation** matches records and explains where the two sides differ.
+### Ask for the reconciliation
 
 **Copy into Claude:**
 
 ```text
-Inspect practice.xlsx without changing it. Compare the Book and Bill
-sheets using State, TaxYear, and PropertyID as the matching key.
-Check for duplicate keys before matching. Save matched differences,
-unmatched rows, and control totals in outputs/reconciliation.xlsx.
-Keep the source unchanged and retain row references.
+Continue in plain beginner-friendly language without personal names or persona
+labels. Read the four workbooks in practice/meeting-inputs. Combine the book
+files and the bill files, then reconcile them by State, Tax year, and Property
+ID. Preserve leading zeros and exclude source-total rows. Save
+outputs/meeting-reconciliation.xlsx with source data, all properties,
+exceptions, state totals, and checks. Show Bill minus Book, exact matches,
+amount differences, book-only and bill-only items. Keep matched net and gross
+differences separate, and prove the bridge to the full difference. Use blank
+cells for missing counterparts. Preserve the source files. Tell me three
+numbers to check in Excel.
 ```
+
+![Reconciliation request entered in the Claude Code extension](assets/walkthrough/19-reconcile-prompt.jpg)
 
 **Follow-up:**
 
 ```text
-Show full Bill minus Book, matched net difference, and the sum of
-absolute matched differences separately. Keep unmatched amounts visible.
-Do not treat missing counterparts as measured zero or invent causes.
+Check duplicate matching keys before joining the data.
+Format counts as whole numbers, not currency.
+Show how every source row reaches the result, and confirm that source
+total rows were excluded. Flag ambiguities instead of guessing.
 ```
 
-**Check in Excel:** Book totals **$1,000**; Bill totals **$1,100**; full difference
-**+$100**. The matched differences **+$10** and **-$10** cancel to **$0 net**, but
-represent **$20 gross**. There is one **$400 Book-only** row and one **$500 Bill-only**
-row. A zero net difference does not mean every item reconciles.
+Wait for Claude to finish. Expand **outputs** in Explorer to find the new file.
+The exact layout can vary; the financial checks below must still agree.
 
-### Understand a formula, then make a checked change
+### Open and calculate the result
+
+1. In File Explorer/Finder, open **outputs/meeting-reconciliation.xlsx** in Excel.
+2. Select **Formulas > Calculate Now** if needed, then save the output workbook.
+   This calculates formulas in Excel itself. Do not save over the original inputs.
+3. Click the **Checks** sheet tab at the bottom.
+
+![Native Excel showing twelve reconciliation checks marked OK](assets/walkthrough/25-excel-reconciliation-checks.jpg)
+
+**Check:** our captured run has **12 OK checks**, source amounts matching the inputs,
+and a zero bridge-control difference. A message from Claude alone is not enough.
+If it cannot run Excel, it must say so; you can still perform this native check yourself.
+
+4. Click **State totals** and compare these values:
+
+![State totals and reconciliation bridge in Microsoft Excel](assets/walkthrough/26-excel-state-totals.jpg)
+
+| Measure | Expected result |
+| --- | --- |
+| Book / Bill | $190,000 / $193,200 |
+| Full difference, Bill minus Book | +$3,200 |
+| Unique property keys / Exact matches | 13 / 8 |
+| Amount differences / Book-only / Bill-only | 3 / 1 / 1 |
+| Matched net / Matched gross | +$1,200 / $2,200 |
+| Book-only / Bill-only amounts | $14,000 / $16,000 |
+| Bridge | $1,200 + $16,000 - $14,000 = $3,200 |
+
+Ohio has +$500 and -$500 matched differences. They cancel to **$0 net**, but
+**$1,000 gross** still needs review. Texas contributes +$1,200. A missing counterpart
+is **missing**, not a measured zero. The source does not explain why any item differs.
+
+**If something looks wrong, copy:**
+
+```text
+Pause. Trace the incorrect number back to its source rows.
+Explain the mismatch, fix the output copy, and rerun all reconciliation
+checks. Preserve the four input workbooks and keep unknown causes open.
+```
+
+This workbook contains a copy of the source rows. Editing an external input file
+does not automatically import it into this workbook. Ask Claude to rebuild and
+repeat the checks when sources change. Compare with the supplied
+[checked example](practice/meeting-results/meeting-reconciliation.xlsx) only after trying.
+
+### A small formula exercise
+
+The separate **practice/practice.xlsx** is a smaller Ohio example.
 
 **Copy into Claude:**
 
 ```text
-Explain the formula in Book!D9 of practice.xlsx in plain language.
-Walk through the cells it uses. Do not edit anything.
+Explain Book!D9 in practice/practice.xlsx in plain language.
+Walk through the cells it sums. Do not change the file.
 ```
+
+![Original practice workbook in Excel with its SUM formula and 1000 total](assets/walkthrough/18-excel-source-total.jpg)
 
 **Follow-up:**
 
 ```text
-Create outputs/formula-practice.xlsx as a copy. Add a clearly labeled
-example of Bill minus Book using the full source totals.
-Explain the formula and verify its result. Keep the original unchanged.
+Make outputs/formula-practice.xlsx as a copy. Add a labeled comparison
+of the full Bill total minus Book total. Explain and verify the formula.
 ```
 
-**Check:** Book!D9 sums four source amounts to **$1,000**. The added comparison
-should show **+$100**, with its sign explained. Open the result in Excel to check
-calculation. Existing macros, Power Query, or PivotTables need separate native
-Excel checks; a skill name does not guarantee these features will be preserved.
+**Check:** Book is **$1,000**, Bill is **$1,100**, full difference **+$100**.
+Do not mix this tiny exercise with the meeting data. The older two-file consolidation
+exercise is also available in [the answer key](practice/ANSWER-KEY.md).
+Macros, Power Query, and PivotTables need their own native Excel checks before real use.
 
 ## 5. Make a dashboard for a meeting
 
-**Goal:** show colleagues the result without making them read spreadsheet rows.
-Excel remains the workpaper. A **browser dashboard** is a saved **.html** report
-that opens in Edge, Chrome, or another browser. It is a snapshot, not a live data feed.
+**Goal:** present the checked result without asking colleagues to read spreadsheet rows.
+An **HTML dashboard** is a saved browser report. This one is a static snapshot,
+with filters for exploring its embedded data, not a live connection to Excel.
 
-### Build a presentation from the checked bills
+### Create the meeting dashboard
+
+**Mac test status:** the sample dashboard's data and calculations passed independent
+checks. Browser rendering, filters, and print review are still pending in this draft.
+The table below is the test to perform, not a claim that browser testing is complete.
 
 **Copy into Claude:**
 
 ```text
-Use outputs/combined-bills.xlsx to create outputs/meeting-dashboard.html.
-Make a clean browser report for a property-tax review meeting:
-total bill amount, bill count, a chart by state, and a detail table.
-Add a state filter and Reset. Show source filenames and the snapshot date.
-Use only the checked detail rows. Keep unresolved checks visible.
-Make it open locally without a server or external downloads.
-Save the file and verify every displayed number against the workbook.
+Create outputs/meeting-dashboard.html for a five-minute property-tax review
+meeting, using the four Excel inputs and meeting-reconciliation.xlsx. Make one
+self-contained browser file that works offline, with no installation or
+external web requests. Use a polished navy, copper, and ivory design with
+large readable labels. Show Book total, Bill total, Bill minus Book,
+exact-match percentage with its denominator, exception count, and matched net
+versus gross difference. Include a state comparison bar chart, a status donut,
+the reconciliation bridge, and an exception table with source rows. State and
+status filters must update the numbers, charts, and detail together; include
+Reset and an empty state. Show missing counterparts as missing. Label it
+fictional 2026 USD data and a static snapshot, not live tax advice. Check
+every total against the sources. Tell me how to open it and test one filter.
+Keep the existing files unchanged.
 ```
 
-**Open it:** in File Explorer or Finder, open **outputs** and double-click
-**meeting-dashboard.html**. If VS Code shows the HTML source, close that tab and
-open the file through File Explorer/Finder, or choose **Open with > your browser**.
-You do not need to understand or edit the HTML code.
+![Meeting dashboard request entered in Claude Code](assets/walkthrough/21-dashboard-prompt.jpg)
 
-**Check:** All states shows **4 bills / $1,000**. Ohio shows **2 / $300**;
-Texas shows **2 / $700**. The chart, cards, and detail rows must all respond together.
-Reset restores all four. Compare at least one displayed record with its source row.
+1. Wait until Claude saves **outputs/meeting-dashboard.html**.
+2. Open **outputs** in File Explorer/Finder. Double-click the HTML file, or choose
+   **Open with > Edge/Chrome**. If VS Code displays code, close that editor tab and
+   open the file through File Explorer/Finder instead.
+3. In your browser, inspect the report before presenting it.
 
-### Make it meeting-ready
+**Check before filtering:** Book **$190,000**, Bill **$193,200**, full difference
+**+$3,200**, **5 exceptions**, exact matches **8 of 13 = 61.5%**.
+The denominator must be visible; a percentage without its scope is ambiguous.
 
-**Follow-up in the same Claude conversation:**
+**Follow-up:**
 
 ```text
-Improve the dashboard for screen sharing. Use larger labels, clear
-currency units, and a short What needs attention section.
-Keep verified facts separate from questions. Add a print-friendly view.
-Recheck the state filter and Reset after the changes.
+Make the dashboard easy to present on a shared screen. Increase small
+labels, show USD and the source snapshot, and add a clear next-action
+section. Keep every verified number unchanged. Check print layout too.
 ```
 
-For the separate reconciliation exercise:
+### Test it like a reviewer
 
-```text
-Use outputs/reconciliation.xlsx to create a separate browser report
-at outputs/reconciliation-dashboard.html. Show full difference,
-matched net, matched gross, and both unmatched amounts separately.
-Include an exception table with source references and review status.
-Do not mix these records with the two-file bill consolidation.
-```
+| Action | Expected result |
+| --- | --- |
+| Select Ohio | Book $90,000; Bill $92,000; full +$2,000; matched net $0; gross $1,000 |
+| Select Texas | Book $100,000; Bill $101,200; full +$1,200; six keys; one exception |
+| Select an exception status | Only that status contributes to the visible scope |
+| Choose a combination with no rows | Clear empty message; no stale totals |
+| Click Reset | All 13 keys and the original totals return |
 
-**Before presenting:** open the final saved file, reset filters, confirm the period
-and source scope, then share the browser window in your meeting. To make a handout,
-press **Ctrl+P** (Mac: **Cmd+P**) and choose **Save as PDF**, or the Windows PDF printer.
-Check the preview for clipped charts. Sharing the HTML file shares its embedded
-records too; a filter does not hide data from the recipient.
+Confirm the cards, charts, and table change together. Trace at least one exception
+to its workbook source row. Do not treat filtered data as hidden from recipients;
+the HTML file still contains the underlying records.
 
-**To refresh next month:** copy approved new inputs into a new work folder, ask
-Claude to rebuild, and repeat the checks. Reopening this HTML does not fetch new bills.
+Before the meeting, reset filters and confirm the period. Share the browser window.
+For a PDF handout press **Ctrl+P** (Mac: **Cmd+P**) and choose **Save as PDF**, or the
+Windows PDF printer. Check the preview for clipped charts before saving.
+For next month, rebuild from approved new files and repeat the checks.
 
 ## 6. Prepare Word, PowerPoint, and PDF files
 
-**Goal:** reuse the checked work in a short, consistent meeting pack.
-Keep working in the same conversation, or name the saved source files explicitly.
+**Goal:** turn the checked workbook into a consistent meeting pack.
+You already saved the request as MY-MEETING.md in lesson 3.
 
-### Write reviewer notes
+### Ask Claude to use the saved request
 
 **Copy into Claude:**
 
 ```text
-Read outputs/reconciliation.xlsx. Save outputs/reviewer-notes.md
-with the work performed, completed checks, exceptions, and open questions.
-Keep the full difference, matched net, matched gross, and unmatched
-amounts distinct. Do not invent explanations or approval status.
+Read MY-MEETING.md and carry out the task.
+Use the checked reconciliation for every amount. Preserve inputs.
+Save the Word briefing and five-slide presentation in outputs.
+Tell me what to open and what still needs checking in Office.
 ```
 
 **Follow-up:**
 
 ```text
-Make the notes easier to review. Add a next-action table with the
-question, source reference, and owner to be assigned. Do not invent owners.
+Check that Word and PowerPoint agree with Excel: $190,000 Book,
+$193,200 Bill, +$3,200 full difference, +$1,200 matched net,
+$2,200 matched gross, and five exceptions. Do not invent causes.
 ```
 
-**Check:** the notes distinguish **+$100 full**, **$0 matched net**, and **$20 matched
-gross**. The unmatched amounts remain visible. This uses the workpaper-summary procedure.
+### Review the meeting pack in Office
 
-### Create a Word briefing
+1. Open **outputs/meeting-briefing.docx** in Word. Use **View > Zoom > Whole page**
+   if needed. Confirm it is one readable page with no clipped table.
+
+![Corrected one-page Word briefing with figures, exceptions, and review questions](assets/walkthrough/30-word-meeting-briefing.jpg)
+
+2. Open **outputs/meeting-results.pptx** in PowerPoint. Click every slide thumbnail,
+   then use **Slide Show > From Beginning** to review at presentation size.
+3. Confirm the slides cover purpose, totals, state comparison, exceptions, and next
+   actions. Unknown causes and unassigned owners must remain open questions.
+
+![Finished PowerPoint totals slide with consistent 61.5 percent exact-match rate](assets/walkthrough/32-powerpoint-results.jpg)
+
+![PowerPoint state comparison chart using a zero baseline](assets/walkthrough/33-powerpoint-state-chart.jpg)
+
+![Five exceptions with source rows in the PowerPoint presentation](assets/walkthrough/34-powerpoint-exceptions.jpg)
+
+In our real run, the first deck had overlapping text and a truncated bar-chart
+axis. We asked for this correction and reopened the saved revision:
+
+```text
+On slide 1, the matched-net/gross value overlaps its subtitle.
+Give it enough space. Start the slide 2 bar-chart axis at zero.
+Use 61.5% for 8 of 13 consistently. Keep all amounts unchanged.
+```
+
+**If a page or slide is crowded, copy:**
+
+```text
+Simplify the crowded page or slide. Use larger readable text and fewer
+words. Preserve all important amounts, sources, and unresolved questions.
+Save the revision and tell me exactly which page or slide changed.
+```
+
+**Save workpaper notes too:**
+
+```text
+Save outputs/reviewer-notes.md with the work performed, source files,
+completed checks, five exceptions, and questions for the reviewer.
+Include a next-action table with owners marked To be assigned.
+Keep full difference, matched net, and matched gross distinct.
+```
+
+### Practice reading a PDF
+
+In Word, export a PDF copy of the briefing: **File > Save As** and choose **PDF**
+on Mac, or **File > Export > Create PDF/XPS** on Windows. Save it as
+**outputs/meeting-briefing.pdf**. Keep the Word original. On Mac, our capture uses
+**Best for printing** for a local export. Click **Export**.
+
+![Word Save As dialog with PDF format and local Best for printing selected](assets/walkthrough/31-word-export-pdf.jpg)
 
 **Copy into Claude:**
 
 ```text
-Turn outputs/reviewer-notes.md into outputs/meeting-brief.docx.
-Make a one-page Word briefing for my manager with the key results,
-a small exceptions table, source references, and decisions still needed.
-Keep all amounts and review status consistent with the source notes.
+Read outputs/meeting-briefing.pdf. Extract the complete Totals table
+into outputs/pdf-summary.xlsx with Page, Measure, Unit, Ohio, Texas,
+and Total columns. Separate Properties and Exact matches into count
+rows. Use USD for money and count for quantities. Keep page references.
+Flag unclear text instead of guessing. Keep the PDF unchanged.
 ```
+
+![Follow-up asking Claude to extract a complete summary and use correct units](assets/walkthrough/38-pdf-extraction-prompt.jpg)
 
 **Follow-up:**
 
 ```text
-Make the Word briefing easier to scan. Use short headings and a clear
-next-actions section. Keep it to one readable page without shrinking text.
+Compare the extracted figures with meeting-reconciliation.xlsx.
+Add a Checks sheet listing each comparison and any discrepancy.
 ```
 
-**Check in Word:** figures match the reconciliation; the table fits the page;
-uncertain causes remain questions. File creation uses Anthropic's docx skill.
+![Exported meeting briefing opened in the Mac Preview PDF reader](assets/walkthrough/39-pdf-in-preview.jpg)
 
-### Make the presentation
+![Complete PDF totals extracted into Excel with amounts and counts labeled separately](assets/walkthrough/44-pdf-summary-excel.jpg)
 
-**Copy into Claude:**
+![All 24 extracted values checked against the reconciliation workbook](assets/walkthrough/45-pdf-extraction-checks.jpg)
 
-```text
-Use outputs/meeting-brief.docx and outputs/reconciliation.xlsx to make
-outputs/meeting-slides.pptx. Create four slides: purpose, results,
-exceptions, and next steps. Include source notes and readable labels.
-Check every figure against the workbook. Keep uncertain items unresolved.
-```
+Our run compared **24 values**, and all 24 checks read **OK** in native Excel.
 
-**Follow-up:**
-
-```text
-Check the deck for crowded text, cut-off labels, and inconsistent figures.
-Simplify crowded slides and add short speaker notes. Save the revision.
-```
-
-**Check in PowerPoint:** review every slide at presentation size. Use the browser
-dashboard to explore detail during the meeting and the slides to tell the short story.
-
-### Extract a PDF table
-
-Copy a small public or approved PDF containing a table into Tax Practice.
-Rename **the copy** to **source-table.pdf**, or substitute its actual filename below.
-Scanned documents may require text recognition; unclear values must remain flagged.
-
-**Copy into Claude:**
-
-```text
-Extract the table from source-table.pdf into outputs/pdf-table.xlsx.
-Keep page numbers, headings, units, and relevant footnotes.
-Flag unreadable values instead of guessing. Preserve the source PDF.
-```
-
-**Follow-up:**
-
-```text
-Compare the extracted rows and totals with the source PDF.
-List any discrepancy or unclear value in a Checks sheet and save it.
-```
-
-**Check:** open the PDF and Excel side by side. Trace several rows, then check the
-full total and footnotes. Do not add unverified extracted figures to the meeting dashboard.
-For a final report PDF, use the dashboard's print step in lesson 5 or Word's PDF export.
+**Check:** open PDF and Excel side by side. Compare every extracted amount and its
+page reference. Scanned PDFs may need text recognition; unresolved values must
+not enter a dashboard. A text extraction that succeeded is not a visual layout check.
 
 ## 7. Research and save tax findings
 
-**Goal:** carry official-source research into your notes and reports.
-The same method works across U.S. states; the applicable rules must be researched
-separately for the state, local jurisdiction, property type, and year.
+**Goal:** research official sources, save the evidence, and carry it into work files.
+The method applies across U.S. states. Rules must be checked separately for the
+jurisdiction, property type, and year. Our fictional Ohio/Texas amounts are not law.
 
-### Ask a precise question
-
-The example below is a research exercise, not a statement of a filing deadline.
+### Ask a precise research question
 
 **Copy into Claude:**
 
 ```text
 Research official business personal property reporting instructions
 for Travis County, Texas, for tax year 2026. Use applicable state and
-local government or appraisal district sources. Save a short note at
-outputs/research-note.md with links, source dates, checked date,
-findings, and unresolved questions. Do not guess missing requirements.
+appraisal district sources. Save outputs/research-note.md with links,
+source dates, checked date, findings, and unresolved questions.
+Verify year and applicability. Do not guess missing requirements.
+Do not submit forms or change any financial figures.
 ```
+
+![Official-source research request in the Claude Code message box](assets/walkthrough/29-research-prompt.jpg)
 
 **Follow-up:**
 
 ```text
-Check whether each source applies to this jurisdiction, property type,
-and tax year. Separate verified findings from items needing review.
-If you cannot access an official source, mark the finding unresolved.
+Keep the note to three short findings. For each, show the exact official source and explain which
+jurisdiction, property type, and year it supports. Mark anything not
+established by the source Needs review. Keep the note short.
 ```
 
-**Check:** open the official links yourself. Confirm jurisdiction, year, and
-applicability. A general article, old deadline, or plausible-looking citation is
-not enough. If web tools are unavailable, ask for an IT request or provide the
-approved official documents; Claude must not pretend to have browsed.
+Open the saved Markdown file in VS Code and preview it with **Ctrl+Shift+V**
+(Mac: **Cmd+Shift+V**). Open the official links yourself. A current-looking page
+or general article is not proof that a rule applies to the case.
+If web access is missing, provide approved official documents or ask IT for the
+required access. Claude must not claim it browsed when it could not.
 
-### Put the findings where you work
+### Add the saved findings to Excel and the dashboard
 
 **Copy into Claude:**
 
 ```text
-Add the saved research note to a Research sheet in a new copy of
-outputs/combined-bills.xlsx. Save outputs/bills-with-research.xlsx.
-Keep links, jurisdiction, tax year, checked dates, and Needs review status.
-Do not apply the findings to bill amounts or change financial totals.
+Use outputs/research-note.md to add a Research sheet to a copy of
+outputs/meeting-reconciliation.xlsx. Save outputs/meeting-with-research.xlsx.
+Keep links, jurisdiction, year, checked date, and Needs review status.
+Preserve formulas and financial figures. Do not apply Texas rules to Ohio.
 ```
 
 **Follow-up:**
 
 ```text
-Add a clearly separate Research and open questions section to a copy
-of outputs/meeting-dashboard.html. Link each finding to its source.
-Save outputs/meeting-dashboard-research.html and verify the financial
-counts and totals are unchanged. Research is not filing approval.
+Add a separate Research and open questions section to a copy of
+outputs/meeting-dashboard.html. Save outputs/meeting-dashboard-research.html.
+Link each finding to its official source. Check that all financial
+amounts and filters are unchanged. Research is not filing approval.
 ```
 
-**Check:** the bill total remains **$1,000**. Ohio records have not silently inherited
-Texas rules. Saved research needs a fresh applicability check before reuse.
+![Three sourced research findings on their own Excel sheet, each marked Needs review](assets/walkthrough/46-research-in-excel.jpg)
 
-Searching and operating a browser are different capabilities. For website interaction,
-[Claude in Chrome](https://code.claude.com/docs/en/chrome) is an optional connection
-when your account and company support it. It is not required for this course.
+If the sheet is too wide, ask: "Use five readable columns: Topic, Short finding,
+Official source, Review status, and Checked date. Put jurisdiction and year in the heading."
+In our run, all twelve financial checks still read **OK** after adding research.
+
+**Check:** Book remains **$190,000**, Bill **$193,200**, full difference **+$3,200**.
+Research has its own scope and review status. Recheck applicability before reuse.
+Searching the web and operating a browser are different capabilities.
+[Claude in Chrome](https://code.claude.com/docs/en/chrome) is an optional connection,
+not a requirement for creating the local files in this course.
 
 ## 8. Use the five productivity helpers
 
@@ -686,30 +865,49 @@ Finish with the saved file location, a short result, and one check I can do.
 
 ### Create a skill from a successful task
 
-In the conversation where the bill dashboard worked, copy:
+After the reconciliation works, save its review method. The following is a small
+first skill: it checks a workbook and writes a meeting checklist.
+
+**Copy into Claude:**
 
 ```text
-Save our checked monthly bill-to-dashboard process as a Claude Code skill
-for this project. Give it a specific purpose and a description that fits
-normal requests. Preserve existing skills. Include the inputs, output
-files, source checks, and browser checks. Test it on the practice files
-and show me where you saved the skill and its test output.
+Save our monthly property-tax review as a small reusable Claude Code
+skill for this project. Read MY-MEETING.md and
+outputs/meeting-reconciliation.xlsx. Preserve existing skills.
+Check the workbook, keep full/net/gross differences and missing
+counterparts separate, and write a meeting checklist with sources
+and unresolved items. Use automatic selection from normal requests.
+Test it on this fictional workbook and save outputs/skill-test.md.
+Do not run subagents or large evaluations or change global settings.
 ```
 
+![Creating a reusable project review skill through a normal request](assets/walkthrough/41-create-reusable-skill-prompt.jpg)
+
 **Check:** Claude saves **SKILL.md** inside its own folder under the project's
-**.claude/skills** directory, with any needed supporting files. It also creates
-and checks a sample output. A loose prompt note alone is not an installed skill.
+**.claude/skills** directory, with any required support files. In our run the folder
+is **monthly-meeting-review**. It also saves a test output. A loose prompt note
+alone is not an installed skill. The learner does not have to write the SKILL.md syntax.
+
+![The new skill opened as a readable Markdown preview in VS Code](assets/walkthrough/43-skill-markdown-preview.jpg)
 
 ### Use it without typing its name
 
-Open a fresh Claude conversation after saving. Copy:
+After saving or revising a skill, follow lesson 10 to **Reload Window**, then
+click **New session** at the top of Claude. This gives the next conversation the
+updated instructions. Copy:
 
 ```text
-Prepare the monthly bill dashboard from OH-bills.xlsx and TX-bills.xlsx.
-Use our saved procedure and put this run in a new output folder.
+Check outputs/meeting-reconciliation.xlsx before our monthly review
+meeting. Save a short checklist of the numbers and unresolved items
+at outputs/meeting-checklist.md. Keep the workbook unchanged.
 ```
 
-**Check:** four bills total **$1,000**; originals remain unchanged. Ask which procedure
+![Claude automatically selecting the meeting-review skill from an ordinary request](assets/walkthrough/48-automatic-skill-selection.jpg)
+
+The expanded activity in this real run shows Claude choosing **monthly-meeting-review**.
+The request did not name the skill or use a slash command.
+
+**Check:** the four inputs total **$190,000 Book / $193,200 Bill**; originals remain unchanged. Ask which procedure
 was used if helpful, but verify the output rather than trusting the name alone.
 
 ### Improve it or adapt an installed skill
@@ -717,10 +915,16 @@ was used if helpful, but verify the output rather than trusting the name alone.
 **Copy into Claude:**
 
 ```text
-Update my monthly bill dashboard skill to include a source-file column
-and a final meeting checklist. Keep a backup and test the change on one
-small sample. Show what changed and which checks passed.
+Update my monthly meeting review skill so its main checklist stays
+under 300 words. Put detailed checks in a separate note. Keep source
+references and every unresolved item. Back up the skill first and test
+the change on the practice workbook. Show me what changed.
 ```
+
+![Asking Claude to improve the existing skill and test its revision](assets/walkthrough/42-improve-skill-prompt.jpg)
+
+Our revision saved a backup and kept the checklist **under 300 words**, with detailed
+checks in a separate note. A fresh conversation produced a 298-word checklist. [Read the example checklist](practice/meeting-results/meeting-checklist.md).
 
 For a plugin skill you want to customize:
 
@@ -748,6 +952,8 @@ you later need the procedure in other work folders. Keep employer details privat
 ```text
 Developer: Reload Window
 ```
+
+![Reload Window refreshes the VS Code extension after changes](assets/walkthrough/14-reload-window.jpg)
 
 4. Wait for VS Code to return. Reopen Claude Code using the Command Palette.
    For new skills, start a fresh conversation. Use Session history to resume old work.
@@ -819,6 +1025,8 @@ this is not a switch to another assistant or a requirement to learn programming.
    Use the same approved connection and work folder.
 3. When Claude shows its input prompt, paste or dictate an ordinary request from
    this course. A new terminal conversation may need the saved handoff note.
+
+![The actual Claude Code Open in Terminal action in the VS Code Command Palette](assets/walkthrough/49-open-claude-terminal.jpg)
 
 If your managed extension does not offer this option, use the separate CLI path below
 with IT's approved installation. Do not run two conversations editing the same files.

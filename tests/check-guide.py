@@ -20,7 +20,7 @@ for i,t in enumerate(tokens):
         assert normalize(tokens[i+1].content) in text, f'PDF missing heading: {tokens[i+1].content}'
 expected=hashlib.sha256(source.encode()).hexdigest()
 assert reader.metadata.subject.endswith(expected), 'PDF is stale; rebuild after editing README.md'
-assert 12<=len(pages)<=24, f'PDF should remain a compact complete course: {len(pages)} pages'
+assert 12<=len(pages)<=48, f'PDF should remain a compact complete course: {len(pages)} pages'
 assert all(len(t.strip())>150 for t in pages), 'Unexpected near-empty PDF page'
 headings = {tokens[i+1].content for i,t in enumerate(tokens) if t.type=='heading_open'}
 for number, page in enumerate(pages, 1):

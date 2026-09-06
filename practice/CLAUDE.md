@@ -16,3 +16,9 @@ No supplied amount establishes an actual tax obligation, cause, or deadline.
 
 STARTER-SKILLS.md is an optional installation checklist. Read it when the learner
 asks to install the extra skills; it is not spreadsheet data or an automatic setup task.
+
+meeting-inputs contains a separate, larger Ohio/Texas meeting exercise with four
+workbooks, a Word brief, and a PowerPoint agenda. Use only that explicitly named
+input set for the meeting workshop. meeting-case.json is its fictional scenario.
+meeting-results contains checked examples for the learner's later comparison,
+not inputs for generating a fresh result. Never mix these with the tiny fixtures.
