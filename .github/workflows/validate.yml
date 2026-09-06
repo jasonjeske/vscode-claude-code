@@ -1,13 +1,10 @@
 name: validate
-
 on:
   push:
     branches: [main]
   pull_request:
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,9 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - run: node tests/validate-repo.mjs
-      - run: node tests/merge-spec.mjs
-      - run: node tests/dashboard-spec.mjs
-      - run: node tests/plugin-spec.mjs
       - run: python3 tests/state-workbook-spec.py

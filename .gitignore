@@ -5,19 +5,25 @@ Thumbs.db
 .vscode/
 .claude/
 .mcp.json
-*.code-workspace
-.pi-work/
-*.backup
-*.candidate
-
-# Common work artifacts. These patterns reduce accidental staging; they are not DLP.
+CLAUDE.local.md
+node_modules/
+outputs/
+work-data/
 *.xlsx
 *.xls
+*.xlsm
+*.xlsb
 *.csv
 *.pdf
 *.docx
-*.xlsm
-*.xlsb
+*.backup
+!/practice/practice.xlsx
+/PROJECT.md
+
+# Keep private work and local tool state out of the public course.
+*.code-workspace
+.pi-work/
+*.candidate
 *.pptx
 *.pbix
 *.pbit
@@ -26,31 +32,6 @@ Thumbs.db
 *.duckdb
 *.sqlite
 .local-work/
-work-data/
-outputs/
 evidence/
 receipts/
 backups/
-
-# Local project-ledger metadata is not part of the public repository.
-/PROJECT.md
-
-# The user's real monthly budget figure. Only the blank .example.json ships.
-config/statusline-budget.json
-
-# Ship only the empty practice-folder markers, never generated work in those folders.
-!/practice-project/outputs/
-/practice-project/outputs/*
-!/practice-project/outputs/.gitkeep
-!/practice-project/evidence/
-/practice-project/evidence/*
-!/practice-project/evidence/.gitkeep
-
-# Only the reviewed invented course workbook and empty output markers ship.
-!/state-project/inputs/state-practice.xlsx
-!/state-project/outputs/
-/state-project/outputs/*
-!/state-project/outputs/.gitkeep
-!/state-project/evidence/
-/state-project/evidence/*
-!/state-project/evidence/.gitkeep

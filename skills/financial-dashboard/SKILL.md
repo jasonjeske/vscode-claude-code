@@ -1,60 +1,38 @@
 ---
 name: financial-dashboard
-description: Use when asked to plan, build, or improve an accounting dashboard or visual financial report from approved data. Define metrics, filters, exceptions, and source-to-display checks; not for a simple arithmetic answer.
-disable-model-invocation: false
-user-invocable: true
+description: Create or improve an accounting dashboard from approved spreadsheet or reconciliation data, with source totals, exception details, filters, and verification. Use for Excel dashboards or local HTML reports.
 ---
 
-# Financial dashboard
+# Build a checked dashboard
 
-Apply only to the current requested outcome. Do not start this workflow merely because a source
-mentions its topic. State the skill used in one short line when applying it. If the next request
-changes the task, follow that request rather than repeating this workflow.
+State that you are using this skill. Use the requested audience, source, output format, and approved
+location. Ask only for material missing details. Preserve originals and do not publish, upload,
+install tools, or connect systems without the corresponding authorization.
 
-Use for a matching user request or when selected with `/financial-dashboard`. Work within the user's approved task,
-inputs, runtime, and output location. Propose the metric definitions and output before writing;
-use the project's approval process. Do not connect to databases, install dependencies, publish,
-send, or upload without separate authorization. Never put work records into this public starter.
+Establish row grain, keys, jurisdiction, period, currency, source date, and validation status.
+Define metrics before building: population, exclusions, aggregation, and filter behavior. Keep
+book expense, bills, assessments, payments, and estimates distinct. Identify duplicate/ambiguous
+keys before joining. Mark unvalidated inputs draft; do not invent source facts or treat no data
+as a passed control.
 
-## Define the report
+For reconciliation dashboards, distinguish full Bill minus Book from matched net and matched gross
+(sum of absolute matched differences). Keep unmatched amounts and missing values visible. A
+missing counterpart stays missing in detail; aggregate each source's known amounts independently
+and label the resulting difference clearly. Do not show unmatched absence as a measured zero.
 
-Clarify the audience and decision. Reuse supplied details and ask one question at a time for
-material gaps. Establish row grain, unique keys, period, currency, source date, and refresh status.
-Define every KPI's numerator, denominator, exclusions, aggregation, and filter behavior. Missing
-values remain unknown; no-data is not a successful reconciliation. Distinguish tax assessed,
-book expense, liability, payments, and estimates. Do not combine different grains or currencies.
+Use Excel for an Excel request, checking installed readers/writers and using the xlsx skill if
+available. Prefer a new workbook; advanced features need native Excel checks. For a standalone
+HTML request, use a self-contained file with native HTML/CSS/JS, system fonts, escaped labels, no
+external requests, and no server requirement. Do not render untrusted cell text as executable HTML.
 
-Check source counts, duplicates, join cardinality, and totals before design. Keep input exceptions
-visible. If data is missing, offer a clearly labeled synthetic mockup rather than invented results.
-If data is unvalidated, label the dashboard draft and report failed checks.
+Use readable cards, labeled charts, and an exception table. Show scope, units, source, generation
+date, and snapshot/refresh behavior. Relevant filters must update cards, charts, and details
+together. Include reset, active-selection labels, no-data handling, keyboard-accessible controls,
+and statuses conveyed with words as well as color. A filter does not protect embedded records.
 
-## Build and teach
-
-Choose the simplest approved format that the audience can use: Excel/PivotTables for workpapers,
-local HTML for an interactive snapshot, or the organization's BI platform for governed sharing.
-Use the existing stack and brand standards when supplied.
-
-For HTML, prefer local assets or native SVG, system fonts, readable tables, and a restrained palette.
-Use a clear title, reporting scope, three or four purposeful metrics, useful comparisons, and an
-exception table. Use bars for categories, lines for time, and a waterfall for a proved variance
-bridge. Use a pie/donut only for a small, nonnegative, mutually exclusive composition with a known
-whole. Include labels and a table alternative; never communicate status through color alone.
-
-All relevant controls must update metrics, charts, and detail together. Show active filters, reset,
-empty states, missing values, units, source freshness, and print behavior. A filter is not access
-control. Hidden or embedded records remain part of the file. Do not embed credentials. Escape
-untrusted labels; never insert source strings as executable HTML. Avoid external scripts, fonts,
-analytics, or live APIs unless explicitly approved.
-
-## Verify before delivery
-
-- Independently total the approved source and compare it with every KPI and chart population.
-- Exercise each filter alone and in combination, reset, an empty selection, missing data, and
-  offsetting positive/negative differences. Show gross exceptions as well as net variance.
-- Check responsive layouts, keyboard controls, label readability, scrolling, print, and console
-  errors in a real browser when available. Report any browser checks not performed.
-- If offline use is required, test it without network access. A CDN dependency fails that claim.
-- Reopen the deliverable and document input version, transformation, checks, and refresh method.
-
-Return the artifact location, checks with evidence, limitations, and one short lesson showing how
-the user can trace a displayed number to its inputs. Human review decides accounting acceptance.
+Independently compare displayed counts and amounts with source records. Test filter selections,
+combinations where relevant, reset, empty results, missing counterparts, and offsetting differences.
+Inspect the deliverable in a browser or Excel when available; report unavailable UI, calculation,
+and offline checks as UNVERIFIED. Reading code is not a browser test. Do not claim refresh from a
+static snapshot. Return output location, verified results, remaining checks, and one number the
+learner can trace back to its source.

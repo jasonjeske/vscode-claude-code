@@ -4,7 +4,7 @@ from zipfile import ZipFile
 import xml.etree.ElementTree as ET
 
 NS = {"x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
-book = Path(__file__).resolve().parents[1] / "state-project/inputs/state-practice.xlsx"
+book = Path(__file__).resolve().parents[1] / "practice/practice.xlsx"
 populations = []
 with ZipFile(book) as archive:
     assert not any("vbaProject" in name or "externalLinks/" in name for name in archive.namelist())
