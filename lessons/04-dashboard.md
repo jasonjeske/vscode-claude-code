@@ -114,4 +114,6 @@ Explain the next action before continuing. Do not repeat finished work.
 **Check:** you can explain one number in your report and find the evidence behind it.
 Repeat the practice with a new comparison before trying larger multi-state files.
 
+**Ready for another task? [5. Research and save a property-tax finding](05-research.md).**
+
 [Back to the course](../README.md) · [Troubleshooting and optional Node.js](../HELP.md)

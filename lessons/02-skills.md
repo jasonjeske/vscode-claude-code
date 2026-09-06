@@ -18,12 +18,15 @@ jasonjeske/vscode-claude-code
 
 Return to **Plugins**. Find **property-tax-workbench** from **property-tax-learning**.
 Choose **Install**, then **Install for you** if permitted, so it works across your folders.
-If policy requires a different scope, let IT select it. This installs just two skills:
+If policy requires a different scope, let IT select it. The package includes five skills. Start with the first two:
 
 | Skill | Use it for |
 | --- | --- |
 | `excel-workbook-review` | Understand a workbook and compare book amounts with bills |
 | `financial-dashboard` | Turn checked results into an Excel or local browser report |
+| `property-tax-research` | Find official sources and save findings for review (lesson 5) |
+| `excel-formula-helper` | Explain and test an Excel formula (lesson 7) |
+| `workpaper-summary` | Draft a reviewer note or action list (lesson 7) |
 
 **Check:** property-tax-workbench appears in your installed plugins. If the panel is unavailable,
 [use the help page](../HELP.md#plugins-or-skills-are-missing). [Official plugin interface](https://code.claude.com/docs/en/vs-code#manage-plugins).

@@ -9,7 +9,8 @@ State that you are using this skill. Use the requested audience, source, output 
 location. Ask only for material missing details. Preserve originals and do not publish, upload,
 install tools, or connect systems without the corresponding authorization.
 
-Establish row grain, keys, jurisdiction, period, currency, source date, and validation status.
+Establish applicable scope: row grain, keys, jurisdiction, period, source date, and validation
+status; include currency when amounts are shown.
 Define metrics before building: population, exclusions, aggregation, and filter behavior. Keep
 book expense, bills, assessments, payments, and estimates distinct. Identify duplicate/ambiguous
 keys before joining. Mark unvalidated inputs draft; do not invent source facts or treat no data
@@ -36,3 +37,9 @@ Inspect the deliverable in a browser or Excel when available; report unavailable
 and offline checks as UNVERIFIED. Reading code is not a browser test. Do not claim refresh from a
 static snapshot. Return output location, verified results, remaining checks, and one number the
 learner can trace back to its source.
+
+For a research dashboard, count distinct finding IDs and preserve source links, jurisdiction,
+property type, tax year, source/access dates, and human review metadata. Keep Needs review items
+visible. Research status is not filing status. Do not apply research rules to financial rows or
+change amounts without an explicit, reviewed applicability mapping. Test that added research
+sections leave existing financial totals unchanged and label any unverified linkage.

@@ -1,7 +1,7 @@
 {
   "name": "property-tax-workbench",
-  "version": "2.0.0",
-  "description": "Two beginner-friendly skills for Excel reconciliation and accounting dashboards.",
+  "version": "2.1.0",
+  "description": "Five beginner-friendly skills for Excel reconciliation, dashboards, property-tax research, formula help, and workpaper summaries.",
   "license": "MIT",
   "author": {
     "name": "Property Tax Workbench maintainers"

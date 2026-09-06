@@ -35,3 +35,7 @@ work-data/
 evidence/
 receipts/
 backups/
+
+# Local adaptations and source evidence stay in approved work folders.
+skill-backups/
+sources/
