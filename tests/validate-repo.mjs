@@ -46,6 +46,11 @@ for (const name of skills) {
   assert.match(skill, new RegExp(`^---\\nname: ${name}\\n`));
   assert.match(skill, /\ndescription: .+\n/);
   assert(!skill.includes('TODO'), `Unfinished skill ${name}`);
+  assert(!/disable-model-invocation:\s*true/.test(skill), `Automatic selection disabled: ${name}`);
+}
+// The learner workflow must work without memorizing plugin command names.
+for (const path of markdown.filter(p => p.includes('/lessons/') || /\/(README|HELP)\.md$/.test(p))) {
+  assert(!/\/property-tax-workbench:/.test(read(path)), `Explicit skill command in learner path: ${path}`);
 }
 const illustrations = files.filter(p => p.includes('/images/') && extname(p) === '.svg');
 for (const path of illustrations) {

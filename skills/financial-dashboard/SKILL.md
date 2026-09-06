@@ -5,7 +5,7 @@ description: Create or improve an accounting dashboard from approved spreadsheet
 
 # Build a checked dashboard
 
-State that you are using this skill. Use the requested audience, source, output format, and approved
+Describe the next useful action plainly. Select this skill from ordinary requests; do not require a skill command. Use the requested audience, source, output format, and approved
 location. Ask only for material missing details. Preserve originals and do not publish, upload,
 install tools, or connect systems without the corresponding authorization.
 

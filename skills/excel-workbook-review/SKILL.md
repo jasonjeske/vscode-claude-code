@@ -5,7 +5,7 @@ description: Inspect an Excel workbook or reconcile book and bill records, check
 
 # Review or reconcile a workbook
 
-State that you are using this skill. Follow the user's requested scope and approved files.
+Describe the next useful action plainly. Select this skill from ordinary requests; do not require a skill command. Follow the user's requested scope and approved files.
 Explain one useful check in beginner-friendly language; ask one question only for a material gap.
 
 Check available spreadsheet readers before processing. An installed skill does not install a

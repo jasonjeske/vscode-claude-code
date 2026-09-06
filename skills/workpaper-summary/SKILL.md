@@ -5,7 +5,7 @@ description: Turn approved accounting workpapers or research notes into a concis
 
 # Summarize the evidence for a reviewer
 
-State the skill used. Use only the requested approved inputs and audience. Produce the requested
+Explain the next useful action plainly; do not require a skill command. Use only the requested approved inputs and audience. Produce the requested
 draft or file, preserving originals and existing outputs unless replacement is authorized.
 Ask one question only when a missing audience, scope, or source prevents a useful result.
 

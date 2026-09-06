@@ -1,66 +1,66 @@
-# Claude Code + Excel: your first property-tax workflow
+# Your first day with Claude Code and Excel
 
-**A beginner's course for a U.S. property-tax accountant using Claude Code in VS Code.**
-No coding or VS Code experience needed. Follow the pictures, paste one prompt, and check one result.
+**Tell Claude what you need. Let it help with the steps. Check the result together.**
 
-![Your path: set up VS Code, add skills, check an Excel workbook, make a dashboard.](images/00-course.svg)
+For a property-tax accountant who has never used VS Code or Claude Code. Learn to work with
+spreadsheets, combine files, build an Excel dashboard, research tax questions, and teach Claude
+how you like recurring work done.
 
-You will compare a book balance with a tax bill, find differences that cancel each other out,
-and turn the checked results into a dashboard. Start with our tiny, invented workbook.
-The method can be reused across U.S. states; tax rules and deadlines must be checked separately
-for the state, local jurisdiction, tax year, and property type.
+![Illustrated Claude conversation: Combine these spreadsheets into one workbook. Claude asks whether to put rows together or match records.](images/combine.svg)
 
-| Read in this order | What you will do |
+*Illustrated example in the extension. Your wording and Claude's reply can differ.*
+
+**Type or dictate normally.** A prompt is simply your request. Installed skills are reusable
+instructions Claude can choose when they fit your request. You do not need to type a skill name
+or remember a command. Selection depends on the request and skill description, rather than a
+guaranteed keyword switch. [How Claude selects skills](https://code.claude.com/docs/en/skills).
+
+## Start here
+
+Keep this guide open in your browser, with VS Code beside it. Do one page at a time.
+
+| Page | What you will accomplish |
 | --- | --- |
-| **[1. Set up](lessons/01-setup.md)** | Install VS Code and Claude Code; open your practice folder |
-| **[2. Add skills](lessons/02-skills.md)** | Install two skill packages; copy your global instructions |
-| **[3. Analyze Excel](lessons/03-excel.md)** | Inspect, reconcile, and verify the practice workbook |
-| **[4. Make a dashboard](lessons/04-dashboard.md)** | Create a local report; check its numbers; repeat on approved work |
+| **[1. Open Claude](lessons/01-setup.md)** | Install the app, find the message box, and get your first reply |
+| **[2. Add your skills once](lessons/02-skills.md)** | Install the work and spreadsheet helpers, then try an ordinary request |
+| **[3. Work with spreadsheets](lessons/03-excel.md)** | Understand, compare, combine, and create an Excel dashboard |
+| **[4. Research and use the findings](lessons/04-research.md)** | Find official sources, save research, and add it to Excel |
+| **[5. Make the next task easier](lessons/05-repeat.md)** | Save a useful skill, improve it, and reuse it next month |
 
-## After your first dashboard
+Instructions use Windows. Mac keyboard equivalents are beside the Windows shortcuts.
+Hold shortcut keys together. **Ctrl+C** copies; **Ctrl+V** pastes. On Mac, use **Cmd** in place of Ctrl.
+The examples are starting points, not scripts you must copy word for word.
 
-Choose one next lesson when you need it. You can stop after the first four lessons.
+**Already installed everything? Start with [your first spreadsheet](lessons/03-excel.md).**
 
-| Next useful task | What you will learn |
+## What belongs where?
+
+| Tool | What you use it for |
 | --- | --- |
-| **[5. Research and save findings](lessons/05-research.md)** | Check official sources; carry citations into Excel and dashboards |
-| **[6. Create or modify skills](lessons/06-your-skills.md)** | Ask Claude to make a small skill; test, improve, and reuse it |
-| **[7. Everyday productivity](lessons/07-productivity.md)** | Get formula help, prepare reviewer notes, and save useful prompts |
+| VS Code | Open the folder containing the files you want help with |
+| Claude Code extension | Talk to Claude and let it work on those files with available tools |
+| Microsoft Excel | Open the finished workbook and check the numbers and charts |
+| A skill | Give Claude a reusable way to do a type of work |
 
-**Keep this guide open in your browser and VS Code beside it.** Instructions use Windows.
-`Ctrl+C` copies, `Ctrl+V` pastes, and `Ctrl+S` saves. Hold the keys together.
-Each numbered step has an illustration, a small action, and a success check.
+You do not need to learn programming for these lessons. Claude may use code behind the scenes.
+If a needed tool is missing on your work computer, Claude should explain what IT needs to provide.
+Installing a skill alone does not install spreadsheet software.
 
-**Need help?** [Reload or restart Claude Code](HELP.md#reload-claude-code) ·
-[Optional Node.js lesson](HELP.md#optional-nodejs-for-work-scripts) ·
-[Copy global instructions](GLOBAL-CLAUDE.md) · [Practice answer key](practice/ANSWER-KEY.md)
+Use your employer-approved account, connection, files, and storage. Files Claude reads may go to
+your configured AI provider. Start with the invented practice data.
+The workflow applies across U.S. states; each tax question still needs its own applicable sources.
 
-## Four words you need
-
-| Word | Plain meaning |
-| --- | --- |
-| VS Code | The app that holds your work folder and Claude panel |
-| Claude Code | The assistant inside VS Code that can read files and run approved tools |
-| Skill | A reusable set of instructions for a kind of task |
-| Plugin | A package that installs skills together |
-
-**For work:** use your employer-approved account, connection, files, and storage. A file stored on
-your computer can still be sent to the configured AI provider when Claude reads it. Keep the
-public guide free of actual work data. Your review is part of every result.
+**Stuck? [Open, reload, or restart Claude](HELP.md).**
+**Want your usual preferences? [Copy your global instructions](GLOBAL-CLAUDE.md).**
 
 <details>
-<summary>About the pictures and this repository</summary>
+<summary>About the pictures and other repository folders</summary>
 
-The numbered images are original teaching illustrations, not screenshots or proof of a Windows
-installation. Button placement may vary. Two real Microsoft reference screenshots are credited
-[in their attribution file](assets/reference/ATTRIBUTION.md).
+Real extension screenshots from Anthropic are labeled as references. Original illustrated
+conversations show this course's spreadsheet tasks; they are not recordings of Claude running
+them. [Picture sources and verification limits](SOURCES.md).
 
-The course replaces the older overlapping guides and six-skill kit. The kit now includes workbook
-analysis, dashboards, property-tax research, formula help, and workpaper summaries. Earlier material remains in Git history. Existing users can update the
-installed `property-tax-workbench` through `/plugins`; locally copied skills are separate and
-should be reviewed before removing any personal adaptations.
-
-Setup references were checked September 5, 2026. [Sources and checks](SOURCES.md).
-The `skills`, `.claude-plugin`, and `tests` folders support the course; the core lessons do not require editing them. Lesson 6 creates your own local skill copies.
+You only need these lesson links and the practice folder. The skills, plugin files, and tests
+support installation and maintenance. You do not need to edit them.
 
 </details>

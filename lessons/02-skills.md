@@ -1,103 +1,90 @@
-# 2. Add skills and your instructions
+# 2. Add your skills once
 
-[Home](../README.md) · [Set up](01-setup.md) → **Skills** → [Excel](03-excel.md) → [Dashboard](04-dashboard.md)
+[Home](../README.md) · [Back](01-setup.md) · Page 2 of 5 · [Next: spreadsheets](03-excel.md)
 
-Install once, then reuse. A skill teaches Claude a process; it does not install Excel or give it
-permission to access your company systems. Use the approved installation route at work.
+A **skill** is a reusable work procedure Claude can follow. A **plugin** installs a group of skills.
+This page is the one-time setup. Your everyday work will use ordinary sentences.
 
-## Step 6. Install the property-tax skills
+*Pictures on this page are simplified illustrations of the controls described in
+[Anthropic's extension guide](https://code.claude.com/docs/en/vs-code#manage-plugins).
+Labels and positions can change between versions.*
 
-![In Claude chat, open /plugins. Add jasonjeske/vscode-claude-code under Marketplaces, then install property-tax-workbench under Plugins.](../images/06-skills.svg)
+## 1. Open the plugin window
 
-In the **Claude message box**, type `/plugins` to open **Manage plugins**.
-Select **Marketplaces** and add this source:
+![Illustration: click the slash menu button beside Claude's message box, then Plugins under Customize.](../images/plugin-menu.svg)
 
-```text
+Find the small **/** menu button beside Claude's message box. **Click it**.
+Under **Customize**, choose **Plugins**. This is a settings menu; you do not need to type a skill command.
+
+**You are there when:** **Manage plugins** appears with **Plugins** and **Marketplaces** tabs.
+If you do not see Plugins, [update the extension](../HELP.md#update-the-extension).
+
+## 2. Add the property-tax kit
+
+![Illustration of Marketplaces with jasonjeske/vscode-claude-code in the add-source field.](../images/marketplace.svg)
+
+Click **Marketplaces**. A marketplace is a source from which Claude can install plugins.
+In the field for adding a source, enter this repository address once:
+
+~~~text
 jasonjeske/vscode-claude-code
-```
+~~~
 
-Return to **Plugins**. Find **property-tax-workbench** from **property-tax-learning**.
-Choose **Install**, then **Install for you** if permitted, so it works across your folders.
-If policy requires a different scope, let IT select it. The package includes five skills. Start with the first two:
+Add it, then return to **Plugins**. Find **property-tax-workbench**, click **Install**,
+and choose **Install for you** so it is available in your other work folders.
 
-| Skill | Use it for |
-| --- | --- |
-| `excel-workbook-review` | Understand a workbook and compare book amounts with bills |
-| `financial-dashboard` | Turn checked results into an Excel or local browser report |
-| `property-tax-research` | Find official sources and save findings for review (lesson 5) |
-| `excel-formula-helper` | Explain and test an Excel formula (lesson 7) |
-| `workpaper-summary` | Draft a reviewer note or action list (lesson 7) |
+**You are there when:** it appears under installed plugins and is switched on.
+If company policy blocks it, ask IT to review this repository.
 
-**Check:** property-tax-workbench appears in your installed plugins. If the panel is unavailable,
-[use the help page](../HELP.md#plugins-or-skills-are-missing). [Official plugin interface](https://code.claude.com/docs/en/vs-code#manage-plugins).
+## 3. Add the spreadsheet tools and restart
 
-## Step 7. Add Anthropic's spreadsheet skill
+![Illustration of installed property-tax-workbench and document-skills plugins, with the restart banner.](../images/plugins-installed.svg)
 
-![Add anthropics/skills as a marketplace and install document-skills, which includes xlsx.](../images/07-office.svg)
+In **Marketplaces**, add **anthropics/skills** the same way.
+Back in **Plugins**, find **document-skills** from **anthropic-agent-skills**.
+Click **Install > Install for you**. This is Anthropic's document package, including its Excel skill.
 
-In the same **Marketplaces** panel, add:
+Click the banner to **restart Claude Code** when prompted. If no banner appears, follow
+[Reload the window](../HELP.md#reload-the-window). Start a fresh conversation after restarting.
 
-```text
-anthropics/skills
-```
+**You are there when:** both plugins appear installed and enabled.
+You do not need to reinstall them every time you open VS Code.
 
-Under **Plugins**, install **document-skills** from **anthropic-agent-skills** with the same scope.
-It includes `xlsx` for spreadsheet procedures, plus Word, PDF, and PowerPoint skills. Use the
-package only when its license and tools are approved for your work; its terms are separate from
-this guide. [Official package and terms](https://github.com/anthropics/skills).
+## 4. Try it with your own words
 
-**Check:** both packages appear installed. Libraries needed to process Excel files may still be
-missing. The practice lesson will check that before doing work; a skill menu alone is not proof.
+![Illustrated message: Help me understand practice.xlsx. Don't change it yet. Claude chooses a relevant installed skill.](../images/inspect.svg)
 
-## Step 8. Reload and check the skills
+In Claude's message box, say:
 
-![Save, open the Command Palette, choose Developer: Reload Window, and start a fresh Claude tab.](../images/08-reload.svg)
+> Help me understand practice.xlsx. Don't change it yet.
 
-Save open edits with **File → Save All**. Press **Ctrl+Shift+P** and type
-**Developer: Reload Window**. Click that command; VS Code briefly reloads.
-Then press **Ctrl+Shift+P**, type **Claude Code**, and choose **Open in New Tab** for a fresh conversation.
-If the plugin panel offers a restart first, use it too.
+Claude should read the file, use relevant available skills, and explain the two sheets.
+If it asks to run a tool, ask what it will do if you are unsure, then approve the action you understand.
+If a required spreadsheet tool is missing, ask:
 
-In the new Claude message box, type `/` and look for:
+> Tell me exactly what I should ask IT to install so you can read and create Excel files.
 
-```text
-/property-tax-workbench:excel-workbook-review
-/property-tax-workbench:financial-dashboard
-/document-skills:xlsx
-```
+**You are there when:** Claude reports the **Book** and **Bill** sheets from the actual workbook.
+A list of installed skills alone is not this check. If it misses a helper, say:
 
-**Check:** you can select the installed skills. Use the names shown by your actual menu if they differ.
-Do not paste slash commands into the Command Palette or PowerShell.
+> Check the installed skills and use the relevant ones for this workbook.
 
-## Step 9. Copy your global CLAUDE.md
+You can describe a task briefly or in detail. Correct Claude or add requirements in your next message.
 
-![Copy GLOBAL-CLAUDE.md, open your Windows user folder, and save the instructions as .claude/CLAUDE.md.](../images/09-global.svg)
+### Optional: save your usual preferences
 
-This is your reusable instruction sheet. **Claude Code reads it from a file; do not paste it into
-`settings.json` or the Claude website's profile preferences.**
+![Illustrated request to save supplied preferences as global Claude Code instructions while preserving existing instructions.](../images/preferences.svg)
 
-Open [GLOBAL-CLAUDE.md](../GLOBAL-CLAUDE.md) in your browser. On GitHub, click **Raw**, then
-**Ctrl+A → Ctrl+C** to copy just the text. In VS Code choose **File → New Text File**, then **Ctrl+V**.
+Open [GLOBAL-CLAUDE.md](../GLOBAL-CLAUDE.md) in your browser. Copy the text in its copy box.
+In Claude's message box, type the following sentence, paste the preferences underneath, and send:
 
-In **Windows File Explorer** (the folder app), click the address bar, type `%USERPROFILE%`,
-and press **Enter**. Open `.claude`; if missing, create it using **New → Folder**.
-Copy that folder's full address. Back in VS Code press **Ctrl+Shift+S** (**Save As**), paste the
-folder address into the dialog's address bar, and save the file as **CLAUDE.md**.
+> Add these to my global Claude Code instructions. Keep my existing instructions and save a backup first.
 
-**If that file already exists:** cancel the replacement, open the existing file, save a backup
-copy, and append only the relevant instructions. Keep company-managed instructions intact.
-The final location is `C:\Users\YourName\.claude\CLAUDE.md`, without an extra `.txt` suffix.
-[Official instruction locations](https://code.claude.com/docs/en/memory).
+Claude should explain the change, save it to its user-level **CLAUDE.md**, and report the location.
+This is Claude Code's persistent instruction file. It is separate from the Claude website's profile preferences
+and VS Code's settings. You do not need to edit a settings file yourself.
 
-Open another fresh Claude tab and paste:
+**Check:** open a new conversation and ask, “What are my saved working preferences?”
+If your company manages these instructions, have IT approve the addition.
 
-```text
-Read my user-level .claude/CLAUDE.md. Confirm its path and summarize the
-instructions about teaching beginners and preserving original workbooks.
-If you cannot read it, say so. Do not change it.
-```
-
-**Check:** the reported path is under your Windows user folder. The separate `CLAUDE.md` in
-Tax Practice applies only to that practice folder.
-
-**Next: [3. Analyze Excel](03-excel.md).**
+**Next: [Work with spreadsheets](03-excel.md).**
