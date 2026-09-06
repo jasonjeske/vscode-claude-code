@@ -15,3 +15,10 @@ jobs:
           node-version: '22'
       - run: node tests/validate-repo.mjs
       - run: python3 tests/state-workbook-spec.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r tests/pdf-requirements.txt
+      - run: python3 tests/build-guide.py
+      - run: python3 tests/check-guide.py
+      - run: git diff --exit-code -- output/pdf/claude-code-office-guide.pdf

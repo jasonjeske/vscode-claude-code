@@ -1,79 +1,68 @@
-# When you get stuck
+# Quick help for the Claude Code extension
 
-[Home](README.md)
+[Full course](README.md) · [Restart and recovery lesson](README.md#10-restart-and-recover)
 
 ## Open Claude's message box
 
-![Anthropic's real screenshot of the spark icon in the VS Code editor toolbar.](assets/reference/claude-open.png)
-
-*Reference screenshot from [Anthropic](https://code.claude.com/docs/en/vs-code).*
-
-Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**), type **Claude Code**,
-and select **Claude Code: Open in New Tab**. Click inside its message box before typing.
-If a file is open, the spark icon near the editor's upper-right corner is another way to open Claude.
+Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**). Type **Claude Code** and select
+**Open in New Tab**. Click its message box before pasting a work request.
 
 ## Reload the window
 
-![Illustration of the Command Palette with Developer: Reload Window selected.](images/reload.svg)
+1. Save your text files with **Ctrl+S** (Mac: **Cmd+S**).
+2. Open the Command Palette with **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**).
+3. Copy this into the **Command Palette**, select the result, and wait:
 
-Reloading refreshes VS Code and the extension without uninstalling anything.
+```text
+Developer: Reload Window
+```
 
-1. Save any text document you edited with **Ctrl+S** (Mac: **Cmd+S**).
-2. Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**).
-3. Type **Developer: Reload Window**.
-4. Click that result, or press **Enter** when it is selected.
-5. Wait for the window to return. Open Claude again if needed.
-
-**Check:** Claude's message box appears. Use Session history to resume your conversation.
+4. Reopen Claude. Start a fresh conversation to test new skills, or use Session history
+   to resume earlier work. Your saved files remain in the work folder.
 
 ## Restart the whole app
 
-![Illustration: save your work, close all VS Code windows, then reopen Visual Studio Code.](images/restart.svg)
+Save your work, then close every VS Code window. On Mac use **Code > Quit Visual Studio Code**.
+Reopen VS Code from Start or Applications, then **File > Open Recent > your work folder**.
 
-If reload did not help, save your work.
-On Windows, close **all VS Code windows** using their **X** buttons, then open Visual Studio Code
-from **Start**. On Mac, choose **Code > Quit Visual Studio Code**, then reopen it from Applications.
-Choose **File > Open Recent** and your work folder. Open Claude again.
+## Ask for one clear next step
 
-**Check:** your files are still there and Claude answers a short message.
+Copy into the **Claude Code message box**:
 
-## Update the extension
+```text
+I'm stuck. Ask me one question to identify where I am.
+Give me one step, the exact place to click or type, and a success check.
+```
 
-![Illustration of Extensions with Claude Code's Update button and reload prompt.](images/update.svg)
+If the output was not saved:
 
-Open **Extensions** with **Ctrl+Shift+X** (Mac: **Cmd+Shift+X**).
-Find **Claude Code** by Anthropic. Click **Update** if offered, then the reload/restart button.
-If no update is offered, the installed version may already be current or company-managed.
+```text
+Please do the task and save the finished file using available tools.
+If something is missing, give me a short IT request. Do not claim success.
+```
 
-To update the work skills, click Claude's **/** menu button, then **Customize > Plugins**.
-In **Marketplaces**, refresh the relevant source. Return to **Plugins** and apply any offered update.
-Follow the restart banner. If the installed version stays unchanged, ask IT to help update it;
-do not remove your personal adaptations.
+## Find and open your files
 
-## Understand a permission request
+Use **View > Explorer** in VS Code. Copy input files into the open work folder using
+Windows File Explorer or Mac Finder. Name the file in your request. Hold Shift while
+dragging it into Claude's message box if you want to attach a reference.
 
-![Anthropic's real screenshot showing a proposed file edit and a permission request in Claude Code.](assets/reference/claude-review.png)
+Open finished **.xlsx** files in Excel, **.docx** in Word, **.pptx** in PowerPoint,
+**.pdf** in a PDF reader, and **.html** in a browser through File Explorer/Finder.
+Use VS Code for text and **.md** notes. Saving a note does not send it to Claude.
 
-*Real interface reference from [Anthropic](https://code.claude.com/docs/en/vs-code).
-This example edits code; your request may create a workbook or run a spreadsheet tool.*
+## If a number is wrong
 
-Read what Claude wants to do and which files it affects. If it is unclear, ask:
-**“Explain what this will change before I approve.”**
-Approve only the action you understand and intend. You can reject a change and explain what you want instead.
-Available buttons and the amount of prompting depend on your permission mode and company settings.
+Copy into Claude:
 
-## Something else is confusing
+```text
+Trace this number to the source rows before making more changes.
+Explain the mismatch, correct it, and recheck every report that uses it.
+```
 
-| What happened | What to do |
-| --- | --- |
-| Claude asks to run code | Ask, “What will this do to my files?” Claude may need code to process Excel. You do not need to write it. |
-| It asks for a tool or software install | Ask for a short IT request naming the missing tool and the task it enables. |
-| The reply is too technical | Say, “Explain the next step without programming terms. Tell me exactly where to click.” |
-| It only tells you how to do the work | Say, “Please do it and save the finished file. Tell me if a tool is missing.” |
-| It chooses no useful skill | Check the plugins are installed and enabled, reload, then ask Claude to use relevant installed skills. |
-| A spreadsheet won't display in VS Code | Open the file in Microsoft Excel through File Explorer or Finder. |
-| Claude cannot see the spreadsheet | Check the open folder. Name the exact file, or hold Shift and drag it into Claude's message box. |
-| Sign-in, connection, or company policy error | Keep the error text and ask IT. Use the company-approved connection. |
-| A number is wrong | Tell Claude the expected number and its source. Ask it to investigate and recheck the saved output. |
+## If tools, sign-in, or updates are blocked
 
-You can always say: **“I'm stuck. Ask me one question to work out where I am.”**
+Use your company-approved connection. Keep the error text and ask IT.
+For an extension update, open Extensions, find Claude Code by Anthropic, and apply
+Update if offered. For plugin and personal-skill updates, follow lesson 10.
+Do not uninstall working tools, remove your adaptations, or bypass managed settings.
