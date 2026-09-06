@@ -5,7 +5,7 @@ description: Explain, create, or debug an Excel formula for accounting tasks and
 
 # Explain and check one Excel formula
 
-State the skill used. Identify the intended result, input columns/ranges, output cell, data types,
+Explain the next useful action plainly; do not require a skill command. Identify the intended result, input columns/ranges, output cell, data types,
 and material business rules. Ask for Excel version/language when function availability or syntax
 matters. Keep the requested task small; do not turn a formula question into a workbook-wide audit.
 

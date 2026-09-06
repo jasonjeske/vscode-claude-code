@@ -1,12 +1,15 @@
-# Microsoft documentation screenshots
+# Claude Code interface references
 
-Copyright Microsoft Corporation. Reused unchanged under the
-[Creative Commons Attribution 3.0 United States License](https://creativecommons.org/licenses/by/3.0/us/).
-[Repository license](https://github.com/microsoft/vscode-docs/blob/main/LICENSE.md).
-Retrieved September 5, 2026. The images illustrate VS Code controls, not this project's task execution.
-No Microsoft endorsement is implied. The rest of this repository's license does not relicense them.
+These screenshots are copied unchanged from Anthropic's official
+[VS Code documentation](https://code.claude.com/docs/en/vs-code), accessed September 6, 2026.
+Copyright remains with Anthropic and the respective interface owners. This repository's MIT license
+does not relicense these reference images. No endorsement is implied.
 
-| Local image | Original image | Documentation |
-| --- | --- | --- |
-| [Interface](vscode-interface.png) | [Microsoft image](https://code.visualstudio.com/assets/docs/editing/userinterface/hero.png) | [User interface](https://code.visualstudio.com/docs/editing/getting-started/userinterface) |
-| [Command Palette](vscode-command-palette.png) | [Microsoft image](https://code.visualstudio.com/assets/docs/editing/userinterface/commands.png) | [Command Palette](https://code.visualstudio.com/docs/editing/getting-started/userinterface#command-palette) |
+| Image | Original source |
+| --- | --- |
+| Claude panel and message box | [claude-interface.jpg source](https://mintcdn.com/claude-code/-YhHHmtSxwr7W8gy/images/vs-code-extension-interface.jpg) |
+| Spark icon in the editor toolbar | [claude-open.png source](https://mintcdn.com/claude-code/mfM-EyoZGnQv8JTc/images/vs-code-editor-icon.png) |
+| Proposed edit and permission prompt | [claude-review.png source](https://mintcdn.com/claude-code/FVYz38sRY-VuoGHA/images/vs-code-edits.png) |
+
+These show Anthropic's programming examples, not this course's execution. They are interface
+references alongside original, clearly labeled property-tax workflow illustrations.

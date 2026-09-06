@@ -18,6 +18,8 @@ work-data/
 *.docx
 *.backup
 !/practice/practice.xlsx
+!/practice/OH-bills.xlsx
+!/practice/TX-bills.xlsx
 /PROJECT.md
 
 # Keep private work and local tool state out of the public course.

@@ -1,7 +1,7 @@
 {
   "name": "property-tax-workbench",
-  "version": "2.1.0",
-  "description": "Five beginner-friendly skills for Excel reconciliation, dashboards, property-tax research, formula help, and workpaper summaries.",
+  "version": "3.0.0",
+  "description": "Six practical skills Claude can choose from ordinary requests: spreadsheet review, consolidation, dashboards, property-tax research, formula help, and workpaper summaries.",
   "license": "MIT",
   "author": {
     "name": "Property Tax Workbench maintainers"

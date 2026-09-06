@@ -1,80 +1,81 @@
-# 1. Set up your workspace
+# 1. Open Claude
 
-[Home](../README.md) · **Set up** → [Skills](02-skills.md) → [Excel](03-excel.md) → [Dashboard](04-dashboard.md)
+[Home](../README.md) · Page 1 of 5 · [Next: add skills](02-skills.md)
 
-You need a Windows computer, Excel, and your employer-approved way to use Claude Code.
-If an app is already installed, open it and skip its installer.
+Your first goal: see Claude's message box and get a reply. If an app is already installed,
+skip its installation. Use your company's software portal and Claude connection when provided.
 
-## Step 1. Install and open VS Code
+## 1. Install and open VS Code
 
-![Open the official VS Code download page, run the Windows installer, then open Visual Studio Code.](../images/01-install.svg)
+![Illustration: download Visual Studio Code, open the installer in Downloads, then open the app.](../images/install.svg)
 
-Open [VS Code for Windows](https://code.visualstudio.com/docs/setup/windows) in your browser.
-Use your company's software portal if required; otherwise download the Windows installer, open it
-from **Downloads**, and follow its prompts. Open **Visual Studio Code** from Windows **Start**.
-This is a different app from Visual Studio. If installation is blocked, ask IT to install it.
+Open [the VS Code download page](https://code.visualstudio.com/download).
+Choose **Windows** (or **Mac**), open the downloaded installer, and follow its prompts.
+On Windows, open **Start**, type **Visual Studio Code**, and click the app.
+On Mac, open it from **Applications**. If your company manages installs, use its software portal or ask IT.
 
-**Check:** a window titled Visual Studio Code opens.
+**You are there when:** a Visual Studio Code window opens. You can close welcome tabs.
 
-## Step 2. Add the Claude Code extension
+## 2. Install the Claude Code extension
 
-![Press Ctrl+Shift+X, search Claude Code, verify Anthropic, and select Install.](../images/02-extension.svg)
+![Illustration of Extensions: search Claude Code, check the publisher Anthropic, and click Install.](../images/extension.svg)
 
-In VS Code, press **Ctrl+Shift+X**. This opens **Extensions**, the add-on store.
-Search **Claude Code**, choose the extension published by **Anthropic**, and click **Install**.
-Then press **Ctrl+Shift+P**, type **Claude Code**, and choose **Open in New Tab**.
-If it does not appear, use [Reload Window](../HELP.md#reload-claude-code).
+In VS Code, press **Ctrl+Shift+X** (Mac: **Cmd+Shift+X**).
+This opens **Extensions**, where you add features to the app.
+Search **Claude Code**, choose the result published by **Anthropic**, and click **Install**.
 
-**Check:** you can see a Claude Code conversation panel. See [Anthropic's extension guide](https://code.claude.com/docs/en/vs-code).
+Then press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**). This opens the **Command Palette**,
+a search box for app actions. Type **Claude Code** and choose **Claude Code: Open in New Tab**.
 
-## Step 3. Connect and try one message
+**You are there when:** the Claude panel opens. If the option is missing, [reload the window](../HELP.md#reload-the-window).
 
-![Use your approved company connection, then type a first message into the Claude Code chat box.](../images/03-connect.svg)
+## 3. Sign in and send your first message
 
-If your company already configured the connection, keep it. Otherwise follow IT's instructions
-for its gateway or sign-in. For an approved direct Anthropic account, use the extension's sign-in
-prompt. Do not create a personal account or paste keys to work around a company connection error.
+![Anthropic's real screenshot of VS Code with Claude on the right and the message box at the bottom.](../assets/reference/claude-interface.jpg)
 
-Click the **Claude Code message box**, paste this, and press **Enter**:
+*Real reference screenshot from [Anthropic](https://code.claude.com/docs/en/vs-code).
+Their example contains code. Your work will contain spreadsheets. The message box is at the bottom of the Claude panel.*
 
-```text
-I am new to VS Code and Claude Code. Explain what you can help me do with an
-Excel workbook in three short sentences. Do not read or change any files yet.
-```
+Click **Sign in** if prompted and follow your approved account's browser sign-in steps.
+If your company supplied a connection, follow its instructions instead.
+Return to VS Code. Click inside **Claude's message box** and type:
 
-**Check:** Claude replies. You do not need a separate terminal installation to use this chat panel.
+> I'm new here. Help me work with Excel, one step at a time.
 
-## Step 4. Download the practice folder
+Press **Enter** to send. Use **Shift+Enter** if you want a new line in a longer message.
+You can also dictate using a dictation app you already use.
 
-![Download ZIP from GitHub, choose Extract All in Windows, and locate the practice folder.](../images/04-download.svg)
+**You are there when:** Claude replies. This is the box you will use throughout the course.
+The separate VS Code Chat button can open another assistant. Look for **Claude Code**.
 
-[Download this repository as a ZIP](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip).
-Open **Downloads** in Windows File Explorer. Right-click the ZIP → **Extract All** → **Extract**.
-Open the extracted folder until you see `README.md`, `lessons`, and `practice` together.
-Copy the **practice** folder to your approved learning location and rename the copy **Tax Practice**.
-You do not need a GitHub account, Git, or a terminal.
+## 4. Get the practice files
 
-**Check:** Tax Practice contains `practice.xlsx`, `ANSWER-KEY.md`, and `CLAUDE.md`.
-The workbook contains invented Ohio records, not actual tax data.
+![Illustration: extract the downloaded ZIP, copy the practice folder, and rename the copy Tax Practice.](../images/folder.svg)
 
-## Step 5. Open Tax Practice in VS Code
+[Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/b97741cd80be676a52e9ea956bcef9841d27f820.zip).
+In Windows **File Explorer**, open **Downloads**, right-click the ZIP, and choose **Extract All**,
+then **Extract**. On Mac, double-click the ZIP in Finder.
 
-![File, Open Folder, Tax Practice. Explorer holds files; the editor shows text; Claude has its own message box.](../images/05-workspace.svg)
+Open the extracted folder until you see **practice**. Copy that folder to your approved learning
+location and rename the copy **Tax Practice**. Keep its contents together.
 
-Choose **File → Open Folder** in VS Code. Select **Tax Practice**, then **Select Folder**.
-If Workspace Trust appears, trust it only after reviewing the source and following company policy.
-Open the Claude panel again using **Ctrl+Shift+P → Claude Code → Open in New Tab** if needed.
+**You are there when:** Tax Practice contains **practice.xlsx**, **OH-bills.xlsx**, **TX-bills.xlsx**,
+and two text documents. Everything in these spreadsheets is invented.
 
-The left **Explorer** lists files. Click `CLAUDE.md` to open it in the middle **editor**.
-A `.md` file is a plain text document with simple formatting, called Markdown.
-Press **Ctrl+Shift+V** while that file is active to see its formatted preview.
-The Claude message box is where you paste the course prompts.
+## 5. Open that folder in VS Code
 
-![Microsoft's real VS Code interface screenshot, showing the Explorer on the left and editor in the middle.](../assets/reference/vscode-interface.png)
+![Illustration of Tax Practice in Explorer and a normal request in Claude's message box.](../images/open-folder.svg)
 
-*Reference screenshot © Microsoft, [CC BY 3.0 US](../assets/reference/ATTRIBUTION.md). Your files and Claude panel will differ.*
+Choose **File > Open Folder**, select **Tax Practice**, then **Select Folder** (Mac: **Open**).
+If asked whether you trust the folder, review its source and follow your company's policy.
+Open the Claude panel again with the Command Palette if necessary.
 
-**Check:** the Explorer says **Tax Practice** and lists `practice.xlsx`.
-Open spreadsheets in Excel for viewing; a binary-file message in VS Code is normal.
+The **Explorer** on the left lists your files. You can ignore the editor in the middle for now.
+In Claude's message box, say:
 
-**Next: [2. Add skills](02-skills.md).**
+> Which spreadsheets can you see in this folder?
+
+**You are there when:** Claude names the three practice spreadsheets.
+If it names other files, open the correct folder before continuing.
+
+**Next: [Add your skills once](02-skills.md).**

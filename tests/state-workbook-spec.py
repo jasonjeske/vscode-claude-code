@@ -37,3 +37,27 @@ assert a.keys() - b.keys() == {"001104"} and b.keys() - a.keys() == {"001105"}
 assert a["001104"] == 400 and b["001105"] == 500
 assert sum(b.values()) - sum(a.values()) == sum(diffs.values()) + 500 - 400 == 100
 print("OK shipped XLSX: text IDs, formulas/caches, full populations, offsetting differences, bridge")
+
+# The two consolidation sources must remain independently auditable and preserve text IDs.
+combined = []
+for state, ids, amounts in [("OH", ["000101", "000102"], [100, 200]),
+                            ("TX", ["000201", "000202"], [300, 400])]:
+    with ZipFile(book.parent / f"{state}-bills.xlsx") as archive:
+        assert not any("vbaProject" in n or "externalLinks/" in n for n in archive.namelist())
+        wb = ET.fromstring(archive.read("xl/workbook.xml"))
+        assert [s.attrib["name"] for s in wb.findall("x:sheets/x:sheet", NS)] == ["Bills"]
+        sheet = ET.fromstring(archive.read("xl/worksheets/sheet1.xml"))
+        cells = {c.attrib["r"]: c for c in sheet.findall("x:sheetData/x:row/x:c", NS)}
+        def value(address):
+            return cells[address].find("x:v", NS).text
+        for row, key, amount in zip([5, 6], ids, amounts):
+            assert value(f"A{row}") == state and value(f"B{row}") == "2026"
+            assert cells[f"C{row}"].attrib["t"] == "str" and value(f"C{row}") == key
+            assert int(value(f"D{row}")) == amount
+            combined.append((state, key, amount))
+        assert int(value("D8")) == sum(amounts)
+        assert cells["D8"].find("x:f", NS).text == "SUM(D5:D6)"
+        assert not any(c.attrib.get("t") == "e" for c in cells.values())
+assert len(combined) == 4 and len({key for _, key, _ in combined}) == 4
+assert sum(amount for _, _, amount in combined) == 1000
+print("OK consolidation sources: 4 detail rows, text IDs, OH 300 + TX 700 = 1000; total rows excluded")

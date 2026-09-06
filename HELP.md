@@ -1,98 +1,79 @@
-# Help when something is unfamiliar
+# When you get stuck
 
-[Back to the course](README.md)
+[Home](README.md)
 
-## Reload Claude Code
+## Open Claude's message box
 
-![Save all files, press Ctrl+Shift+P, select Developer: Reload Window, then open a new Claude tab.](images/08-reload.svg)
+![Anthropic's real screenshot of the spark icon in the VS Code editor toolbar.](assets/reference/claude-open.png)
 
-**Reload** refreshes the VS Code window and its extensions:
+*Reference screenshot from [Anthropic](https://code.claude.com/docs/en/vs-code).*
 
-1. Choose **File → Save All**.
-2. Hold **Ctrl+Shift+P**. A search box opens at the top: the **Command Palette**.
-3. Type **Developer: Reload Window** and click the matching command.
-4. Wait for the window to return. Press **Ctrl+Shift+P**, search **Claude Code**, and choose **Open in New Tab**.
+Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**), type **Claude Code**,
+and select **Claude Code: Open in New Tab**. Click inside its message box before typing.
+If a file is open, the spark icon near the editor's upper-right corner is another way to open Claude.
 
-**Check:** a fresh Claude conversation opens in your work folder. If work was interrupted, inspect
-existing outputs before rerunning a prompt. You can reopen old chats from Claude's session history.
+## Reload the window
 
-![Microsoft's real Command Palette screenshot, illustrating the search box at the top of VS Code.](assets/reference/vscode-command-palette.png)
+![Illustration of the Command Palette with Developer: Reload Window selected.](images/reload.svg)
 
-*© Microsoft, [CC BY 3.0 US](assets/reference/ATTRIBUTION.md). Type the reload command instead of the example file command.*
+Reloading refreshes VS Code and the extension without uninstalling anything.
 
-## Fully restart VS Code
+1. Save any text document you edited with **Ctrl+S** (Mac: **Cmd+S**).
+2. Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**).
+3. Type **Developer: Reload Window**.
+4. Click that result, or press **Enter** when it is selected.
+5. Wait for the window to return. Open Claude again if needed.
 
-![Save all, choose File Exit, reopen Visual Studio Code from Start, and reopen your work folder.](images/17-restart.svg)
+**Check:** Claude's message box appears. Use Session history to resume your conversation.
 
-If reloading did not help, choose **File → Save All**, then **File → Exit**. This closes VS Code;
-it does not delete your files. Open Windows **Start**, type **Visual Studio Code**, and open it.
-If your files are missing from the left panel, use **File → Open Folder** to select your work folder.
-Open Claude with **Ctrl+Shift+P → Claude Code → Open in New Tab**.
+## Restart the whole app
 
-**Check:** VS Code opens your folder and Claude responds to a simple message.
+![Illustration: save your work, close all VS Code windows, then reopen Visual Studio Code.](images/restart.svg)
 
-## Plugins or skills are missing
+If reload did not help, save your work.
+On Windows, close **all VS Code windows** using their **X** buttons, then open Visual Studio Code
+from **Start**. On Mac, choose **Code > Quit Visual Studio Code**, then reopen it from Applications.
+Choose **File > Open Recent** and your work folder. Open Claude again.
 
-![Plugins live in the Claude chat; extension installation lives in VS Code; they are different menus.](images/18-help.svg)
+**Check:** your files are still there and Claude answers a short message.
 
-| Problem | Try this |
+## Update the extension
+
+![Illustration of Extensions with Claude Code's Update button and reload prompt.](images/update.svg)
+
+Open **Extensions** with **Ctrl+Shift+X** (Mac: **Cmd+Shift+X**).
+Find **Claude Code** by Anthropic. Click **Update** if offered, then the reload/restart button.
+If no update is offered, the installed version may already be current or company-managed.
+
+To update the work skills, click Claude's **/** menu button, then **Customize > Plugins**.
+In **Marketplaces**, refresh the relevant source. Return to **Plugins** and apply any offered update.
+Follow the restart banner. If the installed version stays unchanged, ask IT to help update it;
+do not remove your personal adaptations.
+
+## Understand a permission request
+
+![Anthropic's real screenshot showing a proposed file edit and a permission request in Claude Code.](assets/reference/claude-review.png)
+
+*Real interface reference from [Anthropic](https://code.claude.com/docs/en/vs-code).
+This example edits code; your request may create a workbook or run a spreadsheet tool.*
+
+Read what Claude wants to do and which files it affects. If it is unclear, ask:
+**“Explain what this will change before I approve.”**
+Approve only the action you understand and intend. You can reject a change and explain what you want instead.
+Available buttons and the amount of prompting depend on your permission mode and company settings.
+
+## Something else is confusing
+
+| What happened | What to do |
 | --- | --- |
-| No Claude panel | Ctrl+Shift+X; check that Anthropic's Claude Code is installed and enabled; reload |
-| `/plugins` not offered | Ask IT whether your approved extension version supports plugins and whether policy permits them |
-| Package source will not load | Check the exact GitHub source from lesson 2; report the error to IT if network or policy blocks it |
-| Installed skill not listed | Check plugin enabled state and scope; reload and open a fresh conversation |
-| Reader/library missing | Ask Claude for the dependency name, reason, and minimal acceptance check; use IT's approved route |
-| Wrong response or wrong files | Confirm File → Open Folder points to the intended folder; give the exact filename |
-| Gateway, sign-in, or model error | Keep current managed settings; send a redacted error to the workplace support team |
-| Task seems stuck | Let an active tool finish, or use its stop control; inspect partial outputs before retrying |
+| Claude asks to run code | Ask, “What will this do to my files?” Claude may need code to process Excel. You do not need to write it. |
+| It asks for a tool or software install | Ask for a short IT request naming the missing tool and the task it enables. |
+| The reply is too technical | Say, “Explain the next step without programming terms. Tell me exactly where to click.” |
+| It only tells you how to do the work | Say, “Please do it and save the finished file. Tell me if a tool is missing.” |
+| It chooses no useful skill | Check the plugins are installed and enabled, reload, then ask Claude to use relevant installed skills. |
+| A spreadsheet won't display in VS Code | Open the file in Microsoft Excel through File Explorer or Finder. |
+| Claude cannot see the spreadsheet | Check the open folder. Name the exact file, or hold Shift and drag it into Claude's message box. |
+| Sign-in, connection, or company policy error | Keep the error text and ask IT. Use the company-approved connection. |
+| A number is wrong | Tell Claude the expected number and its source. Ask it to investigate and recheck the saved output. |
 
-**Check:** distinguish the app extension, the skill package, and the file-processing tool.
-Installing one does not prove all three work. Do not delete `.claude` to troubleshoot.
-
-## Optional Node.js for work scripts
-
-**Skip this unless an approved task needs a Node.js script.** Node.js runs JavaScript files on your
-computer. It does not replace Excel and is not needed for the extension chat or a standalone HTML report.
-
-### N1. Install Node.js only when needed
-
-![Use the company software portal or official Node.js Windows LTS installer, then restart VS Code.](images/19-node-install.svg)
-
-Use your company's software portal or [the official Node.js download page](https://nodejs.org/en/download).
-Select the approved **LTS** release for Windows and the **Windows Installer (.msi)** matching your computer.
-Open the downloaded installer and follow the prompts. Leave optional tool bundles unselected unless
-IT requires them. Do not run downloaded shell snippets to get through this lesson.
-Fully restart VS Code afterward using the steps above.
-
-**Check:** the installation finishes without a policy error. If blocked, ask IT.
-
-### N2. Run one harmless command
-
-![Terminal, New Terminal, PowerShell. Run node --version and node -e with a simple practice calculation.](images/20-node-run.svg)
-
-In VS Code, choose **Terminal → New Terminal**. The bottom panel accepts commands, not chat prompts.
-Select **PowerShell** from its profile dropdown if another shell opens. Run this and press **Enter**:
-
-```powershell
-node --version
-```
-
-**Check:** a version starting with `v` appears. “Not recognized” means restart or installation/PATH
-help is needed; it is not a reason to change execution policy. Now run:
-
-```powershell
-node -e "console.log('Practice difference:', 1100 - 1000)"
-```
-
-**Check:** `Practice difference: 100` appears. This command calculates and prints; it does not read or write files.
-For a real script, return to **Claude's message box** and ask:
-
-```text
-Before we run this Node.js script, explain which files it reads, which it
-writes, whether it uses the network, and how I can verify the result.
-Use only the approved work folder and preserve originals.
-```
-
-The `-e` example runs a tiny instruction directly. A saved script instead runs as `node filename.js`
-from its folder, after review. Claude can help write it; you do not need to learn JavaScript before
-completing the spreadsheet lessons.
+You can always say: **“I'm stuck. Ask me one question to work out where I am.”**

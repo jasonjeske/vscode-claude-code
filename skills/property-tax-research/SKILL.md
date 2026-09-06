@@ -5,7 +5,7 @@ description: Research a U.S. state or local property-tax question using official
 
 # Research and preserve evidence
 
-State the skill used and explain the next useful step plainly. Establish the question, state,
+Explain the next useful step plainly. Select this skill from ordinary requests; do not require a skill command. Establish the question, state,
 local jurisdiction, property type, tax year/as-of date, and relevant supplied facts. Ask one
 question for a material gap. Never infer a tax rule from another state or an accounting balance.
 
