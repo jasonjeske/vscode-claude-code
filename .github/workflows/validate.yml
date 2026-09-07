@@ -21,4 +21,6 @@ jobs:
       - run: python3 -m pip install -r tests/pdf-requirements.txt
       - run: python3 tests/build-guide.py
       - run: python3 tests/check-guide.py
+      - run: python3 tests/build-cheat-sheet.py
       - run: git diff --exit-code -- output/pdf/claude-code-office-guide.pdf
+      - run: git diff --exit-code -- output/pdf/claude-code-vscode-cheat-sheet.pdf

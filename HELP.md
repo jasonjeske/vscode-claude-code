@@ -2,6 +2,9 @@
 
 [Full course](README.md) · [Restart and recovery lesson](README.md#10-restart-and-recover)
 
+[Download the bonus cheat sheet (PDF, 6 pages)](https://raw.githubusercontent.com/jasonjeske/vscode-claude-code/main/output/pdf/claude-code-vscode-cheat-sheet.pdf)
+for GUI controls, skills, short commands, and copyable Office work prompts.
+
 ## Open Claude's message box
 
 Press **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**). Type **Claude Code** and select

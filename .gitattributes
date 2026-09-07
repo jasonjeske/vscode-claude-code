@@ -1,2 +1,3 @@
-# Generated course export is a binary document, not a text diff.
+# Generated course exports are binary documents, not text diffs.
 /output/pdf/claude-code-office-guide.pdf binary
+/output/pdf/claude-code-vscode-cheat-sheet.pdf binary
