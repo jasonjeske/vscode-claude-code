@@ -9,6 +9,10 @@ Copy a prompt, let Claude do the work, open the result, and check it.
 [Download the practice kit](https://github.com/jasonjeske/vscode-claude-code/archive/refs/heads/main.zip) ·
 [Quick help](HELP.md) · [Example results](practice/meeting-results/README.md)
 
+**Bonus: [Download the Claude Code cheat sheet (PDF, 6 pages)](https://raw.githubusercontent.com/jasonjeske/vscode-claude-code/main/output/pdf/claude-code-vscode-cheat-sheet.pdf).**
+Keep it beside VS Code for skill installation, everyday GUI controls, short commands,
+restart help, Windows/Mac shortcuts, and 14 copyable Office and property-tax work prompts.
+
 The main path uses the **Claude Code extension inside Visual Studio Code**.
 You talk in its message box, much like a chat assistant. Claude can also read and
 create files in your work folder using its available tools. You do not need the
